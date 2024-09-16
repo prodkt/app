@@ -1,0 +1,33 @@
+---
+import type { Database } from '@/database.types'
+
+import Layout from '@/layouts/PublicLayout.astro'
+
+import PageHeader from '../../../../components/page-header.astro'
+import { GET } from './index.json'
+
+type Repos = Database['public']['Tables']['repos']['Row']
+
+interface RepoData {
+  repo: {
+    repoData: Repos[]
+  }
+}
+const response = await GET(Astro)
+const data = (await response.json()) as RepoData
+---
+
+<Layout>
+  <PageHeader
+    text='Repos'
+    bullet1='Design'
+    bullet2='Previous works'
+    bullet3='Visuals'
+    bullet4='Concepts'
+  />
+  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
+    <p class='text-8xl'>
+      {data.repo.repoData[0]?.title}
+    </p>
+  </div>
+</Layout>

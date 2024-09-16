@@ -1,0 +1,92 @@
+---
+import { PageFile } from '@prodkt/ui/prodkt-components/file'
+import FileFolder from '@prodkt/ui/prodkt-components/file-folder'
+
+import Layout from '@/layouts/PublicLayout.astro'
+
+import PageHeader from '../../components/page-header.astro'
+import { GET } from './index.json'
+
+const response = await GET()
+const data = (await response.json()) as any
+---
+
+<Layout>
+  <PageHeader
+    text='Files'
+    bullet1='About me'
+    bullet2='About Prodkt'
+    bullet3='Insights'
+    bullet4='and more...'
+  />
+  <div class='grid items-stretch grid-cols-3 gap-32 p-20 justify-stretch'>
+    <div class='flex flex-row items-center justify-center gap-4'></div>
+    {
+      data ? (
+        data.fileData.map((item: any) => (
+          <FileFolder
+            text={item.folder.title}
+            src={
+              item.folder.image.filename_disk
+                ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${item.folder.image.filename_disk}`
+                : `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif`
+            }
+          />
+        ))
+      ) : (
+        <p>Loading...</p>
+      )
+    }
+  </div>
+  <div class='flex flex-row items-center justify-center gap-4'>
+    {
+      data ? (
+        data.fileData.map((item: any) => (
+          <PageFile
+            client:load
+            title={item.title}
+            downloadLink={item.src.filename_download ?? null}
+            src={item.src.filename_disk ?? null}
+            fileSrc={
+              item.type === 'file-svg'
+                ? '56c87434-0b8f-4734-b5ff-bbcb3c67fa53.svg'
+                : item.type === 'file-json'
+                  ? 'c4ed0469-368d-401f-8fe7-2ed9b161916d.svg'
+                  : item.type === 'file-spline'
+                    ? '58618fef-f162-4a70-8725-d3b9ef9439f5.svg'
+                    : item.type === 'file-figma'
+                      ? 'e801111f-9077-448e-9309-b746336028f4.svg'
+                      : item.type === 'file-color'
+                        ? 'e1df2bfe-5249-47d2-8286-e1d5aeb4989c.svg'
+                        : item.type === 'file-html'
+                          ? '628e2845-585c-4263-9f12-7de0b7eb6cd8.svg'
+                          : item.type === 'file-css'
+                            ? '9712e240-2f91-4922-b501-eab2c57df425.svg'
+                            : '5c30d260-9586-4f43-b814-6a10cf125d36.svg'
+            }
+          />
+        ))
+      ) : (
+        <p>Loading...</p>
+      )
+    }
+  </div>
+</Layout>
+
+<style>
+  .cube:hover {
+    transform: scaleX(1) scaleY(1) scaleZ(2.5) rotateX(33deg) rotateY(0deg)
+      rotateZ(0deg) translateX(0px) translateY(41px) translateZ(-83px)
+      skewX(0deg) skewY(0deg);
+  }
+
+  .cube:has(:hover) .cube-text {
+    transform: scaleX(1) scaleY(1) scaleZ(1.9) rotateX(9deg) rotateY(0deg)
+      rotateZ(0deg) translateX(0px) translateY(32px) translateZ(-55px)
+      skewX(0deg) skewY(0deg);
+  }
+  .cube-wrap {
+    perspective: 1001px;
+    perspective-origin: 49% 50%;
+  }
+</style>

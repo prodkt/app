@@ -1,0 +1,102 @@
+---
+import type { Database } from '@/database.types'
+import type { ProjectList } from '@prodkt/ui/prodkt-components/project-aside'
+
+import { BoardColumn } from '@prodkt/ui/prodkt-components/kanban'
+import { ProjectLayout } from '@prodkt/ui/prodkt-components/project-layout'
+
+// import PageHeader from '@/components/page-header.astro'
+import Layout from '@/layouts/PublicLayout.astro'
+
+import { GET } from './index.json'
+
+type Roadmap = Database['public']['Tables']['roadmaps']['Row']
+type Project = Database['public']['Tables']['projects']['Row']
+type Files = Database['public']['Tables']['directus_files']['Row']
+type Issue = Database['public']['Tables']['issues']['Row']
+type Status = Database['public']['Tables']['status']['Row'] & { tasks: Issue[] } // Ensure Status includes tasks
+type Column = {
+  id: string
+  color: string
+  label: string
+  value: string
+  tasks: Issue[]
+}
+interface ProjectData {
+  projectSlug?: string
+  roadmapSlug?: string
+  roadmapData?: Roadmap[]
+  projectData: Project[]
+  issueData: Issue[]
+  projectListing: ProjectList[]
+  projectTitle: string | null
+  logo: Files['filename_disk']
+  projectLogo: Files['filename_disk']
+}
+
+// Fetch and parse data
+const response = await GET(Astro)
+const data = (await response.json()) as ProjectData
+
+// Group tasks by their status label
+const columnsData = data.issueData.reduce<Record<string, Issue[]>>(
+  (acc, task) => {
+    const status = task.status // Ensure status is correctly typed
+    // @ts-ignore
+    const columnKey = status.label || 'Unknown' // Group by status label
+
+    if (!acc[columnKey]) {
+      acc[columnKey] = []
+    }
+
+    acc[columnKey].push(task)
+    return acc
+  },
+  {},
+)
+
+// Transform grouped tasks into the format for BoardColumn
+const columns: Column[] = Object.entries(columnsData).map(([label, tasks]) => {
+  // @ts-ignore
+  const exampleStatus = tasks[0]?.status as Status
+
+  return {
+    id: exampleStatus?.id || `unknown-${label}`,
+    color: exampleStatus?.color || 'default-color',
+    label: exampleStatus?.label || 'No Label',
+    value: exampleStatus?.value || 'no-value',
+    tasks, // Pass the tasks to the column object
+  }
+})
+---
+
+<Layout>
+  <!-- <PageHeader
+    minimal
+    text='Projects'
+    bullet1='Design'
+    bullet2='Previous works'
+    bullet3='Visuals'
+    bullet4='Concepts'
+  /> -->
+  <div class='grid grid-cols-1 items-stretch justify-stretch'>
+    <!-- @ts-ignore -->
+    <ProjectLayout
+      projectLogo={data.projectData[0]?.logo?.filename_disk}
+      projectTitle={data.projectData[0]?.title as string | null}
+      projects={data.projectListing}
+      client:only='react'
+    >
+      {
+        columns.map((column) => (
+          <BoardColumn
+            column={column}
+            tasks={column.tasks}
+            isOverlay={false}
+            client:only='react'
+          />
+        ))
+      }
+    </ProjectLayout>
+  </div>
+</Layout>

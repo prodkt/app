@@ -1,0 +1,35 @@
+---
+import type { Database } from '@/database.types'
+
+import Layout from '@/layouts/PublicLayout.astro'
+
+import { GET } from './index.json'
+
+type Work = Database['public']['Tables']['work']['Row']
+type Project = Database['public']['Tables']['projects']['Row']
+
+interface WorkData {
+  projectSlug: string
+  workSlug: string
+  workData: Work[]
+  projectData: Project[]
+}
+
+const response = await GET(Astro)
+const data = (await response.json()) as WorkData
+---
+
+<Layout>
+  {
+    data ? (
+      data.workData.map((item: any) => (
+        <a href={`/work/${data.projectSlug}/${item.slug}`}>
+          <h2>{item.title}</h2>
+          <p>{item.description}</p>
+        </a>
+      ))
+    ) : (
+      <p>Loading...</p>
+    )
+  }
+</Layout>

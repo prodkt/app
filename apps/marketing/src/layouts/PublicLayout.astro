@@ -1,0 +1,118 @@
+---
+import { Theme } from '@radix-ui/themes'
+import { ViewTransitions } from 'astro:transitions'
+import { ThemeProvider } from 'next-themes'
+
+import { Footer } from '@prodkt/ui/prodkt-components/footer'
+import { Header } from '@prodkt/ui/prodkt-components/header'
+import { PageFooter } from '@prodkt/ui/prodkt-components/page-footer'
+
+import BaseHead from '@/components/BaseHead.astro'
+import PostHog from '@/components/posthog/PostHog.astro'
+
+type Appearance = 'inherit' | 'light' | 'dark'
+type AccentColor =
+  | 'gray'
+  | 'gold'
+  | 'bronze'
+  | 'brown'
+  | 'yellow'
+  | 'amber'
+  | 'orange'
+  | 'tomato'
+  | 'red'
+  | 'ruby'
+  | 'crimson'
+  | 'pink'
+  | 'plum'
+  | 'purple'
+  | 'violet'
+  | 'iris'
+  | 'indigo'
+  | 'blue'
+  | 'cyan'
+  | 'teal'
+  | 'jade'
+  | 'green'
+  | 'grass'
+  | 'lime'
+  | 'mint'
+  | 'sky'
+type GrayColor = 'auto' | 'gray' | 'mauve' | 'slate' | 'sage' | 'olive' | 'sand'
+
+interface ThemeOptions {
+  appearance: Appearance
+  accentColor: AccentColor
+  grayColor: GrayColor
+}
+
+interface Props {
+  accentColor?: ThemeOptions['accentColor'] &
+    React.RefAttributes<HTMLDivElement>
+  grayColor?: ThemeOptions['grayColor'] & React.RefAttributes<HTMLDivElement>
+  appearance?: ThemeOptions['appearance'] & React.RefAttributes<HTMLDivElement>
+}
+
+const {
+  accentColor = 'violet',
+  grayColor = 'mauve',
+  appearance = 'light',
+} = Astro.props
+---
+
+<!doctype html>
+<html
+  lang='en'
+  class='radix-themes'
+  data-is-root-theme='true'
+  data-accent-color={accentColor}
+  data-gray-color={grayColor}
+  data-has-background='false'
+  data-panel-background='translucent'
+  data-radius='large'
+  data-scaling='100%'
+>
+  <head>
+    <BaseHead />
+    <PostHog />
+    <ViewTransitions />
+  </head>
+  <body
+    class='w-[100dvw] max-w-[100dvw] h-screen min-h-[100dvh] max-h-[100dvh] relative overflow-x-hidden overflow-y-hidden scroll-m-0 scroll-p-0 !p-0 sm:!p-4 m-0 bg-[var(--grayA12)]'
+  >
+    <div
+      class='relative flex flex-col items-center justify-center rounded-3xl h-[calc(100dvh_-_32px)] w-full z-[0] bg-[var(--grayA12)] dark:bg-[var(--gray1)] overflow-hidden border border-[var(--grayA6)] dark:border-[var(--gray5)]'
+    >
+      <ThemeProvider attribute='class' client:only='react'>
+        <Theme
+          !hasBackground
+          asChild
+          accentColor={accentColor}
+          appearance={appearance}
+          panelBackground='translucent'
+          grayColor={grayColor}
+          radius='large'
+          scaling='100%'
+          client:only='react'
+        >
+          <div
+            class='absolute rounded-2xl top-4 w-full bg-transparent max-w-[calc(100%_-_32px)] overflow-hidden z-[1]'
+          >
+            <Header client:only='react' />
+          </div>
+          <div
+            class='relative bottom-0 mb-0 mt-auto top-auto h-auto min-h-[calc(100%_-_0px)] w-full z-[0] bg-[var(--gray1)] dark:bg-[var(--gray2)] overflow-x-hidden overflow-y-auto scrollbarGutter-stable'
+          >
+            <slot />
+            <PageFooter client:load />
+          </div>
+          <div
+            class='hidden absolute bottom-8 overflow-hidden bg-transparent rounded-2xl shadow-2xl w-auto max-w-[calc(100%_-_32px)]'
+          >
+            <Footer client:only='react' />
+          </div>
+        </Theme>
+      </ThemeProvider>
+    </div>
+  </body>
+</html>

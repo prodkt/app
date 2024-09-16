@@ -1,0 +1,107 @@
+---
+import type { Database, Json } from '@/database.types'
+
+import { Image } from 'astro:assets'
+
+import Circuit from '@prodkt/assets/backgrounds/circuit.svg'
+
+import DocsAside from '@/components/docs-aside.astro'
+import Layout from '@/layouts/PublicLayout.astro'
+
+import PageHeader from '../../../components/page-header.astro'
+import { GET } from './index.json'
+
+// interface DocGroupItem {
+//   id: string;
+//   status: string;
+//   sort: string | null;
+//   user_created: string;
+//   date_created: string;
+//   user_updated: string;
+//   date_updated: string;
+//   title: string;
+//   anchor_slug: string;
+//   block: DocBlock[] | null;
+//   group: DocGroup;
+//   group_codeblocks: boolean;
+// }
+
+// interface DocBlock {
+//   block_subheading: string;
+//   block_content: string;
+//   codeblock_filename?: string;
+//   codeblock?: string | null;
+// }
+
+// interface DocGroup {
+//   page: DocPage;
+//   date_created: string | null;
+//   date_updated: string | null;
+//   group_slug: string | null;
+//   id: string;
+//   sort: number | null;
+//   status: string;
+//   title: string;
+//   user_created: string | null;
+//   user_updated: string | null;
+// }
+
+// interface DocPage {
+//   slug: string;
+//   title: string;
+//   status: string;
+// }
+
+interface GroupDataItem {
+  anchor_slug: string | null
+  block: Json | null
+  block_content: Json | null
+  date_created: string | null
+  date_updated: string | null
+  group: string | null
+  group_codeblocks: boolean | null
+  id: string
+  sort: number | null
+  status: string
+  title: string | undefined
+  user_created: string | null
+  user_updated: string | null
+}
+;[]
+
+type GroupData = GroupDataItem[]
+
+type Documentation = Database['public']['Tables']['documentation']['Row'] & {
+  groupData: GroupData // Just GroupData, not GroupData[]
+}
+const response = await GET(Astro)
+const data = (await response.json()) as Documentation
+console.log(data)
+---
+
+<Layout>
+  <div
+    class='relative top-0 flex flex-col items-center justify-start size-full'
+  >
+    <PageHeader
+      minimal
+      text='Docs'
+      bullet1=''
+      bullet2=''
+      bullet3=''
+      bullet4=''
+    />
+
+    <div
+      class='fixed bg-[var(--gray1)] border-r top-[96px] h-[calc(100%_-_128px)] left-[32px] px-0 pb-5 border rounded-2xl w-auto'
+    >
+      <DocsAside />
+
+      <Image
+        src={Circuit}
+        class='absolute size-full max-w-full mix-blend-color-dodge left-0 top-0 right-0 z-[-1]'
+        alt=''
+      />
+    </div>
+  </div>
+</Layout>

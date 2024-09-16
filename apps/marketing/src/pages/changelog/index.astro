@@ -1,0 +1,185 @@
+---
+import type { Database } from '@/database.types'
+import type {
+  Tag,
+  TagItem,
+  TagList,
+} from '@prodkt/ui/prodkt-components/blog-post'
+
+import { Badge } from '@prodkt/ui/primitives/badge'
+import {
+  BlogPost,
+  ChangelogAccordion,
+} from '@prodkt/ui/prodkt-components/blog-post'
+
+import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
+
+import PageHeader from '../../components/page-header.astro'
+import { GET } from './index.json'
+
+type Changelog = Database['public']['Tables']['changelogs']['Row']
+
+interface ChangelogData {
+  [x: string]: any
+  improvements?: TagItem[]
+  fixes?: TagItem[]
+  api?: TagItem[]
+  new?: TagItem[]
+  changelogData: Changelog[]
+}
+
+const response = await GET()
+const data = (await response.json()) as ChangelogData
+
+// Type guard to check if the value is an array of TagItem
+const isTagItemArray = (value: any): value is TagItem[] => {
+  return (
+    Array.isArray(value) &&
+    value.every(
+      (item) => item != null && typeof item === 'object' && 'changeTo' in item,
+    )
+  )
+}
+
+// Helper function to convert TagItem to TagListItem with unique tags
+const convertToTagListItems = (tagItems: TagItem[] | undefined): Tag[] => {
+  if (!tagItems) return []
+
+  // Use a Set to keep track of unique tags
+  const uniqueTags = new Set<string>()
+
+  tagItems.forEach((tag) => {
+    tag.changeTo.forEach((change) => uniqueTags.add(change))
+  })
+
+  // Convert the Set back to an array of objects
+  return Array.from(uniqueTags).map((text) => ({ text }))
+}
+
+const processTagsForItem = (item: Changelog): TagList => {
+  const tagList: TagList = {}
+
+  if (isTagItemArray(item.improvements)) {
+    tagList['improvements'] = convertToTagListItems(item.improvements)
+  }
+  if (isTagItemArray(item.fixes)) {
+    tagList['fixes'] = convertToTagListItems(item.fixes)
+  }
+  if (isTagItemArray(item.api)) {
+    tagList['api'] = convertToTagListItems(item.api)
+  }
+  if (isTagItemArray(item.new)) {
+    tagList['new'] = convertToTagListItems(item.new)
+  }
+
+  return tagList
+}
+---
+
+<Layout>
+  <PageHeader
+    text='Changelog'
+    bullet1='Improvements'
+    bullet2='New'
+    bullet3='Fixes'
+    bullet4='API'
+  />
+  {
+    data ? (
+      data.changelogData.map((item: any) => {
+        const tagListData = processTagsForItem(item)
+        return (
+          <BlogPost
+            tagList={tagListData}
+            size='default'
+            title={item.title}
+            hideToc
+            previousText='Back to blog'
+            backLink='/blog'
+            date={formatDate(item.publish_date)}
+            image={`${item.image.filename_disk}`}
+            alt={item.title}
+            client:only='react'
+          >
+            <Fragment set:html={item.content} />
+            {item.new ? (
+              <ChangelogAccordion type='New' client:only='react'>
+                {item.new.map((item: any) => (
+                  <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-start h-auto gap-2 mx-0 right-0 left-0'>
+                    <Badge
+                      className='!text-nowrap w-auto font-mono uppercase'
+                      client:only='react'
+                    >
+                      {item.changeTo}
+                    </Badge>
+                    <h3
+                      class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
+                      set:html={item.description}
+                    />
+                  </div>
+                ))}
+              </ChangelogAccordion>
+            ) : null}
+            {item.improvements ? (
+              <ChangelogAccordion type='Improvements' client:only='react'>
+                {item.improvements.map((improvement: any) => (
+                  <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
+                    <Badge
+                      className='!text-nowrap w-auto font-mono uppercase'
+                      client:only='react'
+                    >
+                      {improvement.changeTo}
+                    </Badge>
+                    <h3
+                      class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
+                      set:html={improvement.description}
+                    />
+                  </div>
+                ))}
+              </ChangelogAccordion>
+            ) : null}
+            {item.api ? (
+              <ChangelogAccordion type='API' client:only='react'>
+                {item.api.map((item: any) => (
+                  <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
+                    <Badge
+                      className='!text-nowrap w-auto font-mono uppercase'
+                      client:only='react'
+                    >
+                      {item.changeTo}
+                    </Badge>
+                    <h3
+                      class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
+                      set:html={item.description}
+                    />
+                  </div>
+                ))}
+              </ChangelogAccordion>
+            ) : null}
+            {item.fixes ? (
+              <ChangelogAccordion type='Fixes' client:only='react'>
+                {item.fixes.map((fix: any) => (
+                  <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
+                    <Badge
+                      className='!text-nowrap w-auto font-mono uppercase'
+                      client:only='react'
+                    >
+                      {fix.changeTo}
+                    </Badge>
+                    <h3
+                      class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
+                      set:html={fix.description}
+                    />
+                  </div>
+                ))}
+              </ChangelogAccordion>
+            ) : null}
+          </BlogPost>
+        )
+      })
+    ) : (
+      <p>Loading...</p>
+    )
+  }
+</Layout>

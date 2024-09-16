@@ -1,0 +1,35 @@
+---
+import type { Database } from '@/database.types'
+
+import Layout from '@/layouts/PublicLayout.astro'
+
+import { GET } from './index.json'
+
+type Work = Database['public']['Tables']['work']['Row']
+type Project = Database['public']['Tables']['projects']['Row']
+type Technology = Database['public']['Tables']['work_technology']['Row']
+type Template = Database['public']['Tables']['work_showcase_templates']['Row']
+type TemplateFiles =
+  Database['public']['Tables']['showcase_templates_files']['Row']
+
+interface WorkData {
+  projectSlug: string
+  workSlug: string
+  workData: Work[] & Project[]
+  technologyData: Technology[]
+  templateFiles: TemplateFiles[] & Template[]
+  projectData: Project[]
+}
+const response = await GET(Astro)
+const data = (await response.json()) as WorkData
+---
+
+<Layout>
+  {
+    data ? (
+      data.workData.map((item: any) => <h2>{item.title}</h2>)
+    ) : (
+      <p>Loading...</p>
+    )
+  }
+</Layout>

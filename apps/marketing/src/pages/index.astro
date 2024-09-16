@@ -1,0 +1,31 @@
+---
+import { AboutProdkt } from '@prodkt/ui/prodkt-components/about-prodkt'
+import { HeroHeader } from '@prodkt/ui/prodkt-components/hero-header'
+
+import Layout from '@/layouts/PublicLayout.astro'
+---
+
+<Layout>
+  <div class='relative'>
+    <!-- <div
+      class='absolute bottom-auto top-0 h-40 bg-gradient-to-b from-[var(--gray2)] to-transparent w-full z-[1]'
+    >
+    </div> -->
+    <HeroHeader client:only='react' />
+    <div
+      class='absolute bottom-0 top-auto h-40 bg-gradient-to-t from-[var(--gray2)] to-transparent w-full z-[1]'
+    >
+    </div>
+  </div>
+  <div class='relative gradientMask-to-b-20'>
+    <!-- <div
+      class='absolute bottom-auto top-0 h-64 bg-gradient-to-b from-[var(--gray2)] to-transparent w-full z-[1]'
+    >
+    </div> -->
+    <AboutProdkt client:only='react' />
+    <div
+      class='absolute bottom-0 top-auto h-40 bg-gradient-to-t from-[var(--gray2)] to-transparent w-full z-[1]'
+    >
+    </div>
+  </div>
+</Layout>

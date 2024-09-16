@@ -1,0 +1,159 @@
+---
+import type { Database, Json } from '@/database.types'
+
+import { experimental_AstroContainer } from 'astro/container'
+
+import { componentMap } from '@prodkt/blocks/component-map'
+import { CodeblockLayout } from '@prodkt/ui/prodkt-components/codeblock-layout'
+
+import Layout from '@/layouts/PublicLayout.astro'
+
+import { GET } from './index.json'
+
+// type Codeblocks = Database['public']['Tables']['codeblocks']['Row']
+// type Themes = Database['public']['Tables']['themes']['Row']
+type Files = Database['public']['Tables']['directus_files']['Row']
+
+interface Logos {
+  logo: {
+    filename_disk: Files['filename_disk']
+  }
+  logo_onDark: {
+    filename_disk: Files['filename_disk']
+  }
+  filename_disk: Files['filename_disk']
+}
+interface Theme {
+  build_template: BuildTemplate
+  date_updated: string | null
+  id: string
+  logo: string | null
+  logos: Logos
+  slug: string | null
+  status: string
+  title: string | null
+  user_updated: string | null
+}
+interface Codeblock {
+  card_image: string | null
+  category: string | null
+  date_created: string | null
+  date_updated: string | null
+  frontmatter: string | null
+  html: string | null
+  id: string
+  named_export: string | null
+  slug: string | null
+  sort: number | null
+  status: string
+  syntax: string | null
+  title: string | null
+  user_created: string | null
+  user_updated: string | null
+}
+interface Layout {
+  layouts: Json | null
+  code: string
+  component_name: string
+  component_path: string
+  primary_layout: boolean
+}
+
+interface BuildTemplate {
+  date_created: string | null
+  date_updated: string | null
+  env: string | null
+  id: string
+  layouts: Layout[] | null // Change Json to Layout[]
+  logos: Logos
+  sort: number | null
+  status: string
+  title: string | null
+  user_created: string | null
+  user_updated: string | null
+
+  astro_config: string | null
+  package_json: string | null
+}
+
+interface Data {
+  codeblockData: Codeblock
+  templateData: Theme
+  NamedExport: string
+  codeblockSlug: string
+  templateSlug: string
+}
+
+const response = await GET(Astro)
+const data = (await response.json()) as Data
+
+const container = await experimental_AstroContainer.create()
+const result = await container.renderToString(componentMap[data.NamedExport])
+const files = {
+  // '/Wrapper.js': `export default () => "";`,
+  '/index.astro': {
+    code: `---
+      import Layout from '@/layouts/Layout.astro'
+---
+<Layout title="Prodkt from Bryan Funk.">
+    <h1>Prodkt</h1>
+${data.codeblockData.html}
+</Layout>`,
+    readOnly: false, // Set as non-editable, defaults to `false`
+    active: true, // Set as main file, defaults to `false`
+    hidden: false, // Tab visibility, defaults to `false`
+  },
+  '/layouts/Layout.astro': {
+    // code: `${(data.templateData as Template).build_template?.layouts?.[0]?.code}`,
+    code: `${data.templateData.build_template?.layouts?.[0]?.code}`,
+    readOnly: false, // Set as non-editable, defaults to `false`
+    active: false, // Set as main file, defaults to `false`
+    hidden: false, // Tab visibility, defaults to `false`
+  },
+  '/package.json': {
+    code: `${data.templateData.build_template?.package_json}`,
+    readOnly: false, // Set as non-editable, defaults to `false`
+    active: false, // Set as main file, defaults to `false`
+    hidden: false, // Tab visibility, defaults to `false`
+  },
+  '/astro.config.mjs': {
+    code: `${data.templateData.build_template?.astro_config}`,
+    readOnly: false, // Set as non-editable, defaults to `false`
+    active: false, // Set as main file, defaults to `false`
+    hidden: false, // Tab visibility, defaults to `false`
+  },
+  // '/tailwind.config.mjs': {
+  //   code: `${data.stylesheets[0].tailwind_config}`,
+  //     readOnly: false, // Set as non-editable, defaults to `false`
+  //     active: false, // Set as main file, defaults to `false`
+  //     hidden: true // Tab visibility, defaults to `false`
+  // },
+  // '/styles/global.css': {
+  //   code: `${data.stylesheets[0].src}`,
+  //     readOnly: false, // Set as non-editable, defaults to `false`
+  //     active: false, // Set as main file, defaults to `false`
+  //     hidden: false // Tab visibility, defaults to `false`
+  // },
+}
+---
+
+<Layout>
+  <CodeblockLayout
+    title={data.templateData.title}
+    buildLogo={data.templateData.build_template.logos.logo
+      ?.filename_disk as string}
+    buildLogoOnDark={data.templateData.build_template.logos.logo_onDark
+      ?.filename_disk as string}
+    logo={data.templateData.logos.logo?.filename_disk as string}
+    logoOnDark={data.templateData.logos.logo_onDark?.filename_disk as string}
+    template='astro'
+    componentData={files}
+    client:load
+  >
+    <iframe
+      class='customLevelnLayout w-full h-full min-h-80 isolate bg-[var(--gray1)] rounded-2xl overflow-hidden border border-[var(--grayA4)] pr-2'
+      srcdoc={result}
+      sandbox='allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals'
+    ></iframe>
+  </CodeblockLayout>
+</Layout>

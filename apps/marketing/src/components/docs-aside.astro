@@ -1,0 +1,87 @@
+---
+import { DocTabs } from '@prodkt/ui/prodkt-components/docs-aside'
+
+import { GET } from '@/pages/api/docs-toc.json'
+
+interface DocPage {
+  date_created: string | null
+  date_updated: string | null
+  id: string
+  slug: string | null
+  sort: number | null
+  status: string
+  title: string
+  user_created: string | null
+  user_updated: string | null
+}
+interface DocGroup {
+  page: DocPage
+  date_created: string | null
+  date_updated: string | null
+  group_slug: string | null
+  id: string
+  sort: number | null
+  status: string
+  title: string
+  user_created: string | null
+  user_updated: string | null
+}
+interface DocBlock {
+  block_subheading: string
+  block_content: string
+  codeblock_filename?: string
+  codeblock?: string | null
+}
+interface DocGroupItem {
+  id: string
+  status: string
+  sort: string | null
+  user_created: string
+  date_created: string
+  user_updated: string
+  date_updated: string
+  title: string
+  anchor_slug: string
+  block: DocBlock[] | null
+  group: DocGroup
+  group_codeblocks: boolean
+}
+interface DocTabsProps {
+  docGroup: DocGroupItem[]
+  documentationData: DocGroupItem[]
+}
+
+const response = await GET()
+const data = await response.json()
+
+const { documentationData } = data as DocTabsProps
+---
+
+<div
+  class='fixed bg-[var(--gray1)] border-r top-[96px] h-[calc(100%_-_128px)] left-[32px] px-0 pb-5 border rounded-2xl w-auto'
+>
+  <div class='prodkt-docs-aside'>
+    <DocTabs client:only='react' docGroup={documentationData} />
+  </div>
+</div>
+
+<style lang='scss'>
+  .prodkt-docs-aside {
+    &:has(.border-b):last-of-type {
+      @apply border-b-0 border-b-transparent rounded-b-none;
+    }
+    @apply sticky top-[80px] bg-[var(--grayA1)] overflow-hidden  w-[327px] rounded-xl p-0;
+    ol {
+      @apply py-1;
+      li {
+        a {
+          @apply w-full px-6 py-2 text-[var(--gray9)] hover:text-[var(--gray12)];
+        }
+      }
+    }
+  }
+
+  .prodkt-docs-aside *[data-state='open'] > button {
+    @apply bg-black !important;
+  }
+</style>

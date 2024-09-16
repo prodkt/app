@@ -1,0 +1,52 @@
+---
+import type { Database } from '@/database.types'
+
+import { Card } from '@prodkt/ui/prodkt-components/card'
+
+import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
+
+import PageHeader from '../../components/page-header.astro'
+import { GET } from './index.json'
+
+type Project = Database['public']['Tables']['projects']['Row']
+
+interface ProjectData {
+  projectSlug: string
+  projectData: Project[]
+}
+
+const response = await GET()
+const data = (await response.json()) as ProjectData
+---
+
+<Layout>
+  <PageHeader
+    text='Projects'
+    bullet1='Design'
+    bullet2='Previous works'
+    bullet3='Visuals'
+    bullet4='Concepts'
+  />
+  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
+    {
+      data ? (
+        data.projectData.map((item: any) => (
+          <Card
+            className='col-span-1 h-full'
+            key={item.id}
+            alt={item.title}
+            link={`/projects/${item.slug}`}
+            image={item.primary_image.filename_disk}
+            title={item.title}
+            excerpt={item.excerpt}
+            date={formatDate(item.date_created)}
+            buttonText='View project'
+          />
+        ))
+      ) : (
+        <p>Loading...</p>
+      )
+    }
+  </div>
+</Layout>

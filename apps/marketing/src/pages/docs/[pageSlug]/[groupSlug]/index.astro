@@ -1,0 +1,98 @@
+---
+import type { Database, Json } from '@/database.types'
+
+import { Image } from 'astro:assets'
+
+import Circuit from '@prodkt/assets/backgrounds/circuit.svg'
+import { BlogPost } from '@prodkt/ui/prodkt-components/blog-post'
+
+import DocsAside from '@/components/docs-aside.astro'
+import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
+
+import PageHeader from '../../../../components/page-header.astro'
+import { GET } from './index.json'
+
+interface GroupDataItem {
+  anchor_slug: string | null
+  // block: Json | null
+  block?: Block[]
+  block_content: Json | null
+  date_created: string | null
+  date_updated: string | null
+  group: string | null
+  group_codeblocks: boolean | null
+  id: string
+  sort: number | null
+  status: string
+  title: string | undefined
+  user_created: string | null
+  user_updated: string | null
+}
+
+type GroupData = GroupDataItem[]
+
+type Documentation = Database['public']['Tables']['documentation']['Row'] & {
+  groupData: GroupData // Just GroupData, not GroupData[]
+}
+// Define the types
+interface Block {
+  block_content: string
+}
+
+const response = await GET(Astro)
+const data = (await response.json()) as Documentation
+console.log(data)
+
+const { groupData } = data
+
+// const DocTitle = groupData[0]?.title // Safely access the first element
+// console.log(DocTitle)
+---
+
+<Layout>
+  <div class='relative top-0 flex flex-col items-center justify-start h-auto'>
+    <PageHeader
+      minimal
+      text='Docs'
+      bullet1=''
+      bullet2=''
+      bullet3=''
+      bullet4=''
+    />
+
+    <BlogPost
+      title={groupData[0]?.title as string}
+      previousText='Back'
+      size='noTopPadding'
+      hideAside
+      backLink='/blog'
+      date={formatDate(groupData[0]?.date_created as string | null)}
+      alt={groupData[0]?.title as string}
+      hideToc
+      image={`42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
+      client:only='react'
+    >
+      {
+        groupData.map((item, index) => (
+          <Fragment key={index}>
+            {item.block?.map((block, contentIndex) => (
+              <Fragment key={contentIndex} set:html={block.block_content} />
+            ))}
+          </Fragment>
+        ))
+      }
+      <!-- {
+        groupData.map((item, index) => (
+          <Fragment key={index} set:html={item?.block_content} />
+        ))
+      } -->
+    </BlogPost>
+    <DocsAside />
+    <Image
+      src={Circuit}
+      class='absolute size-full max-w-full mix-blend-color-dodge left-0 top-0 right-0 z-[-1]'
+      alt=''
+    />
+  </div>
+</Layout>

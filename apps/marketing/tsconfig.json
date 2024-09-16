@@ -1,0 +1,10 @@
+{
+  "extends": ["astro/tsconfigs/strictest", "@prodkt/tsconfig/react.json"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/supabase/*": ["src/supabase/*"]
+    }
+  }
+}

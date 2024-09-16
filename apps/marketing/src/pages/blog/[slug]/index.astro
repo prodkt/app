@@ -1,0 +1,87 @@
+---
+import { load } from 'cheerio'
+
+import { BlogPost } from '@prodkt/ui/prodkt-components/blog-post'
+
+import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
+
+import { GET } from './index.json'
+
+type ContentBlock = string | Buffer
+
+interface TocItem {
+  href: string | undefined
+  text: string | undefined
+}
+interface filename_disk {
+  image?: string
+  filename_disk: string
+}
+interface BlogPostProps {
+  title: string
+  'client:only'?: string
+  previousText: string
+  backLink: string
+  date: string
+  date_created: string
+  updated?: string
+  filename_disk: filename_disk
+  image?: null | filename_disk
+  alt?: string
+  hideToc?: boolean
+  toc?: TocItem[]
+  asideText?: string
+  children: React.ReactNode
+  size: 'default' | 'noTopPadding' | null | undefined
+  variant?: 'default' | null
+  className?: string
+  content_block: ContentBlock
+}
+
+interface BlogPostProps {
+  blogData: BlogPostProps[]
+}
+
+const response = await GET(Astro)
+const data = (await response.json()) as BlogPostProps
+
+const blogTitle = data.blogData[0]?.title as string
+const blogImage = data.blogData[0]?.image?.filename_disk
+const blogCreated = data.blogData[0]?.date_created as string
+const blogAlt = data.blogData[0]?.title as string
+const blogContent = data.blogData[0]?.content_block
+
+const contentBlock = data.blogData[0]?.content_block
+
+// Load the content block into cheerio
+// @ts-ignore
+const $ = load(contentBlock)
+
+// Extract <a> tags with href attributes
+const toc = $('a[href]')
+  .map((_i, el) => ({
+    href: $(el).attr('href'),
+    text: $(el).text(),
+  }))
+  .get()
+// console.log(toc)
+---
+
+<Layout>
+  <BlogPost
+    size='default'
+    client:only='react'
+    size='default'
+    title={blogTitle}
+    previousText='Back to blog'
+    backLink='/blog'
+    date={formatDate(blogCreated)}
+    updated={''}
+    image={blogImage as string}
+    alt={blogAlt}
+    toc={toc}
+  >
+    <Fragment set:html={blogContent} />
+  </BlogPost>
+</Layout>

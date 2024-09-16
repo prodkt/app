@@ -1,0 +1,55 @@
+---
+import type { Database } from '@/database.types'
+
+import { Card } from '@prodkt/ui/prodkt-components/card'
+
+import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
+
+import PageHeader from '../../components/page-header.astro'
+import { GET } from './index.json'
+
+type Work = Database['public']['Tables']['work']['Row']
+type Project = Database['public']['Tables']['projects']['Row']
+
+interface WorkData {
+  projectSlug: string
+  workSlug: string
+  workData: Work[]
+  projectData: Project[]
+}
+
+const response = await GET()
+const data = (await response.json()) as WorkData
+---
+
+<Layout>
+  <PageHeader
+    text='Showcase'
+    bullet1='Design'
+    bullet2='Previous works'
+    bullet3='Visuals'
+    bullet4='Concepts'
+  />
+  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
+    {
+      data ? (
+        data.workData.map((item: any) => (
+          <Card
+            className='col-span-1 h-full'
+            key={item.id}
+            alt={item.title}
+            link={`/work/${item.project.slug}/${item.slug}`}
+            image={item.primary_image.filename_disk}
+            title={item.title}
+            excerpt={item.excerpt}
+            date={formatDate(item.date_created)}
+            buttonText='View work'
+          />
+        ))
+      ) : (
+        <p>Loading...</p>
+      )
+    }
+  </div>
+</Layout>

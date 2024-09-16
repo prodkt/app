@@ -1,0 +1,137 @@
+---
+import type { Database } from '@/database.types'
+import type { CSSProperties } from 'react'
+
+import { type XYPosition } from '@xyflow/react'
+
+import { Flow } from '@prodkt/ui/prodkt-components/flow-board'
+
+import Layout from '@/layouts/PublicLayout.astro'
+
+import { GET } from './index.json'
+
+// export type FlowNodeTypes = Database['public']['Tables']['flow_nodes']['Row']
+interface DataType {
+  data: FlowNodeTypes & Record<string, unknown>
+  subline: string
+  icon: string | null
+  title: string | null
+  image: string
+}
+export interface FlowNodeTypes {
+  data: DataType
+  position: XYPosition
+  connectable: boolean
+  date_updated: string | null
+  deletable: boolean
+  draggable: boolean
+  icon: string | null
+  id: string
+  image: string | null
+  posx: number | null
+  posy: number | null
+  selectable: boolean
+  subline: DataType['subline']
+  title: string | null
+  type: string
+  user_updated: string | null
+  style?: CSSProperties
+  className?: string
+  resizing?: boolean
+  focusable?: boolean
+}
+
+type FlowNodes = Database['public']['Tables']['flows']['Row']
+type FlowEdges = Database['public']['Tables']['flows_flow_edges']['Row'] & {
+  animated: boolean
+  selectable: boolean
+  deletable: boolean
+  label: string
+  focusable: boolean
+}
+
+interface FlowData {
+  FlowTitle: string
+  slug: string
+  FlowNodes: FlowNodes[]
+  FlowEdges: FlowEdges[]
+}
+const response = await GET(Astro)
+const data = (await response.json()) as FlowData
+
+function transformNodes(data: FlowNodeTypes[]) {
+  return data.map((node) => ({
+    id: node.id,
+    position: { x: node.posx, y: node.posy },
+    data: {
+      title: node.title,
+      subline: node.subline,
+      // @ts-ignore
+      image: node.image?.filename_disk,
+    },
+    type: node.type?.replace('Node', ''),
+    selectable: node.selectable,
+    draggable: node.draggable,
+    deletable: node.deletable,
+    connectable: node.connectable,
+    // type: node.type?.replace('Node', ''),
+  }))
+}
+
+function transformEdges(data: FlowEdges[]) {
+  return data.map((edge) => ({
+    id: edge.id,
+    // @ts-ignore
+    source: edge.source?.id,
+    // @ts-ignore
+    target: edge.target?.id,
+    label: edge.label,
+    animated: edge.animated,
+    selectable: edge.selectable,
+    deletable: edge.deletable,
+    focusable: edge.focusable,
+    // markerEnd: {
+    // 	type: edge.markerEnd?.type || 'default', // Adjust this as needed
+    // 	width: edge.markerEnd?.width || undefined,
+    // 	height: edge.markerEnd?.height || undefined,
+    // 	color: edge.markerEnd?.color || undefined,
+    // },
+    // markerStart: edge.markerStart
+    // 	? {
+    // 			type: edge.markerStart.type,
+    // 			width: edge.markerStart.width,
+    // 			height: edge.markerStart.height,
+    // 			color: edge.markerStart.color,
+    // 			orient: edge.markerStart.orient,
+    // 	  }
+    // 	: undefined,
+    // style: edge.style || undefined,
+  }))
+}
+
+// @ts-ignore
+const transformedNodes: any = transformNodes(data.FlowNodes)
+const transformedEdges: any = transformEdges(data.FlowEdges)
+
+const { title = data.FlowTitle } = Astro.props
+---
+
+<Layout>
+  <!-- {
+    data ? (
+      data.FlowNodes.map((item: any) => <h2>{item.title}</h2>)
+    ) : (
+      <p>Loading...</p>
+    )
+  } -->
+
+  <!-- <NodeAsHandleFlow client:load /> -->
+  <div class='w-full h-full'>
+    <Flow
+      data={transformedNodes}
+      initialEdges={transformedEdges}
+      flowTitle={title}
+      client:only='react'
+    />
+  </div>
+</Layout>

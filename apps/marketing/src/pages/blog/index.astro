@@ -1,0 +1,67 @@
+---
+import type { Database } from '@/database.types'
+
+import { Card } from '@prodkt/ui/prodkt-components/card'
+
+import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
+
+import PageHeader from '../../components/page-header.astro'
+import { GET } from './index.json'
+
+type Articles = Database['public']['Tables']['articles']['Row']
+type Authors = Database['public']['Tables']['authors']['Row']
+type Files = Database['public']['Tables']['directus_files']['Row']
+
+interface BlogData {
+  blogData: {
+    id: Articles['id']
+    status: Articles['status']
+    sort: Articles['sort']
+    date_created: Articles['date_created']
+    date_updated: Articles['date_updated']
+    title: Articles['title']
+    excerpt: Articles['excerpt']
+    slug: Articles['slug']
+    author?:
+      | (Pick<Authors, 'title' | 'last_name' | 'first_name'> & {
+          avatar: Pick<Files, 'filename_disk'> | null
+        })
+      | null
+    image: Pick<Files, 'filename_disk'> | null
+  }[]
+}
+
+const response = await GET()
+const data = (await response.json()) as BlogData
+---
+
+<Layout>
+  <PageHeader
+    text='Articles'
+    bullet1='About me'
+    bullet2='About Prodkt'
+    bullet3='Insights'
+    bullet4='and more...'
+  />
+  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
+    {
+      data ? (
+        data.blogData.map((item: any) => (
+          <Card
+            className='col-span-1 h-full'
+            key={item.id}
+            alt={item.title}
+            link={`/blog/${item.slug}`}
+            image={item.image.filename_disk}
+            title={item.title}
+            excerpt={item.excerpt}
+            date={formatDate(item.date_created)}
+          />
+        ))
+      ) : (
+        <p>Loading...</p>
+      )
+    }
+  </div>
+</Layout>

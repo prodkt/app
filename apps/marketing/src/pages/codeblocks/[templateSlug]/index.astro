@@ -1,0 +1,45 @@
+---
+import { Card } from '@prodkt/ui/prodkt-components/card'
+
+import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
+
+import { GET } from './index.json'
+
+type GroupedData = {
+  id: string
+  title: string
+  slug: string
+  card_image: { filename_disk: string }
+  date_created: string
+  // Add other properties as necessary
+}
+
+type DataResponse = {
+  groupedData: GroupedData[]
+}
+const response = await GET()
+const data = (await response.json()) as DataResponse
+---
+
+<Layout>
+  {
+    data ? (
+      data.groupedData.map((item: any) => (
+        <Card
+          className='col-span-1 h-full'
+          key={item.id}
+          alt={item.title}
+          link={`/codeblocks/${item.themes[0].slug}/${item.slug}`}
+          image={item.card_image.filename_disk}
+          title={item.title}
+          excerpt={item.title}
+          date={formatDate(item.date_created)}
+          buttonText='View flow'
+        />
+      ))
+    ) : (
+      <p>Loading...</p>
+    )
+  }
+</Layout>

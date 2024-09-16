@@ -1,0 +1,42 @@
+---
+import type { Database } from '@/database.types'
+
+import { Card } from '@prodkt/ui/prodkt-components/card'
+
+import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
+
+import { GET } from './index.json'
+
+type FlowNodes = Database['public']['Tables']['flows']['Row']
+
+interface FlowData {
+  flowData: FlowNodes[]
+}
+const response = await GET()
+const data = (await response.json()) as FlowData
+---
+
+<Layout>
+  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
+    {
+      data ? (
+        data.flowData.map((item: any) => (
+          <Card
+            className='col-span-1 h-full'
+            key={item.id}
+            alt={item.title}
+            link={`/flows/${item.slug}`}
+            image={item.image.filename_disk}
+            title={item.title}
+            excerpt={item.excerpt}
+            date={formatDate(item.date_created)}
+            buttonText='View flow'
+          />
+        ))
+      ) : (
+        <p>Loading...</p>
+      )
+    }
+  </div>
+</Layout>
