@@ -1,0 +1,113 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalPassThroughEnv": [
+    "VERCEL_URL",
+    "NODE_ENV",
+    "CI",
+    "SKIP_ENV_VALIDATION",
+    "PORT",
+    "PUBLIC_SUPABASE_URL",
+    "PUBLIC_SUPABASE_ANON_KEY",
+    "PUBLIC_POSTHOG_KEY",
+    "PUBLIC_POSTHOG_HOST",
+    "PUBLIC_SENTRY_DSN",
+    "SENTRY_ORG",
+    "SENTRY_PROJECT",
+    "SENTRY_AUTH_TOKEN"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!CHANGELOG.md",
+        "!eslint.config.js",
+        "!playwright.config.ts",
+        "!e2e/**",
+        "!.env.example",
+        ".env.production.local",
+        ".env.local",
+        ".env.production",
+        ".env"
+      ],
+      "outputs": ["dist/**"]
+    },
+    "test:e2e": {
+      "dependsOn": ["^build", "build"],
+      "outputs": ["playwright-report/**", "test-results/**"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!CHANGELOG.md",
+        "!eslint.config.js",
+        "!.env.example",
+        ".env.test.local",
+        ".env.local",
+        ".env.test",
+        ".env"
+      ]
+    },
+    "lint": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!CHANGELOG.md"]
+    },
+    "//#lint": {
+      "inputs": [".commitlintrc.ts", "*.ts", "*.js", "tsconfig.json"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!CHANGELOG.md"],
+      "outputs": ["*.tsbuildinfo"]
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true,
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env.development.local",
+        ".env.local",
+        ".env.development",
+        ".env"
+      ]
+    },
+    "start": {
+      "dependsOn": ["^build", "build"],
+      "cache": false,
+      "persistent": true,
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env.production.local",
+        ".env.local",
+        ".env.production",
+        ".env"
+      ]
+    },
+    "db:migrate": {
+      "dependsOn": ["db:generate"],
+      "passThroughEnv": ["DATABASE_URL"],
+      "inputs": ["drizzle/**"]
+    },
+    "db:generate": {
+      "passThroughEnv": ["DATABASE_URL"],
+      "inputs": ["src/schema/**", "drizzle.config.ts"],
+      "outputs": ["drizzle/**"]
+    },
+    "db:studio": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:check": { "cache": false },
+    "db:migrate:drop": { "cache": false },
+    "db:pull": { "cache": false },
+    "db:push": { "cache": false },
+    "db:up": { "cache": false },
+    "clean": { "cache": false },
+    "//#lint:spell": {
+      "outputs": [".cspellcache"]
+    },
+    "//#lint:md": {
+      "inputs": ["**/*.md"]
+    },
+    "sync": { "cache": false }
+  }
+}

@@ -1,0 +1,24 @@
+name: 'Setup'
+description: 'Common setup steps for Actions'
+
+runs:
+  using: composite
+  steps:
+    - uses: oven-sh/setup-bun@v1
+      name: Install bun
+
+    - uses: actions/cache@v4
+      name: Setup bun cache
+      with:
+        path: ~/.bun/install/cache
+        key: ${{ runner.os }}-${{ matrix.bun }}-bun-${{ hashFiles('**/bun.lockb') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ matrix.bun }}-bun-
+
+    - name: Install dependencies
+      shell: bash
+      run: bun install
+
+    - name: Install Playwright Browsers
+      shell: bash
+      run: bun playwright install --with-deps
