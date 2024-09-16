@@ -1,0 +1,35 @@
+import { ExternalLinkIcon } from '@radix-ui/react-icons'
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import { RadixPrimitiveDocsButton } from '../../storybook-utils/primitive-docs-button'
+
+import * as SwitchStories from './switch.stories'
+
+<Meta of={SwitchStories} />
+
+<RadixPrimitiveDocsButton name='switch' />
+
+# Switch
+
+A control that allows the user to toggle between checked and not checked.
+
+## Preview
+
+<Canvas of={SwitchStories.Default} />
+
+<Controls />
+
+## Usage
+
+export const importCode = `import { Switch } from "@prodkt/ui/switch";`
+
+export const usageCode = `<Switch />`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+## Examples
+
+### Default
+
+<Canvas of={SwitchStories.Default} />
