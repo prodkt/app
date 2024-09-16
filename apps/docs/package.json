@@ -1,0 +1,20 @@
+{
+  "name": "@prodkt/docs",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Documentation website for Prodkt using Mintlify",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "type": "module",
+  "scripts": {
+    "dev": "mintlify dev --port=3002"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "mintlify": "^4.0.185"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

@@ -1,0 +1,220 @@
+---
+title: Installation
+icon: 'bars-progress'
+description: 'A guide on how to install and run Prodkt.'
+---
+
+## Introduction
+
+Prodkt is setup as a monorepo, which comes with three applications and many packages, here is the codebase structure:
+
+```bash
+apps
+├── docs # Documentation website with Mintlify
+├── marketing # Marketing website with Astro
+└── web # Web application with Next.js
+packages
+  ├── assets # Shared assets library for example, images, fonts, etc.
+  ├── auth # Auth package to handle authentication.
+  └── config # Config directory hosts tools config packages.
+    ├── eslint # ESLint config package.
+    ├── storybook # Storybook config package.
+    ├── tailwind # Tailwind preset package.
+    ├── tsconfig # TSConfig presets library to configure TypeScript.
+    └── vite # Shared vite config.
+  ├── core # Empty package for business logic.
+  ├── db # Database handling package with Drizzle ORM.
+  ├── env # Environment variables validation using t3-env.
+  ├── ui # Shadcn UI library with Storybook.
+  └── utils # misc utilities.
+```
+
+We will go more in detail about every aspect of prodkt later on, but this should give you a good idea of what to expect.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- You have [`Bun`](https://bun.sh) installed on your machine.
+
+That is actually pretty much all you need!
+
+## Installation
+
+With all that being said, we are ready to start using Prodkt! We firstly need to clone it down to your machine and then we can install dependencies, configure environment variables and run it!
+
+<AccordionGroup>
+  <Accordion title="1. Clone the repository" icon="github">
+    There are three ways to get Prodkt onto your machine, it all comes down to your choice.
+
+    1. You can use degit to download the code directly and remove the git history.
+    ```bash
+    bunx degit prodkt/prodkt
+    ```
+
+    2. You can [fork](https://github.com/prodkt/prodkt/fork) Prodkt and then clone down your version of it.
+    ```bash
+    # After forking the repository
+    git clone --depth 1 https://github.com/<your-username>/prodkt.git <your-project-name>
+    ```
+
+    3. You can clone the repository directly.
+    ```bash
+    # Clone the repository
+    git clone --depth 1 https://github.com/prodkt/prodkt.git <your-project-name>
+    ```
+
+  </Accordion>
+
+  <Accordion title="2. Install dependencies" icon="cube">
+    The next step is to install all of the required dependencies for Prodkt, we use `bun` as the package manager.
+
+    ```bash
+    # Navigate to the project directory
+    cd <your-project-name>
+
+    # Install dependencies
+    bun install
+    ```
+
+  </Accordion>
+</AccordionGroup>
+
+### Configuring environment variables
+
+You will need to set-up some environment variables in a `.env.local` file in the `apps/web` directory. We provide an example file in `apps/web/.env.example` that you can copy over and input the values.
+
+```bash
+# Copy the .env.example file into a .env.local file.
+cp ./apps/web/.env.example ./apps/web/.env.local
+
+# You will also need to symlink that file into the packages/db directory as a `.env` file.
+cd packages/db && ln -s ../../apps/web/.env.local .env
+```
+
+Here is how you can obtain each of the required values:
+
+#### Database
+
+The database that Prodkt uses is [Neon](https://neon.tech) PostgreSQL. You should create a free account and input the database url given to you on the dashboard to be the value of the `DATABASE_URL` environment variable.
+
+Make sure that the `DATABASE_URL` ends with `?sslmode=require`.
+
+#### Uploadthing
+
+[Uploadthing](https://uploadthing.com) is the service of choice in Prodkt for file uploads, you should create an account and input the api keys into the `.env.local` File.
+
+#### Unkey (optional)
+
+[Unkey](https://unkey.dev) is the service of choice in Prodkt for rate limiting, it is however optional as that if the `UNKEY_ROOT_KEY` or `UNKEY_NAMESPACE` variables are not supplied, no rate limiting is applied.
+
+To obtain this key, head over to your unkey dashboard and create a new ratelimit namespace, then in your settings, create a new root key, that will be the value of your environment variable.
+
+As for the namespace that you have created, you will need to put that as the value of the `UNKEY_NAMESPACE` environment variable.
+
+#### Posthog (optional)
+
+[Posthog](https://posthog.com) is the service of choice in Prodkt for analysis, it is however optional as that if the `NEXT_PUBLIC_POSTHOG_HOST` or `NEXT_PUBLIC_POSTHOG_KEY` variables are not supplied for the web app or `PUBLIC_POSTHOG_KEY` and `PUBLIC_POSTHOG_HOST` for the marketing app, no analysis is applied.
+
+To obtain this key, head over to your posthog dashboard, then in your settings, find `Project API Key`, that will be the value of the key environment variable.
+
+As for the host use `app.posthog.com` or `eu.posthog.com` depending on your region.
+
+#### OAuth
+
+Prodkt currently ships with two authentication providers, Google and Github. You will need to create an OAuth application on the respective platforms and input the values into the `.env.local` file.
+
+<Note>
+  Based on the environment variables set, authentication will be provided. For
+  example, setting `AUTH_GITHUB_ID` and `AUTH_GITHUB_SECRET` will make it so
+  that Github OAuth is then activated on the web application. The same is true
+  for Google OAuth.
+</Note>
+
+<AccordionGroup>
+  <Accordion title='Configuring Github OAuth' icon='github'>
+    <ol>
+      <li>Go to your Github Settings.</li>
+      <li>Go to Developer Settings.</li>
+      <li>Go to OAuth Apps.</li>
+      <li>Click on New OAuth App.</li>
+      <li>
+        Fill in the details, the homepage url should be `http://localhost:3000`
+        and the authorization callback url should be
+        `http://localhost:3000/login/github/callback`.
+      </li>
+      <li>Click on Register Application.</li>
+      <li>
+        Copy the Client ID into the `AUTH_GITHUB_ID` environment variable.
+      </li>
+      <li>
+        Click on Generate a new client secret button and copy the client secret
+        into the `AUTH_GITHUB_SECRET` environment variable.
+      </li>
+    </ol>
+  </Accordion>
+  <Accordion title='Configuring Google OAuth' icon='google'>
+    <ol>
+      <li>Go to the Google Cloud Console.</li>
+      <li>Create a new project.</li>
+      <li>Configure consent screen.</li>
+      <li>Create OAuth client ID.</li>
+      <li>
+        Fill in the details, add `http://localhost:3000` in the list of
+        Authorized JavaScript origins and
+        `http://localhost:3000/login/google/callback` in the list of Authorized
+        redirect URIs.
+      </li>
+      <li>
+        Copy the Client ID into the `AUTH_GOOGLE_ID` environment variable.
+      </li>
+      <li>
+        Copy the Client Secret into the `AUTH_GOOGLE_SECRET` environment
+        variable.
+      </li>
+      <li>
+        For the `AUTH_SECRET` environment variable, you can put any random
+        string.
+      </li>
+    </ol>
+  </Accordion>
+</AccordionGroup>
+
+### Reset changelog and versions
+
+When you first clone the repository, you should reset the changelog and project metadata to start fresh. You can do so by running the following commands:
+
+```bash
+# Reset changelog - this will remove all the changelog.md files in the packages
+bun reset:changelog
+
+# Update workspace - this will update the workspace with the new metadata
+bun update:workspace --namespace "@myapp" --ir
+```
+
+The `update:workspace` command has the following options:
+
+```bash
+-n, --namespace # The namespace of the project (e.g. -n "@myapp")
+-v, --ver # The version of the project (e.g. -v 1.0.0)
+-a, --author # The author of the project (e.g. -a "Ahmed Prodkt")
+-l, --license # The license of the project (e.g. -l "MIT")
+--ir, --include-root # Include the root package (e.g. --ir) - boolean flag - no value needs to be passed
+-e, --exclude # Exclude packages (e.g. -e @myapp/core @myapp/db)
+```
+
+> Note: If you want to pass special characters or spaces in the author flag, you should wrap the value in two sets of quotes `'""'` e.g. `'"Bryan Funk - https://prodkt.cloud"'`.
+
+### Running the project
+
+Now that you have set up the environment variables, you can run the project!
+
+```bash
+bun turbo dev
+```
+
+This command will apply the necessary database migrations and start the development tasks on all of the apps & packages.
+
+You should be able to access the web app on `http://localhost:3000`, the marketing website on `http://localhost:4321` and the documentation website on `http://localhost:3002`.
+
+For more info about the commands available to you, you can check out the [Commands](/commands) page.
