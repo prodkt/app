@@ -1,0 +1,34 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as TeamSwitcherStories from './team-switcher.stories'
+
+<Meta of={TeamSwitcherStories} />
+
+# Team Switcher
+
+A component for switching between Teams inside a Workspace.
+
+## Preview
+
+<Canvas of={TeamSwitcherStories.Default} />
+
+<Controls />
+
+## Features
+
+- Documentation to follow
+
+## Usage
+
+export const importCode = `import { TeamSwitcher } from '@prodkt/ui/prodkt-components/team-switcher';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<TeamSwitcher />`
+
+<Canvas of={TeamSwitcherStories.Default} />
+
+## Header
+
+<Canvas of={TeamSwitcherStories.Header} />

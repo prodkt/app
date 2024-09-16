@@ -1,0 +1,31 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as SwatchStories from './color-swatch.stories'
+
+<Meta of={SwatchStories} />
+
+# Logo
+
+An SVG element representing the Prodkt brand.
+
+## Preview
+
+<Canvas of={SwatchStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { ColorSwatch } from '@prodkt/ui/color-swatch';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<ColorSwatch />`
+
+<Canvas of={SwatchStories.Default} />
+<Canvas of={SwatchStories.Color1} />

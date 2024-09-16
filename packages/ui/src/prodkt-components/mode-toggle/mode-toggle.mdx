@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as ModeToggleStories from './mode-toggle.stories'
+
+<Meta of={ModeToggleStories} />
+
+# Logo
+
+An SVG element representing the Prodkt brand.
+
+## Preview
+
+<Canvas of={ModeToggleStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { ModeToggle } from '@prodkt/ui/mode-toggle';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<ModeToggle />`
+
+<Canvas of={ModeToggleStories.Default} />

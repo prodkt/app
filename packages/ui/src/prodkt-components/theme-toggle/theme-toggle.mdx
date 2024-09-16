@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as ThemeToggleStories from './theme-toggle.stories'
+
+<Meta of={ThemeToggleStories} />
+
+# Logo
+
+An SVG element representing the Prodkt brand.
+
+## Preview
+
+<Canvas of={ThemeToggleStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { ThemeToggle } from '@prodkt/ui/theme-toggle';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<ThemeToggle />`
+
+<Canvas of={ThemeToggleStories.Default} />

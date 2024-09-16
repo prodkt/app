@@ -1,0 +1,32 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as ProdktLogoStories from './prodkt.stories'
+
+<Meta of={ProdktLogoStories} />
+
+# Logo
+
+An SVG element representing the Prodkt brand.
+
+## Preview
+
+<Canvas of={ProdktLogoStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { ProdktLogo, ProdktLogomark, ProdktLogotype } from '@prodkt/ui/prodkt';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<ProdktLogo />`
+
+<Canvas of={ProdktLogoStories.Default} />
+<Canvas of={ProdktLogoStories.Mark} />
+<Canvas of={ProdktLogoStories.Type} />

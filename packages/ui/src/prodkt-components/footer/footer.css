@@ -1,0 +1,6 @@
+.footer-bg {
+  background: var(
+    --gradient--alphaLinear-2,
+    linear-gradient(180deg, var(--gray3) -46.44%, var(--gray2) 207.35%)
+  );
+}

@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as DesignSystemStories from './design-system.stories'
+
+<Meta of={DesignSystemStories} />
+
+# Logo
+
+An SVG element representing a technology used inside the Prodkt stack.
+
+## Preview
+
+<Canvas of={DesignSystemStories.ComponentLibraryIcon} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { ComponentLibrary, DesignLanguage, DesignLibraries, Documentation, Governance, Sandboxes } from '@prodkt/ui/design-system';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<ComponentLibrary />`
+
+<Canvas of={DesignSystemStories.ComponentLibraryIcon} />
+<Canvas of={DesignSystemStories.DesignLanguageIcon} />
+<Canvas of={DesignSystemStories.DesignLibrariesIcon} />
+<Canvas of={DesignSystemStories.DocumentationIcon} />
+<Canvas of={DesignSystemStories.GovernanceIcon} />
+<Canvas of={DesignSystemStories.SandboxesIcon} />

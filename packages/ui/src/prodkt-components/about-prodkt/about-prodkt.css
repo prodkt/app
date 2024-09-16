@@ -1,0 +1,16 @@
+.about-prodkt-heading {
+  background: linear-gradient(
+    180deg,
+    var(--grayA12) -0.14%,
+    var(--gray12) 57.35%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    /* 0px 10.127px 104.764px var(--grayA1),
+    0px 146.982px 87.564px var(--blueA1),
+    0px 65.673px 65.673px var(--gray1),
+    0px 15.636px 95.964px var(--gray1), */ 0px
+    4px 140.2px var(--iris1);
+}

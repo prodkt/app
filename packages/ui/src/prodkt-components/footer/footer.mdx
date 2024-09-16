@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as FooterStories from './footer.stories'
+
+<Meta of={FooterStories} />
+
+# Logo
+
+An SVG element representing the Prodkt brand.
+
+## Preview
+
+<Canvas of={FooterStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { Menu, MenuItem, FooterLogo, Footer } from '@prodkt/ui/footer';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<MenuItem />`
+
+<Canvas of={FooterStories.Default} />

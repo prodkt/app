@@ -1,0 +1,44 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as NavigationStories from './navigation.stories'
+
+<Meta of={NavigationStories} />
+
+# Logo
+
+An SVG element representing a technology used inside the Prodkt stack.
+
+## Preview
+
+<Canvas of={NavigationStories.CodeblocksIcon} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { Blog, Home, Codeblocks, Data, Docs, Handoff, Repo, Changelogs, Concepts, Flows, Design, Work, Roadmaps, Milestones } from '@prodkt/ui/navigation';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<Codeblocks />`
+
+<Canvas of={NavigationStories.CodeblocksIcon} />
+<Canvas of={NavigationStories.DataIcon} />
+<Canvas of={NavigationStories.DocsIcon} />
+<Canvas of={NavigationStories.HandoffIcon} />
+<Canvas of={NavigationStories.RepoIcon} />
+<Canvas of={NavigationStories.ChangelogsIcon} />
+<Canvas of={NavigationStories.ConceptsIcon} />
+<Canvas of={NavigationStories.FlowsIcon} />
+<Canvas of={NavigationStories.DesignIcon} />
+<Canvas of={NavigationStories.WorkIcon} />
+<Canvas of={NavigationStories.RoadmapsIcon} />
+<Canvas of={NavigationStories.FileVaultIcon} />
+<Canvas of={NavigationStories.MilestonesIcon} />
+<Canvas of={NavigationStories.HomeIcon} />
+<Canvas of={NavigationStories.BlogIcon} />

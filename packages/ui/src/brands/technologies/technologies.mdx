@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as TechnologyLogoStories from './technologies.stories'
+
+<Meta of={TechnologyLogoStories} />
+
+# Logo
+
+An SVG element representing a technology used inside the Prodkt stack.
+
+## Preview
+
+<Canvas of={TechnologyLogoStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { VercelLogo } from '@prodkt/ui/technologies';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<VercelLogo />`
+
+<Canvas of={TechnologyLogoStories.Default} />

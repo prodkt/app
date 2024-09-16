@@ -1,0 +1,42 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as SocialLogoStories from './socials.stories'
+
+<Meta of={SocialLogoStories} />
+
+# Logo
+
+An SVG element representing a technology used inside the Prodkt stack.
+
+## Preview
+
+<Canvas of={SocialLogoStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { BehanceLogo, DiscordLogo, DockerLogo, DribbbleLogo, FigmaLogo, YouTubeLogo, XLogo, SlackLogo, InstagramLogo, GitlabLogo, GithubLogo, LinkedinLogo } from '@prodkt/ui/socials';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<BehanceLogo />`
+
+<Canvas of={SocialLogoStories.Default} />
+<Canvas of={SocialLogoStories.Slack} />
+<Canvas of={SocialLogoStories.Linkedin} />
+<Canvas of={SocialLogoStories.Github} />
+<Canvas of={SocialLogoStories.Gitlab} />
+<Canvas of={SocialLogoStories.Instagram} />
+<Canvas of={SocialLogoStories.X} />
+<Canvas of={SocialLogoStories.YouTube} />
+<Canvas of={SocialLogoStories.Behance} />
+<Canvas of={SocialLogoStories.Discord} />
+<Canvas of={SocialLogoStories.Dribbble} />
+<Canvas of={SocialLogoStories.Docker} />
+<Canvas of={SocialLogoStories.Figma} />

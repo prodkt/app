@@ -1,0 +1,34 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as WorkspaceDropdownStories from './workspace-dropdown.stories'
+
+<Meta of={WorkspaceDropdownStories} />
+
+# Workspace Dropdown
+
+A component for navigating to settings in a Workspace.
+
+## Preview
+
+<Canvas of={WorkspaceDropdownStories.Default} />
+
+<Controls />
+
+## Features
+
+- Documentation to follow
+
+## Usage
+
+export const importCode = `import { WorkspaceDropdown } from '@prodkt/ui/prodkt-components/workspace-dropdown';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<WorkspaceDropdown />`
+
+<Canvas of={WorkspaceDropdownStories.Default} />
+
+## Header
+
+<Canvas of={WorkspaceDropdownStories.Header} />

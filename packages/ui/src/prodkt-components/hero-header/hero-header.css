@@ -1,0 +1,14 @@
+.hero-mask {
+  mask-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 1) 23.78%,
+    rgba(255, 255, 255, 0.1) 84.27%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 1) 23.78%,
+    rgba(255, 255, 255, 0.1) 84.27%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}

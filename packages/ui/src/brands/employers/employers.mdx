@@ -1,0 +1,36 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as EmployerLogoStories from './employers.stories'
+
+<Meta of={EmployerLogoStories} />
+
+# Logo
+
+An SVG element representing a technology used inside the Prodkt stack.
+
+## Preview
+
+<Canvas of={EmployerLogoStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { TovutiLogo, LumenLogo, ImpLogo, ImpLogomark, DesignBoiseLogo, DesignBoiseLogomark } from '@prodkt/ui/employers';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<TovutiLogo />`
+
+<Canvas of={EmployerLogoStories.Default} />
+<Canvas of={EmployerLogoStories.Tovuti} />
+<Canvas of={EmployerLogoStories.Lumen} />
+<Canvas of={EmployerLogoStories.Imp} />
+<Canvas of={EmployerLogoStories.ImpMark} />
+<Canvas of={EmployerLogoStories.Designboise} />
+<Canvas of={EmployerLogoStories.DesignboiseMark} />

@@ -1,0 +1,32 @@
+import { Canvas, Controls, Meta, Source } from '@storybook/blocks'
+
+import * as SocialMediaStories from './social-media.stories'
+
+<Meta of={SocialMediaStories} />
+
+# Logo
+
+An SVG element representing the Prodkt brand.
+
+## Preview
+
+<Canvas of={SocialMediaStories.Default} />
+
+<Controls />
+
+## Features
+
+- Full use of SVG properties
+
+## Usage
+
+export const importCode = `import { SocialMedia } from '@prodkt/ui/social-media';`
+
+<Source code={importCode} language='ts' dark />
+<Source code={usageCode} language='tsx' dark />
+
+export const usageCode = `<SocialMedia />`
+
+<Canvas of={SocialMediaStories.Default} />
+<Canvas of={SocialMediaStories.Vert} />
+<Canvas of={SocialMediaStories.Small} />
