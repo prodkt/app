@@ -1,0 +1,13 @@
+{
+  "name": "@prodkt/assets",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Prodkt's assets package",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "files": [
+    "**/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
