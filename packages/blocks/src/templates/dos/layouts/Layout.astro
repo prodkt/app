@@ -1,0 +1,54 @@
+---
+import '@/styles/global.scss'
+
+import { Theme } from '@radix-ui/themes'
+import { ThemeProvider } from 'next-themes'
+---
+
+<!doctype html>
+<html
+  lang='en'
+  class='radix-themes dark-theme'
+  style='color-scheme: dark-theme;'
+  data-is-root-theme='true'
+  data-accent-color='violet'
+  data-gray-color='slate'
+  data-has-background='false'
+  data-panel-background='translucent'
+  data-radius='large'
+  data-scaling='100%'
+>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Prodkt Template</title>
+    <link
+      rel='stylesheet'
+      type='css'
+      href='../assets/fonts/labil/stylesheet.css'
+    />
+    <link rel='stylesheet' type='css' href='../styles/global.scss' />
+  </head>
+  <body
+    class='w-[100dvw] max-w-[100dvw] h-screen max-h-[100dvh] relative overflow-x-hidden overflow-y-hidden scroll-m-0 scroll-p-0 !p-4 m-0'
+  >
+    <ThemeProvider attribute='class' client:only='react'>
+      <Theme
+        !hasBackground
+        asChild
+        accentColor='violet'
+        appearance='dark'
+        panelBackground='translucent'
+        grayColor='slate'
+        radius='large'
+        scaling='100%'
+        client:only='react'
+      >
+        <slot />
+      </Theme>
+    </ThemeProvider>
+  </body>
+</html>

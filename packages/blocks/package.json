@@ -1,0 +1,53 @@
+{
+  "name": "@prodkt/blocks",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Prodkt UI Design System Components Library",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./*": {
+      "default": "./src/component-map.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "astro": "astro",
+    "build:leveln-blocks": "npx tailwindcss -c ./src/templates/unique/tailwind/tailwind.config.mjs -i ./src/templates/unique/tailwind/leveln.css -o ../../apps/marketing/public/codeblocks/leveln/leveln-output.css --watch",
+    "build:temp": "astro check && astro build",
+    "check": "astro check",
+    "dev": "astro dev",
+    "format": "biome format --write ./",
+    "lint:safe": "biome lint --write ./",
+    "preview": "astro preview",
+    "start": "astro dev",
+    "upgrade": "bunx @astrojs/upgrade"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.9.3",
+    "@astrojs/react": "3.6.2",
+    "@astrojs/tailwind": "^5.1.0",
+    "@prodkt/ui": "workspace:*",
+    "astro": "4.15.6",
+    "lucide-react": "^0.441.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sass": "^1.78.0",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "^3.4.10",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@prodkt/tailwind": "workspace:*",
+    "@types/node": "^22.5.5",
+    "@types/react": "^18.3.6",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^9.0.0",
+    "postcss": "^8.4.45",
+    "postcss-import": "^16.1.0"
+  }
+}

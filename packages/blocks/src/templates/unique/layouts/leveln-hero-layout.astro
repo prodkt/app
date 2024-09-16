@@ -1,0 +1,34 @@
+---
+import '@prodkt/tailwind/color'
+---
+
+<html
+  lang='en'
+  class='radix-themes dark-theme relative max-w-[100dvw] overflow-x-hidden overflow-y-hidden bg-[var(--slate12)]'
+  data-is-root-theme='true'
+  data-accent-color='violet'
+  data-gray-color='slate'
+  data-has-background='false'
+  data-panel-background='translucent'
+  data-radius='large'
+  data-scaling='100%'
+>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='stylesheet' href='/codeblocks/leveln/leveln-output.css' />
+    <link
+      href='
+https://cdn.jsdelivr.net/npm/@vetixy/circular-std@1.0.0/dist/index.min.css
+'
+      rel='stylesheet'
+    />
+    <title>Prodkt</title>
+  </head>
+  <body
+    class='customLevelnLayout w-full max-w-[100dvw] h-auto min-h-fit max-h-[100dvh] relative overflow-x-hidden overflow-y-scroll scroll-m-0 scroll-smooth scroll-p-0'
+  >
+    <slot name='codeRender' />
+  </body>
+</html>

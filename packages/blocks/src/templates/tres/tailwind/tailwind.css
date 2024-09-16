@@ -1,0 +1,37 @@
+@config "./tailwind.config.mjs";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-switch-1:checked + div {
+  @apply left-1/2;
+  @apply bg-white;
+}
+
+.custom-checkbox-1:checked + span {
+  @apply bg-orange-500;
+  @apply border-orange-600;
+}
+
+.custom-checkbox-1:checked + span svg {
+  @apply block;
+}
+
+.custom-radio-1:checked + span {
+  @apply bg-orange-50;
+  @apply border-orange-500;
+}
+
+.custom-radio-1:checked + span svg {
+  @apply block;
+}
+
+.custom-inline-radio-1:checked + span {
+  @apply bg-orange-50;
+  @apply border-orange-500;
+}
+
+.custom-inline-radio-1:checked + span svg {
+  @apply block;
+}

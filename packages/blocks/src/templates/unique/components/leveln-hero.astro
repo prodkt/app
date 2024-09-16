@@ -1,0 +1,352 @@
+---
+import '../tailwind/leveln.css'
+
+import { Image } from 'astro:assets'
+
+// import MoveRight from '@/assets/icons/MoveRight'
+import BryanMemoji from '../assets/leveln-hero/bryanFunk_memoji_lg_opt.avif'
+import CamdynnMemoji from '../assets/leveln-hero/camdynn-test-memoji.avif'
+import LevelnMonochrome from '../assets/leveln-hero/leveln_logomark_pink.svg'
+import Background3 from '../assets/leveln-hero/levelnChartLine_fillBlur.svg'
+import Background2 from '../assets/leveln-hero/levelnChartLine_outline.svg'
+import MemojiGirlCelebrate_1 from '../assets/leveln-hero/memoji_girl_celebrate_1.png'
+import MemojiGirlHeartEyes_1 from '../assets/leveln-hero/memoji_girl_heart-eyes_1.png'
+import MemojiGirlHeartEyes_2 from '../assets/leveln-hero/memoji_girl_heart-eyes_2.png'
+import MemojiGirlPonder_1 from '../assets/leveln-hero/memoji_girl_ponder_1.png'
+import MemojiGirlQuiet_1 from '../assets/leveln-hero/memoji_girl_quiet_1.png'
+import MemojiGirlThumbsDown_1 from '../assets/leveln-hero/memoji_girl_thumbs-down_1.png'
+import MemojiGirlThumbsDown_2 from '../assets/leveln-hero/memoji_girl_thumbs-down_2.png'
+import MemojiGirlThumbsUp_1 from '../assets/leveln-hero/memoji_girl_thumbs-up_1.png'
+import MemojiGirlUgh_1 from '../assets/leveln-hero/memoji_girl_ugh_1.png'
+import PulseGreen from '../assets/leveln-hero/pulseCircle-green.svg'
+import PulseRed from '../assets/leveln-hero/pulseCircle-red.svg'
+import Layout from '../layouts/leveln-hero-layout.astro'
+---
+
+<Layout>
+  <main
+    slot='codeRender'
+    class='relative flex flex-col items-center justify-center pt-0 pb-20 overflow-hidden align-middle xl:pb-32'
+  >
+    <Image
+      src={Background2}
+      decoding='async'
+      loading='lazy'
+      alt='prodkt'
+      class='absolute top-0 -z-[1] mx-auto mb-auto mt-0 h-auto w-full max-w-[95%] select-none object-cover'
+    />
+    <Image
+      src={Background3}
+      decoding='async'
+      loading='lazy'
+      alt='prodkt'
+      class='absolute top-0 -z-[1] mx-auto mb-auto mt-0 h-auto min-w-full select-none'
+    />
+    <div
+      class='absolute top-0 z-50 flex items-start justify-start w-full h-full mt-0 mb-auto align-top'
+    >
+      <!-- LEVELN WEB SAMPLE -->
+      <div
+        class='group absolute z-50 mx-auto mb-auto mt-0 flex translate-x-[20.75dvw] translate-y-[10dvw] items-center justify-center rounded-full align-middle transition-transform duration-1000 ease-in-out sm:translate-x-[28.75dvw] sm:translate-y-[15dvw]'
+      >
+        <div
+          class='absolute z-50 mx-auto my-auto flex h-[1.75dvw] origin-center -translate-y-[3.5dvw] animate-pulse flex-col items-stretch gap-[0.25dvw] object-center align-middle transition-all duration-1000 ease-in-out group-hover:animate-none'
+        >
+          <div
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--redA9)]'
+          >
+          </div>
+          <div
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--redA9)]'
+          >
+          </div>
+          <div
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--redA9)]'
+          >
+          </div>
+        </div>
+        <div
+          class='justify-content absolute flex h-[5dvw] w-[5dvw] -translate-y-[9dvw] select-none flex-col items-center rounded-full bg-gradient-to-t from-[var(--red9)] via-[var(--red9)] to-[var(--red9)] px-[.5dvw] py-[0.75dvw] align-middle text-[var(--red12)] opacity-0 shadow-2xl shadow-[var(--redA9)] transition-all duration-500 group-hover:-translate-y-[8.5dvw] group-hover:opacity-100'
+        >
+          <p class='absolute top-[0.5dvw] z-[1] mx-auto text-[0.625dvw]'>
+            8:45am
+          </p>
+          <p
+            class='z-[1] mx-auto my-auto p-0 text-[2.25dvw] font-bold leading-none tracking-tighter'
+          >
+            280
+          </p>
+          <!-- <MoveRight
+            className="absolute bottom-auto z-[1] w-[1dvw] -translate-y-[2dvw] text-[var(--red9)]"
+          /> -->
+          <div
+            class='absolute z-0 mx-auto my-auto h-[1.5dvw] w-[1.5dvw] translate-y-[2.825dvw] rotate-45 rounded-sm bg-[var(--red9)]'
+          >
+          </div>
+        </div>
+        <div
+          class='justify-content absolute flex h-[2.5dvw] w-[2.5dvw] -translate-y-[7dvw] select-none flex-col items-center rounded-full bg-gradient-to-t from-[var(--indigo11)] via-[var(--indigo11)] to-[var(--indigo11)] px-[.5dvw] py-[0.75dvw] align-middle text-[var(--sky4)] opacity-100 shadow-2xl shadow-[var(--violetA9)] transition-all duration-500 group-hover:-translate-y-[8dvw] group-hover:opacity-0'
+        >
+          <p
+            class='absolute z-[1] mx-auto -translate-y-[1.75dvw] text-[0.625dvw] text-[var(--indigo11)]'
+          >
+            Reactions
+          </p>
+          <p class='z-[1] mx-auto my-auto text-[0.75dvw] font-bold'>5</p>
+          <div
+            class='absolute z-0 mx-auto my-auto h-[1dvw] w-[1dvw] translate-y-[0.9dvw] rotate-45 rounded-sm bg-[var(--indigo11)]'
+          >
+          </div>
+        </div>
+        <Image
+          src={MemojiGirlPonder_1}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='z-10 mx-auto my-auto h-[5dvw] w-[5dvw] select-none rounded-full border-none bg-gradient-to-b from-[var(--crimson8)] from-25% to-[var(--red9)] to-90% object-contain object-bottom pt-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transitionall duration-1000 ease-in-out group-hover:scale-[0.9] group-hover:shadow-[var(--vibrant-violet-rgb-4)]'
+        />
+        <Image
+          src={MemojiGirlThumbsDown_1}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] -translate-x-[3.5dvw] translate-y-[3.5dvw] select-none rounded-full bg-gradient-to-b from-[var(--blue9)] to-[var(--grass9)] object-contain p-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transition-transform duration-1000 ease-in-out group-hover:-translate-x-[2dvw] group-hover:translate-y-[2dvw]'
+        />
+        <Image
+          src={MemojiGirlQuiet_1}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] -translate-y-[3.5dvw] translate-x-[3.5dvw] select-none rounded-full bg-gradient-to-b from-[var(--indigo9)] to-[var(--sky9)] object-contain p-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transition-transform duration-1000 ease-in-out group-hover:-translate-y-[2dvw] group-hover:translate-x-[2dvw]'
+        />
+        <Image
+          src={MemojiGirlUgh_1}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] -translate-x-[3.5dvw] -translate-y-[3.5dvw] select-none rounded-full bg-gradient-to-b from-[var(--crimson9)] to-[var(-Amber-9)] object-contain p-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transition-transform duration-1000 ease-in-out group-hover:-translate-x-[2dvw] group-hover:-translate-y-[2dvw]'
+        />
+        <Image
+          src={MemojiGirlThumbsDown_2}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] translate-x-[3.5dvw] translate-y-[3.5dvw] select-none rounded-full bg-gradient-to-b from-[var(--yellow9)] to-[var(-Amber-9)] object-contain p-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transition-all duration-1000 ease-in-out group-hover:translate-x-[2dvw] group-hover:translate-y-[2dvw]'
+        />
+        <Image
+          src={PulseRed}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] origin-center -translate-y-[4.75dvw] animate-pulse select-none rounded-full object-cover object-center transition-all duration-1000 ease-in-out group-hover:animate-none'
+        />
+      </div>
+      <!-- END LEVELN WEB SAMPLE -->
+      <!-- LEVELN WEB SAMPLE -->
+      <div
+        class='group absolute z-50 mx-auto mb-auto mt-0 flex translate-x-[70.75dvw] translate-y-[30.25dvw] items-center justify-center rounded-full align-middle transition-transform duration-1000 ease-in-out'
+      >
+        <div
+          class='absolute z-50 mx-auto my-auto flex h-[1.75dvw] origin-center -translate-y-[3.5dvw] animate-pulse flex-col items-stretch gap-[0.25dvw] object-center align-middle transition-all duration-1000 ease-in-out group-hover:animate-none'
+        >
+          <div
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mintA9)]'
+          >
+          </div>
+          <div
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mintA9)]'
+          >
+          </div>
+          <div
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mintA9)]'
+          >
+          </div>
+        </div>
+        <div
+          class='justify-content absolute flex h-[5dvw] w-[5dvw] -translate-y-[9dvw] select-none flex-col items-center rounded-full bg-gradient-to-t from-[var(--mint9)] via-[var(--mint9)] to-[var(--mint9)] px-[.5dvw] py-[0.75dvw] align-middle opacity-0 shadow-2xl shadow-[var(--violetA9)] transition-all duration-500 group-hover:-translate-y-[8.5dvw] group-hover:opacity-100'
+        >
+          <p class='absolute top-[0.5dvw] z-[1] mx-auto text-[0.625dvw]'>
+            1:15pm
+          </p>
+          <p
+            class='z-[1] mx-auto my-auto -translate-x-[0.05dvw] text-[var(--gray12)] p-0 text-[3dvw] font-bold leading-none tracking-tighter'
+          >
+            89
+          </p>
+          <!-- <MoveRight
+            className="absolute bottom-auto z-[1] w-[1dvw] -translate-y-[2dvw] text-[var(--mint9)]"
+          /> -->
+          <div
+            class='absolute z-0 mx-auto my-auto h-[1.5dvw] w-[1.5dvw] translate-y-[2.825dvw] rotate-45 rounded-sm bg-[var(--mint9)]'
+          >
+          </div>
+        </div>
+        <div
+          class='justify-content absolute flex h-[2.5dvw] w-[2.5dvw] -translate-y-[7dvw] select-none flex-col items-center rounded-full bg-gradient-to-t from-[var(--indigo11)] via-[var(--indigo11)] to-[var(--indigo11)] px-[.5dvw] py-[0.75dvw] align-middle text-[var(--sky4)] opacity-100 shadow-2xl shadow-[var(--violetA9)] transition-all duration-500 group-hover:-translate-y-[8dvw] group-hover:opacity-0'
+        >
+          <p
+            class='absolute z-[1] mx-auto -translate-y-[1.75dvw] text-[0.625dvw] text-[var(--indigo11)]'
+          >
+            Reactions
+          </p>
+          <p class='z-[1] mx-auto my-auto text-[0.75dvw] font-bold'>5</p>
+          <div
+            class='absolute z-0 mx-auto my-auto h-[1dvw] w-[1dvw] translate-y-[0.9dvw] rotate-45 rounded-sm bg-[var(--indigo11)]'
+          >
+          </div>
+        </div>
+        <Image
+          src={BryanMemoji}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='z-10 mx-auto my-auto h-[5dvw] w-[5dvw] select-none rounded-full border-none bg-gradient-to-b from-[var(--crimson8)] from-25% to-[var(--red9)] to-90% object-contain object-bottom pt-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transitionall duration-1000 ease-in-out group-hover:scale-[0.9] group-hover:shadow-[var(--vibrant-violet-rgb-4)]'
+        />
+        <Image
+          src={MemojiGirlCelebrate_1}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] -translate-x-[3.5dvw] translate-y-[3.5dvw] select-none rounded-full bg-gradient-to-b from-[var(--blue9)] to-[var(--grass9)] object-contain p-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transition-transform duration-1000 ease-in-out group-hover:-translate-x-[2dvw] group-hover:translate-y-[2dvw]'
+        />
+        <Image
+          src={MemojiGirlHeartEyes_1}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] -translate-y-[3.5dvw] translate-x-[3.5dvw] select-none rounded-full bg-gradient-to-b from-[var(--indigo9)] to-[var(--sky9)] object-contain p-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transition-transform duration-1000 ease-in-out group-hover:-translate-y-[2dvw] group-hover:translate-x-[2dvw]'
+        />
+        <Image
+          src={MemojiGirlHeartEyes_2}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] -translate-x-[3.5dvw] -translate-y-[3.5dvw] select-none rounded-full bg-gradient-to-b from-[var(--crimson9)] to-[var(-Amber-9)] object-contain p-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transition-transform duration-1000 ease-in-out group-hover:-translate-x-[2dvw] group-hover:-translate-y-[2dvw]'
+        />
+        <Image
+          src={MemojiGirlThumbsUp_1}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] translate-x-[3.5dvw] translate-y-[3.5dvw] select-none rounded-full bg-gradient-to-b from-[var(--yellow9)] to-[var(-Amber-9)] object-contain p-[0.2dvw] shadow-2xl shadow-[var(--violetA9)] outline outline-[0.25dvw] outline-offset-2 outline-[var(--ghost-a3)] transition-all duration-1000 ease-in-out group-hover:translate-x-[2dvw] group-hover:translate-y-[2dvw]'
+        />
+        <Image
+          src={PulseGreen}
+          decoding='async'
+          loading='lazy'
+          alt='prodkt'
+          class='absolute mx-auto my-auto h-[2.5dvw] w-[2.5dvw] origin-center -translate-y-[4.75dvw] animate-pulse select-none rounded-full object-cover object-center transition-all duration-1000 ease-in-out group-hover:animate-none'
+        />
+      </div>
+      <!-- END LEVELN WEB SAMPLE -->
+    </div>
+    <div
+      class='container relative mx-auto mt-[10dvw] select-none px-4 lg:mt-[8.25dvw]'
+    >
+      <div
+        class='mx-auto flex flex-col items-center justify-start gap-[2dvw] text-center'
+      >
+        <div class='relative flex items-center justify-center lg:-mb-[4dvw]'>
+          <Image
+            src={CamdynnMemoji}
+            decoding='async'
+            loading='lazy'
+            alt='prodkt'
+            class='z-[1] mx-auto my-auto h-auto w-[20dvw] max-w-[350px] select-none'
+          />
+          <Image
+            src={LevelnMonochrome}
+            decoding='async'
+            loading='lazy'
+            alt='prodkt'
+            class='absolute -top-[1dvw] z-0 mx-auto my-auto h-auto w-[16dvw] select-none'
+          />
+
+          <svg
+            class='levelnSvg absolute mx-auto my-auto h-auto w-32 -translate-y-[13dvw] translate-x-[27dvw] select-none sm:w-44 sm:-translate-y-[9dvw] md:w-56 md:-translate-y-[7.5dvw] xl:w-64'
+            viewBox='0 0 204 58'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='M198.391 21.518C201.758 19.7393 203.809 16.1627 203.809 12.3347V2.88067C203.809 1.2905 202.526 0 200.946 0H193.488C186.605 0 181.313 4.61583 180.89 10.7203C180.29 19.4528 189.34 26.296 198.382 21.5203C198.385 21.5188 198.388 21.518 198.391 21.518V21.518Z'
+              fill='#EA9280'></path>
+            <path
+              fill-rule='evenodd'
+              clip-rule='evenodd'
+              d='M6.05671 1.59321C1.31468 4.14713 0.898018 4.42508 0.717997 5.15468C0.602383 5.62286 0.85618 5.90253 1.90133 6.45842C2.90609 6.99276 3.24647 7.3686 3.4253 8.14146C3.60123 8.90214 3.58711 50.895 3.41052 51.9862C3.17995 53.4108 2.87838 53.8097 1.50724 54.5042C0.17556 55.1787 -0.154917 55.5603 0.0607378 56.175C0.30556 56.8731 0.347134 56.8772 7.07586 56.8793C13.7258 56.8814 13.841 56.8707 14.1071 56.227C14.3815 55.5627 14.1077 55.2091 12.8809 54.6437C11.5625 54.036 11.0548 53.4913 10.7954 52.4058C10.6488 51.7925 10.6038 47.0105 10.5484 26.1893C10.4959 6.4702 10.4441 0.659224 10.3193 0.440808C9.88109 -0.325566 9.35568 -0.183483 6.05671 1.59321ZM133.417 1.59321C128.675 4.14713 128.259 4.42508 128.079 5.15468C127.963 5.62286 128.217 5.90253 129.262 6.45842C130.267 6.99276 130.607 7.3686 130.786 8.14146C130.962 8.90214 130.948 50.895 130.771 51.9862C130.54 53.4108 130.239 53.8097 128.868 54.5042C127.536 55.1787 127.206 55.5603 127.421 56.175C127.666 56.8731 127.708 56.8772 134.436 56.8793C141.086 56.8814 141.202 56.8707 141.468 56.227C141.742 55.5627 141.468 55.2091 140.241 54.6437C138.923 54.036 138.415 53.4913 138.156 52.4058C138.009 51.7925 137.964 47.0105 137.909 26.1893C137.856 6.4702 137.805 0.659224 137.68 0.440808C137.242 -0.325566 136.716 -0.183483 133.417 1.59321ZM154.075 20.8182C153.241 21.1864 146.933 24.7642 146.653 25.0281C145.855 25.7789 146.174 26.6186 147.506 27.2724C149.059 28.0346 148.921 26.8525 148.964 39.8155C149.011 54.0472 149.098 53.4157 146.949 54.5042C145.617 55.1787 145.287 55.5603 145.503 56.175C145.748 56.8737 145.783 56.8772 152.596 56.8793L158.904 56.8813L159.228 56.5565C159.924 55.8585 159.577 55.212 158.166 54.5773C157.141 54.1163 156.563 53.5448 156.286 52.7176C156.086 52.1215 156.058 51.0309 156.02 42.1967L155.977 32.3409L156.455 31.5471C159.827 25.9396 166.202 23.7281 169.63 26.9771C171.166 28.4334 171.429 29.518 172.947 40.6311C174.787 54.1096 174.877 53.2303 171.496 54.7909C170.669 55.173 170.39 55.6185 170.623 56.1845C170.911 56.8803 170.921 56.8813 178.243 56.8813H185.044L185.43 56.4946C186.222 55.701 185.796 54.9293 184.362 54.5562C181.682 53.8596 181.809 54.2529 179.874 40.7415C178.081 28.2209 177.948 27.5113 177.033 25.5831C175.79 22.9625 172.233 21.0298 168.654 21.0298C164.936 21.0298 161.639 22.6942 157.671 26.5735C156.789 27.4349 156.205 27.9136 156.129 27.8358C156.062 27.767 155.988 26.3414 155.965 24.6679C155.929 22.1013 155.886 21.5603 155.696 21.2112C155.363 20.6003 154.85 20.4759 154.075 20.8182ZM32.6532 21.4933C26.6953 22.5914 21.7547 27.0641 19.5402 33.3645C18.2092 37.1511 18.1506 42.2482 19.3959 45.9009C23.3733 57.5668 38.715 61.8198 48.9454 54.0927C52.0299 51.7629 53.4467 49.5025 52.2445 48.8293C51.5623 48.4471 51.1274 48.6877 49.3449 50.4333C46.7915 52.9339 44.9931 53.8093 41.8258 54.0932C35.7511 54.638 30.1572 51.1226 27.1202 44.8523C26.4692 43.5083 26.3849 43.0725 26.7471 42.9241C26.8742 42.8721 32.555 40.9347 39.3711 38.6189C46.1873 36.303 51.855 34.317 51.9662 34.2057C52.575 33.5954 49.4002 28.1915 47.0852 25.8977C43.3899 22.2362 37.8294 20.5393 32.6532 21.4933ZM105.242 21.4933C99.2842 22.5914 94.3436 27.0641 92.1291 33.3645C90.7981 37.1511 90.7395 42.2482 91.9848 45.9009C95.9622 57.5668 111.304 61.8198 121.534 54.0927C124.619 51.7629 126.036 49.5025 124.833 48.8293C124.151 48.4471 123.716 48.6877 121.934 50.4333C119.38 52.9339 117.582 53.8093 114.415 54.0932C108.34 54.638 102.746 51.1226 99.7091 44.8523C99.0581 43.5083 98.9738 43.0725 99.336 42.9241C99.4629 42.8721 105.144 40.9347 111.96 38.6189C118.776 36.303 124.444 34.317 124.555 34.2057C125.164 33.5954 121.989 28.1915 119.674 25.8977C115.979 22.2362 110.418 20.5393 105.242 21.4933ZM52.0811 22.5639C51.038 23.1308 51.37 23.9355 52.9647 24.7055C54.397 25.397 55.6983 26.6372 56.6731 28.2398C57.0272 28.8219 59.9946 35.2983 63.2673 42.6319C66.54 49.9655 69.3711 56.1568 69.5585 56.3903L69.8994 56.8151L71.6255 56.8585C73.5875 56.9079 74.1006 56.7639 74.5426 56.0404C74.6823 55.8117 77.2441 49.8201 80.2356 42.7259C87.9315 24.4753 87.4382 25.3904 90.0004 24.6102C91.3719 24.1927 91.8386 23.3915 91.1262 22.6776L90.8023 22.3528H85.573H80.3435L79.9423 22.755C79.1647 23.5344 79.496 24.0963 81.2143 24.9121C82.8021 25.6661 83.0738 26.0198 83.0585 27.3138C83.0436 28.588 82.8472 29.1226 78.5158 39.6832C73.8965 50.9457 74.2973 50.0223 74.0496 49.9745C73.8388 49.9338 65.1841 30.7666 64.3973 28.5981C63.471 26.0448 63.8981 25.0026 66.0441 24.5789C67.534 24.2848 68.1029 23.1053 67.0244 22.5463C66.4565 22.252 52.6251 22.2682 52.0811 22.5639ZM35.6723 24.0197C38.5061 24.7076 41.745 28.1283 43.2989 32.0743C43.9196 33.6506 43.7422 34.2339 42.4758 34.78C41.1321 35.3594 25.9697 40.4615 25.7932 40.3936C25.2099 40.1692 24.7354 35.1707 25.0555 32.6216C25.8408 26.3683 30.3376 22.7248 35.6723 24.0197ZM108.261 24.0197C111.095 24.7076 114.334 28.1283 115.888 32.0743C116.509 33.6506 116.331 34.2339 115.065 34.78C113.721 35.3594 98.5586 40.4615 98.3822 40.3936C97.7988 40.1692 97.3243 35.1707 97.6444 32.6216C98.4297 26.3683 102.926 22.7248 108.261 24.0197Z'
+              fill='#EDEDEF'></path>
+          </svg>
+        </div>
+        <div
+          class='flex flex-col items-center justify-center w-full h-full max-w-4xl pt-12'
+        >
+          <h3
+            class='z-20 mx-auto mb-2 max-w-2xl text-xl font-medium tracking-tighter text-[#ffadc0] sm:text-3xl xl:text-3xl'
+          >
+            <span class=''>An iOS concept </span>
+          </h3>
+          <h2
+            class='z-[55] mx-auto mb-8 max-w-[80dvw] select-none text-[var(--gray1)] dark:text-[var(--gray9)] pb-2 text-4xl font-medium tracking-tighter sm:mb-4 sm:text-5xl md:max-w-lg xl:text-6xl'
+          >
+            <span class=''>A community app for</span>
+            <span
+              class='bg-gradient-to-br from-[#ffadc0] to-[#F98CA6] bg-clip-text text-transparent'
+              >Type 1 Diabetics.</span
+            >
+          </h2>
+          <a
+            class='ms:ps-7 group relative z-[55] inline-block w-auto overflow-hidden rounded-full bg-gradient-to-br from-[var(--ghost-a9)] to[var(--ghost-a3)] ps-5 font-semibold text-[var(--ghost-aa12)] shadow2xl shadow-[var(--greenA3)] ring-1 ring-[var(--ghost-a2)] transition-all sm:w-auto'
+            href='#'
+          >
+            <div
+              class='group-hover:scale-102 absolute left-[1px] right-full top-[0px] mr-[1px] h-full w-full transform rounded-3xl bg-gradient-to-tr from-[#ffadc0] to-[#F98CA6] p-[1px] blur-lg transition duration-500 group-hover:translate-x-[70%]'
+            >
+            </div>
+            <div
+              class='relative flex items-center justify-center text-nowrap rounded-3xl group-hover:text-[var(--ghost-a12)]'
+            >
+              <span class='mr-4 transition-all delay-150 sm:mr-6'
+                >Apply for Private Beta</span
+              >
+              <span
+                class='flex items-center justify-center border-l border-[var(--ghost-aa2)] px4 py-6 transition-all delay-150 group-hover:border-[var(--ghost-a1)] group-hover:bg-[var(--ghost-a1)] grouphover:px-6 group-hover:text-[var(--ghost-a12)] sm:px-6'
+              >
+                <svg
+                  width='8'
+                  height='12'
+                  viewBox='0 0 8 12'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    d='M6.83 5.29L2.59 1.05C2.49704 0.956274 2.38644 0.881879 2.26458 0.83111C2.14272 0.780342 2.01202 0.754204 1.88 0.754204C1.74799 0.754204 1.61729 0.780342 1.49543 0.83111C1.37357 0.881879 1.26297 0.956274 1.17 1.05C0.983753 1.23736 0.879211 1.49082 0.879211 1.755C0.879211 2.01919 0.983753 2.27264 1.17 2.46L4.71 6L1.17 9.54C0.983753 9.72736 0.879211 9.98082 0.879211 10.245C0.879211 10.5092 0.983753 10.7626 1.17 10.95C1.26344 11.0427 1.37426 11.116 1.4961 11.1658C1.61794 11.2155 1.7484 11.2408 1.88 11.24C2.01161 11.2408 2.14207 11.2155 2.26391 11.1658C2.38575 11.116 2.49656 11.0427 2.59 10.95L6.83 6.71C6.92373 6.61704 6.99813 6.50644 7.04889 6.38458C7.09966 6.26272 7.1258 6.13201 7.1258 6C7.1258 5.86799 7.09966 5.73728 7.04889 5.61543C6.99813 5.49357 6.92373 5.38297 6.83 5.29Z'
+                    fill='currentColor'></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+<style lang='scss'>
+  @media screen and (min-width: 358px) and (max-width: 539px) {
+  }
+  @media screen and (max-width: 350px) {
+    .levelnSvg {
+      display: none;
+    }
+  }
+
+  .customLevelnLayout::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .customLevelnLayout {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>

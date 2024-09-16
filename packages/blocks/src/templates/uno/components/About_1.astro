@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/UnoLayout.astro'
+
+const Asset1 = 'f7ff4f36-e0c2-4016-aa55-345cc3c07b36.avif'
+---
+
+<Layout>
+  <section class='px-8 py-32 md:px-24'>
+    <h1
+      class='max-w-sm mb-6 text-5xl font-medium tracking-tight font-heading md:text-6xl md:max-w-lg'
+    >
+      The team behind successful product
+    </h1>
+    <p class='max-w-xl mb-24 text-lg tracking-tight text-gray-700'>
+      Consulty gives you the blocks &amp; components you need to create a truly
+      professional website, landing page or admin panel for your SaaS.
+    </p>
+    <div class='flex flex-wrap -m-4'>
+      <div class='w-full p-4 md:w-1/2 lg:w-2/12'>
+        <img
+          class='object-cover w-full h-56 mb-6 rounded-2xl'
+          src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${Asset1}`}
+          alt=''
+        />
+        <img
+          class='object-cover w-full rounded-2xl h-28'
+          src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${Asset1}`}
+          alt=''
+        />
+      </div>
+      <div class='w-full p-4 md:w-1/2 lg:w-3/12'>
+        <img
+          class='object-cover w-full rounded-2xl'
+          style='height:360px;'
+          src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${Asset1}`}
+          alt=''
+        />
+      </div>
+      <div class='w-full p-4 md:w-1/2 lg:w-3/12'>
+        <div class='flex gap-6'>
+          <img
+            class='object-cover w-16 rounded-2xl'
+            style='height:360px;'
+            src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${Asset1}`}
+            alt=''
+          />
+          <div class='flex-1'>
+            <img
+              class='object-cover w-full mb-6 rounded-2xl'
+              style='height:165px;'
+              src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${Asset1}`}
+              alt=''
+            />
+            <img
+              class='object-cover w-full rounded-2xl'
+              style='height:165px;'
+              src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${Asset1}`}
+              alt=''
+            />
+          </div>
+        </div>
+      </div>
+      <div class='w-full p-4 md:w-1/2 lg:w-4/12'>
+        <img
+          class='object-cover w-full rounded-2xl'
+          style='height:360px;'
+          src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${Asset1}`}
+          alt=''
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class='pt-24 pb-40 bg-black'>
+    <div class='container px-4 mx-auto'>
+      <h1
+        class='mb-4 text-4xl font-medium tracking-tight text-center text-white font-heading md:text-6xl'
+      >
+        How we work
+      </h1>
+      <p
+        class='max-w-lg mx-auto mb-16 text-lg tracking-tight text-center text-gray-200'
+      >
+        We consider all the drivers of change gives you the blocks of &amp; you
+        need professional website.
+      </p>
+      <div class='flex flex-wrap -m-4'>
+        <div class='w-full p-4 lg:w-1/3'>
+          <div class='bg-gray-900 border border-gray-800 rounded-2xl px-9 py-7'>
+            <div
+              class='flex items-center justify-center w-10 h-10 bg-white rounded-lg bg-opacity-10 mb-28'
+            >
+              <span class='font-semibold tracking-tight text-white'>1</span>
+            </div>
+            <p class='max-w-xs text-xl font-semibold tracking-tight text-white'>
+              Book a free meeting with experts to get started.
+            </p>
+          </div>
+        </div>
+        <div class='w-full p-4 lg:w-1/3'>
+          <div
+            class='relative overflow-hidden border border-gray-700 rounded-2xl px-9 py-7'
+          >
+            <img
+              class='absolute top-0 right-0 rounded-tr-2xl'
+              src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${Asset1}`}
+              alt=''
+            />
+            <div
+              class='flex items-center justify-center w-10 h-10 bg-white rounded-lg bg-opacity-10 mb-28'
+            >
+              <span class='font-semibold tracking-tight text-white'>2</span>
+            </div>
+            <p class='max-w-xs text-xl font-semibold tracking-tight text-white'>
+              Understand the details of financial requirements.
+            </p>
+          </div>
+        </div>
+        <div class='w-full p-4 lg:w-1/3'>
+          <div class='bg-gray-900 border border-gray-800 rounded-2xl px-9 py-7'>
+            <div
+              class='flex items-center justify-center w-10 h-10 bg-white rounded-lg bg-opacity-10 mb-28'
+            >
+              <span class='font-semibold tracking-tight text-white'>3</span>
+            </div>
+            <p class='max-w-xs text-xl font-semibold tracking-tight text-white'>
+              Save extra costs &amp; grow any business fast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

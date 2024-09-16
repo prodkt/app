@@ -1,0 +1,116 @@
+@config 'tailwind.config.mjs';
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  border-color: inherit;
+}
+
+.text-outline {
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.custom-checkbox input:checked ~ .custom-check svg {
+  display: block;
+  color: white;
+}
+
+.custom-checkbox .custom-check svg {
+  color: #b680ed;
+}
+
+.slider::before,
+.slider::after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.slider-container {
+  animation: sliderFeatures 15s linear infinite;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .slider-container {
+    animation: none !important;
+    height: auto !important;
+  }
+}
+
+@keyframes sliderFeatures {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.slider-2::before,
+.slider-2::after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.slider-container-2 {
+  animation: sliderTestimonials 20s linear infinite;
+}
+.slider-container-2.slide-2 {
+  animation: sliderTestimonials2 20s linear infinite;
+}
+
+@media screen and (max-width: 480px) {
+  .slider-container-2 {
+    animation: none !important;
+    height: auto !important;
+  }
+}
+
+@keyframes sliderTestimonials {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes sliderTestimonials2 {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}

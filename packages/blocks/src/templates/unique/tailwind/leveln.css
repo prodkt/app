@@ -1,0 +1,278 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.customLevelnLayout {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+:root,
+.light-theme,
+.light {
+  --ghost-a1: rgba(0, 0, 0, 0.05);
+  --ghost-a2: rgba(0, 0, 0, 0.1);
+  --ghost-a3: rgba(0, 0, 0, 0.15);
+  --ghost-a4: rgba(0, 0, 0, 0.2);
+  --ghost-a5: rgba(0, 0, 0, 0.3);
+  --ghost-a6: rgba(0, 0, 0, 0.4);
+  --ghost-a7: rgba(0, 0, 0, 0.5);
+  --ghost-a8: rgba(0, 0, 0, 0.6);
+  --ghost-a9: rgba(0, 0, 0, 0.7);
+  --ghost-a10: rgba(0, 0, 0, 0.8);
+  --ghost-a11: rgba(0, 0, 0, 0.9);
+  --ghost-a12: rgba(0, 0, 0, 0.95);
+  --ghost-aa1: rgba(255, 255, 255, 0.05);
+  --ghost-aa2: rgba(255, 255, 255, 0.1);
+  --ghost-aa3: rgba(255, 255, 255, 0.15);
+  --ghost-aa4: rgba(255, 255, 255, 0.2);
+  --ghost-aa5: rgba(255, 255, 255, 0.3);
+  --ghost-aa6: rgba(255, 255, 255, 0.4);
+  --ghost-aa7: rgba(255, 255, 255, 0.5);
+  --ghost-aa8: rgba(255, 255, 255, 0.6);
+  --ghost-aa9: rgba(255, 255, 255, 0.7);
+  --ghost-aa10: rgba(255, 255, 255, 0.8);
+  --ghost-aa11: rgba(255, 255, 255, 0.9);
+  --ghost-aa12: rgba(255, 255, 255, 0.95);
+  --ghost-1: rgb(12, 12, 12);
+  --ghost-2: rgb(25, 25, 25);
+  --ghost-3: rgb(38, 38, 38);
+  --ghost-4: rgb(51, 51, 51);
+  --ghost-5: rgb(76, 76, 76);
+  --ghost-6: rgb(102, 102, 102);
+  --ghost-7: rgb(127, 127, 127);
+  --ghost-8: rgb(153, 153, 153);
+  --ghost-9: rgb(178, 178, 178);
+  --ghost-10: rgb(204, 204, 204);
+  --ghost-11: rgb(229, 229, 229);
+  --ghost-12: rgb(242, 242, 242);
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root {
+      --ghost-a1: color(display-p3 0 0 0 / 0.05);
+      --ghost-a2: color(display-p3 0 0 0 / 0.1);
+      --ghost-a3: color(display-p3 0 0 0 / 0.15);
+      --ghost-a4: color(display-p3 0 0 0 / 0.2);
+      --ghost-a5: color(display-p3 0 0 0 / 0.3);
+      --ghost-a6: color(display-p3 0 0 0 / 0.4);
+      --ghost-a7: color(display-p3 0 0 0 / 0.5);
+      --ghost-a8: color(display-p3 0 0 0 / 0.6);
+      --ghost-a9: color(display-p3 0 0 0 / 0.7);
+      --ghost-a10: color(display-p3 0 0 0 / 0.8);
+      --ghost-a11: color(display-p3 0 0 0 / 0.9);
+      --ghost-a12: color(display-p3 0 0 0 / 0.95);
+    }
+  }
+}
+
+.dark,
+.dark-theme {
+  --ghost-a1: rgba(255, 255, 255, 0.05);
+  --ghost-a2: rgba(255, 255, 255, 0.1);
+  --ghost-a3: rgba(255, 255, 255, 0.15);
+  --ghost-a4: rgba(255, 255, 255, 0.2);
+  --ghost-a5: rgba(255, 255, 255, 0.3);
+  --ghost-a6: rgba(255, 255, 255, 0.4);
+  --ghost-a7: rgba(255, 255, 255, 0.5);
+  --ghost-a8: rgba(255, 255, 255, 0.6);
+  --ghost-a9: rgba(255, 255, 255, 0.7);
+  --ghost-a10: rgba(255, 255, 255, 0.8);
+  --ghost-a11: rgba(255, 255, 255, 0.9);
+  --ghost-a12: rgba(255, 255, 255, 0.95);
+  --ghost-aa1: rgba(0, 0, 0, 0.05);
+  --ghost-aa2: rgba(0, 0, 0, 0.1);
+  --ghost-aa3: rgba(0, 0, 0, 0.15);
+  --ghost-aa4: rgba(0, 0, 0, 0.2);
+  --ghost-aa5: rgba(0, 0, 0, 0.3);
+  --ghost-aa6: rgba(0, 0, 0, 0.4);
+  --ghost-aa7: rgba(0, 0, 0, 0.5);
+  --ghost-aa8: rgba(0, 0, 0, 0.6);
+  --ghost-aa9: rgba(0, 0, 0, 0.7);
+  --ghost-aa10: rgba(0, 0, 0, 0.8);
+  --ghost-aa11: rgba(0, 0, 0, 0.9);
+  --ghost-aa12: rgba(0, 0, 0, 0.95);
+  --ghost-1: rgb(242, 242, 242);
+  --ghost-2: rgb(229, 229, 229);
+  --ghost-3: rgb(204, 204, 204);
+  --ghost-4: rgb(178, 178, 178);
+  --ghost-5: rgb(153, 153, 153);
+  --ghost-6: rgb(127, 127, 127);
+  --ghost-7: rgb(102, 102, 102);
+  --ghost-8: rgb(76, 76, 76);
+  --ghost-9: rgb(51, 51, 51);
+  --ghost-10: rgb(38, 38, 38);
+  --ghost-11: rgb(25, 25, 25);
+  --ghost-12: rgb(12, 12, 12);
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --ghost-a1: color(display-p3 1 1 1 / 0.05);
+      --ghost-a2: color(display-p3 1 1 1 / 0.1);
+      --ghost-a3: color(display-p3 1 1 1 / 0.15);
+      --ghost-a4: color(display-p3 1 1 1 / 0.2);
+      --ghost-a5: color(display-p3 1 1 1 / 0.3);
+      --ghost-a6: color(display-p3 1 1 1 / 0.4);
+      --ghost-a7: color(display-p3 1 1 1 / 0.5);
+      --ghost-a8: color(display-p3 1 1 1 / 0.6);
+      --ghost-a9: color(display-p3 1 1 1 / 0.7);
+      --ghost-a10: color(display-p3 1 1 1 / 0.8);
+      --ghost-a11: color(display-p3 1 1 1 / 0.9);
+      --ghost-a12: color(display-p3 1 1 1 / 0.95);
+    }
+  }
+}
+
+:root {
+  --sp-space-1: 4px;
+  --sp-space-2: 8px;
+  --sp-space-3: 12px;
+  --sp-space-4: 16px;
+  --sp-space-5: 20px;
+  --sp-space-6: 24px;
+  --sp-space-7: 28px;
+  --sp-space-8: 32px;
+  --sp-space-9: 36px;
+  --sp-space-10: 40px;
+  --sp-space-11: 44px;
+  --sp-border-radius: 12px;
+  --sp-layout-height: 300px;
+  --sp-layout-headerHeight: 28px;
+  --sp-transitions-default: 150ms ease;
+  --sp-zIndices-base: 1;
+  --sp-zIndices-overlay: 2;
+  --sp-zIndices-top: 3;
+  --sp-colors-surface1: var(--gray-2);
+  --sp-colors-surface2: var(--gray-4);
+  --sp-colors-surface3: var(--gray-6);
+  --sp-colors-disabled: var(--gray-8);
+  --sp-colors-base: var(--gray-10);
+  --sp-colors-clickable: var(--gray-7);
+  --sp-colors-hover: var(--gray-8);
+  --sp-colors-accent: #e5e5e5;
+  --sp-colors-error: #ffb4a6;
+  --sp-colors-errorSurface: #690000;
+  --sp-colors-warning: #e7c400;
+  --sp-colors-warningSurface: #3a3000;
+  --sp-font-body: 'IBM Plex Mono';
+  --sp-font-mono: 'IBM Plex Mono';
+  --sp-font-size: 13px;
+  --sp-font-lineHeight: 20px;
+  --sp-syntax-color-plain: #ffffff;
+  --sp-syntax-color-comment: #757575;
+  --sp-syntax-fontStyle-comment: italic;
+  --sp-syntax-color-keyword: #77b7d7;
+  --sp-syntax-color-tag: #dfab5c;
+  --sp-syntax-color-punctuation: #ffffff;
+  --sp-syntax-color-definition: #86d9ca;
+  --sp-syntax-color-property: #77b7d7;
+  --sp-syntax-color-static: #c64640;
+  --sp-syntax-color-string: #977cdc;
+
+  --sans: 'Labil Grotesk', sans-serif;
+  --sans-variable: 'Labil Grotesk', sans-serif;
+  --sans-family: var(--sans);
+  --radius: 8px;
+  --mainHeight: calc(100dvh - 90px);
+  --workHistoryHeight: calc(100dvh - 90px - 4rem - 4rem - 4rem);
+  --workHistoryContent: calc(100dvh - 90px - 4rem - 4rem - 4rem - 120px);
+  --workHistoryTabContent: calc(
+    100dvh - 90px - 4rem - 4rem - 4rem - 120px - 64px
+  );
+  --background: var(--gray1) !important;
+
+  --widgetMobileHeight: calc(100dvh - 164px);
+  --widgetMobileWidth: calc(100dvw - 64px);
+  --dropmenuHeight: calc(100dvh - 32px);
+  --dropmenuWidth: calc(100dvw - 92px);
+  --bodyFamily: 'Labil Grotesk', sans-serif;
+  --default-font-family: 'Labil Grotesk', sans-serif;
+  --heading-font-family: 'Labil Grotesk', sans-serif !important;
+  --strong-font-family: 'Labil Grotesk', sans-serif !important;
+  --em-font-family: 'Labil Grotesk', sans-serif !important;
+  --quote-font-family: 'Labil Grotesk' !important;
+  --monoFamily: 'IBM Plex Mono', monospace !important;
+  --bgColor-body: var(--background);
+  --textColor-body: var(--foreground);
+  --border: var(--slate-5);
+  --ring: var(--border) !important;
+  --tw-ring-offset-color: var(--border) !important;
+  --tw-ring-color: var(--border) !important;
+}
+*,
+*::before,
+*::after {
+  border-color: var(--border);
+  font-family: 'Labil Grotesk', sans-serif;
+  --tw-ring-color: var(--ring);
+}
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    /* 1 */
+    border-width: 0;
+    /* 2 */
+    border-style: solid;
+    /* 2 */
+    border-color: var(--border);
+  }
+}
+@layer components {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    /* 1 */
+    border-width: 0;
+    /* 2 */
+    border-style: solid;
+    /* 2 */
+    border-color: var(--border);
+  }
+}
+
+::-webkit-resizer {
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 9999px !important;
+}
+::-webkit-scrollbar-button {
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+  border-radius: 9999px !important;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+  border-radius: 9999px !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray8) !important;
+  border: 0px solid var(--grayA2) !important;
+  border-radius: 9999px !important;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--gray5) !important;
+  border: 0px solid var(--gray5) !important;
+  border-right-width: 0 !important;
+  border-radius: 9999px !important;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+  border-radius: 9999px !important;
+}
