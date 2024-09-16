@@ -1,0 +1,54 @@
+{
+  "name": "@prodkt/auth",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Auth package for Prodkt",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./providers/github": {
+      "types": "./dist/providers/github.d.ts",
+      "default": "./dist/providers/github.js"
+    },
+    "./providers/google": {
+      "types": "./dist/providers/google.d.ts",
+      "default": "./dist/providers/google.js"
+    },
+    "./actions/logout": {
+      "types": "./dist/actions/logout.d.ts",
+      "default": "./dist/actions/logout.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "lint": "eslint .  --max-warnings 0",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@lucia-auth/adapter-drizzle": "^1.0.7",
+    "@prodkt/db": "workspace:*",
+    "@prodkt/env": "workspace:*",
+    "@prodkt/utils": "workspace:*",
+    "arctic": "^1.9.2",
+    "lucia": "^3.2.0",
+    "next": "14.2.5",
+    "oslo": "^1.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@prodkt/eslint": "workspace:*",
+    "@prodkt/tsconfig": "workspace:*",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0"
+  }
+}
