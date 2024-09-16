@@ -1,0 +1,37 @@
+:root,
+.light,
+.light-theme {
+  --yellowA1: #aaaa0006;
+  --yellowA2: #f4dd0016;
+  --yellowA3: #ffee0047;
+  --yellowA4: #ffe3016b;
+  --yellowA5: #ffd5008f;
+  --yellowA6: #ebbc0097;
+  --yellowA7: #d2a10098;
+  --yellowA8: #c99700c6;
+  --yellowA9: #ffe100d6;
+  --yellowA10: #ffdc00;
+  --yellowA11: #9e6c00;
+  --yellowA12: #2e2000e0;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --yellowA1: color(display-p3 0.675 0.675 0.024 / 0.024);
+      --yellowA2: color(display-p3 0.953 0.855 0.008 / 0.079);
+      --yellowA3: color(display-p3 0.988 0.925 0.004 / 0.251);
+      --yellowA4: color(display-p3 0.98 0.875 0.004 / 0.373);
+      --yellowA5: color(display-p3 0.969 0.816 0.004 / 0.491);
+      --yellowA6: color(display-p3 0.875 0.71 0 / 0.526);
+      --yellowA7: color(display-p3 0.769 0.604 0 / 0.542);
+      --yellowA8: color(display-p3 0.725 0.549 0 / 0.687);
+      --yellowA9: color(display-p3 1 0.898 0 / 0.781);
+      --yellowA10: color(display-p3 0.969 0.812 0 / 0.71);
+      --yellowA11: color(display-p3 0.6 0.44 0);
+      --yellowA12: color(display-p3 0.271 0.233 0.137);
+    }
+  }
+}

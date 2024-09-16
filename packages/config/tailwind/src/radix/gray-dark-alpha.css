@@ -1,0 +1,35 @@
+.dark,
+.dark-theme {
+  --grayA1: #00000000;
+  --grayA2: #ffffff09;
+  --grayA3: #ffffff12;
+  --grayA4: #ffffff1b;
+  --grayA5: #ffffff22;
+  --grayA6: #ffffff2c;
+  --grayA7: #ffffff3b;
+  --grayA8: #ffffff55;
+  --grayA9: #ffffff64;
+  --grayA10: #ffffff72;
+  --grayA11: #ffffffaf;
+  --grayA12: #ffffffed;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --grayA1: color(display-p3 0 0 0 / 0);
+      --grayA2: color(display-p3 1 1 1 / 0.034);
+      --grayA3: color(display-p3 1 1 1 / 0.071);
+      --grayA4: color(display-p3 1 1 1 / 0.105);
+      --grayA5: color(display-p3 1 1 1 / 0.134);
+      --grayA6: color(display-p3 1 1 1 / 0.172);
+      --grayA7: color(display-p3 1 1 1 / 0.231);
+      --grayA8: color(display-p3 1 1 1 / 0.332);
+      --grayA9: color(display-p3 1 1 1 / 0.391);
+      --grayA10: color(display-p3 1 1 1 / 0.445);
+      --grayA11: color(display-p3 1 1 1 / 0.685);
+      --grayA12: color(display-p3 1 1 1 / 0.929);
+    }
+  }
+}

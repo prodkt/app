@@ -1,0 +1,37 @@
+:root,
+.light,
+.light-theme {
+  --goldA1: #55550003;
+  --goldA2: #9d8a000d;
+  --goldA3: #75600018;
+  --goldA4: #6b4e0024;
+  --goldA5: #60460030;
+  --goldA6: #64440040;
+  --goldA7: #63420055;
+  --goldA8: #633d0072;
+  --goldA9: #5332009a;
+  --goldA10: #492d00a1;
+  --goldA11: #362100b4;
+  --goldA12: #130c00d4;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --goldA1: color(display-p3 0.349 0.349 0.024 / 0.012);
+      --goldA2: color(display-p3 0.592 0.514 0.024 / 0.048);
+      --goldA3: color(display-p3 0.4 0.357 0.012 / 0.091);
+      --goldA4: color(display-p3 0.357 0.298 0.008 / 0.134);
+      --goldA5: color(display-p3 0.345 0.282 0.004 / 0.185);
+      --goldA6: color(display-p3 0.341 0.263 0.004 / 0.244);
+      --goldA7: color(display-p3 0.345 0.235 0.004 / 0.322);
+      --goldA8: color(display-p3 0.345 0.22 0.004 / 0.436);
+      --goldA9: color(display-p3 0.286 0.18 0 / 0.589);
+      --goldA10: color(display-p3 0.255 0.161 0 / 0.62);
+      --goldA11: color(display-p3 0.433 0.386 0.305);
+      --goldA12: color(display-p3 0.227 0.209 0.173);
+    }
+  }
+}

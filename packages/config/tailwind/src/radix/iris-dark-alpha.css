@@ -1,0 +1,35 @@
+.dark,
+.dark-theme {
+  --irisA1: #3636fe0e;
+  --irisA2: #564bf916;
+  --irisA3: #525bff3b;
+  --irisA4: #4d58ff5a;
+  --irisA5: #5b62fd6b;
+  --irisA6: #6d6ffd7a;
+  --irisA7: #7777fe8e;
+  --irisA8: #7b7afeac;
+  --irisA9: #6a6afed4;
+  --irisA10: #7d79ffdc;
+  --irisA11: #b1a9ff;
+  --irisA12: #e1e0fffe;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --irisA1: color(display-p3 0.224 0.224 0.992 / 0.051);
+      --irisA2: color(display-p3 0.361 0.314 1 / 0.08);
+      --irisA3: color(display-p3 0.357 0.373 1 / 0.219);
+      --irisA4: color(display-p3 0.325 0.361 1 / 0.337);
+      --irisA5: color(display-p3 0.38 0.4 1 / 0.4);
+      --irisA6: color(display-p3 0.447 0.447 1 / 0.454);
+      --irisA7: color(display-p3 0.486 0.486 1 / 0.534);
+      --irisA8: color(display-p3 0.502 0.494 1 / 0.652);
+      --irisA9: color(display-p3 0.431 0.431 1 / 0.799);
+      --irisA10: color(display-p3 0.502 0.486 1 / 0.832);
+      --irisA11: color(display-p3 0.685 0.662 1);
+      --irisA12: color(display-p3 0.878 0.875 0.986);
+    }
+  }
+}

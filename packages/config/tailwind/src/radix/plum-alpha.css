@@ -1,0 +1,37 @@
+:root,
+.light,
+.light-theme {
+  --plumA1: #aa00ff03;
+  --plumA2: #c000c008;
+  --plumA3: #cc00cc14;
+  --plumA4: #c200c921;
+  --plumA5: #b700bd2e;
+  --plumA6: #a400b03d;
+  --plumA7: #9900a852;
+  --plumA8: #9000a56e;
+  --plumA9: #89009eb5;
+  --plumA10: #7f0092bb;
+  --plumA11: #730086c1;
+  --plumA12: #40004be6;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --plumA1: color(display-p3 0.675 0.024 1 / 0.012);
+      --plumA2: color(display-p3 0.58 0.024 0.58 / 0.028);
+      --plumA3: color(display-p3 0.655 0.008 0.753 / 0.079);
+      --plumA4: color(display-p3 0.627 0.008 0.722 / 0.126);
+      --plumA5: color(display-p3 0.58 0.004 0.69 / 0.177);
+      --plumA6: color(display-p3 0.537 0.004 0.655 / 0.236);
+      --plumA7: color(display-p3 0.49 0.004 0.616 / 0.314);
+      --plumA8: color(display-p3 0.471 0.004 0.6 / 0.42);
+      --plumA9: color(display-p3 0.451 0 0.576 / 0.687);
+      --plumA10: color(display-p3 0.42 0 0.529 / 0.71);
+      --plumA11: color(display-p3 0.543 0.263 0.619);
+      --plumA12: color(display-p3 0.299 0.114 0.352);
+    }
+  }
+}

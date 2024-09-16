@@ -1,0 +1,37 @@
+:root,
+.light,
+.light-theme {
+  --rubyA1: #ff005503;
+  --rubyA2: #ff002008;
+  --rubyA3: #f3002515;
+  --rubyA4: #ff002523;
+  --rubyA5: #ff002a31;
+  --rubyA6: #e4002440;
+  --rubyA7: #ce002553;
+  --rubyA8: #c300286d;
+  --rubyA9: #db002cb9;
+  --rubyA10: #d2002cc4;
+  --rubyA11: #c10030db;
+  --rubyA12: #550016e8;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --rubyA1: color(display-p3 0.675 0.024 0.349 / 0.012);
+      --rubyA2: color(display-p3 0.863 0.024 0.024 / 0.028);
+      --rubyA3: color(display-p3 0.804 0.008 0.11 / 0.079);
+      --rubyA4: color(display-p3 0.91 0.008 0.125 / 0.13);
+      --rubyA5: color(display-p3 0.831 0.004 0.133 / 0.185);
+      --rubyA6: color(display-p3 0.745 0.004 0.118 / 0.244);
+      --rubyA7: color(display-p3 0.678 0.004 0.114 / 0.314);
+      --rubyA8: color(display-p3 0.639 0.004 0.125 / 0.412);
+      --rubyA9: color(display-p3 0.753 0 0.129 / 0.679);
+      --rubyA10: color(display-p3 0.714 0 0.125 / 0.714);
+      --rubyA11: color(display-p3 0.728 0.211 0.311);
+      --rubyA12: color(display-p3 0.36 0.115 0.171);
+    }
+  }
+}

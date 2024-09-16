@@ -1,0 +1,37 @@
+:root,
+.light,
+.light-theme {
+  --tomatoA1: #ff000003;
+  --tomatoA2: #ff200008;
+  --tomatoA3: #f52b0018;
+  --tomatoA4: #ff35002c;
+  --tomatoA5: #ff2e003d;
+  --tomatoA6: #f92d0050;
+  --tomatoA7: #e7280067;
+  --tomatoA8: #db250084;
+  --tomatoA9: #df2600d1;
+  --tomatoA10: #d72400da;
+  --tomatoA11: #cd2200ea;
+  --tomatoA12: #460900e0;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --tomatoA1: color(display-p3 0.675 0.024 0.024 / 0.012);
+      --tomatoA2: color(display-p3 0.757 0.145 0.02 / 0.032);
+      --tomatoA3: color(display-p3 0.831 0.184 0.012 / 0.091);
+      --tomatoA4: color(display-p3 0.976 0.192 0.004 / 0.165);
+      --tomatoA5: color(display-p3 0.918 0.192 0.004 / 0.232);
+      --tomatoA6: color(display-p3 0.847 0.173 0.004 / 0.302);
+      --tomatoA7: color(display-p3 0.788 0.165 0.004 / 0.389);
+      --tomatoA8: color(display-p3 0.749 0.153 0.004 / 0.499);
+      --tomatoA9: color(display-p3 0.78 0.149 0 / 0.769);
+      --tomatoA10: color(display-p3 0.757 0.141 0 / 0.8);
+      --tomatoA11: color(display-p3 0.755 0.259 0.152);
+      --tomatoA12: color(display-p3 0.335 0.165 0.132);
+    }
+  }
+}

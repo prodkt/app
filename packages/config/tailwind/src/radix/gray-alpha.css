@@ -1,0 +1,37 @@
+:root,
+.light,
+.light-theme {
+  --grayA1: #00000003;
+  --grayA2: #00000006;
+  --grayA3: #0000000f;
+  --grayA4: #00000017;
+  --grayA5: #0000001f;
+  --grayA6: #00000026;
+  --grayA7: #00000031;
+  --grayA8: #00000044;
+  --grayA9: #00000072;
+  --grayA10: #0000007c;
+  --grayA11: #0000009b;
+  --grayA12: #000000df;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --grayA1: color(display-p3 0 0 0 / 0.012);
+      --grayA2: color(display-p3 0 0 0 / 0.024);
+      --grayA3: color(display-p3 0 0 0 / 0.063);
+      --grayA4: color(display-p3 0 0 0 / 0.09);
+      --grayA5: color(display-p3 0 0 0 / 0.122);
+      --grayA6: color(display-p3 0 0 0 / 0.153);
+      --grayA7: color(display-p3 0 0 0 / 0.192);
+      --grayA8: color(display-p3 0 0 0 / 0.267);
+      --grayA9: color(display-p3 0 0 0 / 0.447);
+      --grayA10: color(display-p3 0 0 0 / 0.486);
+      --grayA11: color(display-p3 0 0 0 / 0.608);
+      --grayA12: color(display-p3 0 0 0 / 0.875);
+    }
+  }
+}

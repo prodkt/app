@@ -1,0 +1,37 @@
+:root,
+.light,
+.light-theme {
+  --blueA1: #0080ff04;
+  --blueA2: #008cff0b;
+  --blueA3: #008ff519;
+  --blueA4: #009eff2a;
+  --blueA5: #0093ff3d;
+  --blueA6: #0088f653;
+  --blueA7: #0083eb71;
+  --blueA8: #0084e6a1;
+  --blueA9: #0090ff;
+  --blueA10: #0086f0fa;
+  --blueA11: #006dcbf2;
+  --blueA12: #002359ee;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --blueA1: color(display-p3 0.024 0.514 1 / 0.016);
+      --blueA2: color(display-p3 0.024 0.514 0.906 / 0.04);
+      --blueA3: color(display-p3 0.012 0.506 0.914 / 0.087);
+      --blueA4: color(display-p3 0.008 0.545 1 / 0.146);
+      --blueA5: color(display-p3 0.004 0.502 0.984 / 0.212);
+      --blueA6: color(display-p3 0.004 0.463 0.922 / 0.291);
+      --blueA7: color(display-p3 0.004 0.431 0.863 / 0.393);
+      --blueA8: color(display-p3 0 0.427 0.851 / 0.55);
+      --blueA9: color(display-p3 0 0.412 0.961 / 0.753);
+      --blueA10: color(display-p3 0 0.376 0.886 / 0.765);
+      --blueA11: color(display-p3 0.15 0.44 0.84);
+      --blueA12: color(display-p3 0.102 0.193 0.379);
+    }
+  }
+}

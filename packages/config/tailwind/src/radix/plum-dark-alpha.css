@@ -1,0 +1,35 @@
+.dark,
+.dark-theme {
+  --plumA1: #f112f108;
+  --plumA2: #f22ff211;
+  --plumA3: #fd4cfd27;
+  --plumA4: #f646ff3a;
+  --plumA5: #f455ff48;
+  --plumA6: #f66dff56;
+  --plumA7: #f07cfd70;
+  --plumA8: #ee84ff95;
+  --plumA9: #e961feb6;
+  --plumA10: #ed70ffc0;
+  --plumA11: #f19cfef3;
+  --plumA12: #feddfef4;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --plumA1: color(display-p3 0.973 0.071 0.973 / 0.026);
+      --plumA2: color(display-p3 0.933 0.267 1 / 0.059);
+      --plumA3: color(display-p3 0.918 0.333 0.996 / 0.148);
+      --plumA4: color(display-p3 0.91 0.318 1 / 0.219);
+      --plumA5: color(display-p3 0.914 0.388 1 / 0.269);
+      --plumA6: color(display-p3 0.906 0.463 1 / 0.328);
+      --plumA7: color(display-p3 0.906 0.529 1 / 0.425);
+      --plumA8: color(display-p3 0.906 0.553 1 / 0.568);
+      --plumA9: color(display-p3 0.875 0.427 1 / 0.69);
+      --plumA10: color(display-p3 0.886 0.471 0.996 / 0.732);
+      --plumA11: color(display-p3 0.86 0.602 0.933);
+      --plumA12: color(display-p3 0.936 0.836 0.949);
+    }
+  }
+}
