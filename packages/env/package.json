@@ -1,0 +1,30 @@
+{
+  "name": "@prodkt/env",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A package to define environment variables for apps in the workspace using t3 env",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./web/server": "./src/web/server.ts",
+    "./web/client": "./src/web/client.ts",
+    "./web/db": "./src/web/db.ts",
+    "./marketing": "./src/marketing/index.ts"
+  },
+  "scripts": {
+    "clean": "bun run rm -rf *.tsbuildinfo",
+    "lint": "eslint .  --max-warnings 0",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.10.1",
+    "@t3-oss/env-nextjs": "^0.10.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@prodkt/eslint": "workspace:*",
+    "@prodkt/tsconfig": "workspace:*"
+  }
+}

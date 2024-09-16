@@ -1,0 +1,37 @@
+{
+  "name": "@prodkt/vite",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Vite presets for the workspace",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "lint": "eslint .  --max-warnings 0",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@rollup/plugin-inject": "^5.0.5",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.3",
+    "vite-tsconfig-paths": "^5.0.1"
+  },
+  "devDependencies": {
+    "@prodkt/eslint": "workspace:*",
+    "@prodkt/tsconfig": "workspace:*",
+    "globby": "^14.0.2",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "vite-plugin-dts": "^4.1.1",
+    "vite-plugin-external": "^4.3.1"
+  }
+}

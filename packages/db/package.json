@@ -1,0 +1,48 @@
+{
+  "name": "@prodkt/db",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A database package utilizing drizzle orm.",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schema": {
+      "types": "./dist/schema/index.d.ts",
+      "default": "./dist/schema/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "db:check": "drizzle-kit check",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:migrate:drop": "drizzle-kit drop",
+    "db:pull": "drizzle-kit introspect",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:up": "drizzle-kit up",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "lint": "eslint .  --max-warnings 0",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.4",
+    "@prodkt/env": "workspace:*",
+    "drizzle-orm": "^0.32.0",
+    "pg": "^8.12.0",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@prodkt/eslint": "workspace:*",
+    "@prodkt/tsconfig": "workspace:*",
+    "drizzle-kit": "^0.23.0"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "@prodkt/storybook",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A package to share Storybook configuration preset for the workspace",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./configs/react-vite": {
+      "types": "./dist/configs/react-vite.d.ts",
+      "default": "./dist/configs/react-vite.js"
+    },
+    "./manager": {
+      "types": "./dist/manager.d.ts",
+      "default": "./dist/manager.js"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "default": "./dist/theme.js"
+    },
+    "./preview": {
+      "types": "./dist/preview.d.ts",
+      "default": "./dist/preview.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "lint": "eslint .  --max-warnings 0",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@prodkt/assets": "workspace:*",
+    "@prodkt/utils": "workspace:*",
+    "@radix-ui/colors": "^3.0.0",
+    "@storybook/addon-a11y": "^8.2.4",
+    "@storybook/addon-essentials": "^8.2.4",
+    "@storybook/addon-interactions": "^8.2.4",
+    "@storybook/addon-links": "^8.2.4",
+    "@storybook/addon-onboarding": "^8.2.4",
+    "@storybook/addon-themes": "^8.2.4",
+    "@storybook/addon-viewport": "^8.2.4",
+    "@storybook/manager-api": "^8.2.4",
+    "@storybook/react": "^8.2.4",
+    "@storybook/react-vite": "^8.2.4",
+    "@storybook/theming": "^8.2.4",
+    "@storybook/types": "^8.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "^8.2.4"
+  },
+  "devDependencies": {
+    "@prodkt/eslint": "workspace:*",
+    "@prodkt/tsconfig": "workspace:*",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0"
+  }
+}

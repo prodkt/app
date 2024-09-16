@@ -1,0 +1,257 @@
+:root,
+.light-theme,
+.light {
+  --ghost-a1: rgba(0, 0, 0, 0.05);
+  --ghost-a2: rgba(0, 0, 0, 0.1);
+  --ghost-a3: rgba(0, 0, 0, 0.15);
+  --ghost-a4: rgba(0, 0, 0, 0.2);
+  --ghost-a5: rgba(0, 0, 0, 0.3);
+  --ghost-a6: rgba(0, 0, 0, 0.4);
+  --ghost-a7: rgba(0, 0, 0, 0.5);
+  --ghost-a8: rgba(0, 0, 0, 0.6);
+  --ghost-a9: rgba(0, 0, 0, 0.7);
+  --ghost-a10: rgba(0, 0, 0, 0.8);
+  --ghost-a11: rgba(0, 0, 0, 0.9);
+  --ghost-a12: rgba(0, 0, 0, 0.95);
+  --ghost-aa1: rgba(255, 255, 255, 0.05);
+  --ghost-aa2: rgba(255, 255, 255, 0.1);
+  --ghost-aa3: rgba(255, 255, 255, 0.15);
+  --ghost-aa4: rgba(255, 255, 255, 0.2);
+  --ghost-aa5: rgba(255, 255, 255, 0.3);
+  --ghost-aa6: rgba(255, 255, 255, 0.4);
+  --ghost-aa7: rgba(255, 255, 255, 0.5);
+  --ghost-aa8: rgba(255, 255, 255, 0.6);
+  --ghost-aa9: rgba(255, 255, 255, 0.7);
+  --ghost-aa10: rgba(255, 255, 255, 0.8);
+  --ghost-aa11: rgba(255, 255, 255, 0.9);
+  --ghost-aa12: rgba(255, 255, 255, 0.95);
+  --ghost-1: rgb(12, 12, 12);
+  --ghost-2: rgb(25, 25, 25);
+  --ghost-3: rgb(38, 38, 38);
+  --ghost-4: rgb(51, 51, 51);
+  --ghost-5: rgb(76, 76, 76);
+  --ghost-6: rgb(102, 102, 102);
+  --ghost-7: rgb(127, 127, 127);
+  --ghost-8: rgb(153, 153, 153);
+  --ghost-9: rgb(178, 178, 178);
+  --ghost-10: rgb(204, 204, 204);
+  --ghost-11: rgb(229, 229, 229);
+  --ghost-12: rgb(242, 242, 242);
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root {
+      --ghost-a1: color(display-p3 0 0 0 / 0.05);
+      --ghost-a2: color(display-p3 0 0 0 / 0.1);
+      --ghost-a3: color(display-p3 0 0 0 / 0.15);
+      --ghost-a4: color(display-p3 0 0 0 / 0.2);
+      --ghost-a5: color(display-p3 0 0 0 / 0.3);
+      --ghost-a6: color(display-p3 0 0 0 / 0.4);
+      --ghost-a7: color(display-p3 0 0 0 / 0.5);
+      --ghost-a8: color(display-p3 0 0 0 / 0.6);
+      --ghost-a9: color(display-p3 0 0 0 / 0.7);
+      --ghost-a10: color(display-p3 0 0 0 / 0.8);
+      --ghost-a11: color(display-p3 0 0 0 / 0.9);
+      --ghost-a12: color(display-p3 0 0 0 / 0.95);
+    }
+  }
+}
+
+.dark,
+.dark-theme {
+  --ghost-a1: rgba(255, 255, 255, 0.05);
+  --ghost-a2: rgba(255, 255, 255, 0.1);
+  --ghost-a3: rgba(255, 255, 255, 0.15);
+  --ghost-a4: rgba(255, 255, 255, 0.2);
+  --ghost-a5: rgba(255, 255, 255, 0.3);
+  --ghost-a6: rgba(255, 255, 255, 0.4);
+  --ghost-a7: rgba(255, 255, 255, 0.5);
+  --ghost-a8: rgba(255, 255, 255, 0.6);
+  --ghost-a9: rgba(255, 255, 255, 0.7);
+  --ghost-a10: rgba(255, 255, 255, 0.8);
+  --ghost-a11: rgba(255, 255, 255, 0.9);
+  --ghost-a12: rgba(255, 255, 255, 0.95);
+  --ghost-aa1: rgba(0, 0, 0, 0.05);
+  --ghost-aa2: rgba(0, 0, 0, 0.1);
+  --ghost-aa3: rgba(0, 0, 0, 0.15);
+  --ghost-aa4: rgba(0, 0, 0, 0.2);
+  --ghost-aa5: rgba(0, 0, 0, 0.3);
+  --ghost-aa6: rgba(0, 0, 0, 0.4);
+  --ghost-aa7: rgba(0, 0, 0, 0.5);
+  --ghost-aa8: rgba(0, 0, 0, 0.6);
+  --ghost-aa9: rgba(0, 0, 0, 0.7);
+  --ghost-aa10: rgba(0, 0, 0, 0.8);
+  --ghost-aa11: rgba(0, 0, 0, 0.9);
+  --ghost-aa12: rgba(0, 0, 0, 0.95);
+  --ghost-1: rgb(242, 242, 242);
+  --ghost-2: rgb(229, 229, 229);
+  --ghost-3: rgb(204, 204, 204);
+  --ghost-4: rgb(178, 178, 178);
+  --ghost-5: rgb(153, 153, 153);
+  --ghost-6: rgb(127, 127, 127);
+  --ghost-7: rgb(102, 102, 102);
+  --ghost-8: rgb(76, 76, 76);
+  --ghost-9: rgb(51, 51, 51);
+  --ghost-10: rgb(38, 38, 38);
+  --ghost-11: rgb(25, 25, 25);
+  --ghost-12: rgb(12, 12, 12);
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    .dark,
+    .dark-theme {
+      --ghost-a1: color(display-p3 1 1 1 / 0.05);
+      --ghost-a2: color(display-p3 1 1 1 / 0.1);
+      --ghost-a3: color(display-p3 1 1 1 / 0.15);
+      --ghost-a4: color(display-p3 1 1 1 / 0.2);
+      --ghost-a5: color(display-p3 1 1 1 / 0.3);
+      --ghost-a6: color(display-p3 1 1 1 / 0.4);
+      --ghost-a7: color(display-p3 1 1 1 / 0.5);
+      --ghost-a8: color(display-p3 1 1 1 / 0.6);
+      --ghost-a9: color(display-p3 1 1 1 / 0.7);
+      --ghost-a10: color(display-p3 1 1 1 / 0.8);
+      --ghost-a11: color(display-p3 1 1 1 / 0.9);
+      --ghost-a12: color(display-p3 1 1 1 / 0.95);
+    }
+  }
+}
+button[type='button'],
+button[aria-haspopup='menu'],
+button[aria-expanded='false'],
+button[data-state='closed'],
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  outline: none;
+  outline-color: var(--grayA4);
+}
+
+.hero-mask {
+  mask-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 1) 3.78%,
+    rgba(255, 255, 255, 0.1) 80.27%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 1) 3.78%,
+    rgba(255, 255, 255, 0.1) 80.27%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.gradientMask-to-t {
+  mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.gradientMask-to-t-20 {
+  mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.gradientMask-to-t-10 {
+  mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.gradientMask-to-b {
+  mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.gradientMask-to-b-20 {
+  mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 20%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 20%
+  );
+}
+.gradientMask-to-b-10 {
+  mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 10%
+  );
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 10%
+  );
+}
+.gradientMask-to-l {
+  mask-image: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.gradientMask-to-r {
+  mask-image: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.gradientMask-workShowcase {
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}

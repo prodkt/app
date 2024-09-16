@@ -1,0 +1,45 @@
+{
+  "name": "@prodkt/eslint",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A package to share ESLint configurations in workspace",
+  "license": "MIT",
+  "author": "Bryan Funk",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "bun run rm -rf *.tsbuildinfo",
+    "lint": "eslint .  --max-warnings 0",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsdoc": "^48.7.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-playwright": "^1.6.2",
+    "eslint-plugin-react": "^7.34.4",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-regexp": "^2.6.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "eslint-plugin-turbo": "^2.0.7",
+    "globals": "^15.8.0",
+    "typescript-eslint": "^7.16.1"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.5",
+    "@prodkt/tsconfig": "workspace:*",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@typescript-eslint/utils": "^7.16.1",
+    "eslint-plugin-storybook": "^0.8.0"
+  }
+}
