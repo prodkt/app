@@ -11,10 +11,10 @@ export default mergeConfig(
   buildConfig({
     lib: {
       entry: [
-        'src/primitives/*/index.tsx',
-        'src/brands/*/index.tsx',
-        'src/prodkt-components/*/index.tsx',
-        'src/icons/*/index.tsx',
+        './src/primitives/*/index.tsx',
+        './src/brands/*/index.tsx',
+        './src/prodkt-components/*/index.tsx',
+        './src/icons/*/index.tsx',
         './src/utils/cn.ts',
         './src/utils/use-mounted.ts',
         './src/utils/kanban.ts',
@@ -25,6 +25,9 @@ export default mergeConfig(
     },
     dts: {
       exclude: ['src/storybook-utils', '**/*.stories.tsx'],
+    },
+    define: {
+      'process.env': {},
     },
   }),
 )
