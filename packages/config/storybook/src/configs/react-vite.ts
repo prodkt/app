@@ -1,32 +1,30 @@
 import type { StorybookConfig } from '@storybook/react-vite'
 
-import { getAbsolutePath } from '@prodkt/utils/filesystem'
-
-const config = {
+const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    getAbsolutePath('@storybook/addon-links'),
+    '@storybook/addon-links',
     {
-      name: getAbsolutePath('@storybook/addon-essentials'),
+      name: '@storybook/addon-essentials',
       options: {
         backgrounds: false,
       },
     },
-    getAbsolutePath('@storybook/addon-onboarding'),
-    getAbsolutePath('@storybook/addon-interactions'),
-    getAbsolutePath('@storybook/addon-themes'),
-    getAbsolutePath('@storybook/addon-a11y'),
+    '@storybook/addon-onboarding',
+    '@storybook/addon-interactions',
+    '@storybook/addon-themes',
+    '@storybook/addon-a11y',
   ],
   framework: {
-    name: getAbsolutePath('@storybook/react-vite') as '@storybook/react-vite',
+    name: '@storybook/react-vite',
     options: {
       strictMode: true,
     },
   },
-  staticDirs: [getAbsolutePath('@prodkt/assets')],
+  staticDirs: ['../static'], // Ensure this is the correct path
   docs: {
     autodocs: 'tag',
   },
-} satisfies StorybookConfig
+}
 
 export default config

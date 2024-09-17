@@ -5,6 +5,7 @@ import type { LibraryOptions } from 'vite'
 import type { PluginOptions as DtsPluginOptions } from 'vite-plugin-dts'
 import type { Options as ExternalPluginOptions } from 'vite-plugin-external'
 
+import react from '@vitejs/plugin-react'
 import { globbySync } from 'globby'
 import preserveDirectives from 'rollup-plugin-preserve-directives'
 import { defineConfig, loadEnv } from 'vite'
@@ -60,8 +61,14 @@ export function buildConfig({
           preserveDirectives({
             suppressPreserveModulesWarning: true,
           }),
+          react(),
         ],
-        external: ['@dnd-kit', '@codesandbox/sandpack-react'],
+        external: [
+          'react',
+          'react-dom',
+          '@dnd-kit',
+          '@codesandbox/sandpack-react',
+        ],
         output: {
           preserveModules: true,
           preserveModulesRoot: 'src',
