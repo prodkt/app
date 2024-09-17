@@ -1,12 +1,12 @@
 /* eslint-disable jsdoc/require-jsdoc */
 
-import React from 'react'
+import type React from 'react'
 
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from '@prodkt/ui/primitives/hover-card'
+} from '@/primitives/hover-card'
 
 interface Props {
   props?: Props

@@ -9,11 +9,10 @@ import TemplateUnoComponentTest from './templates/uno/components/ComponentTest.a
 import TemplateTres404One from './templates/uno/components/Page404_1.astro'
 import TemplateUnoLayout from './templates/uno/layouts/UnoLayout.astro'
 
-// Import other components similarly
-
 // Define the type for your component map
 type ComponentMap = {
-  [key: string]: any // Adjust the type if you need more specific prop types
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  [key: string]: any
 }
 
 // Create the map of components

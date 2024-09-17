@@ -1,14 +1,11 @@
-/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
-
 import '../../../../../apps/marketing/src/styles/codeblock.scss'
-
-import React from 'react'
 
 import type { Database } from '@/database.types'
 import type {
   ComponentData,
   ComponentTemplate,
 } from '@/prodkt-components/code-editor'
+import type React from 'react'
 
 import {
   ResizableHandle,
@@ -73,10 +70,10 @@ const CodeblockLayout = ({
           </div>
           <ResizablePanelGroup
             direction='horizontal'
-            className='inset-0 m-0 size-full min-h-[200px]'
+            className='inset-0 m-0 size-full'
           >
             <ResizablePanel defaultSize={25} maxSize={75}>
-              <div className='inset-0 m-0 flex size-full items-start justify-center py-0 pr-2.5'>
+              <div className='inset-0 m-0 flex size-full items-start justify-center py-0'>
                 <CodeEditor componentData={componentData} template={template} />
               </div>
             </ResizablePanel>
@@ -85,7 +82,7 @@ const CodeblockLayout = ({
               withHandle
             />
             <ResizablePanel minSize={25} defaultSize={75} maxSize={75}>
-              <div className='inset-0 m-0 flex size-full items-start justify-center py-0 pl-2.5'>
+              <div className='inset-0 m-0 flex size-full items-start justify-center py-0 pl-0'>
                 {children}
               </div>
             </ResizablePanel>

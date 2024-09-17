@@ -1,19 +1,24 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-param-description */
+
 import type { LibraryOptions } from 'vite'
 import type { PluginOptions as DtsPluginOptions } from 'vite-plugin-dts'
 import type { Options as ExternalPluginOptions } from 'vite-plugin-external'
 
 import { globbySync } from 'globby'
 import preserveDirectives from 'rollup-plugin-preserve-directives'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import dtsPlugin from 'vite-plugin-dts'
 import createExternal from 'vite-plugin-external'
 
+const env = loadEnv(process.cwd(), '')
 /**
  * A vite config preset for bundling packages in lib mode.
  * @param params The parameters that the function takes.
  * @param params.lib override vite's `build.lib` options.
  * @param params.dts override the `vite-plugin-dts` options.
  * @param params.external override the `vite-plugin-external` options.
+ * @param params.define
  * @returns a vite configuration object
  */
 export function buildConfig({
@@ -23,6 +28,9 @@ export function buildConfig({
 }: {
   lib: LibraryOptions & {
     entry: string[] | string
+  }
+  define: {
+    'process.env': typeof env
   }
   dts?: DtsPluginOptions
   external?: ExternalPluginOptions
@@ -53,7 +61,12 @@ export function buildConfig({
             suppressPreserveModulesWarning: true,
           }),
         ],
-        external: ['react', 'react-dom', '@dnd-kit'],
+        external: [
+          'react',
+          'react-dom',
+          '@dnd-kit',
+          '@codesandbox/sandpack-react',
+        ],
         output: {
           preserveModules: true,
           preserveModulesRoot: 'src',

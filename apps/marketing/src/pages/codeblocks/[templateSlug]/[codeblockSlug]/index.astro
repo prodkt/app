@@ -6,12 +6,10 @@ import { experimental_AstroContainer } from 'astro/container'
 import { componentMap } from '@prodkt/blocks/component-map'
 import { CodeblockLayout } from '@prodkt/ui/prodkt-components/codeblock-layout'
 
-import Layout from '@/layouts/PublicLayout.astro'
+import PageLayout from '@/layouts/PublicLayout.astro'
 
 import { GET } from './index.json'
 
-// type Codeblocks = Database['public']['Tables']['codeblocks']['Row']
-// type Themes = Database['public']['Tables']['themes']['Row']
 type Files = Database['public']['Tables']['directus_files']['Row']
 
 interface Logos {
@@ -64,7 +62,7 @@ interface BuildTemplate {
   date_updated: string | null
   env: string | null
   id: string
-  layouts: Layout[] | null // Change Json to Layout[]
+  layouts: Layout[] | null
   logos: Logos
   sort: number | null
   status: string
@@ -90,23 +88,16 @@ const data = (await response.json()) as Data
 const container = await experimental_AstroContainer.create()
 const result = await container.renderToString(componentMap[data.NamedExport])
 const files = {
-  // '/Wrapper.js': `export default () => "";`,
   '/index.astro': {
-    code: `---
-      import Layout from '@/layouts/Layout.astro'
----
-<Layout title="Prodkt from Bryan Funk.">
-    <h1>Prodkt</h1>
-${data.codeblockData.html}
-</Layout>`,
-    readOnly: false, // Set as non-editable, defaults to `false`
+    code: `${data.codeblockData.html}`,
+    readOnly: true, // Set as non-editable, defaults to `false`
     active: true, // Set as main file, defaults to `false`
     hidden: false, // Tab visibility, defaults to `false`
   },
   '/layouts/Layout.astro': {
     // code: `${(data.templateData as Template).build_template?.layouts?.[0]?.code}`,
     code: `${data.templateData.build_template?.layouts?.[0]?.code}`,
-    readOnly: false, // Set as non-editable, defaults to `false`
+    readOnly: true, // Set as non-editable, defaults to `false`
     active: false, // Set as main file, defaults to `false`
     hidden: false, // Tab visibility, defaults to `false`
   },
@@ -137,8 +128,9 @@ ${data.codeblockData.html}
 }
 ---
 
-<Layout>
+<PageLayout>
   <CodeblockLayout
+    client:load
     title={data.templateData.title}
     buildLogo={data.templateData.build_template.logos.logo
       ?.filename_disk as string}
@@ -148,12 +140,11 @@ ${data.codeblockData.html}
     logoOnDark={data.templateData.logos.logo_onDark?.filename_disk as string}
     template='astro'
     componentData={files}
-    client:load
   >
     <iframe
-      class='customLevelnLayout w-full h-full min-h-80 isolate bg-[var(--gray1)] rounded-2xl overflow-hidden border border-[var(--grayA4)] pr-2'
+      class='customLevelnLayout w-full h-full min-h-80 isolate bg-[var(--gray1)] rounded-2xl overflow-hidden border border-[var(--grayA4)] pr-0 ml-0.5 max-h-[calc(100dvh_-_192px)]'
       srcdoc={result}
       sandbox='allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals'
     ></iframe>
   </CodeblockLayout>
-</Layout>
+</PageLayout>

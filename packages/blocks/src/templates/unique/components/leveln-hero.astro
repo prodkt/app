@@ -1,5 +1,7 @@
 ---
 import '../tailwind/leveln.css'
+import '@prodkt/tailwind/color'
+import '../../../../../config/tailwind/src/color.css'
 
 import { Image } from 'astro:assets'
 
@@ -76,9 +78,6 @@ import Layout from '../layouts/leveln-hero-layout.astro'
           >
             280
           </p>
-          <!-- <MoveRight
-            className="absolute bottom-auto z-[1] w-[1dvw] -translate-y-[2dvw] text-[var(--red9)]"
-          /> -->
           <div
             class='absolute z-0 mx-auto my-auto h-[1.5dvw] w-[1.5dvw] translate-y-[2.825dvw] rotate-45 rounded-sm bg-[var(--red9)]'
           >
@@ -150,15 +149,15 @@ import Layout from '../layouts/leveln-hero-layout.astro'
           class='absolute z-50 mx-auto my-auto flex h-[1.75dvw] origin-center -translate-y-[3.5dvw] animate-pulse flex-col items-stretch gap-[0.25dvw] object-center align-middle transition-all duration-1000 ease-in-out group-hover:animate-none'
         >
           <div
-            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mintA9)]'
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mint9)]'
           >
           </div>
           <div
-            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mintA9)]'
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mint9)]'
           >
           </div>
           <div
-            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mintA9)]'
+            class='h-[1dvw] w-[0.25dvw] self-stretch rounded-full bg-[var(--mint9)]'
           >
           </div>
         </div>
@@ -173,16 +172,13 @@ import Layout from '../layouts/leveln-hero-layout.astro'
           >
             89
           </p>
-          <!-- <MoveRight
-            className="absolute bottom-auto z-[1] w-[1dvw] -translate-y-[2dvw] text-[var(--mint9)]"
-          /> -->
           <div
             class='absolute z-0 mx-auto my-auto h-[1.5dvw] w-[1.5dvw] translate-y-[2.825dvw] rotate-45 rounded-sm bg-[var(--mint9)]'
           >
           </div>
         </div>
         <div
-          class='justify-content absolute flex h-[2.5dvw] w-[2.5dvw] -translate-y-[7dvw] select-none flex-col items-center rounded-full bg-gradient-to-t from-[var(--indigo11)] via-[var(--indigo11)] to-[var(--indigo11)] px-[.5dvw] py-[0.75dvw] align-middle text-[var(--sky4)] opacity-100 shadow-2xl shadow-[var(--violetA9)] transition-all duration-500 group-hover:-translate-y-[8dvw] group-hover:opacity-0'
+          class='justify-content absolute flex h-[2.5dvw] w-[2.5dvw] -translate-y-[7dvw] select-none flex-col items-center rounded-full bg-gradient-to-t from-[var(--indigo11)] to-[var(--indigo11)] px-[.5dvw] py-[0.75dvw] align-middle text-[var(--sky4)] opacity-100 shadow-2xl shadow-[var(--violetA9)] transition-all duration-500 group-hover:-translate-y-[8dvw] group-hover:opacity-0'
         >
           <p
             class='absolute z-[1] mx-auto -translate-y-[1.75dvw] text-[0.625dvw] text-[var(--indigo11)]'
@@ -270,7 +266,7 @@ import Layout from '../layouts/leveln-hero-layout.astro'
           >
             <path
               d='M198.391 21.518C201.758 19.7393 203.809 16.1627 203.809 12.3347V2.88067C203.809 1.2905 202.526 0 200.946 0H193.488C186.605 0 181.313 4.61583 180.89 10.7203C180.29 19.4528 189.34 26.296 198.382 21.5203C198.385 21.5188 198.388 21.518 198.391 21.518V21.518Z'
-              fill='#EA9280'></path>
+              fill='var(--pink10)'></path>
             <path
               fill-rule='evenodd'
               clip-rule='evenodd'
@@ -282,7 +278,7 @@ import Layout from '../layouts/leveln-hero-layout.astro'
           class='flex flex-col items-center justify-center w-full h-full max-w-4xl pt-12'
         >
           <h3
-            class='z-20 mx-auto mb-2 max-w-2xl text-xl font-medium tracking-tighter text-[#ffadc0] sm:text-3xl xl:text-3xl'
+            class='z-20 mx-auto mb-2 max-w-2xl text-xl font-medium tracking-tighter text-[var(--pink10)] sm:text-3xl xl:text-3xl'
           >
             <span class=''>An iOS concept </span>
           </h3>
@@ -291,7 +287,7 @@ import Layout from '../layouts/leveln-hero-layout.astro'
           >
             <span class=''>A community app for</span>
             <span
-              class='bg-gradient-to-br from-[#ffadc0] to-[#F98CA6] bg-clip-text text-transparent'
+              class='bg-gradient-to-br from-[var(--pink11)] to-[var(--gray1)] bg-clip-text text-transparent'
               >Type 1 Diabetics.</span
             >
           </h2>

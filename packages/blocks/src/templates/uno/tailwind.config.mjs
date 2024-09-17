@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['../**/*.astro', '../components/*.astro', '../pages/*.astro'],
+  content: ['./**/*.astro', './components/*.astro', './pages/*.astro'],
   prefix: '',
   darkMode: 'class',
   theme: {
@@ -1222,49 +1222,49 @@ export default {
       },
       colors: {
         ringColor: {
-          DEFAULT: 'var(--gray-a1)',
+          DEFAULT: 'var(--grayA1)',
         },
         ring: {
-          DEFAULT: 'var(--gray-a1)',
+          DEFAULT: 'var(--grayA1)',
         },
         borderColor: {
-          DEFAULT: 'var(--gray-a1)',
+          DEFAULT: 'var(--grayA1)',
         },
         input: {
-          DEFAULT: 'var(--gray-9)',
+          DEFAULT: 'var(--gray9)',
           foreground: 'var(--accent-1)',
         },
-        background: 'var(--gray-1)',
-        foreground: 'var(--gray-11)',
+        background: 'var(--gray1)',
+        foreground: 'var(--gray11)',
         primary: {
-          DEFAULT: 'var(--accent-9)',
-          foreground: 'var(--accent-12)',
+          DEFAULT: 'var(--accent9)',
+          foreground: 'var(--accent12)',
         },
         secondary: {
-          DEFAULT: 'var(--violet-9)',
-          foreground: 'var(--violet-1)',
+          DEFAULT: 'var(--violet9)',
+          foreground: 'var(--violet1)',
         },
         destructive: {
           DEFAULT: 'var(--tomato-9)',
           foreground: 'var(--tomato-1)',
         },
         muted: {
-          DEFAULT: 'var(--gray-a4)',
-          foreground: 'var(--gray-9)',
+          DEFAULT: 'var(--grayA4)',
+          foreground: 'var(--gray9)',
         },
         accent: {
-          DEFAULT: 'var(--accent-9)',
-          foreground: 'var(--accent-1)',
+          DEFAULT: 'var(--accent9)',
+          foreground: 'var(--accent1)',
         },
         popover: {
-          DEFAULT: 'var(--gray-9)',
-          foreground: 'var(--gray-1)',
+          DEFAULT: 'var(--gray9)',
+          foreground: 'var(--gray1)',
         },
         card: {
-          DEFAULT: 'var(--gray-1)',
-          foreground: 'var(--gray-11)',
-          ring: 'var(--gray-a1)',
-          border: 'var(--gray-a1)',
+          DEFAULT: 'var(--gray1)',
+          foreground: 'var(--gray11)',
+          ring: 'var(--grayA1)',
+          border: 'var(--grayA1)',
         },
       },
       borderRadius: {
