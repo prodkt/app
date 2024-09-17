@@ -18,7 +18,7 @@
   --sp-zIndices-base: 1;
   --sp-zIndices-overlay: 2;
   --sp-zIndices-top: 3;
-  --sp-colors-surface1: var(--ghost-aa3);
+  --sp-colors-surface1: var(--gray9) !important;
   --sp-colors-surface2: transparent;
   --sp-colors-surface3: transparent;
   --sp-colors-disabled: var(--gray9);
@@ -206,7 +206,7 @@ aria-selected:prodkt-codeblock-tab-button {
 data-active:prodkt-codeblock-tab-button,
 .sp-tab-button .prodkt-codeblock-tab-button[data-active='true'] {
   /* @apply bg-transparent border-transparent ring-[var(--gray10)] !important; */
-  @apply bg-[var(--grayA4)] dark:bg-[var(--gray12)] !important;
+  // @apply bg-[var(--grayA4)] dark:bg-[var(--gray12)] !important;
   @apply rounded-lg !important;
   @apply outline-none outline-0 aria-selected:border-none ring-0 border-none !important;
 }
@@ -260,8 +260,7 @@ aria-selected:prodkt-codeblock-tab-container {
 /* cm-gutters */
 .prodkt-codemirror-gutters,
 .cm-gutters {
-  @apply pr-1 rounded-lg bg-[var(--gray1)] !important;
-  @apply shadow-xl shadow-[var(--gray1)];
+  @apply pr-1 rounded-lg bg-transparent !important;
 }
 .sp-tabs-scrollable-container,
 .prodkt-tabs-scrollable-container {
@@ -356,7 +355,7 @@ div.cm-comment {
 }
 
 .prodkt-codeblock-tabs-scrollable-container {
-  @apply relative rounded-xl !pl-0 !pr-0 !py-2 z-10 min-h-[48px] w-full flex flex-row items-center justify-start gap-0 text-xs overflow-x-scroll overflow-y-hidden;
+  @apply relative rounded-xl !pl-0 !pr-0 !py-2 z-10 min-h-[48px] w-full flex flex-row items-center justify-start gap-0 text-xs font-normal tracking-[0.0125rem] overflow-x-scroll overflow-y-hidden;
 }
 
 .sp-tabs-scrollable-container:has(
@@ -377,11 +376,15 @@ div.cm-comment {
   margin: 0;
 }
 .prodkt-codeblock-tab-container button {
-  @apply bg-[var(--grayA1)] mx-0 mr-[-20px] pl-3 pr-3 py-2 rounded-2xl border border-[var(--grayA3)];
+  @apply bg-[var(--grayA1)] mx-0 mr-[-20px] text-[var(--gray12)] hover:text-[var(--accent11)] pl-3 pr-3 py-2 rounded-2xl border border-[var(--grayA3)] !important;
+}
+
+.prodkt-codeblock-tabs-scrollable-container button[data-active='true'] {
+  color: var(--accent11) !important;
 }
 
 .prodkt-codeblock-tab-container button[data-active='true'] {
-  @apply bg-[var(--gray3)] border !border-[var(--grayA6)] rounded-xl;
+  @apply bg-[var(--gray5)] border border-[var(--grayA1)] ring-1 ring-[var(--gray6)]  ring-inset dark:ring-[var(--gray6)] rounded-xl !important;
 }
 
 .prodkt-codeblock-tabs-scrollable-container::-webkit-resizer {
@@ -450,11 +453,13 @@ div.cm-comment {
   max-height: calc(100dvh - 248px);
   overflow-x: hidden;
   overflow-y: auto;
-  @apply rounded-2xl bg-[var(--gray1)];
-  @apply border border-[var(--grayA4)];
+  @apply rounded-2xl bg-[var(--gray4)] dark:bg-[var(--gray1)];
+  @apply border border-[var(--gray6)] dark:border-[var(--grayA4)];
 }
 
-.prodkt-code-editor {
+.prodkt-code-editor,
+.sp-code-editor {
+  background-color: transparent !important;
   overflow: auto;
   margin-top: 50px;
   @apply rounded-2xl;
@@ -523,7 +528,7 @@ div.cm-comment {
 }
 
 .sp-syntax-plain {
-  color: var(--sky9) !important;
+  @apply text-[var(--sky11)] dark:text-[var(--sky9)] !important;
 }
 
 .sp-syntax-static {

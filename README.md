@@ -1,11 +1,6 @@
 <div align="center">
-  <img src="https://github.com/prodkt/prodkt/blob/main/apps/marketing/public/blog-placeholder.jpg?raw=true" alt="Cover image" width="700px">
+  <img src="https://github.com/prodkt/app/blob/master/apps/marketing/public/blog-placeholder.jpg?raw=true" alt="Cover image" width="700px">
 </div>
-
-## Note
-
-> [!IMPORTANT]
-> Prodkt is built on top of a very opinionated tech stack, which might not work for every use case/business idea. I offer monorepo architecture consulting or even building something completely custom for you, if you are interested be sure to [DM me on X/Twitter](https://twitter.com/prodkt_).
 
 ## Features
 

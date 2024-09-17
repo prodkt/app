@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const GoogleAnalyticsLogo = (props: SVGProps<SVGSVGElement>) => (
+const GoogleAnalytics = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={100}
@@ -9,6 +9,8 @@ const GoogleAnalyticsLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Google Analytics</title>
+    <desc>Logo</desc>
     <g clipPath='url(#googleanalytics-a)'>
       <path
         fill='#F9AB00'
@@ -30,4 +32,4 @@ const GoogleAnalyticsLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default GoogleAnalyticsLogo
+export default GoogleAnalytics

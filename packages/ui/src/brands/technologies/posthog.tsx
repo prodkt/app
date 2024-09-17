@@ -1,6 +1,6 @@
-import { SVGProps } from 'react'
+import type { SVGProps } from 'react'
 
-const PosthogLogo = (props: SVGProps<SVGSVGElement>) => (
+const Posthog = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={512}
@@ -9,6 +9,8 @@ const PosthogLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Posthog</title>
+    <desc>Logo</desc>
     <g clipPath='url(#posthog-a)'>
       <path
         fill='#F9BD2B'
@@ -38,4 +40,4 @@ const PosthogLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default PosthogLogo
+export default Posthog

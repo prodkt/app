@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const PostmarkLogo = (props: SVGProps<SVGSVGElement>) => (
+const Postmark = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={100}
@@ -9,6 +9,8 @@ const PostmarkLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Postmark</title>
+    <desc>Logo</desc>
     <g fill='#FFDE00' fillRule='evenodd' clipRule='evenodd' opacity={0.35}>
       <path d='M32.526 9.386c-1.74 1.662-5.085 2.79-8.943 2.79-2.868 0-5.46-.633-7.32-1.642-2.137-1.167-5.085-2.79-8.943-2.79-2.868 0-5.46.633-7.32 1.642v-.791c1.86-1.009 4.452-1.642 7.32-1.642 3.858 0 6.806 1.622 8.943 2.79 1.86 1.009 4.452 1.642 7.32 1.642 3.858 0 7.202-1.128 8.943-2.79v.791Z' />
       <path d='M32.526 12.75c-1.74 1.662-5.085 2.79-8.943 2.79-2.868 0-5.46-.634-7.32-1.643-2.137-1.167-5.085-2.79-8.943-2.79-2.868 0-5.46.634-7.32 1.643v-.792c1.86-1.009 4.452-1.642 7.32-1.642 3.858 0 6.806 1.622 8.943 2.79 1.86 1.009 4.452 1.642 7.32 1.642 3.858 0 7.202-1.128 8.943-2.79v.792Z' />
@@ -25,4 +27,4 @@ const PostmarkLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default PostmarkLogo
+export default Postmark

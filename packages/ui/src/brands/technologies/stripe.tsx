@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const StripeLogo = (props: SVGProps<SVGSVGElement>) => (
+const Stripe = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={51}
@@ -9,6 +9,8 @@ const StripeLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Stripe</title>
+    <desc>Logo</desc>
     <path
       fill='currentColor'
       fillRule='evenodd'
@@ -17,4 +19,4 @@ const StripeLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default StripeLogo
+export default Stripe

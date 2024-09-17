@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const StyleDictionaryLogo = (props: SVGProps<SVGSVGElement>) => (
+const StyleDictionary = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={331}
@@ -9,6 +9,8 @@ const StyleDictionaryLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Style Dictionary</title>
+    <desc>Logo</desc>
     <g fillRule='evenodd' clipPath='url(#styledictionary-a)' clipRule='evenodd'>
       <path
         fill='var(--mint-8)'
@@ -42,4 +44,4 @@ const StyleDictionaryLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default StyleDictionaryLogo
+export default StyleDictionary

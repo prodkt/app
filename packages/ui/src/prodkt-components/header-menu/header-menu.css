@@ -1,0 +1,38 @@
+.prodkt-header-menu::-webkit-resizer {
+  background-color: transparent;
+  border: 0px solid transparent;
+}
+
+.prodkt-header-menu::-webkit-scrollbar {
+  background-color: transparent;
+  border: 0px solid transparent;
+  width: auto;
+  height: 5px;
+  border-radius: 9999px;
+}
+.prodkt-header-menu::-webkit-scrollbar-button {
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-radius: 9999px;
+}
+.prodkt-header-menu::-webkit-scrollbar-corner {
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-radius: 9999px;
+}
+.prodkt-header-menu::-webkit-scrollbar-thumb {
+  background-color: var(--grayA8);
+  border: 0px solid var(--grayA2);
+  border-radius: 9999px;
+}
+.prodkt-header-menu::-webkit-scrollbar-track {
+  background-color: var(--gray4);
+  border: 0px solid var(--gray5);
+  border-right-width: 0;
+  border-radius: 9999px;
+}
+.prodkt-header-menu::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-radius: 9999px;
+}

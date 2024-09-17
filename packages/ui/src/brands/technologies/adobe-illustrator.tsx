@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const AdobeIllustratorLogo = (props: SVGProps<SVGSVGElement>) => (
+const AdobeIllustrator = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={256}
@@ -9,6 +9,8 @@ const AdobeIllustratorLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Adobe Illustrator</title>
+    <desc>Logo</desc>
     <g clipPath='url(#a)'>
       <path
         fill='#300'
@@ -21,9 +23,9 @@ const AdobeIllustratorLogo = (props: SVGProps<SVGSVGElement>) => (
     </g>
     <defs>
       <clipPath id='a'>
-        <path fill='white' d='M0 0h256v250H0z' />
+        <path fill='currentColor' d='M0 0h256v250H0z' />
       </clipPath>
     </defs>
   </svg>
 )
-export default AdobeIllustratorLogo
+export default AdobeIllustrator

@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const DirectusLogo = (props: SVGProps<SVGSVGElement>) => (
+const Directus = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={100}
@@ -9,6 +9,8 @@ const DirectusLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Directus</title>
+    <desc>Logo</desc>
     <path
       fill='currentColor'
       fillRule='evenodd'
@@ -21,4 +23,4 @@ const DirectusLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default DirectusLogo
+export default Directus

@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const ConfluenceLogo = (props: SVGProps<SVGSVGElement>) => (
+const Confluence = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={158}
@@ -9,6 +9,8 @@ const ConfluenceLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Confluence</title>
+    <desc>Logo</desc>
     <g clipPath='url(#confluence-a)'>
       <path
         fill='currentColor'
@@ -54,4 +56,4 @@ const ConfluenceLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default ConfluenceLogo
+export default Confluence

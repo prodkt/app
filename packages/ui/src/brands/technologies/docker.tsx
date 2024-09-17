@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const DockerLogo = (props: SVGProps<SVGSVGElement>) => (
+const Docker = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={100}
@@ -9,6 +9,8 @@ const DockerLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Docker</title>
+    <desc>Logo</desc>
     <path
       fill='#2396ED'
       d='m27.46 5.956.76.552c1.323 1.071 2.083 2.28 2.248 3.662 1.422-.276 3.24-.069 4.033.484l.727.45-.132.276c-.232.518-.298.656-.33.725-1.29 2.591-3.835 2.626-5.025 2.591-3.008 7.566-9.42 11.746-18.08 11.746-4 0-7.04-1.278-9.09-3.8-2.71-3.317-2.71-7.635-2.478-9.017l.066-.276h23.897c1.256 0 2.215-.346 2.677-.622-.495-.76-.66-1.624-.694-2.107-.099-1.382.232-2.833.893-3.87l.529-.794ZM6.373 9.203v3.455H2.737V9.203h3.636Zm4.297 0v3.455H7.034V9.203h3.636Zm4.297 0v3.455H11.33V9.203h3.636Zm4.296 0v3.455h-3.635V9.203h3.635Zm4.297 0v3.455h-3.636V9.203h3.636Zm-4.297-4.146v3.455h-3.635V5.057h3.635Zm-4.296 0v3.455H11.33V5.057h3.636Zm-4.297 0v3.455H7.034V5.057h3.636ZM19.263.912v3.455h-3.635V.912h3.635Z'
@@ -25,4 +27,4 @@ const DockerLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default DockerLogo
+export default Docker
