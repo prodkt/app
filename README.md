@@ -1,7 +1,9 @@
 <div align="center">
   <img src="https://github.com/prodkt/app/blob/master/apps/marketing/public/monorepo-placeholder.avif?raw=true" alt="Cover image" width="700px">
 </div>
-
+<div align="center">
+  <img src="https://github.com/prodkt/app/blob/master/apps/marketing/public/monorepo-technology.avif?raw=true" alt="Technology image" width="700px">
+</div>
 ## Documentation
 
 To get started with Prodkt, head over to the [documentation](https://prodkt.cloud) website where you can find installation instructions and how to work with the codebase.
