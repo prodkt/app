@@ -9,13 +9,15 @@ import {
 
 /**
  * DocsAside Component
+ * @param root0
+ * @param root0.children
  */
 export function DocsAside({
   children,
   ...props
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <Accordion type='single' collapsible className='w-full' {...props}>
+    <Accordion type='multiple' className='w-full' {...props}>
       {children}
     </Accordion>
   )
@@ -74,9 +76,11 @@ interface DocTabsProps {
 
 /**
  * DocTabs Component
+ * @param root0
+ * @param root0.docGroup
  */
 export function DocTabs({ docGroup }: Readonly<DocTabsProps>) {
-  // Group by group.page.title
+  // Group by group.page.title, sorting by page.sort first
   const groupData = docGroup.reduce<
     Record<string, { page: DocPage; items: DocGroupItem[] }>
   >((acc, item) => {
@@ -94,8 +98,10 @@ export function DocTabs({ docGroup }: Readonly<DocTabsProps>) {
     return acc
   }, {})
 
-  // Convert grouped data to array for rendering
-  const groupedArray = Object.values(groupData)
+  // Convert grouped data to array and sort by page.sort
+  const groupedArray = Object.values(groupData).sort(
+    (a, b) => (a.page.sort ?? 0) - (b.page.sort ?? 0),
+  )
 
   return (
     <DocsAside>
@@ -107,20 +113,22 @@ export function DocTabs({ docGroup }: Readonly<DocTabsProps>) {
             </h6>
           </AccordionTrigger>
           <AccordionContent>
-            <ol className='flex w-full flex-col items-start justify-start gap-1 border-t py-2 pb-0 text-xs'>
-              {items.map((item, itemIndex) => (
-                <li
-                  key={itemIndex}
-                  className='flex w-full items-center justify-start'
-                >
-                  <a
-                    href={`/docs/${item.group.page.slug}/${item.group.group_slug}`}
-                    className='w-full px-3 py-2 text-[var(--gray11)] hover:text-[var(--gray12)]'
+            <ol className='flex flex-col items-start justify-start w-full gap-1 py-2 pb-0 text-xs border-t'>
+              {items
+                .sort((a, b) => (a.group.sort ?? 0) - (b.group.sort ?? 0)) // Sort by group.sort
+                .map((item, itemIndex) => (
+                  <li
+                    key={itemIndex}
+                    className='flex items-center justify-start w-full'
                   >
-                    {item.title}
-                  </a>
-                </li>
-              ))}
+                    <a
+                      href={`/docs/${item.group.page.slug}#${item.group.group_slug}`}
+                      className='w-full px-3 py-2 text-[var(--gray11)] hover:text-[var(--gray12)]'
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
             </ol>
           </AccordionContent>
         </AccordionItem>

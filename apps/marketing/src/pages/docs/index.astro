@@ -1,10 +1,10 @@
 ---
-import type { Database, Json } from '@/database.types'
+import type { Database } from '@/database.types'
 
 import { Image } from 'astro:assets'
 
 import Circuit from '@prodkt/assets/backgrounds/circuit.svg'
-import { BlogPost } from '@prodkt/ui/prodkt-components/blog-post'
+import { Card } from '@prodkt/ui/prodkt-components/card'
 
 import DocsAside from '@/components/docs-aside.astro'
 // import { DocsShadow } from '@prodkt/ui/prodkt-components/docs-aside/docs-shadow'
@@ -14,8 +14,6 @@ import { formatDate } from '@/utils/formatDate'
 
 import PageHeader from '../../components/page-header.astro'
 import { GET } from './index.json'
-
-type Documentation = Database['public']['Tables']['documentation']['Row']
 
 // interface DocBlock {
 //   block_subheading: string
@@ -52,47 +50,76 @@ type Documentation = Database['public']['Tables']['documentation']['Row']
 //   group_codeblocks: boolean
 // }
 
-interface DocContent {
-  block: Documentation['block']
-  block_content: Documentation['block'] | Json | string[] | Json[]
+// interface DocContent {
+//   block: Documentation['block']
+//   block_content: Documentation['block'] | Json | string[] | Json[]
+// }
+
+type Documentation = Database['public']['Tables']['documentation']['Row'] & {
+  group: DocumentationGroup
+  documentationPages: DocumentationPage[]
 }
+
+type DocumentationPage =
+  Database['public']['Tables']['documentation_page']['Row']
+
+type DocumentationGroup =
+  Database['public']['Tables']['docummentation_group']['Row'] & {
+    page: DocumentationPage
+  }
+
+// interface DocTypes {
+//   documentationData: DocumentationGroup
+// }
 
 const response = await GET()
 const data = await response.json()
 
 // @ts-ignore
-const { documentationData } = data
+const { documentationData } = data as Documentation
+const { documentationPages } = data as Documentation
+const sortedPages = [...documentationPages].sort(
+  (a, b) => (a.sort ?? 0) - (b.sort ?? 0),
+)
 ---
 
 <Layout>
   <div
-    class='relative min-h-full w-full h-full flex flex-col items-center justify-start top-0'
+    class='relative top-0 flex flex-col items-center justify-start w-full min-h-full'
   >
-    <PageHeader
-      minimal
-      text='Docs'
-      bullet1=''
-      bullet2=''
-      bullet3=''
-      bullet4=''
-    />
-
-    <BlogPost
-      size='noTopPadding'
-      title={documentationData[0].title as string}
-      previousText='Back to blog'
-      backLink='/blog'
-      date={formatDate(`${documentationData[0].date_created}`)}
-      alt={documentationData[0].title}
-      hideToc
-      client:only='react'
+    <div
+      class='flex flex-col items-stretch w-full place-items-stretch place-content-stretch pl-[21.5rem] justify-stretch'
     >
-      {
-        documentationData.map((item: DocContent, index: number) => (
-          <Fragment key={index} set:html={item?.block_content} />
-        ))
-      }
-    </BlogPost>
+      <PageHeader minimal fullWidth text='Docs' />
+      <div
+        class='grid items-stretch grid-cols-3 gap-0 p-8 pt-0 justify-stretch'
+      >
+        {
+          sortedPages.length > 0 ? (
+            sortedPages.map((item: DocumentationPage) => (
+              <Card
+                client:only='react'
+                className='col-span-1 h-full'
+                key={item.id}
+                image={
+                  '42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif' as
+                    | React.ImgHTMLAttributes<HTMLImageElement>
+                    | undefined
+                }
+                alt='test'
+                link={`/docs/${item.slug}`}
+                title={item.title || 'Untitled'}
+                excerpt={item.title || 'No description available'}
+                date={formatDate(item.date_created) || 'Date not available'}
+              />
+            ))
+          ) : (
+            <p>Loading...</p>
+          )
+        }
+      </div>
+    </div>
+
     <DocsAside />
 
     <Image

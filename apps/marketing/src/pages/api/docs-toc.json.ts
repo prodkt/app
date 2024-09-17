@@ -45,8 +45,10 @@ async function fetchDocumentationData(
       `
       *,
       group (
+      sort,
         title,
         page (
+        sort,
           slug,
           title,
           status
@@ -57,6 +59,7 @@ async function fetchDocumentationData(
     `,
     )
     .neq('status', 'draft')
+    .order('sort', { referencedTable: 'group', ascending: false })
 
   if (response.error) {
     console.error(response.error)

@@ -6,10 +6,17 @@ import { cn } from '@prodkt/ui/cn/cn'
 const pageHeaderVariants = cva('', {
   variants: {
     variant: {
-      default: ({ minimal }: { minimal?: boolean }) =>
+      default: ({
+        minimal,
+        fullWidth,
+      }: {
+        minimal?: boolean
+        fullWidth?: boolean
+      }) =>
         cn(
           !minimal ? 'justify-center' : '',
-          'flex flex-col items-center justify-between gap-20 mx-auto w-[743px] relative h-auto',
+          fullWidth ? 'w-full mx-0' : 'mx-auto',
+          'flex flex-col items-center justify-between gap-20  relative h-auto',
         ),
     },
   },
@@ -25,18 +32,20 @@ interface Props {
   bullet3?: string
   bullet4?: string
   minimal?: boolean
+  fullWidth?: boolean
   className?: string
   variant?: 'default'
 }
 const {
   className,
   minimal = false,
+  fullWidth = false,
   variant = 'default',
   text = 'Codeblocks',
-  bullet1 = 'React',
-  bullet2 = 'Astro',
-  bullet3 = 'Svelte',
-  bullet4 = 'HTML',
+  bullet1,
+  bullet2,
+  bullet3,
+  bullet4,
 } = Astro.props
 ---
 
@@ -46,7 +55,10 @@ const {
       !minimal
         ? 'text-[8.925rem] text-center  tracking-tighter mb-12  after:left-0 after:right-0 leading-[75%]'
         : 'text-left text-[5.925rem] tracking-[-0.325rem] font-normal  after:left-0 after:right-auto leading-[64%] mb-8',
-      'prodkt-creative-h1  w-[743px]  relative z-[4] mx-auto mt-28 after:absolute after:w-1/2 after:h-1/2 after:mx-auto after:top-0 after:bg-[var(--grayA7)] after:blur-2xl after:mix-blend-soft-light',
+      !fullWidth
+        ? 'w-[743px] after:mx-auto  after:w-1/2'
+        : 'block after:ml-0 mr-0 max-w-[calc(100%_-_4rem)] text-left px-10 after:w-1/4',
+      'prodkt-creative-h1 mx-auto relative z-[4] mt-20 after:absolute after:h-1/2 after:top-0 after:bg-[var(--grayA7)] after:blur-2xl after:mix-blend-soft-light',
     )}
   >
     {text}
@@ -125,7 +137,18 @@ const {
     >
     </div>
   </h1>
-  <div class='grid grid-cols-4 mx-auto items-center justify-center w-[743px]'>
+  <div
+    class={cn(
+      !minimal
+        ? 'text-[8.925rem] text-center  tracking-tighter mb-12  after:left-0 after:right-0 leading-[75%]'
+        : 'text-left text-[5.925rem] tracking-[-0.325rem] font-normal  after:left-0 after:right-auto leading-[64%] mb-8',
+      !fullWidth
+        ? 'w-[743px] mx-auto grid grid-cols-4 items-center justify-center'
+        : 'w-[calc(100%_-_4rem)] mx-auto text-left flex flex-row items-center justify-start gap-8',
+      '',
+    )}
+    class=''
+  >
     <p
       class='col-span-1 font-mono uppercase text-sm tracking-widest font-normal text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
     >

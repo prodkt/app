@@ -6,6 +6,7 @@ import { Card } from '@prodkt/ui/prodkt-components/card'
 import Layout from '@/layouts/PublicLayout.astro'
 import { formatDate } from '@/utils/formatDate'
 
+import PageHeader from '../../components/page-header.astro'
 import { GET } from './index.json'
 
 type FlowNodes = Database['public']['Tables']['flows']['Row']
@@ -18,7 +19,14 @@ const data = (await response.json()) as FlowData
 ---
 
 <Layout>
-  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
+  <PageHeader
+    bullet1='User Flows'
+    bullet2='UX Journeys'
+    bullet3='Proofs'
+    bullet4='Concepting'
+    text='Flows'
+  />
+  <div class='grid items-stretch grid-cols-3 gap-32 p-20 justify-stretch'>
     {
       data ? (
         data.flowData.map((item: any) => (

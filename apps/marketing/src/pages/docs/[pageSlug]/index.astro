@@ -4,9 +4,11 @@ import type { Database, Json } from '@/database.types'
 import { Image } from 'astro:assets'
 
 import Circuit from '@prodkt/assets/backgrounds/circuit.svg'
+import { BlogPost } from '@prodkt/ui/prodkt-components/blog-post'
 
 import DocsAside from '@/components/docs-aside.astro'
 import Layout from '@/layouts/PublicLayout.astro'
+import { formatDate } from '@/utils/formatDate'
 
 import PageHeader from '../../../components/page-header.astro'
 import { GET } from './index.json'
@@ -54,35 +56,59 @@ import { GET } from './index.json'
 
 interface GroupDataItem {
   anchor_slug: string | null
-  block: Json | null
+  // block: Json | null
+  block?: Block[]
+  docData: []
   block_content: Json | null
   date_created: string | null
   date_updated: string | null
-  group: string | null
+  group: DocumentationGroup & { page: DocumentationPage }
   group_codeblocks: boolean | null
   id: string
   sort: number | null
   status: string
-  title: string | undefined
+  title: string
   user_created: string | null
   user_updated: string | null
 }
-;[]
+
+// Define the types
+interface Block {
+  block_content: string
+}
+
+// interface GroupDataItem {
+//   anchor_slug: string | null
+//   block: Json | null
+//   block_content: Json | null
+//   date_created: string | null
+//   date_updated: string | null
+//   group: string | null
+//   group_codeblocks: boolean | null
+//   id: string
+//   sort: number | null
+//   status: string
+//   title: string | undefined
+//   user_created: string | null
+//   user_updated: string | null
+// }
+// ;[]
 
 type GroupData = GroupDataItem[]
 
+type DocumentationPage =
+  Database['public']['Tables']['documentation_page']['Row']
+type DocumentationGroup =
+  Database['public']['Tables']['docummentation_group']['Row']
 type Documentation = Database['public']['Tables']['documentation']['Row'] & {
-  groupData: GroupData // Just GroupData, not GroupData[]
+  docData: GroupData
 }
 const response = await GET(Astro)
 const data = (await response.json()) as Documentation
-console.log(data)
 ---
 
 <Layout>
-  <div
-    class='relative top-0 flex flex-col items-center justify-start size-full'
-  >
+  <div class='relative top-0 flex flex-col items-center justify-start h-auto'>
     <PageHeader
       minimal
       text='Docs'
@@ -92,16 +118,42 @@ console.log(data)
       bullet4=''
     />
 
-    <div
-      class='fixed bg-[var(--gray1)] border-r top-[96px] h-[calc(100%_-_128px)] left-[32px] px-0 pb-5 border rounded-2xl w-auto'
+    <BlogPost
+      title={data?.docData[0]?.group?.page?.title as string | undefined}
+      previousText='Back'
+      size='noTopPadding'
+      hideAside
+      backLink='/docs'
+      date={formatDate(data?.docData[0]?.date_created as string | null)}
+      alt={data?.title as string}
+      hideToc
+      image={`42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
+      client:only='react'
     >
-      <DocsAside />
-
-      <Image
-        src={Circuit}
-        class='absolute size-full max-w-full mix-blend-color-dodge left-0 top-0 right-0 z-[-1]'
-        alt=''
-      />
-    </div>
+      <!-- {
+        data.docData.map((item, index) => (
+          <Fragment key={index}>
+            {item.group?.map((block) => (
+              <Fragment key={block.id} set:html={block.block_content} />
+            ))}
+          </Fragment>
+        ))
+      } -->
+      {
+        data.docData.map((item, index) => (
+          <>
+            <hr id={item?.anchor_slug} />
+            <h4 class='text-3xl'>{item?.title}</h4>
+            <Fragment key={index} set:html={item?.block?.[0]?.block_content} />
+          </>
+        ))
+      }
+    </BlogPost>
+    <DocsAside />
+    <Image
+      src={Circuit}
+      class='absolute size-full max-w-full mix-blend-color-dodge left-0 top-0 right-0 z-[-1]'
+      alt=''
+    />
   </div>
 </Layout>

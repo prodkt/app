@@ -10,7 +10,7 @@ function PageFooter() {
   return (
     <section className='w-full bg-transparent'>
       <div className='flex flex-row flex-wrap'>
-        <div className='w-full px-6 pt-10 bg-transparent sm:w-1/2 sm:pt-10 md:w-4/12 lg:w-3/12 lg:pb-10'>
+        <div className='w-full px-6 pt-10 bg-transparent sm:w-1/2 sm:pt-10 md:w-4/12 lg:w-3/12 lg:pb-10 lg:pl-12'>
           <div className='max-w-md mx-auto top-12 sm:sticky lg:relative'>
             <a className='inline-block mb-12 text-3xl' href='/'>
               <ProdktLogo className='h-9' />
@@ -112,7 +112,7 @@ function PageFooter() {
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/'>
+                  <a className='hover:underline' href='/docs'>
                     Documentation
                   </a>
                 </li>
