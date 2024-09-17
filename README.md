@@ -4,6 +4,9 @@
 <div align="center">
   <img src="https://github.com/prodkt/app/blob/master/apps/marketing/public/monorepo-technology.avif?raw=true" alt="Technology image" width="700px">
 </div>
+
+<div align="center">
+
 ## Documentation
 
 To get started with Prodkt, head over to the [documentation](https://prodkt.cloud) website where you can find installation instructions and how to work with the codebase.
@@ -31,3 +34,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+</div>
