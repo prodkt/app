@@ -51,7 +51,7 @@ interface Props {
 const {
   accentColor = 'violet',
   grayColor = 'mauve',
-  appearance = 'light',
+  appearance = 'dark',
 } = Astro.props
 ---
 
@@ -72,10 +72,10 @@ const {
     <ViewTransitions />
   </head>
   <body
-    class='w-full h-screen relative overflow-x-hidden overflow-y-hidden scroll-m-0 scroll-p-0 m-0 bg-[var(--grayA12)]'
+    class='w-full h-screen relative overflow-x-hidden overflow-y-hidden scroll-m-0 scroll-p-0 m-0 bg-[var(--gray12)]'
   >
     <div
-      class='relative flex flex-col items-center justify-center rounded-3xl w-full z-[0] bg-[var(--grayA12)] dark:bg-[var(--gray1)] overflow-hidden border border-[var(--grayA6)] dark:border-[var(--gray5)]'
+      class='relative flex flex-col items-center justify-center rounded-3xl w-full z-[0] bg-[var(--gray12)] dark:bg-[var(--gray1)] overflow-hidden border border-[var(--grayA6)] dark:border-[var(--gray5)]'
     >
       <ThemeProvider attribute='class' client:only='react'>
         <Theme
@@ -93,6 +93,7 @@ const {
             class='relative bottom-0 mb-0 mt-auto top-auto h-auto min-h-[calc(100%_-_0px)] w-full z-[0] bg-[var(--gray1)] dark:bg-[var(--gray2)] overflow-x-hidden overflow-y-auto scrollbarGutter-stable'
           >
             <slot />
+            <slot name='codeRender' />
           </div>
         </Theme>
       </ThemeProvider>

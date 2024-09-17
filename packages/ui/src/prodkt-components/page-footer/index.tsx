@@ -10,7 +10,7 @@ function PageFooter() {
   return (
     <section className='w-full bg-transparent'>
       <div className='flex flex-row flex-wrap'>
-        <div className='w-full bg-transparent px-6 pb-36 pt-20 md:w-5/12 lg:w-3/12'>
+        <div className='w-full bg-transparent px-6 pb-36 pt-20 md:w-5/12 lg:w-2/12'>
           <div className='mx-auto max-w-xs'>
             <a className='mb-12 inline-block text-3xl' href='/'>
               <ProdktLogo className='h-9' />
@@ -25,26 +25,26 @@ function PageFooter() {
             </div>
           </div>
         </div>
-        <div className='w-full px-6 py-20 md:w-7/12 lg:w-9/12 lg:pl-40'>
-          <div className='-mx-4 mt-16 flex flex-wrap border-b pb-20'>
-            <div className='mb-10 w-full px-4 md:w-1/2 lg:mb-0 lg:w-1/3'>
+        <div className='w-full px-6 py-20 md:w-7/12 lg:w-10/12 lg:pl-40'>
+          <div className='-mx-4 mt-16 flex flex-wrap border-b border-[var(--grayA3)] pb-20'>
+            <div className='mb-10 w-full px-4 md:w-1/2 lg:mb-0 lg:w-1/4'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
-                Information
+                Exploration
               </h3>
               <ul>
                 <li className='mb-6 text-xs'>
                   <a className='hover:underline' href='/flows'>
-                    User Flows
+                    Flows
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/blog'>
-                    Blog
+                  <a className='hover:underline' href='/codeblocks'>
+                    Codeblocks
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/work'>
-                    Work Showcase
+                  <a className='hover:underline' href='/files'>
+                    File Manager
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
@@ -69,44 +69,71 @@ function PageFooter() {
                 </li>
               </ul>
             </div>
-            <div className='mb-10 w-full px-4 md:w-1/2 lg:mb-0 lg:w-1/3'>
+            <div className='mb-10 w-full px-4 md:w-1/2 lg:mb-0 lg:w-1/4'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
-                Customer Service
+                Bryan Funk
               </h3>
               <ul>
                 <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/'>
-                    Return an order
+                  <a className='hover:underline' href='/work'>
+                    Work
+                  </a>
+                </li>
+                <li className='mb-6 text-xs'>
+                  <a className='hover:underline' href='/blog'>
+                    Blog
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
                   <a className='hover:underline' href='/'>
-                    Search Terms
+                    Work History
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
                   <a className='hover:underline' href='/'>
-                    Advanced Search
+                    Resume
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
                   <a className='hover:underline' href='/'>
-                    Orders and Returns
+                    Type 1 Diabetes
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className='mb-10 w-full px-4 md:w-1/2 lg:mb-0 lg:w-1/4'>
+              <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
+                Prodkt
+              </h3>
+              <ul>
+                <li className='mb-6 text-xs'>
+                  <a className='hover:underline' href='/about'>
+                    What is Prodkt?
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
                   <a className='hover:underline' href='/'>
-                    FAQs
+                    Component Library
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
                   <a className='hover:underline' href='/'>
-                    Store Location
+                    Roadmap
                   </a>
                 </li>
-                <li className='text-xs'>
+                <li className='mb-6 text-xs'>
                   <a className='hover:underline' href='/'>
-                    Contact Us
+                    Pricing
+                  </a>
+                </li>
+                <li className='mb-6 text-xs'>
+                  <a className='hover:underline' href='/'>
+                    Documentation
+                  </a>
+                </li>
+                <li className='mb-6 text-xs'>
+                  <a className='hover:underline' href='/'>
+                    API
                   </a>
                 </li>
               </ul>
@@ -119,7 +146,7 @@ function PageFooter() {
                 <li className='mb-6'>
                   <h4 className='mb-2 text-xs'>Mobile</h4>
                   <a
-                    className='text-xs text-[var(--accent9)] hover:underline'
+                    className='text-xs text-[var(--accent10)] hover:underline'
                     href='/'
                   >
                     +1 208 954 4981
@@ -128,7 +155,7 @@ function PageFooter() {
                 <li className='mb-6'>
                   <h4 className='mb-2 text-xs'>Email</h4>
                   <a
-                    className='text-xs text-[var(--accent9)] hover:underline'
+                    className='text-xs text-[var(--accent10)] hover:underline'
                     href='mailto:bryan.funk@prodkt.cloud'
                   >
                     bryan.funk@prodkt.cloud

@@ -284,6 +284,14 @@ aria-selected:prodkt-codeblock-tab-container {
   @apply bg-transparent;
 }
 
+.sp-tab-container .prodkt-codeblock-tab-container,
+.sp-tab-container,
+.prodkt-codeblock-tab-container,
+.sp-tab-container.prodkt-codeblock-tab-container {
+  outline: none !important;
+  outline-color: var(--grayA4);
+}
+
 .prodkt-codeblock-code-editor,
 .sp-code-editor {
   width: 100%;
@@ -344,19 +352,36 @@ div.cm-comment {
 // }
 
 .prodkt-codeblock-tabs {
-  @apply absolute px-1 pb-2 pt-1 top-0 bottom-auto mt-0 z-10 min-h-[48px] w-full flex flex-row items-center justify-start gap-0 bg-[var(--gray1)] ring-inset ring-1 ring-[var(--grayA4)] text-xs overflow-hidden rounded-2xl;
+  @apply absolute px-1.5 pt-1 pb-1 top-0 bottom-auto mt-0 z-10 min-h-[48px] w-full flex flex-row items-center !justify-start !gap-0 !bg-[var(--gray1)] ring-inset ring-1 ring-[var(--grayA4)] text-xs overflow-hidden rounded-2xl border-none !border-b-0;
 }
 
 .prodkt-codeblock-tabs-scrollable-container {
-  @apply relative px-2 py-2 z-10 min-h-[48px] w-full flex flex-row items-center justify-start gap-0 text-xs overflow-x-scroll overflow-y-hidden;
+  @apply relative rounded-xl !pl-0 !pr-0 !py-2 z-10 min-h-[48px] w-full flex flex-row items-center justify-start gap-0 text-xs overflow-x-scroll overflow-y-hidden;
 }
 
+.sp-tabs-scrollable-container:has(
+    [role='tab'],
+    [aria-selected='false'],
+    [aria-selected='true']
+  ),
+.sp-tabs-scrollable-container:has(button),
+.sp-tabs-scrollable-container,
+.sp-tabs-scrollable-container[role='tab'],
+.prodkt-codeblock-tabs-scrollable-container[role='tab'],
+.prodkt-codeblock-tabs-scrollable-container,
+.sp-tabs-scrollable-container .prodkt-codeblock-tabs-scrollable-container,
+.sp-tabs-scrollable-container.prodkt-codeblock-tabs-scrollable-container {
+  padding-right: 1px !important;
+  padding-left: 0 !important;
+  padding: 0 0 0 0 !important;
+  margin: 0;
+}
 .prodkt-codeblock-tab-container button {
-  @apply bg-[var(--grayA1)] px-3 py-2 border border-[var(--grayA1)];
+  @apply bg-[var(--grayA1)] mx-0 mr-[-20px] pl-3 pr-3 py-2 rounded-2xl border border-[var(--grayA3)];
 }
 
 .prodkt-codeblock-tab-container button[data-active='true'] {
-  @apply bg-[var(--grayA2)] border border-[var(--grayA4)] rounded-xl;
+  @apply bg-[var(--gray3)] border !border-[var(--grayA6)] rounded-xl;
 }
 
 .prodkt-codeblock-tabs-scrollable-container::-webkit-resizer {
@@ -408,10 +433,11 @@ div.cm-comment {
 // }
 
 .prodkt-codeblock-editor {
+  @apply rounded-lg h-full shadow-none border border-transparent outline-0 ring-0 border-none ring-transparent pt-1 mb-0 pb-0 text-xs bg-transparent !important;
 }
 // .sp-editor,
 .sp-stack {
-  @apply flex flex-col flex-nowrap border-none mt-auto mb-0 bottom-0 top-auto overflow-hidden;
+  @apply flex flex-col h-full flex-nowrap border-none mt-auto mb-0 bottom-0 top-auto overflow-hidden;
 }
 
 .sp-editor {
@@ -419,19 +445,23 @@ div.cm-comment {
 }
 
 .prodkt-cm-editor {
-  height: calc(100dvh - 292px);
-  max-height: calc(100dvh - 292px);
-  overflow: hidden;
+  height: calc(100dvh - 248px);
+  min-height: calc(100dvh - 248px);
+  max-height: calc(100dvh - 248px);
+  overflow-x: hidden;
+  overflow-y: auto;
   @apply rounded-2xl bg-[var(--gray1)];
-  @apply border border-[var(--grayA4)] pr-2;
+  @apply border border-[var(--grayA4)];
 }
 
 .prodkt-code-editor {
-  height: calc(100dvh - 292px);
-  max-height: calc(100dvh - 292px);
   overflow: auto;
-  margin-top: 80px;
-  @apply rounded-xl;
+  margin-top: 50px;
+  @apply rounded-2xl;
+}
+
+.cm-scroller {
+  @apply pr-2 !important;
 }
 
 .cm-scroller::-webkit-resizer {
@@ -473,33 +503,33 @@ div.cm-comment {
 }
 
 .sp-syntax-definition {
-  color: var(--iris10);
+  color: var(--iris10) !important;
 }
 
 .sp-syntax-property {
-  color: var(--tomato11);
+  color: var(--tomato11) !important;
 }
 
 .sp-syntax-string {
-  color: var(--mauve10);
+  color: var(--mauve10) !important;
 }
 
 .sp-syntax-punctuation {
-  color: var(--mauve11);
+  color: var(--mauve11) !important;
 }
 
 .sp-syntax-keyword {
-  color: var(--violet8);
+  color: var(--violet8) !important;
 }
 
 .sp-syntax-plain {
-  color: var(--sky9);
+  color: var(--sky9) !important;
 }
 
 .sp-syntax-static {
-  color: var(--mauve10);
+  color: var(--mauve10) !important;
 }
 
 .cm-line {
-  color: var(--violet10);
+  color: var(--violet10) !important;
 }

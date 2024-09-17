@@ -1442,6 +1442,12 @@
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[var\(--indigo12\)\] {
+  --tw-gradient-from: var(--indigo12) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-\[var\(--indigo9\)\] {
   --tw-gradient-from: var(--indigo9) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -1450,6 +1456,18 @@
 
 .from-\[var\(--mint9\)\] {
   --tw-gradient-from: var(--mint9) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[var\(--pink11\)\] {
+  --tw-gradient-from: var(--pink11) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[var\(--pink9\)\] {
+  --tw-gradient-from: var(--pink9) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -1494,6 +1512,10 @@
 
 .to-\[var\(--grass9\)\] {
   --tw-gradient-to: var(--grass9) var(--tw-gradient-to-position);
+}
+
+.to-\[var\(--gray1\)\] {
+  --tw-gradient-to: var(--gray1) var(--tw-gradient-to-position);
 }
 
 .to-\[var\(--indigo11\)\] {
@@ -1794,6 +1816,10 @@
   color: var(--mint9);
 }
 
+.text-\[var\(--pink10\)\] {
+  color: var(--pink10);
+}
+
 .text-\[var\(--red12\)\] {
   color: var(--red12);
 }
@@ -2076,7 +2102,7 @@
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -6074,13 +6100,13 @@ select {
   --sp-zIndices-base: 1;
   --sp-zIndices-overlay: 2;
   --sp-zIndices-top: 3;
-  --sp-colors-surface1: var(--gray-2);
-  --sp-colors-surface2: var(--gray-4);
-  --sp-colors-surface3: var(--gray-6);
-  --sp-colors-disabled: var(--gray-8);
-  --sp-colors-base: var(--gray-10);
-  --sp-colors-clickable: var(--gray-7);
-  --sp-colors-hover: var(--gray-8);
+  --sp-colors-surface1: var(--gray2);
+  --sp-colors-surface2: var(--gray4);
+  --sp-colors-surface3: var(--gray6);
+  --sp-colors-disabled: var(--gray8);
+  --sp-colors-base: var(--gray10);
+  --sp-colors-clickable: var(--gray7);
+  --sp-colors-hover: var(--gray8);
   --sp-colors-accent: #e5e5e5;
   --sp-colors-error: #ffb4a6;
   --sp-colors-errorSurface: #690000;
@@ -6124,7 +6150,7 @@ select {
   --monoFamily: 'IBM Plex Mono', monospace !important;
   --bgColor-body: var(--background);
   --textColor-body: var(--foreground);
-  --border: var(--slate-5);
+  --border: var(--slate5);
   --ring: var(--border) !important;
   --tw-ring-offset-color: var(--border) !important;
   --tw-ring-color: var(--border) !important;
@@ -6180,6 +6206,18 @@ select {
   background-color: transparent !important;
   border: 0px solid transparent !important;
   border-radius: 9999px !important;
+}
+
+button[type='button'],
+button[aria-haspopup='menu'],
+button[aria-expanded='false'],
+button[data-state='closed'],
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  outline: none;
+  outline-color: var(--grayA4);
 }
 
 .hover\:border-white:hover {

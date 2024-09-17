@@ -1,4 +1,3 @@
-import type { Database } from '@/database.types'
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { CodeblockLayout } from '.'

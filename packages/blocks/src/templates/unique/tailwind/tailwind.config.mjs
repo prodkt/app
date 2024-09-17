@@ -6,14 +6,17 @@ export default {
   content: [
     '/src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     '../components/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    // './node_modules/@radix-ui/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    './src/components/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    '../components/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    'src/templates/unique/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     'src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     'src/**/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     '/src/**/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     './src/**/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
   ],
+  corePlugins: {
+    gradientColorStops: true,
+    gradientColorStopPositions: true,
+  },
   prefix: '',
   darkMode: 'class',
   theme: {
@@ -67,21 +70,21 @@ export default {
     backdropSaturate: ({ theme }) => theme('saturate'),
     backdropSepia: ({ theme }) => theme('sepia'),
     backgroundColor: ({ theme }) => theme('colors'),
-    backgroundImage: {
-      none: 'none',
-      'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
-      'gradient-to-tr':
-        'linear-gradient(to top right, var(--tw-gradient-stops))',
-      'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
-      'gradient-to-br':
-        'linear-gradient(to bottom right, var(--tw-gradient-stops))',
-      'gradient-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
-      'gradient-to-bl':
-        'linear-gradient(to bottom left, var(--tw-gradient-stops))',
-      'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
-      'gradient-to-tl':
-        'linear-gradient(to top left, var(--tw-gradient-stops))',
-    },
+    // backgroundImage: {
+    //   none: 'none',
+    //   'gradient-tt': 'linear-gradient(to top, var(--tw-gradient-stops))',
+    //   'gradient-to-tr':
+    //     'linear-gradient(to top right, var(--tw-gradient-stops))',
+    //   'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
+    //   'gradient-to-br':
+    //     'linear-gradient(to bottom right, var(--tw-gradient-stops))',
+    //   'gradient-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
+    //   'gradient-to-bl':
+    //     'linear-gradient(to bottom left, var(--tw-gradient-stops))',
+    //   'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
+    //   'gradient-to-tl':
+    //     'linear-gradient(to top left, var(--tw-gradient-stops))',
+    // },
     backgroundOpacity: ({ theme }) => theme('opacity'),
     backgroundPosition: {
       bottom: 'bottom',
@@ -1229,38 +1232,38 @@ export default {
           DEFAULT: 'var(--border)',
         },
         input: {
-          DEFAULT: 'var(--gray-9)',
-          foreground: 'var(--accent-1)',
+          DEFAULT: 'var(--gray9)',
+          foreground: 'var(--accent1)',
         },
-        background: 'var(--gray-1)',
-        foreground: 'var(--gray-11)',
+        background: 'var(--gray1)',
+        foreground: 'var(--gray11)',
         primary: {
-          DEFAULT: 'var(--accent-9)',
-          foreground: 'var(--accent-12)',
+          DEFAULT: 'var(--accent9)',
+          foreground: 'var(--accent12)',
         },
         secondary: {
-          DEFAULT: 'var(--violet-9)',
-          foreground: 'var(--violet-1)',
+          DEFAULT: 'var(--violet9)',
+          foreground: 'var(--violet1)',
         },
         destructive: {
-          DEFAULT: 'var(--tomato-9)',
-          foreground: 'var(--tomato-1)',
+          DEFAULT: 'var(--tomato9)',
+          foreground: 'var(--tomato1)',
         },
         muted: {
-          DEFAULT: 'var(--gray-a4)',
-          foreground: 'var(--gray-9)',
+          DEFAULT: 'var(--grayA4)',
+          foreground: 'var(--gray9)',
         },
         accent: {
-          DEFAULT: 'var(--accent-9)',
-          foreground: 'var(--accent-1)',
+          DEFAULT: 'var(--accent9)',
+          foreground: 'var(--accent1)',
         },
         popover: {
-          DEFAULT: 'var(--gray-9)',
-          foreground: 'var(--gray-1)',
+          DEFAULT: 'var(--gray9)',
+          foreground: 'var(--gray1)',
         },
         card: {
-          DEFAULT: 'var(--gray-1)',
-          foreground: 'var(--gray-11)',
+          DEFAULT: 'var(--gray1)',
+          foreground: 'var(--gray11)',
           ring: 'var(--border)',
           border: 'var(--border)',
         },

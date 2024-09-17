@@ -4,16 +4,11 @@ import type {
 } from '@codesandbox/sandpack-react'
 
 import {
-  // getSandpackCssText,
   SandpackCodeEditor,
-  SandpackCodeViewer,
   SandpackLayout,
-  SandpackPreview,
   SandpackProvider,
-} from '@codesandbox/sandpack-react/unstyled'
+} from '@codesandbox/sandpack-react'
 import { monokaiPro } from '@codesandbox/sandpack-themes'
-
-// const cssTextOutput = getSandpackCssText()
 
 export type ComponentData = SandpackFiles
 export type ComponentTemplate = SandpackPredefinedTemplate
@@ -29,6 +24,7 @@ const CodeEditor = ({
     theme={monokaiPro}
     files={componentData}
     options={{
+      bundlerURL: 'https://sandpack-bundler.codesandbox.io',
       classes: {
         'sp-wrapper': 'prodkt-codeblock-wrapper',
         'sp-layout': 'prodkt-codeblock-layout',
@@ -58,10 +54,6 @@ const CodeEditor = ({
         'sp-syntax-static': 'prodkt-syntax-static',
       },
     }}
-    // options={{
-    //   visibleFiles: ['/App.js', '/button.js', '/index.js'],
-    //   activeFile: '/button.js',
-    // }}
     template={template}
   >
     <SandpackLayout>
@@ -76,13 +68,4 @@ const CodeEditor = ({
   </SandpackProvider>
 )
 
-const CodeViewer = () => (
-  <SandpackProvider template='react'>
-    <SandpackLayout>
-      <SandpackCodeViewer />
-      <SandpackPreview />
-    </SandpackLayout>
-  </SandpackProvider>
-)
-
-export { CodeEditor, CodeViewer }
+export { CodeEditor }
