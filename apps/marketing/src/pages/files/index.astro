@@ -1,6 +1,7 @@
 ---
 import { PageFile } from '@prodkt/ui/prodkt-components/file'
-import FileFolder from '@prodkt/ui/prodkt-components/file-folder'
+
+// import FileFolder from '@prodkt/ui/prodkt-components/file-folder'
 
 import Layout from '@/layouts/PublicLayout.astro'
 
@@ -12,16 +13,10 @@ const data = (await response.json()) as any
 ---
 
 <Layout>
-  <PageHeader
-    text='Files'
-    bullet1='About me'
-    bullet2='About Prodkt'
-    bullet3='Insights'
-    bullet4='and more...'
-  />
-  <div class='grid items-stretch grid-cols-3 gap-32 p-20 justify-stretch'>
+  <PageHeader minimal fullWidth text='Files' />
+  <div class='items-stretch hidden grid-cols-3 gap-32 p-20 justify-stretch'>
     <div class='flex flex-row items-center justify-center gap-4'></div>
-    {
+    <!-- {
       data ? (
         data.fileData.map((item: any) => (
           <FileFolder
@@ -36,9 +31,11 @@ const data = (await response.json()) as any
       ) : (
         <p>Loading...</p>
       )
-    }
+    } -->
   </div>
-  <div class='flex flex-row items-center justify-center gap-4'>
+  <div
+    class='flex flex-row flex-wrap items-center justify-around gap-12 px-12 mx-auto'
+  >
     {
       data ? (
         data.fileData.map((item: any) => (

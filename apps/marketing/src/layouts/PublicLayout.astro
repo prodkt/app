@@ -76,6 +76,38 @@ const {
     <BaseHead />
     <PostHog />
     <ViewTransitions />
+
+    <script>
+      document.addEventListener('click', function (e: MouseEvent) {
+        const target = e.target as HTMLElement
+
+        if (target.tagName === 'A') {
+          const href = (target as HTMLAnchorElement).getAttribute('href')
+
+          if (href && href.includes('#')) {
+            const [path, hash] = href.split('#')
+            const currentPath = window.location.pathname
+
+            // If the path matches the current page or is empty (just the fragment), handle the scrolling
+            if (path === currentPath || path === '') {
+              e.preventDefault() // Prevent default behavior
+              const id = hash
+              const targetElement = document.getElementById(id ? id : '')
+              const scrollableDiv = document.querySelector(
+                '.prodkt-app-container',
+              ) // Adjust to your div's class or ID
+
+              if (targetElement && scrollableDiv) {
+                scrollableDiv.scrollTo({
+                  top: targetElement.offsetTop,
+                  behavior: 'smooth', // Optional for smooth scrolling
+                })
+              }
+            }
+          }
+        }
+      })
+    </script>
   </head>
   <body
     class='w-[100dvw] max-w-[100dvw] h-screen min-h-[100dvh] max-h-[100dvh] relative overflow-x-hidden overflow-y-hidden scroll-m-0 scroll-p-0 !p-0 sm:!p-4 m-0 bg-[var(--grayA12)]'
@@ -101,7 +133,7 @@ const {
             <Header client:only='react' />
           </div>
           <div
-            class='relative bottom-0 mb-0 mt-auto top-auto h-auto min-h-[calc(100%_-_0px)] w-full z-[0] bg-[var(--gray1)] dark:bg-[var(--gray2)] overflow-x-hidden overflow-y-auto scrollbarGutter-stable'
+            class='prodkt-app-container relative bottom-0 mb-0 mt-auto top-auto h-auto min-h-[calc(100%_-_0px)] w-full z-[0] bg-[var(--gray1)] dark:bg-[var(--gray2)] overflow-x-hidden overflow-y-auto scrollbarGutter-stable'
           >
             <slot />
             <PageFooter client:load />

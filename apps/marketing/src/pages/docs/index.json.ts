@@ -67,6 +67,32 @@ async function fetchDocumentationData(
 }
 
 /**
+ *
+ * @param supabase
+ */
+async function fetchDocumentationPages(
+  supabase: SupabaseClient<Database>,
+): Promise<Database['public']['Tables']['documentation_page']['Row'] | null> {
+  const response = await supabase
+    .from('documentation_page')
+    .select(
+      `
+      *,slug,
+          title,
+          status
+    `,
+    )
+    .neq('status', 'draft')
+
+  if (response.error) {
+    console.error(response.error)
+    return null
+  }
+
+  return response.data as unknown as Database['public']['Tables']['documentation_page']['Row']
+}
+
+/**
  * Handle GET request.
  * @param root0
  * @param root0.params
@@ -84,6 +110,16 @@ export async function GET() {
         },
       })
     }
+    const documentationPages = await fetchDocumentationPages(supabaseClient)
+    if (!documentationPages) {
+      console.error('Data is empty or undefined')
+      return new Response(JSON.stringify({ error: 'No data found.' }), {
+        status: 404,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+    }
 
     const groupSlugs = documentationData.map(
       (group) => group.group[0]?.group_slug,
@@ -93,6 +129,7 @@ export async function GET() {
       JSON.stringify({
         pageSlugs,
         groupSlugs,
+        documentationPages,
         documentationData,
         status: 200,
       }),

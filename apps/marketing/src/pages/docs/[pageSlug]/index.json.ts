@@ -22,8 +22,9 @@ async function fetchData(
 ): Promise<Documentation[] | null> {
   const response: PostgrestResponse<Documentation> = await supabase
     .from('documentation')
-    .select('*, group!inner (page!inner (slug))')
-    .eq('group.page.slug', `${pageSlug}`)
+    .select('*, group!inner (page!inner (slug, sort, title), sort, id)')
+    .eq('group.page.slug', pageSlug ? pageSlug : '')
+    .order('sort', { referencedTable: 'group', ascending: false })
 
   // Type guard to check if response.error exists
   if (response.error) {
@@ -33,6 +34,7 @@ async function fetchData(
 
   return response.data
 }
+
 /**
  * Fetch flow data from the database.
  * @param supabase The Supabase client.
