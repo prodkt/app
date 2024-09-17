@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const TokenStudioLogo = (props: SVGProps<SVGSVGElement>) => (
+const TokenStudio = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={203}
@@ -8,6 +8,8 @@ const TokenStudioLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Tokens Studio</title>
+    <desc>Logo</desc>
     <g fill='currentColor' clipPath='url(#tokensstudent-a)'>
       <path
         fillRule='evenodd'
@@ -24,4 +26,4 @@ const TokenStudioLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default TokenStudioLogo
+export default TokenStudio

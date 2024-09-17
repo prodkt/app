@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const StencilLogo = (props: SVGProps<SVGSVGElement>) => (
+const Stencil = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={512}
@@ -9,6 +9,8 @@ const StencilLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Stencil</title>
+    <desc>Logo</desc>
     <g clipPath='url(#stencil-a)'>
       <path
         fill='currentColor'
@@ -22,4 +24,4 @@ const StencilLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default StencilLogo
+export default Stencil

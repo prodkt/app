@@ -1,6 +1,6 @@
-import { SVGProps } from 'react'
+import type { SVGProps } from 'react'
 
-const StarlightLogo = (props: SVGProps<SVGSVGElement>) => (
+const Starlight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={161}
@@ -9,6 +9,8 @@ const StarlightLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Starlight</title>
+    <desc>Logo</desc>
     <g clipPath='url(#starlight-a)'>
       <path
         fill='url(#starlight-b)'
@@ -56,4 +58,4 @@ const StarlightLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default StarlightLogo
+export default Starlight

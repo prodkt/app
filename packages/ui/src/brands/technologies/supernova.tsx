@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const SupernovaLogo = (props: SVGProps<SVGSVGElement>) => (
+const Supernova = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={418}
@@ -9,6 +9,8 @@ const SupernovaLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Supernova</title>
+    <desc>Logo</desc>
     <path
       fill='currentColor'
       fillRule='evenodd'
@@ -17,4 +19,4 @@ const SupernovaLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default SupernovaLogo
+export default Supernova

@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const TurborepoLogo = (props: SVGProps<SVGSVGElement>) => (
+const Turborepo = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={512}
@@ -9,6 +9,8 @@ const TurborepoLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>TurboRepo</title>
+    <desc>Logo</desc>
     <g clipPath='url(#turborepo-a)'>
       <path
         fill='url(#turborepo-b)'
@@ -112,4 +114,4 @@ const TurborepoLogo = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default TurborepoLogo
+export default Turborepo

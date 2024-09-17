@@ -129,7 +129,7 @@
 }
 
 :root {
-  --sp-space-1: 4px;
+  /* --sp-space-1: 4px;
   --sp-space-2: 8px;
   --sp-space-3: 12px;
   --sp-space-4: 16px;
@@ -172,9 +172,9 @@
   --sp-syntax-color-definition: #86d9ca;
   --sp-syntax-color-property: #77b7d7;
   --sp-syntax-color-static: #c64640;
-  --sp-syntax-color-string: #977cdc;
+  --sp-syntax-color-string: #977cdc; */
 
-  --sans: 'Labil Grotesk', sans-serif;
+  /* --sans: 'Labil Grotesk', sans-serif;
   --sans-variable: 'Labil Grotesk', sans-serif;
   --sans-family: var(--sans);
   --radius: 8px;
@@ -202,7 +202,7 @@
   --border: var(--slate5);
   --ring: var(--border) !important;
   --tw-ring-offset-color: var(--border) !important;
-  --tw-ring-color: var(--border) !important;
+  --tw-ring-color: var(--border) !important; */
 }
 *,
 *::before,

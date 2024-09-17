@@ -1,5 +1,7 @@
 import type React from 'react'
 
+import './header-menu.css'
+
 import {
   Blog,
   Changelogs,
@@ -27,7 +29,7 @@ const HeaderMenuItem = ({
 }: MenuItemProps) => {
   return (
     <li
-      className='m-auto flex h-full w-auto list-none items-center justify-center'
+      className='flex items-center justify-center w-auto h-full m-auto list-none'
       {...props}
     >
       <a
@@ -35,7 +37,7 @@ const HeaderMenuItem = ({
         href={link}
       >
         {Icon && typeof Icon === 'function' ? (
-          <Icon className='size-5 brightness-150 saturate-150 transition-all duration-300' />
+          <Icon className='transition-all duration-300 size-5 brightness-150 saturate-150' />
         ) : (
           Icon
         )}
@@ -48,7 +50,7 @@ const HeaderMenuItem = ({
 const HeaderMenu = ({ ...props }) => {
   return (
     <ul
-      className='m-auto hidden h-12 w-auto flex-row place-content-center place-items-center items-center justify-center gap-0.5 overflow-hidden rounded-2xl border border-[var(--gray12)] bg-[var(--gray12)] px-0.5 shadow-2xl dark:border-[var(--gray4)] dark:bg-[var(--gray1)] xl:inline-flex'
+      className='prodkt-header-menu m-auto hidden h-12 w-auto flex-row place-content-center place-items-center items-center justify-start gap-0.5 overflow-y-hidden rounded-2xl border border-[var(--gray12)] bg-[var(--gray12)] px-0.5 shadow-2xl dark:border-[var(--gray4)] dark:bg-[var(--gray1)] xl:inline-flex'
       {...props}
     >
       <HeaderMenuItem link='/flows' icon={Flows} name='Flows' />

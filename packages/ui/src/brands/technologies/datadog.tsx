@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const DatadogLogo = (props: SVGProps<SVGSVGElement>) => (
+const Datadog = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={127}
@@ -9,6 +9,8 @@ const DatadogLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>DataDog</title>
+    <desc>Logo</desc>
     <path
       fill='currentColor'
       fillRule='evenodd'
@@ -17,4 +19,4 @@ const DatadogLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default DatadogLogo
+export default Datadog

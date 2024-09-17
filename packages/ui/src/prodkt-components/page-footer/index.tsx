@@ -10,9 +10,9 @@ function PageFooter() {
   return (
     <section className='w-full bg-transparent'>
       <div className='flex flex-row flex-wrap'>
-        <div className='w-full bg-transparent px-6 pb-36 pt-20 md:w-5/12 lg:w-2/12'>
-          <div className='mx-auto max-w-xs'>
-            <a className='mb-12 inline-block text-3xl' href='/'>
+        <div className='w-full px-6 pt-10 bg-transparent sm:w-1/2 sm:pt-10 md:w-4/12 lg:w-3/12 lg:pb-10'>
+          <div className='max-w-md mx-auto top-12 sm:sticky lg:relative'>
+            <a className='inline-block mb-12 text-3xl' href='/'>
               <ProdktLogo className='h-9' />
             </a>
             <div className='mb-12 text-xs'>
@@ -20,14 +20,14 @@ function PageFooter() {
               <p>Las Vegas, Nevada</p>
               <p>Boise, Idaho</p>
             </div>
-            <div className='mb-16 flex md:mb-24'>
+            <div className='flex mb-16 md:mb-24'>
               <SocialMedia variant='grid' />
             </div>
           </div>
         </div>
-        <div className='w-full px-6 py-20 md:w-7/12 lg:w-10/12 lg:pl-40'>
-          <div className='-mx-4 mt-16 flex flex-wrap border-b border-[var(--grayA3)] pb-20'>
-            <div className='mb-10 w-full px-4 md:w-1/2 lg:mb-0 lg:w-1/4'>
+        <div className='w-full px-6 py-4 sm:w-1/2 sm:py-10 md:w-7/12 lg:w-9/12 lg:py-20 lg:pl-36'>
+          <div className='-mx-4 mt-2 flex flex-wrap border-b border-[var(--grayA3)] pb-10'>
+            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/4'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Exploration
               </h3>
@@ -52,24 +52,9 @@ function PageFooter() {
                     Projects
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/codeblocks'>
-                    Codeblocks
-                  </a>
-                </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/documentation'>
-                    Documentation
-                  </a>
-                </li>
-                <li className='text-xs'>
-                  <a className='hover:underline' href='/changelog'>
-                    Changelog
-                  </a>
-                </li>
               </ul>
             </div>
-            <div className='mb-10 w-full px-4 md:w-1/2 lg:mb-0 lg:w-1/4'>
+            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/4'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Bryan Funk
               </h3>
@@ -101,7 +86,7 @@ function PageFooter() {
                 </li>
               </ul>
             </div>
-            <div className='mb-10 w-full px-4 md:w-1/2 lg:mb-0 lg:w-1/4'>
+            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/4'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Prodkt
               </h3>
@@ -138,7 +123,7 @@ function PageFooter() {
                 </li>
               </ul>
             </div>
-            <div className='w-full px-4 md:w-1/2 lg:w-1/3 xl:w-1/4'>
+            <div className='px-4 sm:w-1/2 sm:w-full md:w-1/2 lg:w-1/4'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Contact Me
               </h3>
@@ -146,7 +131,7 @@ function PageFooter() {
                 <li className='mb-6'>
                   <h4 className='mb-2 text-xs'>Mobile</h4>
                   <a
-                    className='text-xs text-[var(--accent10)] hover:underline'
+                    className='text-xs text-[var(--accent11)] hover:underline dark:text-[var(--accent10)]'
                     href='/'
                   >
                     +1 208 954 4981
@@ -155,7 +140,7 @@ function PageFooter() {
                 <li className='mb-6'>
                   <h4 className='mb-2 text-xs'>Email</h4>
                   <a
-                    className='text-xs text-[var(--accent10)] hover:underline'
+                    className='text-xs  text-[var(--accent11)] hover:underline dark:text-[var(--accent10)]'
                     href='mailto:bryan.funk@prodkt.cloud'
                   >
                     bryan.funk@prodkt.cloud
@@ -164,8 +149,8 @@ function PageFooter() {
               </ul>
             </div>
           </div>
-          <div className='relative mt-8 pb-32 lg:pb-0'>
-            <p className='font-mono text-xs uppercase tracking-widest'>
+          <div className='relative pb-32 mt-8 lg:pb-0'>
+            <p className='font-mono text-xs tracking-widest uppercase'>
               © Copyright 2024 Bryan Funk
             </p>
           </div>

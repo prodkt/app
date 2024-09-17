@@ -219,7 +219,7 @@ const FileLarge = React.forwardRef<SVGProps<SVGSVGElement>, FileFolderProps>(
             stroke='url(#ProdktFileLarge-f)'
             x={1}
             y={1}
-            className='fileLargeMask origin-center scale-125 object-cover object-center transition-all group-hover:scale-100'
+            className='object-cover object-center transition-all origin-center scale-125 fileLargeMask group-hover:scale-100'
             preserveAspectRatio='xMidYMid slice'
           />
         )}
@@ -344,7 +344,7 @@ const PageFile = React.forwardRef<
     return (
       <div {...props} ref={ref}>
         <div className=' group relative z-[1] rounded-[2rem] bg-[var(--gray1)] p-2 transition-all duration-300 hover:bg-[var(--gray3)]'>
-          <div className='absolute inset-x-0 top-0 mx-0 p-2'>
+          <div className='absolute inset-x-0 top-0 p-2 mx-0'>
             <div className='flex flex-row items-center justify-start gap-2 py-2 pl-2 pr-0'>
               <div className='flex size-10 items-center justify-center rounded-full bg-gradient-to-b from-[var(--ghost-aa6)] to-[var(--ghost-a2)] p-1 backdrop-blur'>
                 {fileSrc ? (
@@ -401,13 +401,15 @@ const PageFile = React.forwardRef<
                     <DialogHeader>
                       <DialogTitle>Preview: {title}</DialogTitle>
                     </DialogHeader>
-                    {src ? (
-                      <img
-                        src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${src}`}
-                        alt=''
-                        className='m-auto h-80 w-full origin-center self-center rounded-lg border border-[var(--grayA2)] object-cover object-center'
-                      />
-                    ) : null}
+                    <div className='relative size-full'>
+                      {src ? (
+                        <img
+                          src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${src}`}
+                          alt=''
+                          className='m-auto h-80 w-full origin-center self-center rounded-lg border border-[var(--grayA2)] object-cover object-center'
+                        />
+                      ) : null}
+                    </div>
                   </DialogContent>
                 </Dialog>
               </div>
@@ -419,9 +421,9 @@ const PageFile = React.forwardRef<
               src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${src}`}
             />
           ) : null}
-          <div className='absolute inset-x-0 bottom-0 mx-0 p-2'>
+          <div className='absolute inset-x-0 bottom-0 p-2 mx-0'>
             <div className='flex flex-col items-start justify-center gap-2 px-4 py-2'>
-              <div className='flex items-center justify-center rounded-full text-sm'>
+              <div className='flex items-center justify-center text-sm rounded-full'>
                 <h3>{title}</h3>
               </div>
 
@@ -431,7 +433,7 @@ const PageFile = React.forwardRef<
                     <img
                       src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${projectLogo}`}
                       alt=''
-                      className='h-4 w-auto origin-center self-center object-cover object-center'
+                      className='self-center object-cover object-center w-auto h-4 origin-center'
                     />
                   </div>
                 ) : null}

@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-const FigmaLogo = (props: SVGProps<SVGSVGElement>) => (
+const Figma = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={51}
@@ -9,6 +9,8 @@ const FigmaLogo = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
+    <title>Figma</title>
+    <desc>Logo</desc>
     <path
       fill='currentColor'
       d='M.5.458v14.114l1.801.006V7.857h4.344V6.08H2.3V2.234h5.657V.457L.5.458ZM11.2 3.323a1.18 1.18 0 0 0 1.176-1.184A1.18 1.18 0 0 0 11.2.955a1.18 1.18 0 0 0-1.175 1.184A1.18 1.18 0 0 0 11.2 3.323ZM10.284 5.1v9.475h1.802V5.1h-1.802Z'
@@ -31,4 +33,4 @@ const FigmaLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default FigmaLogo
+export default Figma

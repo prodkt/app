@@ -63,7 +63,7 @@ const groups: Group[] = [
     label: 'Personal Account',
     teams: [
       {
-        logotype: <ProdktLogotype className='h-auto w-20' />,
+        logotype: <ProdktLogotype className='w-20 h-auto' />,
         label: 'Bryan Funk',
         value: 'personal',
         logomark:
@@ -75,8 +75,8 @@ const groups: Group[] = [
     label: 'Teams',
     teams: [
       {
-        logotype: <ProdktLogotype className='h-auto w-20' />,
-        label: <ProdktLogotype className='h-auto w-20' />,
+        logotype: <ProdktLogotype className='w-20 h-auto' />,
+        label: <ProdktLogotype className='w-20 h-auto' />,
         value: 'prodkt',
         logomark:
           'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1ad4fd1f-b9e0-445d-aedd-960bb4a7da8e.png',
@@ -90,7 +90,7 @@ type PopoverTriggerProps = React.ComponentPropsWithoutRef<typeof PopoverTrigger>
 type TeamSwitcherProps = PopoverTriggerProps
 
 const switcherVariants = cva(
-  'relative h-12 min-h-full w-[200px] bg-[var(--gray12)] text-[var(--gray7)] transition-all duration-300 hover:bg-[var(--grayA12)] hover:text-[var(--gray1)] dark:border-[var(--gray4)] dark:bg-[var(--gray1)] dark:from-[var(--gray4)] dark:to-[var(--gray5)] dark:hover:text-[var(--gray12)]',
+  'relative hidden h-12 min-h-full w-[200px] bg-[var(--gray12)] text-[var(--gray7)] transition-all duration-300 hover:bg-[var(--grayA12)] hover:text-[var(--gray1)] dark:border-[var(--gray4)] dark:bg-[var(--gray1)] dark:from-[var(--gray4)] dark:to-[var(--gray5)] dark:hover:text-[var(--gray12)] sm:flex',
   {
     variants: {
       variant: {
@@ -120,8 +120,8 @@ export function TeamSwitcher({
   const [showNewTeamDialog, setShowNewTeamDialog] = React.useState(false)
   const [selectedTeam, setSelectedTeam] = React.useState<Team>(
     groups[0]?.teams[0] ?? {
-      logotype: <ProdktLogotype className='h-auto w-20' />,
-      label: <ProdktLogotype className='h-auto w-20' />,
+      logotype: <ProdktLogotype className='w-20 h-auto' />,
+      label: <ProdktLogotype className='w-20 h-auto' />,
       value: 'prodkt',
       logomark:
         'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1ad4fd1f-b9e0-445d-aedd-960bb4a7da8e.png',
@@ -140,7 +140,7 @@ export function TeamSwitcher({
             className={cn(switcherVariants({ variant }), className)}
           >
             {selectedTeam.label}
-            <Avatar className='absolute inset-y-0 right-10 my-auto ml-auto mr-0 size-5'>
+            <Avatar className='absolute inset-y-0 my-auto ml-auto mr-0 right-10 size-5'>
               <AvatarImage
                 src={selectedTeam.logomark}
                 alt={
@@ -152,7 +152,7 @@ export function TeamSwitcher({
               />
               <AvatarFallback>P</AvatarFallback>
             </Avatar>
-            <CaretSortIcon className='ml-auto size-4 shrink-0 opacity-50' />
+            <CaretSortIcon className='ml-auto opacity-50 size-4 shrink-0' />
           </Button>
         </PopoverTrigger>
         <PopoverContent className='w-[200px] p-0'>
@@ -227,12 +227,12 @@ export function TeamSwitcher({
           </div>
           <DialogDescription>
             <div className='px-4 pt-4'>
-              <p className='text-muted-foreground text-sm'>
+              <p className='text-sm text-muted-foreground'>
                 Add a new team to manage your Prodkt projects.
               </p>
             </div>
             <Separator className='my-4' />
-            <div className='flex h-5 items-center space-x-4 px-4 text-sm'>
+            <div className='flex items-center h-5 px-4 space-x-4 text-sm'>
               <div>Codeblocks</div>
               <Separator orientation='vertical' />
               <div>Flows</div>
@@ -242,7 +242,7 @@ export function TeamSwitcher({
           </DialogDescription>
         </DialogHeader>
         <div>
-          <div className='space-y-4 p-4'>
+          <div className='p-4 space-y-4'>
             <div className='space-y-2'>
               <Label htmlFor='name'>Team name</Label>
               <Input id='name' placeholder='Prodkt' />
@@ -273,7 +273,7 @@ export function TeamSwitcher({
         </div>
         <DialogFooter className='gap-0 space-x-0 overflow-hidden rounded-b-lg'>
           <Button
-            className='grow basis-1/3 rounded-none'
+            className='rounded-none grow basis-1/3'
             size='modal'
             variant='gray'
             onClick={() => {

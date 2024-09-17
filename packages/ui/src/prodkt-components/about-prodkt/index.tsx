@@ -20,17 +20,17 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
   return (
     <section
       ref={ref}
-      className='gradientMask-to-b-10 relative flex w-full flex-col items-center justify-center overflow-hidden px-10 pb-40 md:px-20 '
+      className='relative flex flex-col items-center justify-center w-full px-10 pb-40 overflow-hidden gradientMask-to-b-10 md:px-20 '
       {...props}
     >
       {/* <CircuitTwo className='absolute bottom-0 z-0 mb-0 hidden size-full min-w-[1920px] -translate-y-1/3 object-cover md:block' /> */}
-      <div className='relative flex w-full flex-col place-content-center place-items-center content-center items-start justify-start md:min-h-screen md:items-center md:justify-center'>
-        <div className='my-auto grid max-w-screen-md grid-cols-1 place-content-center place-items-center content-start items-start justify-center md:grid-cols-4 md:place-items-center md:items-center'>
-          <div className='z-10 col-span-2 my-auto flex flex-col items-center justify-center gap-8 py-20 md:pt-0'>
-            <h3 className='my-auto max-w-[60dvw] text-pretty bg-gradient-to-br from-[var(--sky11)] to-[var(--sky12)] bg-clip-text pb-2 pr-3 text-6xl font-semibold leading-[80%] tracking-tighter text-transparent sm:text-7xl sm:leading-[75%] md:text-balance md:text-8xl md:leading-[75%] lg:max-w-full'>
+      <div className='relative flex flex-col items-start content-center justify-start w-full place-content-center place-items-center md:min-h-screen md:items-center md:justify-center'>
+        <div className='grid items-start content-start justify-center max-w-screen-md grid-cols-1 my-auto place-content-center place-items-center md:grid-cols-4 md:place-items-center md:items-center'>
+          <div className='z-10 flex flex-col items-center justify-center col-span-2 gap-8 py-20 my-auto md:pt-0'>
+            <h3 className='my-auto max-w-[60dvw] text-pretty bg-gradient-to-br from-[var(--gray11)] to-[var(--gray12)] bg-clip-text pb-2 pr-3 text-6xl font-semibold leading-[80%] tracking-tighter text-transparent sm:text-7xl sm:leading-[75%] md:text-balance md:text-8xl md:leading-[75%] lg:max-w-full'>
               What is Prodkt?
             </h3>
-            <div className='relative mr-auto flex translate-y-0 flex-row items-center justify-start gap-4'>
+            <div className='relative flex flex-row items-center justify-start gap-4 mr-auto translate-y-0'>
               <div className='h-px w-4 bg-[var(--grayA5)]' />
 
               <div className='relative z-[19] mr-auto flex w-full translate-y-0 flex-col items-center justify-start gap-2'>
@@ -91,7 +91,7 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
                   />
                 </div>
               </div>
-              <div className='relative inset-0 m-auto flex size-full flex-col place-content-center place-items-center content-center items-center justify-center'>
+              <div className='relative inset-0 flex flex-col items-center content-center justify-center m-auto size-full place-content-center place-items-center'>
                 <img
                   src='https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/762dfb06-a622-4959-94cb-4357413be570.avif'
                   className='absolute left-0 z-[-1] -translate-x-1/2  -scale-y-[0.7] animate-pulse select-none opacity-50'
@@ -118,12 +118,12 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
       </div>
 
       <div className='relative bottom-0 top-auto z-[1] mb-0 mt-auto flex w-full max-w-full flex-row items-start justify-start gap-8 lg:justify-center'>
-        <div className='flex h-full flex-col items-start justify-start gap-12'>
+        <div className='flex flex-col items-start justify-start h-full gap-12'>
           <h6 className='relative mr-auto max-w-[75dvw] text-balance bg-gradient-to-br from-[var(--grayA10)] to-[var(--grayA12)] bg-clip-text text-left font-mono text-xs font-semibold uppercase tracking-widest text-transparent lg:mx-auto'>
             The driving force above all other intentions and purpose is
             simple...
           </h6>
-          <h3 className='text-balance bg-gradient-to-br from-[var(--sky11)] to-[var(--sky12)] bg-clip-text pb-2 pr-3 text-6xl font-semibold leading-[80%] tracking-tighter text-transparent md:text-8xl md:leading-[75%] lg:mx-auto'>
+          <h3 className='text-balance bg-gradient-to-br from-[var(--gray11)] to-[var(--gray12)] bg-clip-text pb-2 pr-3 text-6xl font-semibold leading-[80%] tracking-tighter text-transparent md:text-8xl md:leading-[75%] lg:mx-auto'>
             Get hired.
           </h3>
           <h6 className='mr-auto text-balance bg-gradient-to-br from-[var(--grayA6)] to-[var(--grayA4)] bg-clip-text pb-2 pr-3 text-4xl font-semibold leading-[80%] tracking-tighter text-transparent md:text-5xl md:leading-[90%]'>
@@ -135,9 +135,9 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
 
       {/* <GlowOrb className="absolute z-0 translate-x-20 -translate-y-16 size-full blur-2xl" /> */}
       {/* <CircuitThree className="absolute inset-auto z-0 hidden w-full min-h-screen mb-auto pointer-events-none select-none min-w-screen size-full md:block" /> */}
-      <Stars className='pointer-events-none absolute inset-x-auto bottom-auto top-0 z-20 mx-0 mb-auto mt-0 select-none opacity-10' />
+      <Stars className='absolute inset-x-auto top-0 bottom-auto z-20 mx-0 mt-0 mb-auto pointer-events-none select-none opacity-10' />
       <GreenGlow className='pointer-events-none absolute inset-x-0 bottom-auto top-0 z-[-1] mx-0 mb-auto mt-0 translate-y-0 select-none' />
-      <TopGlow className='pointer-events-none absolute inset-x-auto top-0 z-0 mx-0 mt-0 min-w-full select-none opacity-100 mix-blend-hard-light blur' />
+      <TopGlow className='absolute inset-x-auto top-0 z-0 min-w-full mx-0 mt-0 opacity-100 pointer-events-none select-none mix-blend-hard-light blur' />
       <GiantOrb className='pointer-events-none absolute inset-auto z-[-1] mx-0 w-full min-w-[150dvw] translate-y-40 select-none sm:w-full sm:translate-y-24 md:translate-y-40 lg:translate-y-1/4 xl:translate-y-1/3' />
     </section>
   )
