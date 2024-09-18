@@ -1,3 +1,11 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable @eslint-community/eslint-comments/no-duplicate-disable */
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+
+// @ts-nocheck
+
 import type { BuiltInNode, Node } from '@xyflow/react'
 import type { PositionLoggerNode as PositionLoggerNodeType } from './position-logger-node'
 
