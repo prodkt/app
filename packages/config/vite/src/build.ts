@@ -64,10 +64,10 @@ export function buildConfig({
           react(),
         ],
         external: [
-          'react',
-          'react-dom',
-          '@dnd-kit',
-          '@codesandbox/sandpack-react',
+          // 'react',
+          // 'react-dom',
+          // '@dnd-kit',
+          // '@codesandbox/sandpack-react',
         ],
         output: {
           preserveModules: true,
