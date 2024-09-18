@@ -29,6 +29,10 @@
   --controls-box-shadow-default: 0 0 2px 1px rgba(0, 0, 0, 0.08);
 }
 
+.react-flow__attribution {
+  visibility: hidden;
+  display: none;
+}
 /* The outermost container */
 .react-flow {
 }
@@ -167,9 +171,13 @@
 }
 
 .react-flow__minimap-mask {
-  @apply bg-[var(--grayA1)] opacity-0;
+  @apply bg-[var(--gray2)] blur-2xl opacity-10 rounded-full !important;
 }
 
 .react-flow__minimap-node {
-  @apply fill-[var(--gray9)] rounded-full border-none transition-all ease-in-out duration-1000 contrast-200 opacity-100;
+  @apply fill-[var(--grayA10)] after:bg-black blur-[2px] !rounded-full border-none transition-all ease-in-out duration-1000 dark:contrast-200 opacity-100;
+}
+
+svg.react-flow__minimap-svg {
+  @apply border-[var(--grayA4)];
 }

@@ -130,7 +130,7 @@ const Flow = ({
           </marker>
         </defs>
       </svg>
-      <div className='absolute top-0 mt-4 w-full'>
+      <div className='absolute top-0 w-full mt-4'>
         {/* <ProjectDropdown isFlow projectTitle={flowTitle} /> */}
       </div>
       <Background color='var(--grayA6)' variant={BackgroundVariant.Dots} />

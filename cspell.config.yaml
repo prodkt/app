@@ -13,10 +13,10 @@ ignorePaths:
 words:
   - acst
   - aest
+  - subflows
   - akst
   - Anson
   - apitoken
-  - Concepting
   - astro
   - astrojs
   - autodocs
@@ -53,6 +53,7 @@ words:
   - commitlint
   - commitlintrc
   - compat
+  - Concepting
   - connectingfrom
   - connectingto
   - connectionline
@@ -69,6 +70,8 @@ words:
   - degit
   - Designboise
   - directus
+  - dndflow
+  - dndnode
   - docummentation
   - dotenv
   - dribbble
@@ -136,6 +139,7 @@ words:
   - nesw
   - Neue
   - nextjs
+  - nocheck
   - nodesselection
   - nodrag
   - nopan

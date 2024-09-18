@@ -12,11 +12,13 @@ const ImageFlowNode: React.FC<NodeProps<FlowNodeTypes>> & {
     <>
       <Handle type='target' position={Position.Left} />
       <Handle type='source' position={Position.Right} />
-      <img
-        src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${data.image}`}
-        alt={data.title ?? 'Flow Image'}
-        className='prodktFlow_imageNode h-full max-h-[500px] w-auto max-w-fit origin-center overflow-hidden rounded-3xl border border-transparent bg-transparent object-contain object-center p-0 ring-1 ring-transparent'
-      />
+      {data.image ? (
+        <img
+          src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${data.image}`}
+          alt={data.title ?? 'Flow Image'}
+          className='prodktFlow_imageNode h-full max-h-[500px] w-auto max-w-fit origin-center overflow-hidden rounded-3xl border border-transparent bg-transparent object-contain object-center p-0 ring-1 ring-transparent'
+        />
+      ) : null}
     </>
   )
 }

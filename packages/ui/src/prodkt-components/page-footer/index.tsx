@@ -97,7 +97,7 @@ function PageFooter() {
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/'>
+                  <a className='hover:underline' href='https://ui.prodkt.cloud'>
                     Component Library
                   </a>
                 </li>
@@ -107,7 +107,7 @@ function PageFooter() {
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/'>
+                  <a className='hover:underline' href='/pricing'>
                     Pricing
                   </a>
                 </li>
@@ -117,7 +117,7 @@ function PageFooter() {
                   </a>
                 </li>
                 <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/'>
+                  <a className='hover:underline' href='/API'>
                     API
                   </a>
                 </li>

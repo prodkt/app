@@ -1,10 +1,16 @@
+/* eslint-disable jsdoc/require-returns */
+/* eslint-disable jsdoc/require-param-description */
+
 import type { Database } from '@/database.types'
 import type { Meta, StoryObj } from '@storybook/react'
 import type { Edge, Node } from '@xyflow/react'
+import type { FlowEdgeTypes } from './Edge'
+import type { FlowNodeTypes } from './Node'
 
 import { Flow } from '.'
-import { type FlowEdgeTypes } from './Edge'
-import { type FlowNodeTypes } from './Node'
+import FlowDnD from './dnd'
+import NestedFlow from './nested-flow'
+import PositionLogger from './position-logger'
 
 const data = {
   slug: 'olio-logo-concepts',
@@ -134,7 +140,7 @@ function transformNodes(data: FlowNodeTypes[]) {
       subline: node.subline,
       image: (node.image as unknown as FlowData['image']).filename_disk,
     },
-    type: node.type?.replace('Node', ''),
+    type: node.type.replace('Node', ''),
     selectable: node.selectable,
     draggable: node.draggable,
     deletable: node.deletable,
@@ -151,9 +157,9 @@ function transformEdges(data: FlowEdgeTypes[]) {
   return data.map((edge) => ({
     id: edge.id,
     // @ts-ignore
-    source: edge.source?.id,
+    source: edge.source.id,
     // @ts-ignore
-    target: edge.target?.id,
+    target: edge.target.id,
     label: edge.label,
     animated: edge.animated,
     selectable: edge.selectable,
@@ -217,6 +223,27 @@ export const Default: Story = {
         initialEdges={transformedEdges}
         flowTitle={data.FlowTitle}
       />
+    </div>
+  ),
+}
+export const Nested: Story = {
+  render: () => (
+    <div className='relative inset-0 min-w-full min-h-full size-full h-dvh'>
+      <NestedFlow />
+    </div>
+  ),
+}
+export const PositionLog: Story = {
+  render: () => (
+    <div className='relative inset-0 min-w-full min-h-full size-full h-dvh'>
+      <PositionLogger />
+    </div>
+  ),
+}
+export const DND: Story = {
+  render: () => (
+    <div className='relative inset-0 min-w-full min-h-full size-full h-dvh'>
+      <FlowDnD />
     </div>
   ),
 }
