@@ -1,47 +1,20 @@
-// import type { Database } from '@/database.types'
-
 import { memo } from 'react'
 
-import type { NodeProps, XYPosition } from '@xyflow/react'
-import type { CSSProperties } from 'react'
+import type { Database } from '@/database.types'
+import type { NodeProps } from 'reactflow'
 
-import { Handle, NodeResizer, Position } from '@xyflow/react'
+import { Handle, NodeResizer, Position } from 'reactflow'
 
-// export type FlowNodeTypes = Database['public']['Tables']['flow_nodes']['Row']
-interface DataType {
-  data: FlowNodeTypes & Record<string, unknown>
-  subline: string
-  icon: string | null
-  title: string | null
-  image: string
-}
-export interface FlowNodeTypes {
-  string: Record<string, unknown>
-  data: DataType
-  position: XYPosition
-  connectable: boolean
-  date_updated: string | null
-  deletable: boolean
-  draggable: boolean
-  icon: string | null
-  id: string
-  image: string | null
-  posx: number | null
-  posy: number | null
-  selectable: boolean
-  subline: string[]
-  title: string | null
-  type: string
-  user_updated: string | null
-  style?: CSSProperties
-  className?: string
-  resizing?: boolean
-  focusable?: boolean
-}
+// Define the type for the node props
+export type FlowNodeTypes = Database['public']['Tables']['flow_nodes']['Row']
 
-const BaseNode: React.FC<NodeProps<FlowNodeTypes>> & {
-  displayName?: string
-} = ({ data }: NodeProps<FlowNodeTypes>, { icon: Icon }) => {
+// Define the functional component
+const FlowNodeComponent = ({
+  data,
+  icon: Icon,
+}: NodeProps<FlowNodeTypes> & {
+  icon: React.ComponentType<{ name: string }>
+}) => {
   return (
     <>
       <Handle type='target' position={Position.Left} />
@@ -64,4 +37,8 @@ const BaseNode: React.FC<NodeProps<FlowNodeTypes>> & {
   )
 }
 
-export default memo(BaseNode)
+// Set the display name for debugging purposes
+FlowNodeComponent.displayName = 'FlowNodeComponent'
+
+// Export the memoized version of the component
+export default memo(FlowNodeComponent)

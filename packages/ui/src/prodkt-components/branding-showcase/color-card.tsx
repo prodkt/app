@@ -1,3 +1,8 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-returns */
+/* eslint-disable jsdoc/require-param-description */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import chroma from 'chroma-js'
 import { cva } from 'class-variance-authority'
 import { Locate } from 'lucide-react'
@@ -9,10 +14,8 @@ import { cn } from '@/utils/cn'
 // type TokenTypes = Database['public']['Tables']['design_tokens']['Row']
 
 export interface SwatchProps {
-  // @ts-ignore
-  key_hsl: Json | string | null
-  // @ts-ignore
-  value_hsl: Json | string | null
+  key_hsl: string
+  value_hsl: string
   key_use: string
   isDark: boolean
   key: string | number | undefined
@@ -32,8 +35,6 @@ export default function ColorCard({
   key_use,
   isDark,
 }: Readonly<SwatchProps>) {
-  const baseColor = isDark ? '#000000' : '#ffffff'
-
   const getKeyUse = (key_hsl: string) => {
     const step = Number.parseInt(key_hsl, 10)
     if (step >= 1 && step <= 2) return 'Backgrounds'
@@ -49,7 +50,7 @@ export default function ColorCard({
   }
 
   const getContrastAndRating = (key_hsl: string, value_hsl: string) => {
-    const color = value_hsl ?? baseColor
+    const color = value_hsl
     let contrastRatio = 'N/A'
     let accessibilityRating = 'N/A'
 
@@ -113,10 +114,13 @@ export default function ColorCard({
     },
   )
 
+  // biome-ignore lint/suspicious/noImplicitAnyLet: <explanation>
   let textColor
+  // biome-ignore lint/suspicious/noImplicitAnyLet: <explanation>
   let borderColor
   const customVar = '--colorCardBorder'
   const customBg = '--colorCardTagBg'
+  // biome-ignore lint/suspicious/noImplicitAnyLet: <explanation>
   let tagBg
 
   if (isDark) {
@@ -157,18 +161,19 @@ export default function ColorCard({
       style={{
         backgroundColor: value_hsl,
         color: textColor,
+        // @ts-expect-error
         [customVar]: borderColor,
         [customBg]: tagBg,
       }}
     >
-      <div className='relative mb-auto ml-auto mr-0 mt-0 flex w-full max-w-full flex-col items-start justify-end gap-2'>
+      <div className='relative flex flex-col items-start justify-end w-full max-w-full gap-2 mt-0 mb-auto ml-auto mr-0'>
         <div className='flex h-full w-auto flex-row items-center justify-center rounded-lg border border-[var(--colorCardBorder)]'>
           <div className='flex h-full items-center justify-center rounded-l-lg bg-[var(--colorCardTagBg)] px-2 py-1.5'>
             {key_hsl}
           </div>
-          <div className='my-0 flex h-full w-px min-w-px items-center justify-center rounded-l-lg bg-[var(--colorCardBorder)] opacity-50'></div>
+          <div className='my-0 flex h-full w-px min-w-px items-center justify-center rounded-l-lg bg-[var(--colorCardBorder)] opacity-50' />
           <div className='flex h-full items-center justify-center px-2 py-1.5'>
-            <p className='line-clamp-1 overflow-hidden text-ellipsis'>
+            <p className='overflow-hidden line-clamp-1 text-ellipsis'>
               {value_hsl}
             </p>
           </div>
@@ -179,7 +184,7 @@ export default function ColorCard({
             <div className='flex h-full items-center justify-center rounded-l-lg bg-[var(--colorCardTagBg)] px-2 py-1.5'>
               {accessibilityRating}
             </div>
-            <div className='my-0 flex h-full w-px min-w-px items-center justify-center rounded-l-lg bg-[var(--colorCardBorder)] opacity-50'></div>
+            <div className='my-0 flex h-full w-px min-w-px items-center justify-center rounded-l-lg bg-[var(--colorCardBorder)] opacity-50' />
             <div className='flex h-full items-center justify-center px-2 py-1.5'>
               {contrastRatio}
             </div>
@@ -189,9 +194,9 @@ export default function ColorCard({
           <div className='flex h-full items-center justify-center rounded-l-lg bg-[var(--colorCardTagBg)] px-2 py-1.5'>
             <Locate size='14' />
           </div>
-          <div className='my-0 flex h-full w-px min-w-px items-center justify-center rounded-l-lg bg-[var(--colorCardBorder)] opacity-50'></div>
+          <div className='my-0 flex h-full w-px min-w-px items-center justify-center rounded-l-lg bg-[var(--colorCardBorder)] opacity-50' />
           <div className='flex h-full items-center justify-center px-2 py-1.5 text-left'>
-            <p className='line-clamp-1 w-full max-w-full overflow-hidden text-ellipsis text-left'>
+            <p className='w-full max-w-full overflow-hidden text-left line-clamp-1 text-ellipsis'>
               {getKeyUse(key_use)}
             </p>
           </div>

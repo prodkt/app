@@ -1,3 +1,6 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-returns */
+
 import { useCallback } from 'react'
 
 import type { OnConnect } from '@xyflow/react'
@@ -25,8 +28,12 @@ import { initialNodes, nodeTypes } from './position-logger-node-composed'
  *
  */
 export default function PositionLogger() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   const [nodes, , onNodesChange] = useNodesState<CustomNodeType>(initialNodes)
   const [edges, setEdges, onEdgesChange] =
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     useEdgesState<CustomEdgeType>(initialEdges)
   const onConnect: OnConnect = useCallback(
     (connection) => {
@@ -38,9 +45,13 @@ export default function PositionLogger() {
   return (
     <ReactFlow<CustomNodeType, CustomEdgeType>
       nodes={nodes}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       nodeTypes={nodeTypes}
       onNodesChange={onNodesChange}
       edges={edges}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       edgeTypes={edgeTypes}
       onEdgesChange={onEdgesChange}
       onConnect={onConnect}

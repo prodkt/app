@@ -1,7 +1,6 @@
 import React from 'react'
 
 import {
-  CircuitTwo,
   ConnectionBoard,
   GiantOrb,
   GreenGlow,
@@ -58,36 +57,36 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
                 <h2 className='absolute inset-x-0 bottom-0 top-auto mx-auto mb-0 mt-auto translate-y-4 bg-gradient-to-br from-[var(--grayA2)] to-[var(--grayA6)] bg-clip-text text-center font-mono text-xs font-semibold uppercase tracking-widest text-transparent'>
                   Portfolio Engine
                 </h2>
-                <div className='relative z-[5] flex size-[4.5rem] origin-center animate-spinSlow1x items-center justify-center rounded-full border border-[var(--mintA9)] bg-[var(--gray2)] p-0 shadow-2xl shadow-[var(--sky9)] ring-1 ring-[var(--skyA3)] after:absolute after:inset-0 after:z-20 after:size-full after:animate-spinSlow1x after:rounded-full after:bg-gradient-to-b after:from-transparent after:to-transparent after:opacity-100 after:brightness-100 after:transition-all'>
+                <div className='animate-spinSlow1x after:animate-spinSlow1x relative z-[5] flex size-[4.5rem] origin-center items-center justify-center rounded-full border border-[var(--mintA9)] bg-[var(--gray2)] p-0 shadow-2xl shadow-[var(--sky9)] ring-1 ring-[var(--skyA3)] after:absolute after:inset-0 after:z-20 after:size-full after:rounded-full after:bg-gradient-to-b after:from-transparent after:to-transparent after:opacity-100 after:brightness-100 after:transition-all'>
                   {/* <div className="inset-0 m-0 size-full overflow-hidden rounded-full border-[10px] border-[var(--gray6)] blur-sm" /> */}
                   <img
                     src={TinyFan}
                     alt={''}
-                    className='absolute inset-0 m-auto origin-center animate-spinSlow2x overflow-hidden rounded-full object-cover object-center opacity-[0.015] brightness-0 contrast-0'
+                    className='animate-spinSlow2x absolute inset-0 m-auto origin-center overflow-hidden rounded-full object-cover object-center opacity-[0.015] brightness-0 contrast-0'
                   />
                 </div>
-                <div className='relative z-[5] flex size-[4.5rem] origin-center animate-spinSlow1x items-center justify-center rounded-full border border-[var(--mintA9)] bg-[var(--gray2)] p-0 shadow-2xl shadow-[var(--sky9)] ring-1 ring-[var(--skyA3)] after:absolute after:inset-0 after:z-20 after:size-full after:animate-spinSlow4x after:rounded-full after:bg-gradient-to-b after:from-transparent after:to-transparent after:opacity-100 after:brightness-100 after:transition-all'>
+                <div className='animate-spinSlow1x after:animate-spinSlow4x relative z-[5] flex size-[4.5rem] origin-center items-center justify-center rounded-full border border-[var(--mintA9)] bg-[var(--gray2)] p-0 shadow-2xl shadow-[var(--sky9)] ring-1 ring-[var(--skyA3)] after:absolute after:inset-0 after:z-20 after:size-full after:rounded-full after:bg-gradient-to-b after:from-transparent after:to-transparent after:opacity-100 after:brightness-100 after:transition-all'>
                   {/* <div className="inset-0 m-0 size-full overflow-hidden rounded-full border-[10px] border-[var(--gray6)] blur-sm" /> */}
                   <img
                     src={TinyFan}
                     alt={''}
-                    className='absolute inset-0 m-auto origin-center animate-spinSlow2x overflow-hidden rounded-full object-cover object-center opacity-[0.015] brightness-0 contrast-0'
+                    className='animate-spinSlow2x absolute inset-0 m-auto origin-center overflow-hidden rounded-full object-cover object-center opacity-[0.015] brightness-0 contrast-0'
                   />
                 </div>
-                <div className='relative z-[5] flex size-[4.5rem] origin-center animate-spinSlow1x items-center justify-center rounded-full border border-[var(--mintA9)] bg-[var(--gray2)] p-0 shadow-2xl shadow-[var(--sky9)] ring-1 ring-[var(--skyA3)] after:absolute after:inset-0 after:z-20 after:size-full after:animate-spinSlow3x after:rounded-full after:bg-gradient-to-b after:from-transparent after:to-transparent after:opacity-100 after:brightness-100 after:transition-all'>
+                <div className='animate-spinSlow1x after:animate-spinSlow3x relative z-[5] flex size-[4.5rem] origin-center items-center justify-center rounded-full border border-[var(--mintA9)] bg-[var(--gray2)] p-0 shadow-2xl shadow-[var(--sky9)] ring-1 ring-[var(--skyA3)] after:absolute after:inset-0 after:z-20 after:size-full after:rounded-full after:bg-gradient-to-b after:from-transparent after:to-transparent after:opacity-100 after:brightness-100 after:transition-all'>
                   {/* <div className="inset-0 m-0 size-full overflow-hidden rounded-full border-[10px] border-[var(--gray6)] blur-sm" /> */}
                   <img
                     src={TinyFan}
                     alt={''}
-                    className='absolute inset-0 m-auto origin-center animate-spinSlow2x overflow-hidden rounded-full object-cover object-center opacity-[0.015] brightness-0 contrast-0'
+                    className='animate-spinSlow2x absolute inset-0 m-auto origin-center overflow-hidden rounded-full object-cover object-center opacity-[0.015] brightness-0 contrast-0'
                   />
                 </div>
-                <div className='relative z-[5] flex size-[4.5rem] origin-center animate-spinSlow1x items-center justify-center rounded-full border border-[var(--mintA9)] bg-[var(--gray2)] p-0 shadow-2xl shadow-[var(--sky9)] ring-1 ring-[var(--skyA3)] after:absolute after:inset-0 after:z-20 after:size-full after:animate-spinSlow2x after:rounded-full after:bg-gradient-to-b after:from-transparent after:to-transparent after:opacity-100 after:brightness-100 after:transition-all'>
+                <div className='animate-spinSlow1x after:animate-spinSlow2x relative z-[5] flex size-[4.5rem] origin-center items-center justify-center rounded-full border border-[var(--mintA9)] bg-[var(--gray2)] p-0 shadow-2xl shadow-[var(--sky9)] ring-1 ring-[var(--skyA3)] after:absolute after:inset-0 after:z-20 after:size-full after:rounded-full after:bg-gradient-to-b after:from-transparent after:to-transparent after:opacity-100 after:brightness-100 after:transition-all'>
                   {/* <div className="inset-0 m-0 size-full overflow-hidden rounded-full border-[10px] border-[var(--gray6)] blur-sm" /> */}
                   <img
                     src={TinyFan}
                     alt={''}
-                    className='absolute inset-0 m-auto origin-center animate-spinSlow2x overflow-hidden rounded-full object-cover object-center opacity-[0.015] brightness-0 contrast-0'
+                    className='animate-spinSlow2x absolute inset-0 m-auto origin-center overflow-hidden rounded-full object-cover object-center opacity-[0.015] brightness-0 contrast-0'
                   />
                 </div>
               </div>
@@ -103,7 +102,7 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
                   alt='Chip glow'
                 />
                 <ConnectionBoard className='absolute z-[11] m-auto size-[43.25rem] translate-y-[10.5rem] fill-[var(--grayA2)] stroke-none opacity-100 mix-blend-screen' />
-                <ConnectionBoard className='z-[1] m-auto size-[43.25rem] translate-y-[10.5rem] fill-background stroke-[var(--grayA6)] opacity-100 mix-blend-color-dodge' />
+                <ConnectionBoard className='fill-background z-[1] m-auto size-[43.25rem] translate-y-[10.5rem] stroke-[var(--grayA6)] opacity-100 mix-blend-color-dodge' />
               </div>
             </div>
           </div>

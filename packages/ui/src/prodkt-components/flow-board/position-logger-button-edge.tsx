@@ -20,10 +20,10 @@ const buttonStyle = {
   lineHeight: 1,
 }
 
-// type ButtonEdgeData = NonNullable<unknown>;
-// type ButtonEdgeData = object;
-type ButtonEdgeData = Record<string, never>
-// type ButtonEdgeData = unknown;
+export interface ButtonEdgeData {
+  label?: string // Example field, adjust based on your data
+  [key: string]: unknown // Allows for additional dynamic properties
+}
 
 export type ButtonEdge = Edge<ButtonEdgeData>
 
@@ -35,8 +35,9 @@ export default function ButtonEdge({
   targetY,
   sourcePosition,
   targetPosition,
-  style = {},
+  style,
   markerEnd,
+  data, // Make sure data is handled safely
 }: EdgeProps<ButtonEdge>) {
   const { setEdges } = useReactFlow()
   const [edgePath, labelX, labelY] = getBezierPath({
@@ -54,19 +55,27 @@ export default function ButtonEdge({
 
   return (
     <>
-      <BaseEdge path={edgePath} markerEnd={markerEnd} style={style} />
+      <BaseEdge
+        path={edgePath}
+        markerEnd={markerEnd ?? ''} // Ensure markerEnd is always a string
+        style={style ?? {}}
+      />
       <EdgeLabelRenderer>
         <div
           style={{
             position: 'absolute',
-            transform: `translate(-50%, -50%) translate(${labelX}px,${labelY}px)`,
+            transform: `translate(-50%, -50%) translate(${String(labelX)}px, ${String(labelY)}px)`,
             fontSize: 12,
-            // everything inside EdgeLabelRenderer has no pointer events by default
-            // if you have an interactive element, set pointer-events: all
             pointerEvents: 'all',
           }}
           className='nodrag nopan'
         >
+          {/* Example of using data safely */}
+          {data?.label && (
+            <span style={{ backgroundColor: '#fff', padding: '2px 5px' }}>
+              {data.label}
+            </span>
+          )}
           <button style={buttonStyle} type='button' onClick={onEdgeClick}>
             ×
           </button>

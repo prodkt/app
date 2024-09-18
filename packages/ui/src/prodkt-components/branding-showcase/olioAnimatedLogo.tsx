@@ -1,3 +1,7 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+
 import type { SVGProps } from 'react'
 
 import { motion } from 'framer-motion'

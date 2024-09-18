@@ -8,11 +8,6 @@ import {
   useReactFlow,
 } from '@xyflow/react'
 
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable react/jsx-no-comment-textnodes */
-/* eslint-disable jsdoc/require-returns */
-/* eslint-disable jsdoc/require-param-description */
-
 export type FlowEdgeTypes =
   Database['public']['Tables']['flow_edges']['Row'] & {
     style: string | number | string[]
@@ -29,7 +24,6 @@ export type FlowEdgeTypes =
  * @param root0.targetY
  * @param root0.sourcePosition
  * @param root0.targetPosition
- * @param root0.style
  * @param root0.markerEnd
  */
 export default function CustomEdge({
@@ -41,7 +35,7 @@ export default function CustomEdge({
   sourcePosition,
   targetPosition,
   markerEnd,
-}: EdgeProps<FlowEdgeTypes>) {
+}: EdgeProps<EdgeProps>) {
   const { setEdges } = useReactFlow()
   const xEqual = sourceX === targetX
   const yEqual = sourceY === targetY
@@ -62,8 +56,11 @@ export default function CustomEdge({
 
   return (
     <>
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      <BaseEdge path={edgePath} markerEnd={markerEnd!} style={{}} />
+      <BaseEdge
+        path={edgePath}
+        markerEnd={markerEnd ? markerEnd : ''}
+        style={{}}
+      />
       <EdgeLabelRenderer>
         <div
           style={{
@@ -77,7 +74,7 @@ export default function CustomEdge({
           }}
           className='nodrag nopan'
         >
-          <button className='' onClick={onEdgeClick}>
+          <button className='' type='button' onClick={onEdgeClick}>
             ×
           </button>
         </div>

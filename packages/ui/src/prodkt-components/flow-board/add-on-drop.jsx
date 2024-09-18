@@ -31,10 +31,12 @@ const AddNodeOnEdgeDrop = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes)
   const [edges, setEdges, onEdgesChange] = useEdgesState([])
   const { screenToFlowPosition } = useReactFlow()
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const onConnect = useCallback((params) => {
     setEdges((eds) => addEdge(params, eds))
   }, [])
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const onConnectEnd = useCallback(
     (event, connectionState) => {
       // when a connection is dropped on the pane it's not valid

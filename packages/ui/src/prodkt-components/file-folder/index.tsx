@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import type { SVGProps } from 'react'
 
 import './file-folder.css'
@@ -25,6 +23,7 @@ const FileFolder = ({
     fill='none'
     {...props}
   >
+    <title>File Folder</title>
     <g className='' clipPath='url(#prodktFileFolder-roundedBottom)'>
       <path
         fill='url(#a)'

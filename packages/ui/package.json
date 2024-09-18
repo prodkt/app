@@ -118,11 +118,11 @@
     "react-syntax-highlighter": "^15.5.0",
     "reactflow": "^11.11.4",
     "recharts": "^2.12.7",
-    "sass": "^1.78.0",
+    "sass": "^1.79.1",
     "sonner": "^1.5.0",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.2",
-    "vaul": "^0.9.1",
+    "vaul": "^0.9.3",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -145,7 +145,7 @@
     "postcss": "^8.4.47",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "storybook": "^8.3.1",
-    "tailwindcss": "^3.4.11",
+    "tailwindcss": "^3.4.12",
     "vite": "^5.4.6",
     "vite-plugin-dts": "^4.2.1",
     "vite-plugin-external": "^4.3.1"

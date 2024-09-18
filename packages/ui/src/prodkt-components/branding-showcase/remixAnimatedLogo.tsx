@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import type { SVGProps } from 'react'
 
 import { motion } from 'framer-motion'
@@ -21,7 +23,6 @@ const icon = {
   },
   visible: {
     pathLength: 1,
-    // filter: 'url(#a)',
     stroke: 'var(--crimsonA9)',
     strokeWidth: 2,
   },
@@ -35,9 +36,11 @@ const RemixAnimatedLogo = (props: SVGProps<SVGSVGElement>) => (
     viewBox='0 0 481 350'
     {...props}
   >
+    <title>Remix</title>
     <g clipPath='url(#a)'>
       <motion.path
         d='M0 248.878h154.653L257.459 349.92 0 248.878Z'
+        // @ts-expect-error
         variants={icon}
         initial='hidden'
         animate='visible'
@@ -49,6 +52,7 @@ const RemixAnimatedLogo = (props: SVGProps<SVGSVGElement>) => (
       />
       <motion.path
         d='M149.969 101.042 0 248.958l304.623-147.916H149.969Z'
+        // @ts-expect-error
         variants={icon}
         initial='hidden'
         animate='visible'
@@ -60,6 +64,7 @@ const RemixAnimatedLogo = (props: SVGProps<SVGSVGElement>) => (
       />
       <motion.path
         d='M0 248.959 102.806 350h154.653L0 248.878v.081ZM0 248.878h154.653v.08l149.97-147.916L0 248.878Z'
+        // @ts-expect-error
         variants={icon}
         initial='hidden'
         animate='visible'
@@ -71,6 +76,7 @@ const RemixAnimatedLogo = (props: SVGProps<SVGSVGElement>) => (
       />
       <motion.path
         d='M481 101.042H326.347L223.541 0 481 101.042ZM331.031 248.958 481 101.042 176.377 248.958h154.654Z'
+        // @ts-expect-error
         variants={icon}
         initial='hidden'
         animate='visible'
@@ -82,6 +88,7 @@ const RemixAnimatedLogo = (props: SVGProps<SVGSVGElement>) => (
       />
       <motion.path
         d='M481 101.042 378.194 0H223.541L481 101.042ZM481 101.042H326.347l-149.97 147.916L481 101.042Z'
+        // @ts-expect-error
         variants={icon}
         initial='hidden'
         animate='visible'
