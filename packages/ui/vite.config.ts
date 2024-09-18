@@ -21,7 +21,7 @@ export default mergeConfig(
       ],
     },
     external: {
-      externalizeDeps: Object.keys(pkg.dependencies),
+      // externalizeDeps: Object.keys(pkg.dependencies),
     },
     dts: {
       exclude: ['src/storybook-utils', '**/*.stories.tsx'],
