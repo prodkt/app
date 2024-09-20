@@ -1,0 +1,4 @@
+.remix-heading {
+  font-size: inherit;
+  @apply -space-x-2 text-6xl sm:text-6xl lg:text-7xl;
+}
