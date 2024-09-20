@@ -22,7 +22,9 @@ async function fetchData(
 ): Promise<Documentation[] | null> {
   const response: PostgrestResponse<Documentation> = await supabase
     .from('documentation')
-    .select('*, group!inner (page!inner (slug, sort, title), sort, id)')
+    .select(
+      '*, group!inner (page!inner (slug, sort, title,image(filename_disk),excerpt), sort, id)',
+    )
     .eq('group.page.slug', pageSlug ? pageSlug : '')
     .order('sort', { referencedTable: 'group', ascending: false })
 

@@ -7,6 +7,7 @@ import { supabase } from '@/supabase'
 type Documentation = Database['public']['Tables']['documentation']['Row']
 
 const supabaseClient: SupabaseClient<Database> = supabase
+
 /**
  *
  * @param supabase
@@ -19,7 +20,7 @@ async function fetchData(
   const response: PostgrestResponse<Documentation> = await supabase
     .from('documentation')
     .select('*, block, group!inner (group_slug,page!inner (title,slug)),group')
-    .eq('group.group_slug', `${groupSlug}`)
+    .eq('group.group_slug', groupSlug ?? '')
   // .limit(1)
   // .single()
 

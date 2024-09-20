@@ -42,31 +42,31 @@
     "lucide-react": "^0.441.0",
     "micromatch": "^4.0.8",
     "next-themes": "^0.3.0",
-    "posthog-js": "^1.161.5",
+    "posthog-js": "^1.162.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "reactflow": "^11.11.4",
-    "sass": "^1.78.0",
+    "sass": "^1.79.2",
     "supabase": "^1.192.5",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.3",
-    "@astrojs/mdx": "^3.1.6",
+    "@astrojs/mdx": "^3.1.7",
     "@astrojs/react": "^3.6.2",
     "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/tailwind": "^5.1.1",
     "@playwright/test": "^1.45.2",
     "@prodkt/eslint": "workspace:*",
     "@prodkt/tailwind": "workspace:*",
     "@prodkt/tsconfig": "workspace:*",
     "@sentry/astro": "^8.30.0",
-    "@types/react": "^18.3.6",
+    "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.4.5",
     "postcss": "^8.4.47",
     "postcss-import": "^16.1.0",
-    "tailwindcss": "^3.4.11"
+    "tailwindcss": "^3.4.12"
   }
 }

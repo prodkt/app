@@ -1,5 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
-
 import React from 'react'
 
 import { cva } from 'class-variance-authority'
@@ -207,7 +205,9 @@ const BlogPost = React.forwardRef<HTMLDivElement, BlogPostProps>(
               'flex w-3/4 flex-col items-start gap-8',
             )}
           >
-            <h1 className='text-7xl tracking-tighter'>{title}</h1>
+            <h1 className='text-7xl tracking-tighter'>
+              {title ? title : 'No title provided'}
+            </h1>
             {image ? (
               <AspectRatio
                 className='relative z-0 border-none border-transparent bg-[var(--grayA2)] p-0'

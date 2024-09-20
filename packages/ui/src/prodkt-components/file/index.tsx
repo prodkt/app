@@ -188,6 +188,7 @@ const FileLarge = React.forwardRef<SVGProps<SVGSVGElement>, FileFolderProps>(
       fill='none'
       {...props}
     >
+      <title>File</title>
       <g className=''>
         <path
           fill='url(#ProdktFileLarge-a)'
@@ -219,7 +220,7 @@ const FileLarge = React.forwardRef<SVGProps<SVGSVGElement>, FileFolderProps>(
             stroke='url(#ProdktFileLarge-f)'
             x={1}
             y={1}
-            className='object-cover object-center transition-all origin-center scale-125 fileLargeMask group-hover:scale-100'
+            className='fileLargeMask origin-center scale-125 object-cover object-center transition-all group-hover:scale-100'
             preserveAspectRatio='xMidYMid slice'
           />
         )}
@@ -263,27 +264,28 @@ const FileLarge = React.forwardRef<SVGProps<SVGSVGElement>, FileFolderProps>(
           x1={150.525}
           x2={150.525}
           y1={1}
-          y2={236.501}
+          y2={256.501}
           gradientUnits='userSpaceOnUse'
         >
-          <stop offset={0} stopOpacity={0} stopColor='var(--gray1)' />
-          <stop offset={1} opacity={1} stopColor='var(--gray1)' />
+          <stop offset={1} stopOpacity={1} stopColor='var(--gray1)' />
+          <stop offset={1} stopOpacity={1} stopColor='var(--gray12)' />
         </linearGradient>
         <linearGradient
           id='ProdktFileLarge-f'
           x1={100.524}
           x2={100.524}
           y1={1}
-          y2={236.501}
+          y2={536.501}
           gradientUnits='userSpaceOnUse'
         >
-          <stop stopColor='var(--gray6)' />
-          <stop offset={1} stopColor='var(--gray4)' />
+          <stop offset={0} stopOpacity={1} stopColor='var(--gray8)' />
+          <stop offset={1} stopOpacity={1} stopColor='var(--gray10)' />
         </linearGradient>
 
         <clipPath id='prodktFileLargeComponent'>
           <path
-            stroke='url(#ProdktFileLarge-f)'
+            fill='url(#ProdktFileLarge-f)'
+            stroke='transparent'
             d='M24.938 237.518c78.559.101 199.885.632 251.025.868 13.58.063 24.537-10.928 24.537-24.504V70c0-6.903-5.596-12.5-12.5-12.5h-21.5c-10.769 0-19.5-8.73-19.5-19.5V13C247 6.1 241.445.5 234.539.5H24.99C11.459.5.5 11.47.5 25V213c0 13.529 10.906 24.499 24.438 24.517Z'
           />
         </clipPath>
@@ -343,22 +345,22 @@ const PageFile = React.forwardRef<
 
     return (
       <div {...props} ref={ref}>
-        <div className=' group relative z-[1] rounded-[2rem] bg-[var(--gray1)] p-2 transition-all duration-300 hover:bg-[var(--gray3)]'>
-          <div className='absolute inset-x-0 top-0 p-2 mx-0'>
-            <div className='flex flex-row items-center justify-start gap-2 py-2 pl-2 pr-0'>
-              <div className='flex size-10 items-center justify-center rounded-full bg-gradient-to-b from-[var(--ghost-aa6)] to-[var(--ghost-a2)] p-1 backdrop-blur'>
+        <div className=' group relative z-[1] rounded-[2rem] bg-[var(--gray6)] p-2 transition-all duration-300 hover:bg-[var(--gray3)] dark:bg-[var(--gray1)]'>
+          <div className='absolute inset-x-0 top-0 mx-0 p-2'>
+            <div className='flex flex-row items-center justify-start gap-1 py-2 pl-2 pr-0'>
+              <div className='flex size-8 items-center justify-center rounded-full p-0'>
                 {fileSrc ? (
                   <img
                     src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${fileSrc}`}
                     alt=''
-                    className='m-auto size-8 origin-center self-center rounded-full border border-[var(--grayA2)] object-cover object-center ring ring-[var(--grayA2)]'
+                    className='outline-3 m-auto size-8 origin-center self-center rounded-full bg-transparent object-cover object-center outline -outline-offset-[3px] outline-[var(--grayA5)] dark:outline-[var(--gray4)]'
                   />
                 ) : null}
               </div>
               {downloadLink && src ? (
                 <button
                   onClick={handleDownload}
-                  className='flex size-10 items-center justify-center rounded-full bg-gradient-to-b from-[var(--ghost-aa6)] to-[var(--ghost-a2)] p-1 backdrop-blur group-hover:from-[var(--grayA1)] group-hover:to-[var(--grayA6)]'
+                  className='flex size-8 items-center justify-center rounded-full bg-gradient-to-b from-[var(--ghost-aa6)] to-[var(--ghost-a6)] p-1 backdrop-blur group-hover:from-[var(--grayA11)] group-hover:to-[var(--grayA6)] group-hover:text-[var(--gray2)]'
                 >
                   <Download size={16} />
                 </button>
@@ -421,9 +423,9 @@ const PageFile = React.forwardRef<
               src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${src}`}
             />
           ) : null}
-          <div className='absolute inset-x-0 bottom-0 p-2 mx-0'>
+          <div className='absolute inset-x-0 bottom-0 mx-0 p-2'>
             <div className='flex flex-col items-start justify-center gap-2 px-4 py-2'>
-              <div className='flex items-center justify-center text-sm rounded-full'>
+              <div className='flex items-center justify-center rounded-full text-sm'>
                 <h3>{title}</h3>
               </div>
 
@@ -433,7 +435,7 @@ const PageFile = React.forwardRef<
                     <img
                       src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${projectLogo}`}
                       alt=''
-                      className='self-center object-cover object-center w-auto h-4 origin-center'
+                      className='h-4 w-auto origin-center self-center object-cover object-center'
                     />
                   </div>
                 ) : null}

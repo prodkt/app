@@ -61,7 +61,11 @@ type Documentation = Database['public']['Tables']['documentation']['Row'] & {
 }
 
 type DocumentationPage =
-  Database['public']['Tables']['documentation_page']['Row']
+  Database['public']['Tables']['documentation_page']['Row'] & {
+    image: {
+      filename_disk: Database['public']['Tables']['directus_files']['Row']['filename_disk']
+    }
+  }
 
 type DocumentationGroup =
   Database['public']['Tables']['docummentation_group']['Row'] & {
@@ -102,15 +106,15 @@ const sortedPages = [...documentationPages].sort(
                 className='col-span-1 h-full'
                 key={item.id}
                 image={
-                  '42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif' as
-                    | React.ImgHTMLAttributes<HTMLImageElement>
-                    | undefined
+                  item.image?.filename_disk
+                    ? item.image?.filename_disk
+                    : `42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`
                 }
                 alt='test'
                 link={`/docs/${item.slug}`}
                 title={item.title || 'Untitled'}
                 excerpt={item.title || 'No description available'}
-                date={formatDate(item.date_created) || 'Date not available'}
+                date={formatDate(item.date_updated) || 'Date not available'}
               />
             ))
           ) : (

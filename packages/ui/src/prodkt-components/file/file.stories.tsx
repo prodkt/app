@@ -59,22 +59,22 @@ export const FilePage: Story = {
     <div className='flex size-full h-screen max-w-full items-center justify-center gap-2 overflow-x-hidden'>
       <PageFile
         title='filename'
-        downloadLink={FileLogo}
-        fileSrc={FileSpline}
+        downloadLink='7b2ae3a2-eded-4a52-adcc-ba31346e4164.svg'
+        fileSrc='56c87434-0b8f-4734-b5ff-bbcb3c67fa53.avif'
         folderTitle='Sugarless'
-        src={FileLogo as string}
+        src='eec84143-61e6-4607-addf-75cd40b130b2.avif'
       />
       <PageFile
         title='filename'
         projectLogo={Explor}
-        fileSrc={FileSvg}
-        src={Circuit}
+        fileSrc='7055699f-8a61-48b7-9bb7-3ef8d1aa48d9.avif'
+        src='4306fd23-b2d8-49c5-a7c7-40f344584acd.avif'
       />
       <PageFile
         title='filename'
         projectLogo={Explor}
         folderTitle='Sugarless'
-        fileSrc={FileFigma}
+        fileSrc='f6894a58-ed38-4668-a9f4-8f0ca5b563cf.avif'
         src={Scales3d}
       />
     </div>
