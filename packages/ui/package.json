@@ -23,6 +23,11 @@
       "require": "./dist/prodkt-components/*/index.cjs",
       "default": "./dist/prodkt-components/*/index.js"
     },
+    "./blocks/*": {
+      "types": "./dist/blocks/*/index.d.ts",
+      "require": "./dist/blocks/*/index.cjs",
+      "default": "./dist/blocks/*/index.js"
+    },
     "./icons/*": {
       "types": "./dist/icons/*/index.d.ts",
       "require": "./dist/icons/*/index.cjs",
