@@ -13,102 +13,36 @@ import { formatDate } from '@/utils/formatDate'
 import PageHeader from '../../../components/page-header.astro'
 import { GET } from './index.json'
 
-// interface DocGroupItem {
-//   id: string;
-//   status: string;
-//   sort: string | null;
-//   user_created: string;
-//   date_created: string;
-//   user_updated: string;
-//   date_updated: string;
-//   title: string;
-//   anchor_slug: string;
-//   block: DocBlock[] | null;
-//   group: DocGroup;
-//   group_codeblocks: boolean;
-// }
-
-// interface DocBlock {
-//   block_subheading: string;
-//   block_content: string;
-//   codeblock_filename?: string;
-//   codeblock?: string | null;
-// }
-
-// interface DocGroup {
-//   page: DocPage;
-//   date_created: string | null;
-//   date_updated: string | null;
-//   group_slug: string | null;
-//   id: string;
-//   sort: number | null;
-//   status: string;
-//   title: string;
-//   user_created: string | null;
-//   user_updated: string | null;
-// }
-
-// interface DocPage {
-//   slug: string;
-//   title: string;
-//   status: string;
-// }
-
-interface GroupDataItem {
+interface DocDataItem {
   anchor_slug: string | null
   // block: Json | null
   block?: Block[]
-  docData: []
   block_content: Json | null
   date_created: string | null
   date_updated: string | null
-  group: DocumentationGroup & { page: DocumentationPage }
+  group: string | null
   group_codeblocks: boolean | null
   id: string
   sort: number | null
   status: string
-  title: string
+  title: string | undefined
   user_created: string | null
   user_updated: string | null
 }
 
+type DocData = DocDataItem[]
+
+type Documentation = Database['public']['Tables']['documentation']['Row'] & {
+  docData: DocData
+}
 // Define the types
 interface Block {
   block_content: string
 }
 
-// interface GroupDataItem {
-//   anchor_slug: string | null
-//   block: Json | null
-//   block_content: Json | null
-//   date_created: string | null
-//   date_updated: string | null
-//   group: string | null
-//   group_codeblocks: boolean | null
-//   id: string
-//   sort: number | null
-//   status: string
-//   title: string | undefined
-//   user_created: string | null
-//   user_updated: string | null
-// }
-// ;[]
-
-type GroupData = GroupDataItem[]
-
-type DocumentationPage =
-  Database['public']['Tables']['documentation_page']['Row'] & {
-    image: {
-      filename_disk?: string
-    }
-  }
-type DocumentationGroup =
-  Database['public']['Tables']['docummentation_group']['Row']
-type Documentation = Database['public']['Tables']['documentation']['Row'] & {
-  docData: GroupData
-}
 const response = await GET(Astro)
 const data = (await response.json()) as Documentation
+const { docData } = data
 ---
 
 <Layout>
@@ -123,17 +57,15 @@ const data = (await response.json()) as Documentation
     />
 
     <BlogPost
-      title={data?.docData[0]?.group?.page?.title as string | undefined}
+      title={docData[0]?.title as string}
       previousText='Back'
       size='noTopPadding'
       hideAside
-      backLink='/docs'
-      date={formatDate(data?.docData[0]?.date_updated as string | null)}
-      alt={data?.title as string}
+      backLink='/blog'
+      date={formatDate(docData[0]?.date_created as string | null)}
+      alt={docData[0]?.title as string}
       hideToc
-      image={data?.docData[0]?.group?.page?.image?.filename_disk
-        ? data?.docData[0]?.group?.page?.image?.filename_disk
-        : `42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
+      image={`42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
       client:only='react'
     >
       <!-- {
@@ -146,11 +78,14 @@ const data = (await response.json()) as Documentation
         ))
       } -->
       {
-        data.docData.map((item, index) => (
+        data.docData.map((item) => (
           <>
             <hr id={item?.anchor_slug} />
             <h4 class='text-3xl'>{item?.title}</h4>
-            <Fragment key={index} set:html={item?.block?.[0]?.block_content} />
+            <Fragment
+              key={item.id}
+              set:html={item?.block?.[0]?.block_content}
+            />
           </>
         ))
       }

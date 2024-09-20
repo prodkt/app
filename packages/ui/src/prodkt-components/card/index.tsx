@@ -7,6 +7,8 @@ import type { ReactNode } from 'react'
 import { cva } from 'class-variance-authority'
 import { ExternalLink } from 'lucide-react'
 
+import { AspectRatio } from '@/primitives/aspect-ratio'
+import { Button } from '@/primitives/button'
 import {
   CardContent,
   CardDescription,
@@ -16,9 +18,6 @@ import {
   Card as ShadCard,
 } from '@/primitives/card'
 import { cn } from '@/utils/cn'
-
-import { AspectRatio } from '../../primitives/aspect-ratio'
-import { Button } from '../../primitives/button'
 
 const cardVariants = cva('relative h-full grow', {
   variants: {
