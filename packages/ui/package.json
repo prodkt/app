@@ -120,6 +120,7 @@
     "recharts": "^2.12.7",
     "sass": "^1.78.0",
     "sonner": "^1.5.0",
+    "swagger-ui": "^5.17.14",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.2",
     "vaul": "^0.9.1",

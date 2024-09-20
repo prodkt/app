@@ -79,7 +79,10 @@ async function fetchDocumentationPages(
       `
       *,slug,
           title,
-          status
+          status,
+          image!inner(filename_disk),excerpt,
+          order_id,
+          sort
     `,
     )
     .neq('status', 'draft')

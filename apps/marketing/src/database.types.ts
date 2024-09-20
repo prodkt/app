@@ -2369,11 +2369,26 @@ export type Database = {
           },
         ]
       }
+      documentation_navigation: {
+        Row: {
+          id: string
+        }
+        Insert: {
+          id: string
+        }
+        Update: {
+          id?: string
+        }
+        Relationships: []
+      }
       documentation_page: {
         Row: {
           date_created: string | null
           date_updated: string | null
+          excerpt: string | null
           id: string
+          image: string | null
+          order_id: string | null
           slug: string | null
           sort: number | null
           status: string
@@ -2384,7 +2399,10 @@ export type Database = {
         Insert: {
           date_created?: string | null
           date_updated?: string | null
+          excerpt?: string | null
           id: string
+          image?: string | null
+          order_id?: string | null
           slug?: string | null
           sort?: number | null
           status?: string
@@ -2395,7 +2413,10 @@ export type Database = {
         Update: {
           date_created?: string | null
           date_updated?: string | null
+          excerpt?: string | null
           id?: string
+          image?: string | null
+          order_id?: string | null
           slug?: string | null
           sort?: number | null
           status?: string
@@ -2404,6 +2425,20 @@ export type Database = {
           user_updated?: string | null
         }
         Relationships: [
+          {
+            foreignKeyName: 'documentation_page_image_foreign'
+            columns: ['image']
+            isOneToOne: false
+            referencedRelation: 'directus_files'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'documentation_page_order_id_foreign'
+            columns: ['order_id']
+            isOneToOne: false
+            referencedRelation: 'documentation_navigation'
+            referencedColumns: ['id']
+          },
           {
             foreignKeyName: 'documentation_page_user_created_foreign'
             columns: ['user_created']
@@ -3002,23 +3037,33 @@ export type Database = {
       folder: {
         Row: {
           id: string
+          image: string | null
           parent: string | null
           project: string | null
           title: string | null
         }
         Insert: {
           id: string
+          image?: string | null
           parent?: string | null
           project?: string | null
           title?: string | null
         }
         Update: {
           id?: string
+          image?: string | null
           parent?: string | null
           project?: string | null
           title?: string | null
         }
         Relationships: [
+          {
+            foreignKeyName: 'folder_image_foreign'
+            columns: ['image']
+            isOneToOne: false
+            referencedRelation: 'directus_files'
+            referencedColumns: ['id']
+          },
           {
             foreignKeyName: 'folder_parent_foreign'
             columns: ['parent']

@@ -41,7 +41,7 @@ const Card = forwardRef<
     VariantProps<typeof cardVariants> & {
       link: string
       excerpt: string | ReactNode
-      image: React.ImgHTMLAttributes<HTMLImageElement> | undefined
+      image?: string
       alt?: string
       date?: string
       buttonText?: string
@@ -98,9 +98,9 @@ const Card = forwardRef<
             src={
               image
                 ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${image}`
-                : '1662d152-933f-414d-9230-c4b19c773557.avif'
+                : 'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif'
             }
-            alt={image?.alt ?? alt ?? 'Default Alt Text'}
+            aria-label={alt ?? 'Default Alt Text'}
             className='card-mask absolute z-0 size-full max-h-full scale-125 border border-transparent object-cover object-top opacity-50 brightness-50 contrast-50 saturate-150 transition-transform duration-500 group-hover:scale-105'
           />
           <CardHeader>
@@ -112,9 +112,9 @@ const Card = forwardRef<
                 src={
                   image
                     ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${image}`
-                    : '1662d152-933f-414d-9230-c4b19c773557.avif'
+                    : 'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif'
                 }
-                alt={image?.alt ?? alt ?? 'Default Alt Text'}
+                aria-label={alt ?? 'Default Alt Text'}
                 className='size-full rounded-[calc(1rem_-_2px)] border border-transparent object-cover object-center opacity-0'
               />
             </AspectRatio>

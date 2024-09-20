@@ -97,7 +97,11 @@ interface Block {
 type GroupData = GroupDataItem[]
 
 type DocumentationPage =
-  Database['public']['Tables']['documentation_page']['Row']
+  Database['public']['Tables']['documentation_page']['Row'] & {
+    image: {
+      filename_disk?: string
+    }
+  }
 type DocumentationGroup =
   Database['public']['Tables']['docummentation_group']['Row']
 type Documentation = Database['public']['Tables']['documentation']['Row'] & {
@@ -124,10 +128,12 @@ const data = (await response.json()) as Documentation
       size='noTopPadding'
       hideAside
       backLink='/docs'
-      date={formatDate(data?.docData[0]?.date_created as string | null)}
+      date={formatDate(data?.docData[0]?.date_updated as string | null)}
       alt={data?.title as string}
       hideToc
-      image={`42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
+      image={data?.docData[0]?.group?.page?.image?.filename_disk
+        ? data?.docData[0]?.group?.page?.image?.filename_disk
+        : `42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
       client:only='react'
     >
       <!-- {

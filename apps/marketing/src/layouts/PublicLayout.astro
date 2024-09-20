@@ -8,6 +8,7 @@ import { Header } from '@prodkt/ui/prodkt-components/header'
 import { PageFooter } from '@prodkt/ui/prodkt-components/page-footer'
 
 import BaseHead from '@/components/BaseHead.astro'
+import Plutio from '@/components/plutio/plutio.astro'
 import PostHog from '@/components/posthog/PostHog.astro'
 
 type Appearance = 'inherit' | 'light' | 'dark'
@@ -75,6 +76,7 @@ const {
   <head>
     <BaseHead />
     <PostHog />
+    <Plutio />
     <ViewTransitions />
 
     <script>
