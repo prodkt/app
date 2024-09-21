@@ -1,25 +1,67 @@
 /// <reference types="react-scripts" />
+// images.d.ts
 
-declare module '*.avif' {
-  const src: string
+declare module '*.png' {
+  const value: string
+  export default value
+}
 
-  export default src
+declare module '*.jpg' {
+  const value: string
+  export default value
+}
+
+declare module '*.jpeg' {
+  const value: string
+  export default value
+}
+
+declare module '*.gif' {
+  const value: string
+  export default value
+}
+
+declare module '*.bmp' {
+  const value: string
+  export default value
+}
+
+declare module '*.tiff' {
+  const value: string
+  export default value
 }
 
 declare module '*.svg' {
-  const src: string
-
-  export default src
+  const content: any
+  export default content
 }
 
 declare module '*.webp' {
-  const src: string
-
-  export default src
+  const value: string
+  export default value
 }
 
-declare module '*.png' {
-  const src: string
+declare module '*.avif' {
+  const value: string
+  export default value
+}
 
-  export default src
+declare module '*.heic' {
+  const value: string
+  export default value
+}
+
+declare module '*.heif' {
+  const value: string
+  export default value
+}
+
+declare module '*.exr' {
+  const value: string
+  export default value
+}
+
+declare module '*.hdr' {
+  const value: string
+  export default value
 }

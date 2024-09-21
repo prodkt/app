@@ -1,11 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable security/detect-object-injection */
-/* eslint-disable tailwindcss/no-custom-classname */
-
 import React from 'react'
-
-import type { Json } from '@/database.types'
 
 import { Badge } from '@/primitives/badge'
 
@@ -21,17 +14,6 @@ import SplineLogo from './spline_100w.png'
 export interface Token {
   palettes: Record<string, Record<string, any>>
 }
-
-// const transformPaletteName = (name: Json) => {
-//   // @ts-ignore
-//   const parts = name?.split('_')
-//   const lastPart = parts.pop()
-//   const mainPart = parts
-//     // @ts-ignore
-//     .map((part: Json) => part?.replace(/([a-z])([A-Z])/g, '$1 $2'))
-//     .join(' - ')
-//   return `${mainPart} (${lastPart})`
-// }
 
 interface Showcase {
   ProjectDesignTokens?: Token[]
@@ -80,30 +62,30 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
             <div className='absolute inset-0 m-0 size-full'>
               <div className='absolute inset-y-0 left-0 right-auto my-0 ml-0 mr-auto flex h-full flex-col'>
                 <BackgroundPattern className='gradientMask-workShowcase absolute inset-0 z-0 m-0 min-h-full min-w-full text-[var(--redA2)]' />
-                <div className='p-0'></div>
+                <div className='p-0' />
                 <div className='border-var(--ghost-aa1) flex h-full min-h-8 min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='p-0'></div>
+                <div className='p-0' />
               </div>
               <div className='absolute inset-y-0 left-auto right-0 my-0 ml-auto mr-0 flex h-full flex-col'>
                 <BackgroundPattern className='gradientMask-workShowcase absolute inset-0 z-0 m-0 min-h-full min-w-full text-[var(--redA2)]' />
-                <div className='p-0'></div>
-                <div className='border-var(--ghost-aa1) relative flex h-full min-h-8 min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
+                <div className='p-0' />
+                <div className='relative flex h-full min-h-8 min-w-8 flex-row items-center justify-center border border-[var(--ghost-aa1)] bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='bg-[var(--ghost-aa1)] p-0'></div>
+                <div className='bg-[var(--ghost-aa1)] p-0' />
               </div>
             </div>
             <div className='relative size-full max-w-full p-8'>
               <div className='absolute inset-x-0 bottom-auto top-0 mx-auto mb-auto mt-0 flex w-full max-w-full flex-row'>
                 <BackgroundPattern className='gradientMask-workShowcase absolute inset-0 z-0 m-0 min-h-full min-w-full text-[var(--redA2)]' />
 
-                <div className='p-0'></div>
+                <div className='p-0' />
                 <div className='border-var(--ghost-aa1) flex min-h-8 w-full min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='p-0'></div>
+                <div className='p-0' />
               </div>
               <div className='relative flex size-full max-w-full items-center justify-center bg-[var(--ghost-aa1)] p-12'>
                 <img
@@ -129,43 +111,43 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                     className='z-[1] max-w-full overflow-visible'
                   />
                 ) : null}
-                <div className='gradientMask-11 absolute z-0 size-full max-w-full bg-transparent'></div>
+                <div className='gradientMask-11 absolute z-0 size-full max-w-full bg-transparent' />
               </div>
               <div className='absolute inset-x-0 bottom-0 top-auto mx-auto mb-0 mt-auto flex w-full max-w-full flex-row'>
                 <BackgroundPattern className='gradientMask-workShowcase absolute inset-0 z-0 m-0 min-h-full min-w-full text-[var(--redA2)]' />
 
-                <div className='p-0'></div>
+                <div className='p-0' />
                 <div className='border-var(--ghost-aa1) flex min-h-8 w-full min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='p-0'></div>
+                <div className='p-0' />
               </div>
             </div>
           </div>
           <div className='relative flex h-auto max-w-full basis-1/2 flex-col items-center justify-between overflow-hidden bg-transparent p-0'>
             <div className='absolute inset-0 m-0 size-full'>
               <div className='absolute inset-y-0 left-0 right-auto my-0 ml-0 mr-auto flex h-full flex-col'>
-                <div className='bg-[var(--ghost-aa1)] p-0'></div>
+                <div className='bg-[var(--ghost-aa1)] p-0' />
                 <div className='border-var(--ghost-aa1) flex h-full min-h-8 min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='bg-[var(--accent1)] p-0'></div>
+                <div className='bg-[var(--accent1)] p-0' />
               </div>
               <div className='absolute inset-y-0 left-auto right-0 my-0 ml-auto mr-0 flex h-full flex-col'>
-                <div className='bg-[var(--ghost-aa1)] p-0'></div>
+                <div className='bg-[var(--ghost-aa1)] p-0' />
                 <div className='border-var(--ghost-aa1) flex h-full min-h-8 min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='p-0'></div>
+                <div className='p-0' />
               </div>
             </div>
             <div className='relative size-full p-8'>
               <div className='absolute inset-x-0 bottom-auto top-0 mx-auto mb-auto mt-0 flex w-full flex-row'>
-                <div className='p-0'></div>
+                <div className='p-0' />
                 <div className='border-var(--ghost-aa1) flex min-h-8 w-full min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='p-0'></div>
+                <div className='p-0' />
               </div>
               <div className='relative flex size-full grow items-center justify-center p-12'>
                 <img
@@ -193,11 +175,11 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                 ) : null}
               </div>
               <div className='absolute inset-x-0 bottom-0 top-auto mx-auto mb-0 mt-auto flex w-full flex-row'>
-                <div className='bg-[var(--ghost-aa1)] p-0'></div>
+                <div className='bg-[var(--ghost-aa1)] p-0' />
                 <div className='border-var(--ghost-aa1) bottom-0 top-auto mb-0 mt-auto flex min-h-8 w-full min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='bg-[var(--ghost-aa1)] p-0'></div>
+                <div className='bg-[var(--ghost-aa1)] p-0' />
               </div>
             </div>
           </div>
@@ -274,8 +256,10 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                       alt='Project Logotype'
                       className='z-0 h-auto max-h-[280px] w-full origin-right translate-x-12 brightness-50 dark:brightness-100'
                       style={{
-                        maskImage: `linear-gradient(270deg, transparent 8%, var(--gray1) 99%)`,
-                        WebkitMaskImage: `linear-gradient(270deg, transparent 8%, var(--gray1) 99%)`,
+                        maskImage:
+                          'linear-gradient(270deg, transparent 8%, var(--gray1) 99%)',
+                        WebkitMaskImage:
+                          'linear-gradient(270deg, transparent 8%, var(--gray1) 99%)',
                       }}
                     />
                   ) : null}
@@ -297,8 +281,10 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                       alt='Project Base Type'
                       className='z-0 h-auto max-h-[280px] w-full origin-right translate-x-12 brightness-50 dark:brightness-100'
                       style={{
-                        maskImage: `linear-gradient(270deg, transparent 8%, var(--gray1) 99%)`,
-                        WebkitMaskImage: `linear-gradient(270deg, transparent 8%, var(--gray1) 99%)`,
+                        maskImage:
+                          'linear-gradient(270deg, transparent 8%, var(--gray1) 99%)',
+                        WebkitMaskImage:
+                          'linear-gradient(270deg, transparent 8%, var(--gray1) 99%)',
                       }}
                     />
                   ) : null}
@@ -320,8 +306,10 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                       alt='Project Expressive Type'
                       className='z-0 h-auto max-h-[280px] w-full origin-right translate-x-12 brightness-50 dark:brightness-100'
                       style={{
-                        maskImage: `linear-gradient(270deg, transparent 8%, var(--gray1) 99%)`,
-                        WebkitMaskImage: `linear-gradient(270deg, transparent 8%, var(--gray1) 99%)`,
+                        maskImage:
+                          'linear-gradient(270deg, transparent 8%, var(--gray1) 99%)',
+                        WebkitMaskImage:
+                          'linear-gradient(270deg, transparent 8%, var(--gray1) 99%)',
                       }}
                     />
                   ) : null}
@@ -343,8 +331,10 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                       alt='Project Code Type'
                       className='z-0 h-auto max-h-[280px] w-full origin-right translate-x-12 brightness-50 dark:brightness-100'
                       style={{
-                        maskImage: `linear-gradient(270deg, transparent 8%, var(--gray1) 99%)`,
-                        WebkitMaskImage: `linear-gradient(270deg, transparent 8%, var(--gray1) 99%)`,
+                        maskImage:
+                          'linear-gradient(270deg, transparent 8%, var(--gray1) 99%)',
+                        WebkitMaskImage:
+                          'linear-gradient(270deg, transparent 8%, var(--gray1) 99%)',
                       }}
                     />
                   ) : null}
@@ -365,7 +355,7 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                       <h4 className='bg-gradient-to-br from-[var(--ghost-a1)] via-[var(--ghost-a12)] to-[var(--ghost-a12)] bg-clip-text pb-2 text-[0.625rem] font-medium uppercase tracking-[0.25rem] text-transparent'>
                         Color | Brand
                       </h4>
-                      <p className='leading-tighter my-0 ml-0 mr-auto tracking-tight'>
+                      <p className='my-0 ml-0 mr-auto tracking-tight'>
                         {paletteName}
                       </p>
                     </div>
@@ -384,10 +374,10 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                           value_hsl={color}
                           key_hsl={shade}
                           isDark={
-                            paletteName.includes('dark') ||
-                            paletteName.includes('Dark')
-                              ? true
-                              : false
+                            !!(
+                              paletteName.includes('dark') ||
+                              paletteName.includes('Dark')
+                            )
                           }
                           key_use={shade}
                         />

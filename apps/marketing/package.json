@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "build": "astro check && astro build",
+    "build:prodkt-css": "npx tailwindcss -c ./tailwind.config.ts -i ./src/styles/globals.css -o ./public/prodkt-styles.css --watch",
     "clean": "bun run rm -rf .astro dist *.tsbuildinfo playwright-report test-results",
     "dev": "astro dev",
     "generate:types": "bunx supabase gen types --lang=typescript --project-id odzdpcvclydcqawdagdt > src/database.types.ts",
@@ -48,6 +49,8 @@
     "reactflow": "^11.11.4",
     "sass": "^1.79.2",
     "supabase": "^1.192.5",
+    "swiper": "^11.1.14",
+    "tailwind-merge": "^2.5.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {

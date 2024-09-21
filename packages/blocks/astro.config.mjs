@@ -34,6 +34,7 @@ export default defineConfig({
   integrations: [
     react({
       experimentalReactChildren: true,
+      include: ['**/react/*'],
     }),
     tailwind({
       nesting: true,
@@ -41,6 +42,7 @@ export default defineConfig({
   ],
   vite: {
     ...viteConfig,
+    // sourceMap: true,
     css: {
       postcss,
     },
@@ -50,6 +52,7 @@ export default defineConfig({
       },
     },
     ssr: {
+      // noExternal: ['swiper'],
       external: ['image-size', 'tiny-glob'],
     },
     plugins: [],

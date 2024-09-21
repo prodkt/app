@@ -2,9 +2,16 @@ import { loadEnv } from 'vite'
 
 import { buildConfig, mergeConfig, reactConfig } from '@prodkt/vite'
 
-// import pkg from './package.json'
+import pkg from './package.json'
 
 const env = loadEnv(process.cwd(), '')
+// const exemptedDependencies = new Set([
+//   'react',
+//   'react-dom',
+//   '@dnd-kit',
+//   '@codesandbox/sandpack-react',
+//   'swiper',
+// ])
 
 export default mergeConfig(
   // Vite config to support React.
@@ -16,6 +23,7 @@ export default mergeConfig(
   buildConfig({
     lib: {
       entry: [
+        'src/CodeblockComponentMap.tsx',
         'src/primitives/*/index.tsx',
         'src/brands/*/index.tsx',
         'src/prodkt-components/*/index.tsx',
@@ -25,9 +33,6 @@ export default mergeConfig(
         './src/utils/use-mounted.ts',
         './src/utils/kanban.ts',
       ],
-    },
-    external: {
-      // externalizeDeps: Object.keys(pkg.dependencies),
     },
     dts: {
       exclude: ['src/storybook-utils', '**/*.stories.tsx'],

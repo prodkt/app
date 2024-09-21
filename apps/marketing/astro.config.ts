@@ -50,6 +50,7 @@ export default defineConfig({
       },
     },
     ssr: {
+      noExternal: ['swiper'],
       external: ['image-size', 'tiny-glob'],
     },
   },

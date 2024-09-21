@@ -1,5 +1,8 @@
 @import './codeblock.scss';
-@import '@prodkt/tailwind/color';
+/* @import '@prodkt/tailwind/color'; */
+@import '../../../../packages/config/tailwind/src/color.css';
+@import '../../../../packages/config/tailwind/src/ghost.css';
+@import '../../../../packages/assets/fonts/stylesheet.css';
 @import './flow-board.css';
 
 @tailwind base;
@@ -820,6 +823,10 @@ body[data-scroll-locked] {
   --grayA10: var(--slateA10);
   --grayA11: var(--slateA11);
   --grayA12: var(--slateA12);
+}
+
+:root {
+  --font-labil-grotesk: 'Labil Grotesk Variable';
 }
 
 @layer base {
