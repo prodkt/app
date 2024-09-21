@@ -49,7 +49,7 @@ export function buildConfig({
     },
     plugins: [
       createExternal({
-        nodeBuiltins: false,
+        nodeBuiltins: true,
         ...external,
         name: 'configure-sass',
         configResolved() {

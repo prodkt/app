@@ -6,14 +6,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    ".storybook/**/*",
-    "**/CodeblockComponentMap.ts",
-    "CodeblockComponentMap.ts",
-    "src/blocks/remix/index.jsx"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", ".storybook/**/*"],
   "exclude": ["node_modules", "dist", "storybook-static"]
 }

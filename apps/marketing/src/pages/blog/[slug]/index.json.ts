@@ -6,27 +6,27 @@ import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient = supabase
-type Articles = Database['public']['Tables']['articles']['Row']
-type Authors = Database['public']['Tables']['authors']['Row']
-type Files = Database['public']['Tables']['directus_files']['Row']
+const supabaseClient: SupabaseClient<Database> = supabase
+// type Articles = Database['public']['Tables']['articles']['Row']
+// type Authors = Database['public']['Tables']['authors']['Row']
+// type Files = Database['public']['Tables']['directus_files']['Row']
 
-interface ArticlesWithRelations {
-  id: Articles['id']
-  status: Articles['status']
-  sort: Articles['sort']
-  date_created: Articles['date_created']
-  date_updated: Articles['date_updated']
-  title: Articles['title']
-  excerpt: Articles['excerpt']
-  slug: Articles['slug']
-  author?:
-    | (Pick<Authors, 'title' | 'last_name' | 'first_name'> & {
-        avatar: Pick<Files, 'filename_disk'> | null
-      })
-    | null
-  image: Pick<Files, 'filename_disk'> | null
-}
+// interface ArticlesWithRelations {
+//   id: Articles['id']
+//   status: Articles['status']
+//   sort: Articles['sort']
+//   date_created: Articles['date_created']
+//   date_updated: Articles['date_updated']
+//   title: Articles['title']
+//   excerpt: Articles['excerpt']
+//   slug: Articles['slug']
+//   author?:
+//     | (Pick<Authors, 'title' | 'last_name' | 'first_name'> & {
+//         avatar: Pick<Files, 'filename_disk'> | null
+//       })
+//     | null
+//   image: Pick<Files, 'filename_disk'> | null
+// }
 /**
  *
  * @param root0 The API context.
@@ -93,7 +93,7 @@ export async function GET({ params }: APIContext) {
 async function fetchBlogData(
   supabase: SupabaseClient,
   slug: string,
-): Promise<ArticlesWithRelations[] | null> {
+): Promise<unknown[] | null> {
   const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
   const isDevMode = SUPABASE_DEV_MODE === 'true'
 
@@ -116,7 +116,7 @@ async function fetchBlogData(
   const response = await query
 
   if (response.error === null) {
-    return response.data as unknown as ArticlesWithRelations[]
+    return response.data
   }
 
   console.error(response.error)

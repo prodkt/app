@@ -50,8 +50,15 @@ export default defineConfig({
       },
     },
     ssr: {
-      noExternal: ['swiper'],
-      external: ['image-size', 'tiny-glob'],
+      noExternal: [],
+      external: [
+        'image-size',
+        'tiny-glob',
+        'react',
+        'react-dom',
+        '@dnd-kit',
+        '@codesandbox/sandpack-react',
+      ],
     },
   },
   output: 'server',
