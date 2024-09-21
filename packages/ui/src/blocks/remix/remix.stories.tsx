@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Remix } from '.'
+import Remix from '.'
 
 const meta: Meta<typeof Remix> = {
   component: Remix,
@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Remix>
 
 export const Default: Story = {
   render: () => (
-    <div className='flex items-center justify-center max-w-full overflow-x-hidden size-full'>
+    <div className='flex size-full max-w-full items-center justify-center overflow-x-hidden'>
       <Remix />
     </div>
   ),

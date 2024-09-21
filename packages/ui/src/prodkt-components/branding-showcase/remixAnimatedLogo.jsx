@@ -1,4 +1,4 @@
-import type { SVGProps } from 'react'
+// @ts-nocheck
 
 import { motion } from 'framer-motion'
 
@@ -27,7 +27,7 @@ const icon = {
   },
 }
 
-const RemixAnimatedLogo = (props: SVGProps<SVGSVGElement>) => (
+const RemixAnimatedLogo = (props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={481}
@@ -35,6 +35,7 @@ const RemixAnimatedLogo = (props: SVGProps<SVGSVGElement>) => (
     viewBox='0 0 481 350'
     {...props}
   >
+    <title>Remix Animated Logo</title>
     <g clipPath='url(#a)'>
       <motion.path
         d='M0 248.878h154.653L257.459 349.92 0 248.878Z'

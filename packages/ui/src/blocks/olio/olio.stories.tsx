@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Olio } from '.'
+import Olio from '.'
 
 const meta: Meta<typeof Olio> = {
   component: Olio,

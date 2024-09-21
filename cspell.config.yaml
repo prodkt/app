@@ -51,6 +51,7 @@ words:
   - colorwheel
   - commitlint
   - commitlintrc
+  - Comonent
   - compat
   - Concepting
   - connectingfrom
@@ -247,6 +248,7 @@ words:
   - viewports
   - vuepress
   - waitlist
+  - webp
   - wght
   - wireframe
   - wireframes
@@ -258,3 +260,8 @@ words:
   - zoomable
   - zoompane
   - ZUEP
+  - dashdraw
+  - textwrapper
+  - connectionindicator
+  - edgeupdater
+  - edgelabel

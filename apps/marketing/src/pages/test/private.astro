@@ -1,0 +1,17 @@
+---
+import PageLayout from '@/components/dynamic-imports/ComponentWrapper.astro'
+
+// import { renderComponentToString } from '@/components/dynamic-imports/render' // New .tsx file path
+
+import PrivateAstro from './private-astro.astro'
+
+// const componentName = 'Remix' // Example component name
+// // const result = renderComponentToString(componentName)
+// const result = renderComponentToString(componentName, {
+//   /* your props here */
+// })
+---
+
+<PageLayout>
+  <PrivateAstro slot='codeRender' />
+</PageLayout>

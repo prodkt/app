@@ -1,9 +1,11 @@
 import TemplateTresLayout from './templates/tres/layouts/TresLayout.astro'
 import AmpersandHero from './templates/unique/components/ampersand-hero.astro'
 import LevelnHero from './templates/unique/components/leveln-hero.astro'
+import RemixHero from './templates/unique/components/remix-hero.astro'
 import WarpLandingPage from './templates/unique/components/warp-landing-page.astro'
 import AmpersandLayout from './templates/unique/layouts/ampersand-hero-layout.astro'
 import LevelnLayout from './templates/unique/layouts/leveln-hero-layout.astro'
+import RemixLayout from './templates/unique/layouts/leveln-hero-layout.astro'
 import TemplateUnoAboutOne from './templates/uno/components/About_1.astro'
 import TemplateUnoComponentTest from './templates/uno/components/ComponentTest.astro'
 import TemplateTres404One from './templates/uno/components/Page404_1.astro'
@@ -24,9 +26,11 @@ const componentMap: ComponentMap = {
   WarpLandingPage,
   TemplateUnoComponentTest,
   LevelnLayout,
+  RemixLayout,
   AmpersandLayout,
   AmpersandHero,
   LevelnHero,
+  RemixHero,
 }
 
 export { componentMap }

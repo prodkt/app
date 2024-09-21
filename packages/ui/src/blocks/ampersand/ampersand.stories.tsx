@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Ampersand } from '.'
+import Ampersand from '.'
 
 const meta: Meta<typeof Ampersand> = {
   component: Ampersand,
