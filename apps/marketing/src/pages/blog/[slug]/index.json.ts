@@ -2,29 +2,31 @@ import type { Database } from '@/database.types'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import type { APIContext } from 'astro'
 
+import { getSecret } from 'astro:env/server'
+
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient = supabase
-type Articles = Database['public']['Tables']['articles']['Row']
-type Authors = Database['public']['Tables']['authors']['Row']
-type Files = Database['public']['Tables']['directus_files']['Row']
+const supabaseClient: SupabaseClient<Database> = supabase
+// type Articles = Database['public']['Tables']['articles']['Row']
+// type Authors = Database['public']['Tables']['authors']['Row']
+// type Files = Database['public']['Tables']['directus_files']['Row']
 
-interface ArticlesWithRelations {
-  id: Articles['id']
-  status: Articles['status']
-  sort: Articles['sort']
-  date_created: Articles['date_created']
-  date_updated: Articles['date_updated']
-  title: Articles['title']
-  excerpt: Articles['excerpt']
-  slug: Articles['slug']
-  author?:
-    | (Pick<Authors, 'title' | 'last_name' | 'first_name'> & {
-        avatar: Pick<Files, 'filename_disk'> | null
-      })
-    | null
-  image: Pick<Files, 'filename_disk'> | null
-}
+// interface ArticlesWithRelations {
+//   id: Articles['id']
+//   status: Articles['status']
+//   sort: Articles['sort']
+//   date_created: Articles['date_created']
+//   date_updated: Articles['date_updated']
+//   title: Articles['title']
+//   excerpt: Articles['excerpt']
+//   slug: Articles['slug']
+//   author?:
+//     | (Pick<Authors, 'title' | 'last_name' | 'first_name'> & {
+//         avatar: Pick<Files, 'filename_disk'> | null
+//       })
+//     | null
+//   image: Pick<Files, 'filename_disk'> | null
+// }
 /**
  *
  * @param root0 The API context.
@@ -91,21 +93,32 @@ export async function GET({ params }: APIContext) {
 async function fetchBlogData(
   supabase: SupabaseClient,
   slug: string,
-): Promise<ArticlesWithRelations[] | null> {
-  const response = await supabase
+): Promise<unknown[] | null> {
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  // Start building the query
+  let query = supabase
     .from('articles')
     .select(
       `
-	  *,slug,author(title,last_name,first_name,avatar(filename_disk)),image(filename_disk)
-	  )
-	`,
+      *,slug,author(title,last_name,first_name,avatar(filename_disk)),image(filename_disk)
+      `,
     )
-    .neq('status', 'draft')
     .eq('slug', slug)
 
-  if (response.error === null && response.data !== null) {
-    return response.data as unknown as ArticlesWithRelations[]
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
   }
+
+  const response = await query
+
+  if (response.error === null) {
+    return response.data
+  }
+
   console.error(response.error)
   return null
 }

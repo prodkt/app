@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import vercel from '@astrojs/vercel/serverless'
 import sentry from '@sentry/astro'
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
 import dotenv from 'dotenv'
 
 import postcss from './postcss.config.js'
@@ -50,12 +50,31 @@ export default defineConfig({
       },
     },
     ssr: {
-      noExternal: ['swiper'],
-      external: ['image-size', 'tiny-glob'],
+      noExternal: [],
+      external: [
+        'image-size',
+        'tiny-glob',
+        'react',
+        'react-dom',
+        '@dnd-kit',
+        '@codesandbox/sandpack-react',
+      ],
     },
   },
   output: 'server',
   adapter: vercel({
     imageService: true,
   }),
+  experimental: {
+    env: {
+      schema: {
+        SUPABASE_DEV_MODE: envField.string({
+          context: 'server',
+          access: 'public',
+          default: 'false',
+        }),
+      },
+    },
+    serverIslands: true,
+  },
 })

@@ -1,28 +1,30 @@
 import type { Database } from '@/database.types'
-import type { PostgrestResponse, SupabaseClient } from '@supabase/supabase-js'
+import type { SupabaseClient } from '@supabase/supabase-js'
+
+import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-type Articles = Database['public']['Tables']['articles']['Row']
-type Authors = Database['public']['Tables']['authors']['Row']
-type Files = Database['public']['Tables']['directus_files']['Row']
+// type Articles = Database['public']['Tables']['articles']['Row']
+// type Authors = Database['public']['Tables']['authors']['Row']
+// type Files = Database['public']['Tables']['directus_files']['Row']
 
-interface ArticlesWithRelations {
-  id: Articles['id']
-  status: Articles['status']
-  sort: Articles['sort']
-  date_created: Articles['date_created']
-  date_updated: Articles['date_updated']
-  title: Articles['title']
-  excerpt: Articles['excerpt']
-  slug: Articles['slug']
-  author?:
-    | (Pick<Authors, 'title' | 'last_name' | 'first_name'> & {
-        avatar: Pick<Files, 'filename_disk'> | null
-      })
-    | null
-  image: Pick<Files, 'filename_disk'> | null
-}
+// interface ArticlesWithRelations {
+//   post_id: Articles['id']
+//   status: Articles['status']
+//   sort: Articles['sort']
+//   date_created: Articles['date_created']
+//   date_updated: Articles['date_updated']
+//   title: Articles['title']
+//   excerpt: Articles['excerpt']
+//   slug: Articles['slug']
+//   author?:
+//     | (Pick<Authors, 'first_name' | 'title' | 'last_name'> & {
+//         avatar: Pick<Files, 'filename_disk'> | null
+//       })
+//     | null,
+//   image: Pick<Files, 'filename_disk'> | null,
+// }
 const supabaseClient: SupabaseClient<Database> = supabase
 
 /**
@@ -32,20 +34,35 @@ const supabaseClient: SupabaseClient<Database> = supabase
  */
 async function fetchBlogData(
   supabase: SupabaseClient<Database>,
-): Promise<ArticlesWithRelations[] | null> {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  const response: PostgrestResponse<ArticlesWithRelations> = await supabase
+): Promise<unknown[] | null> {
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  console.log('isDevMode:', isDevMode)
+
+  // Start building the query
+  let query = supabase
     .from('articles')
     .select(
-      'id,status,sort,date_created,date_updated,author(title,last_name,first_name,avatar(filename_disk)),title,excerpt,slug,image(filename_disk)',
+      'id, status, sort, date_created, date_updated, title, excerpt, slug, image!inner(id,filename_disk), author!inner(id,title, first_name, last_name, avatar!inner(id,filename_disk))',
     )
-    .neq('status', 'draft')
+
     .order('date_created', { ascending: false })
 
-  // Type guard to check if response.error exists
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    // console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
+  }
+
+  const response = await query
+
+  // Log the response to see what is returned
+  // console.log('Response received:', response)
+
+  // Check for errors
   if (response.error) {
-    console.error(response.error)
+    console.error('Error fetching articles:', response.error)
     return null
   }
 
@@ -59,7 +76,7 @@ async function fetchBlogData(
 export async function GET() {
   try {
     const blogData = await fetchBlogData(supabaseClient)
-    if (!blogData || blogData.length === 0) {
+    if (!blogData) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {
         status: 404,

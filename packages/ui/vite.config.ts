@@ -34,6 +34,9 @@ export default mergeConfig(
         './src/utils/kanban.ts',
       ],
     },
+    external: {
+      externalizeDeps: Object.keys(pkg.dependencies),
+    },
     dts: {
       exclude: ['src/storybook-utils', '**/*.stories.tsx'],
     },

@@ -119,7 +119,7 @@ const Card = forwardRef<
             </AspectRatio>
           </CardHeader>
           <CardContent className='z-[2] flex flex-col gap-4'>
-            <CardTitle className='line-clamp-2 leading-normal'>
+            <CardTitle className='line-clamp-2 text-balance leading-normal'>
               {title}
             </CardTitle>
             <CardDescription className='line-clamp-3'>

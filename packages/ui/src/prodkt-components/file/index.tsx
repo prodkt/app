@@ -278,8 +278,8 @@ const FileLarge = React.forwardRef<SVGProps<SVGSVGElement>, FileFolderProps>(
           y2={536.501}
           gradientUnits='userSpaceOnUse'
         >
-          <stop offset={0} stopOpacity={1} stopColor='var(--gray8)' />
-          <stop offset={1} stopOpacity={1} stopColor='var(--gray10)' />
+          <stop offset={0} stopOpacity={1} stopColor='var(--gray4)' />
+          <stop offset={1} stopOpacity={1} stopColor='var(--gray6)' />
         </linearGradient>
 
         <clipPath id='prodktFileLargeComponent'>
@@ -345,9 +345,9 @@ const PageFile = React.forwardRef<
 
     return (
       <div {...props} ref={ref}>
-        <div className=' group relative z-[1] rounded-[2rem] bg-[var(--gray6)] p-2 transition-all duration-300 hover:bg-[var(--gray3)] dark:bg-[var(--gray1)]'>
-          <div className='absolute inset-x-0 top-0 mx-0 p-2'>
-            <div className='flex flex-row items-center justify-start gap-1 py-2 pl-2 pr-0'>
+        <div className=' group relative z-[1] rounded-[2rem] bg-[var(--gray6)] p-2 transition-all duration-300 hover:bg-[var(--gray5)] dark:bg-[var(--gray2)]'>
+          <div className='absolute inset-x-0 top-0 z-0 mx-0 p-2'>
+            <div className='flex flex-row items-start justify-start gap-1 py-2 pl-2 pr-0'>
               <div className='flex size-8 items-center justify-center rounded-full p-0'>
                 {fileSrc ? (
                   <img
@@ -365,10 +365,10 @@ const PageFile = React.forwardRef<
                   <Download size={16} />
                 </button>
               ) : null}
-              <div className='ml-auto flex size-8 -translate-y-2.5 translate-x-2.5 items-center justify-center rounded-full '>
+              <div className='z-0 ml-auto flex translate-x-1 items-center justify-center'>
                 <Dialog>
                   <DropdownMenu>
-                    <DropdownMenuTrigger>
+                    <DropdownMenuTrigger className=' left-auto right-0 flex -translate-y-2 items-center justify-center rounded-tr-3xl bg-gradient-to-tr from-[transparent] via-[transparent] to-[var(--grayA4)] pb-8 pl-8 pr-3 pt-2'>
                       <Ellipsis size={20} />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
@@ -415,11 +415,12 @@ const PageFile = React.forwardRef<
                   </DialogContent>
                 </Dialog>
               </div>
-              <div className=''></div>
+              <div className='' />
             </div>
           </div>
           {src ? (
             <FileLarge
+              className='z-10'
               src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${src}`}
             />
           ) : null}

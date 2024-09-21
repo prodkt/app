@@ -537,10 +537,12 @@ export type Database = {
           frontmatter: string | null
           html: string | null
           id: string
+          isStory: boolean | null
           named_export: string | null
           slug: string | null
           sort: number | null
           status: string
+          storybook_id: string | null
           syntax: string | null
           title: string | null
           user_created: string | null
@@ -554,10 +556,12 @@ export type Database = {
           frontmatter?: string | null
           html?: string | null
           id: string
+          isStory?: boolean | null
           named_export?: string | null
           slug?: string | null
           sort?: number | null
           status?: string
+          storybook_id?: string | null
           syntax?: string | null
           title?: string | null
           user_created?: string | null
@@ -571,10 +575,12 @@ export type Database = {
           frontmatter?: string | null
           html?: string | null
           id?: string
+          isStory?: boolean | null
           named_export?: string | null
           slug?: string | null
           sort?: number | null
           status?: string
+          storybook_id?: string | null
           syntax?: string | null
           title?: string | null
           user_created?: string | null

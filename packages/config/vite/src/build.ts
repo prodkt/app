@@ -81,7 +81,13 @@ export function buildConfig({
             suppressPreserveModulesWarning: true,
           }),
         ],
-        external: ['react', /node_modules/],
+        external: [
+          'react',
+          'react-dom',
+          '@dnd-kit',
+          '@codesandbox/sandpack-react',
+          /node_modules/,
+        ],
         output: {
           preserveModules: true,
           preserveModulesRoot: 'src',
