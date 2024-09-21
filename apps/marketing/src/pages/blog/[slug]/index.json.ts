@@ -2,6 +2,8 @@ import type { Database } from '@/database.types'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import type { APIContext } from 'astro'
 
+import { getSecret } from 'astro:env/server'
+
 import { supabase } from '@/supabase'
 
 const supabaseClient: SupabaseClient = supabase
@@ -92,20 +94,31 @@ async function fetchBlogData(
   supabase: SupabaseClient,
   slug: string,
 ): Promise<ArticlesWithRelations[] | null> {
-  const response = await supabase
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  // Start building the query
+  let query = supabase
     .from('articles')
     .select(
       `
-	  *,slug,author(title,last_name,first_name,avatar(filename_disk)),image(filename_disk)
-	  )
-	`,
+      *,slug,author(title,last_name,first_name,avatar(filename_disk)),image(filename_disk)
+      `,
     )
-    .neq('status', 'draft')
     .eq('slug', slug)
 
-  if (response.error === null && response.data !== null) {
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
+  }
+
+  const response = await query
+
+  if (response.error === null) {
     return response.data as unknown as ArticlesWithRelations[]
   }
+
   console.error(response.error)
   return null
 }

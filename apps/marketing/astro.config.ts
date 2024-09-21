@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import vercel from '@astrojs/vercel/serverless'
 import sentry from '@sentry/astro'
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
 import dotenv from 'dotenv'
 
 import postcss from './postcss.config.js'
@@ -58,4 +58,16 @@ export default defineConfig({
   adapter: vercel({
     imageService: true,
   }),
+  experimental: {
+    env: {
+      schema: {
+        SUPABASE_DEV_MODE: envField.string({
+          context: 'server',
+          access: 'public',
+          default: 'false',
+        }),
+      },
+    },
+    serverIslands: true,
+  },
 })

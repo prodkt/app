@@ -1,6 +1,8 @@
 import type { Database } from '@/database.types'
 import type { PostgrestResponse, SupabaseClient } from '@supabase/supabase-js'
 
+import { getSecret } from 'astro:env/server'
+
 import { supabase } from '@/supabase'
 
 type Articles = Database['public']['Tables']['articles']['Row']
@@ -33,19 +35,33 @@ const supabaseClient: SupabaseClient<Database> = supabase
 async function fetchBlogData(
   supabase: SupabaseClient<Database>,
 ): Promise<ArticlesWithRelations[] | null> {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  const response: PostgrestResponse<ArticlesWithRelations> = await supabase
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  console.log('isDevMode:', isDevMode)
+
+  // Start building the query
+  let query = supabase
     .from('articles')
     .select(
       'id,status,sort,date_created,date_updated,author(title,last_name,first_name,avatar(filename_disk)),title,excerpt,slug,image(filename_disk)',
     )
-    .neq('status', 'draft')
     .order('date_created', { ascending: false })
 
-  // Type guard to check if response.error exists
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
+  }
+
+  const response: PostgrestResponse<ArticlesWithRelations> = await query
+
+  // Log the response to see what is returned
+  console.log('Response received:', response)
+
+  // Check for errors
   if (response.error) {
-    console.error(response.error)
+    console.error('Error fetching articles:', response.error)
     return null
   }
 

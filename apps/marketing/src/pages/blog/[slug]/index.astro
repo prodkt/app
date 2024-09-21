@@ -1,4 +1,5 @@
 ---
+import { undefined } from 'astro:schema'
 import { load } from 'cheerio'
 
 import { BlogPost } from '@prodkt/ui/prodkt-components/blog-post'
@@ -52,7 +53,7 @@ const blogCreated = data.blogData[0]?.date_created as string
 const blogAlt = data.blogData[0]?.title as string
 const blogContent = data.blogData[0]?.content_block
 
-const contentBlock = data.blogData[0]?.content_block
+const contentBlock = data.blogData[0]?.content_block ?? ''
 
 // Load the content block into cheerio
 // @ts-ignore
