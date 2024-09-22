@@ -13,11 +13,6 @@
       "require": "./dist/primitives/*/index.cjs",
       "default": "./dist/primitives/*/index.js"
     },
-    "./CodeblockComponentMap.ts": {
-      "types": "./dist/CodeblockComonentMap/*/index.d.ts",
-      "require": "./dist/CodeblockComonentMap/*/index.cjs",
-      "default": "./dist/CodeblockComonentMap/*/index.js"
-    },
     "./brands/*": {
       "types": "./dist/brands/*/index.d.ts",
       "require": "./dist/brands/*/index.cjs",
@@ -47,6 +42,11 @@
       "types": "./dist/utils/use-mounted.d.ts",
       "require": "./dist/utils/use-mounted.cjs",
       "default": "./dist/utils/use-mounted.js"
+    },
+    "./useStore/*": {
+      "types": "./dist/utils/use-store.d.ts",
+      "require": "./dist/utils/use-store.cjs",
+      "default": "./dist/utils/use-store.js"
     }
   },
   "files": [
@@ -132,7 +132,8 @@
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.2",
     "vaul": "^0.9.1",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "zustand": "^5.0.0-rc.2"
   },
   "devDependencies": {
     "@dnd-kit/core": "^6.1.0",

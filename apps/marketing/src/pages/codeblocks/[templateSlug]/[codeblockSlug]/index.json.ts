@@ -1,17 +1,17 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 /* eslint-disable jsdoc/require-returns */
 /* eslint-disable jsdoc/require-param-description */
 /* eslint-disable jsdoc/check-param-names */
 
 import type { Database } from '@/database.types'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import type { APIContext } from 'astro'
 
-import { type SupabaseClient } from '@supabase/supabase-js'
+import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient = supabase
-
-type CodeblockTypes = Database['public']['Tables']['codeblocks']['Row']
+const supabaseClient: SupabaseClient<Database> = supabase
 
 /**
  *
@@ -31,7 +31,10 @@ export async function GET({ params }: APIContext) {
     if (!codeblockData) {
       console.error('No codeblock found for the specified slug.')
       return new Response(
-        JSON.stringify({ error: 'No codeblock found for the specified slug.' }),
+        JSON.stringify({
+          error: 'No codeblock found for the specified slug.',
+          codeblockSlug,
+        }),
         {
           status: 404,
           headers: {
@@ -92,22 +95,29 @@ export async function GET({ params }: APIContext) {
 async function fetchCodeblockBySlug(
   supabase: SupabaseClient,
   slug: string | undefined,
-): Promise<CodeblockTypes | null> {
-  const { data, error } = await supabase
-    .from('codeblocks')
-    .select('*,category(*),card_image(*)')
-    .eq('slug', slug)
-    .neq('status', 'draft')
-    .single()
+) {
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
 
-  if (error ?? !data) {
-    console.error('Error fetching codeblock data:', error)
+  let query = supabase
+    .from('codeblocks')
+    .select('*,category(*),card_image(*),isStory,storybook_id')
+    .eq('slug', slug)
+
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    query = query.neq('status', 'draft')
+  }
+
+  const response = await query.single()
+
+  if (response.error) {
+    console.error('Error fetching themes:', response.error)
     return null
   }
 
-  return data
+  return response.data
 }
-
 /**
  *
  * @param supabase
@@ -117,20 +127,29 @@ async function fetchCodeblockBySlug(
 async function fetchBuildTemplate(
   supabase: SupabaseClient,
   templateSlug: string | undefined,
-): Promise<CodeblockTypes | null> {
-  const { data, error } = await supabase
+) {
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  // Build the query
+  let query = supabase
     .from('themes')
     .select(
-      '*,build_template!inner(package_json,astro_config,env,layouts,logos(logo(filename_disk),logo_onDark(filename_disk))),logos(logo_onDark(filename_disk),logo(filename_disk))',
+      '*, build_template!inner(package_json,astro_config,env,layouts, logos!inner(logo!inner(filename_disk), logo_onDark!inner(filename_disk))),logos!inner(logo_onDark!inner(filename_disk),logo!inner(filename_disk))',
     )
     .eq('slug', templateSlug)
-    .neq('status', 'draft')
-    .single()
 
-  if (error ?? !data) {
-    console.error('Error fetching codeblock data:', error)
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    query = query.neq('status', 'draft')
+  }
+
+  const response = await query.single()
+
+  if (response.error) {
+    console.error('Error fetching themes:', response.error)
     return null
   }
 
-  return data
+  return response.data
 }

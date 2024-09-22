@@ -1,77 +1,102 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-returns */
+/* eslint-disable jsdoc/require-param-description */
 /* eslint-disable jsdoc/require-jsdoc */
 
 import type { Database } from '@/database.types'
-import type { PostgrestResponse, SupabaseClient } from '@supabase/supabase-js'
+import type { SupabaseClient } from '@supabase/supabase-js'
+
+import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-type CodeblockThemes = Database['public']['Tables']['codeblocks_themes']['Row']
+// Function to fetch codeblock data
+/**
+ *
+ * @param supabase
+ */
+async function fetchCodeblockData(supabase: SupabaseClient<Database>) {
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
 
-async function fetchCodeblockData(
-  supabase: SupabaseClient<Database>,
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-): Promise<any[] | null> {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  const response: PostgrestResponse<any> = await supabase
+  // Build the query
+  let query = supabase
     .from('codeblocks')
     .select('id, title, slug, category(*), card_image(filename_disk)')
-    .neq('status', 'draft')
+    .order('date_created', { ascending: false })
+
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    query = query.neq('status', 'draft')
+  }
+
+  const response = await query
 
   if (response.error) {
     console.error('Error fetching codeblocks:', response.error)
     return null
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-  if (response.data) {
-    // console.log('Fetched Codeblock data:', response.data) // Log the data
-    return response.data
-  }
-
-  return null
+  return response.data
 }
 
-async function fetchThemeData(
-  supabase: SupabaseClient<Database>,
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-): Promise<any[] | null> {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-  const response: PostgrestResponse<any> = await supabase
+async function fetchThemeData(supabase: SupabaseClient<Database>) {
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  // console.log('isDevMode:', isDevMode)
+
+  // Build the query
+  let query = supabase
     .from('themes')
-    .select('id, title, slug, build_template, logo(filename_disk), status')
-    .neq('status', 'draft')
+    .select(
+      '*,logos!inner(logo_onDark!inner(filename_disk),logo!inner(filename_disk))',
+    )
+
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    query = query.neq('status', 'draft')
+  }
+
+  const response = await query
 
   if (response.error) {
     console.error('Error fetching themes:', response.error)
     return null
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-  if (response.data) {
-    // console.log('Fetched Theme data:', response.data) // Log the data
-    return response.data
-  }
-
-  return null
+  return response.data
 }
 
-async function fetchCodeblockThemeData(
-  supabase: SupabaseClient<Database>,
-): Promise<CodeblockThemes[] | null> {
-  const response: PostgrestResponse<CodeblockThemes> = await supabase
+async function fetchCodeblockThemeData(supabase: SupabaseClient<Database>) {
+  // console.log('isDevMode:', isDevMode)
+
+  // Build the query
+  const query = supabase
     .from('codeblocks_themes')
     .select('codeblocks_id, themes_id')
 
+  const response = await query
+
   if (response.error) {
-    console.error('Error fetching codeblocks_themes:', response.error)
+    console.error('Error fetching themes:', response.error)
     return null
   }
 
   return response.data
 }
 
+// type Files = Database['public']['Tables']['codeblocks']['Row']
+type Codeblocks = Database['public']['Tables']['codeblocks']['Row']
+type CodeblockThemes = Database['public']['Tables']['codeblocks_themes']['Row']
+type Themes = Database['public']['Tables']['themes']['Row']
+
+interface GroupData {
+  id: Codeblocks['id'] | null
+  codeblockData: Codeblocks[] | null
+  themeData: Themes | null
+  codeblockThemeData: CodeblockThemes[] | null
+}
 export async function GET() {
   try {
     const codeblockData = await fetchCodeblockData(supabase)
@@ -79,43 +104,36 @@ export async function GET() {
     const codeblockThemeData = await fetchCodeblockThemeData(supabase)
 
     if (!codeblockData || !themeData || !codeblockThemeData) {
-      return new Response(JSON.stringify({ error: 'No data found.' }), {
-        status: 404,
-        headers: { 'Content-Type': 'application/json' },
-      })
+      return new Response(
+        JSON.stringify({
+          error: 'No groupedData found.',
+          codeblockData,
+          themeData,
+          codeblockThemeData,
+        }),
+        {
+          status: 404,
+          headers: { 'Content-Type': 'application/json' },
+        },
+      )
     }
-
-    console.log('Mapping codeblocks to themes...')
-
+    // console.log('Mapping codeblocks to themes...')
     // Manually map codeblocks to themes
     const groupedData = codeblockData.map((codeblock) => {
       const matchingThemes = codeblockThemeData
-        .filter((ct) => {
-          const isMatch = ct.codeblocks_id === codeblock.id
-          if (isMatch) {
-            console.log(
-              `Found match for codeblock ID ${codeblock.id} with theme ID ${ct.themes_id}`,
-            )
-          }
-          return isMatch
-        })
-        .map((ct) => {
-          const theme = themeData.find((theme) => theme.id === ct.themes_id)
-          if (theme) {
-            console.log(`Theme found for theme ID ${ct.themes_id}:`, theme)
-          } else {
-            console.warn(`No theme found for theme ID ${ct.themes_id}`)
-          }
-          return theme
-        })
+        .filter((ct) => ct.codeblocks_id === codeblock.id)
+        .map((ct) =>
+          themeData.find(
+            (theme: GroupData['themeData']) => theme?.id === ct.themes_id,
+          ),
+        )
 
       return {
         ...codeblock,
         themes: matchingThemes.filter(Boolean), // Filter out undefined if no match
       }
     })
-
-    // console.log('Final grouped data:', groupedData)
+    // console.log(JSON.stringify(groupedData, null, 3))
 
     return new Response(
       JSON.stringify({
