@@ -48,6 +48,9 @@ interface Codeblock {
   title: string | null
   user_created: string | null
   user_updated: string | null
+  isStory?: boolean
+  storybook_id?: string
+  filename?: string
 }
 interface Layout {
   layouts: Json | null
@@ -84,19 +87,27 @@ interface Data {
 
 const response = await GET(Astro)
 const data = (await response.json()) as Data
+const container =
+  data.codeblockData?.isStory !== true
+    ? await experimental_AstroContainer.create()
+    : null
+const result =
+  container !== null
+    ? await container.renderToString(componentMap[data.NamedExport])
+    : ''
 
-const container = await experimental_AstroContainer.create()
-const result = await container.renderToString(componentMap[data.NamedExport])
+const defaultFile = data.codeblockData.filename ?? 'index.astro'
+
 const files = {
-  '/index.astro': {
+  [`${defaultFile}`]: {
     code: `${data.codeblockData.html}`,
-    readOnly: true, // Set as non-editable, defaults to `false`
-    active: true, // Set as main file, defaults to `false`
-    hidden: false, // Tab visibility, defaults to `false`
+    readOnly: true,
+    active: true,
+    hidden: false,
   },
   '/layouts/Layout.astro': {
-    // code: `${(data.templateData as Template).build_template?.layouts?.[0]?.code}`,
     code: `${data.templateData.build_template?.layouts?.[0]?.code}`,
+    // code: `${data.templateData.build_template?.layouts?.[0]?.code}`,
     readOnly: true, // Set as non-editable, defaults to `false`
     active: false, // Set as main file, defaults to `false`
     hidden: false, // Tab visibility, defaults to `false`
@@ -113,25 +124,13 @@ const files = {
     active: false, // Set as main file, defaults to `false`
     hidden: false, // Tab visibility, defaults to `false`
   },
-  // '/tailwind.config.mjs': {
-  //   code: `${data.stylesheets[0].tailwind_config}`,
-  //     readOnly: false, // Set as non-editable, defaults to `false`
-  //     active: false, // Set as main file, defaults to `false`
-  //     hidden: true // Tab visibility, defaults to `false`
-  // },
-  // '/styles/global.css': {
-  //   code: `${data.stylesheets[0].src}`,
-  //     readOnly: false, // Set as non-editable, defaults to `false`
-  //     active: false, // Set as main file, defaults to `false`
-  //     hidden: false // Tab visibility, defaults to `false`
-  // },
 }
 ---
 
 <PageLayout>
   <CodeblockLayout
     client:load
-    title={data.templateData.title}
+    title={data.codeblockData.title}
     buildLogo={data.templateData.build_template.logos.logo
       ?.filename_disk as string}
     buildLogoOnDark={data.templateData.build_template.logos.logo_onDark
@@ -141,10 +140,23 @@ const files = {
     template='astro'
     componentData={files}
   >
-    <iframe
-      class='customLevelnLayout w-full h-full min-h-80 isolate bg-[var(--gray1)] rounded-2xl overflow-hidden border border-[var(--grayA4)] pr-0 ml-0.5 max-h-[calc(100dvh_-_192px)]'
-      srcdoc={result}
-      sandbox='allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals'
-    ></iframe>
+    {
+      data.codeblockData?.isStory !== true ? (
+        <iframe
+          class='customLevelnLayout w-full h-full min-h-80 isolate bg-[var(--gray1)] rounded-2xl overflow-hidden border border-[var(--grayA4)] pr-0 ml-0.5 max-h-[calc(100dvh_-_192px)]'
+          srcdoc={result}
+          sandbox='allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals'
+        />
+      ) : null
+    }
+    {
+      data.codeblockData?.isStory === true ? (
+        <iframe
+          class='customLevelnLayout w-full h-full min-h-80 isolate bg-[var(--gray1)] rounded-2xl overflow-hidden border border-[var(--grayA4)] pr-0 ml-0.5 max-h-[calc(100dvh_-_192px)]'
+          src={`https://ui.prodkt.cloud/iframe.html?id=${data.codeblockData?.storybook_id}&viewMode=story&shortcuts=false&singleStory=true`}
+          sandbox='allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals'
+        />
+      ) : null
+    }
   </CodeblockLayout>
 </PageLayout>

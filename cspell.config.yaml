@@ -39,7 +39,9 @@ words:
   - cjsx
   - classname
   - clsx
+  - cmax
   - cmdk
+  - cmin
   - codebl
   - codefence
   - codemirror
@@ -56,6 +58,7 @@ words:
   - Concepting
   - connectingfrom
   - connectingto
+  - connectionindicator
   - connectionline
   - Consolas
   - consts
@@ -65,6 +68,7 @@ words:
   - crossorigin
   - csvg
   - ctsx
+  - dashdraw
   - datetime
   - dbaeumer
   - degit
@@ -77,6 +81,8 @@ words:
   - dsznajder
   - Duarte
   - dwireframe
+  - edgelabel
+  - edgeupdater
   - Elsakaan
   - Embla
   - esbenp
@@ -103,6 +109,7 @@ words:
   - highlightjs
   - hljs
   - hookform
+  - Hoverable
   - HYWE
   - ianvs
   - Ideanote
@@ -214,6 +221,7 @@ words:
   - textareas
   - textbg
   - textnodes
+  - textwrapper
   - Themeing
   - thollander
   - tiktok
@@ -260,8 +268,4 @@ words:
   - zoomable
   - zoompane
   - ZUEP
-  - dashdraw
-  - textwrapper
-  - connectionindicator
-  - edgeupdater
-  - edgelabel
+  - zustand

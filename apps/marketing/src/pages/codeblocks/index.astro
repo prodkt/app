@@ -34,11 +34,15 @@ const data = (await response.json()) as DataResponse
             key={item.id}
             alt={item.title}
             link={`/codeblocks/${item.themes[0].slug}/${item.slug}`}
-            image={item.card_image.filename_disk}
+            image={
+              item.card_image?.filename_disk
+                ? item.card_image.filename_disk
+                : 'b2613714-89d4-4aca-8677-27fb97ffbcfe.avif'
+            }
             title={item.title}
             excerpt={item.title}
             date={formatDate(item.date_created)}
-            buttonText='View flow'
+            buttonText='View codeblock'
           />
         ))
       ) : (

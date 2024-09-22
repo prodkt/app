@@ -15,7 +15,7 @@ async function fetchCodeblockData(
   const response: PostgrestResponse<Codeblock> = await supabase
     .from('codeblocks')
     .select('id, title, slug, category(*), card_image(filename_disk)')
-    .neq('status', 'draft')
+    // .neq('status', 'draft')
     .single()
 
   if (response.error) {
@@ -38,7 +38,7 @@ async function fetchThemeData(
   const response: PostgrestResponse<Theme> = await supabase
     .from('themes')
     .select('id, title, slug, build_template, logo(filename_disk), status')
-    .neq('status', 'draft')
+    // .neq('status', 'draft')
     .single()
 
   if (response.error) {
