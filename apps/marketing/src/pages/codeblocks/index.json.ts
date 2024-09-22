@@ -69,18 +69,12 @@ async function fetchThemeData(supabase: SupabaseClient<Database>) {
 }
 
 async function fetchCodeblockThemeData(supabase: SupabaseClient<Database>) {
-  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
-  const isDevMode = SUPABASE_DEV_MODE === 'true'
-
   // console.log('isDevMode:', isDevMode)
 
   // Build the query
-  let query = supabase.from('codeblocks_themes').select('*')
-
-  // Conditionally apply the filter based on isDevMode
-  if (!isDevMode) {
-    query = query.neq('status', 'draft')
-  }
+  const query = supabase
+    .from('codeblocks_themes')
+    .select('codeblocks_id, themes_id')
 
   const response = await query
 
@@ -110,10 +104,18 @@ export async function GET() {
     const codeblockThemeData = await fetchCodeblockThemeData(supabase)
 
     if (!codeblockData || !themeData || !codeblockThemeData) {
-      return new Response(JSON.stringify({ error: 'No data found.' }), {
-        status: 404,
-        headers: { 'Content-Type': 'application/json' },
-      })
+      return new Response(
+        JSON.stringify({
+          error: 'No groupedData found.',
+          codeblockData,
+          themeData,
+          codeblockThemeData,
+        }),
+        {
+          status: 404,
+          headers: { 'Content-Type': 'application/json' },
+        },
+      )
     }
     // console.log('Mapping codeblocks to themes...')
     // Manually map codeblocks to themes
@@ -131,7 +133,7 @@ export async function GET() {
         themes: matchingThemes.filter(Boolean), // Filter out undefined if no match
       }
     })
-    console.log(JSON.stringify(groupedData, null, 3))
+    // console.log(JSON.stringify(groupedData, null, 3))
 
     return new Response(
       JSON.stringify({
