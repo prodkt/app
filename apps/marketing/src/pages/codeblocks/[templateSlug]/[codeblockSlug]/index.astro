@@ -96,18 +96,16 @@ const result =
     ? await container.renderToString(componentMap[data.NamedExport])
     : ''
 
-const defaultFile = data.codeblockData.filename ?? 'index.astro'
-
 const files = {
-  [`${defaultFile}`]: {
-    code: `${data.codeblockData.html}`,
+  [`${data.codeblockData.filename ?? 'index.astro'}`]: {
+    code: `${data.codeblockData.frontmatter}
+    ${data.codeblockData.html}`,
     readOnly: true,
     active: true,
     hidden: false,
   },
   '/layouts/Layout.astro': {
     code: `${data.templateData.build_template?.layouts?.[0]?.code}`,
-    // code: `${data.templateData.build_template?.layouts?.[0]?.code}`,
     readOnly: true, // Set as non-editable, defaults to `false`
     active: false, // Set as main file, defaults to `false`
     hidden: false, // Tab visibility, defaults to `false`

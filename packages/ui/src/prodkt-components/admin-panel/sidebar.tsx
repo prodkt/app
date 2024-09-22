@@ -1,8 +1,6 @@
 /* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 /* eslint-disable jsdoc/require-returns */
 
-import { PanelsTopLeft } from 'lucide-react'
-
 import { Docs } from '@/icons/navigation'
 import { Button } from '@/primitives/button'
 import { cn } from '@/utils/cn'

@@ -1,7 +1,7 @@
 /* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 /* eslint-disable jsdoc/require-returns */
 
-import { MenuIcon, PanelsTopLeft } from 'lucide-react'
+import { MenuIcon } from 'lucide-react'
 
 import { Docs } from '@/icons/navigation'
 import { Button } from '@/primitives/button'

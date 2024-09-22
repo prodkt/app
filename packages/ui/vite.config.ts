@@ -4,6 +4,7 @@ import { buildConfig, mergeConfig, reactConfig } from '@prodkt/vite'
 
 import pkg from './package.json'
 
+const excludedDeps = ['react', 'react-dom']
 const env = loadEnv(process.cwd(), '')
 // const exemptedDependencies = new Set([
 //   'react',
@@ -35,7 +36,9 @@ export default mergeConfig(
       ],
     },
     external: {
-      externalizeDeps: Object.keys(pkg.dependencies),
+      externalizeDeps: Object.keys(pkg.dependencies).filter(
+        (dep) => !excludedDeps.includes(dep),
+      ),
     },
     dts: {
       exclude: ['src/storybook-utils', '**/*.stories.tsx'],

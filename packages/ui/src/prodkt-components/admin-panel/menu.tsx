@@ -1,3 +1,4 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 /* eslint-disable jsdoc/require-returns */
 /* eslint-disable jsdoc/require-param-description */
 'use client'
@@ -16,7 +17,6 @@ import { cn } from '@/utils/cn'
 
 import { CollapseMenuButton } from './collapse-menu-button'
 import { getMenuList } from './lib/menu-list'
-import { urlToSlug } from './lib/slugs'
 
 interface MenuProps {
   isOpen: boolean | undefined
