@@ -42,6 +42,7 @@ const File = ({ src, ...props }: Readonly<FileFolderProps>) => (
     fill='none'
     {...props}
   >
+    <title>File Folder</title>
     <path
       fill='url(#a)'
       stroke='url(#b)'
@@ -177,7 +178,7 @@ const File = ({ src, ...props }: Readonly<FileFolderProps>) => (
 )
 
 const FileLarge = React.forwardRef<SVGProps<SVGSVGElement>, FileFolderProps>(
-  ({ src, ...props }, ref) => (
+  ({ src, ...props }) => (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -212,7 +213,6 @@ const FileLarge = React.forwardRef<SVGProps<SVGSVGElement>, FileFolderProps>(
         {src && (
           <image
             href={src}
-            ref={ref}
             width={300}
             height={238}
             stroke='url(#ProdktFileLarge-f)'

@@ -10,7 +10,6 @@ import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
 import dotenv from 'dotenv'
 
-import postcss from './postcss.config.mjs'
 import viteConfig from './vite.config.mjs'
 
 dotenv.config()
@@ -43,9 +42,6 @@ export default defineConfig({
   vite: {
     ...viteConfig,
     // sourceMap: true,
-    css: {
-      postcss,
-    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),

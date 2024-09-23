@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { TechUsed } from '.'
+import { BryanFunkSection } from '.'
+import ResumeSection from './resume-section'
 
-const meta: Meta<typeof TechUsed> = {
-  component: TechUsed,
+const meta: Meta<typeof BryanFunkSection> = {
+  component: BryanFunkSection,
   args: {},
   // argTypes: {
   //   variant: {
@@ -28,15 +29,13 @@ const meta: Meta<typeof TechUsed> = {
 }
 
 export default meta
-type Story = StoryObj<typeof TechUsed>
+type Story = StoryObj<typeof BryanFunkSection>
 
 export const Default: Story = {
   render: () => (
-    <div className='flex size-full items-center justify-center'>
-      <TechUsed
-        technologyMark='40a2ca7d-a884-4adb-a245-e5984fd265c5.svg'
-        technologyName='Explor'
-      />
+    <div className='size-full max-w-full overflow-x-hidden'>
+      <BryanFunkSection />
+      <ResumeSection />
     </div>
   ),
 }

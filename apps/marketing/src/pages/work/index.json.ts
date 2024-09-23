@@ -1,5 +1,7 @@
 import type { Database } from '@/database.types'
-import type { PostgrestResponse, SupabaseClient } from '@supabase/supabase-js'
+import type { SupabaseClient } from '@supabase/supabase-js'
+
+import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
@@ -14,18 +16,32 @@ const supabaseClient: SupabaseClient = supabase
  * @returns A promise that resolves to an array of Nodes or null.
  */
 async function fetchWorkData(supabase: SupabaseClient): Promise<Work[] | null> {
-  const response: PostgrestResponse<Work> = await supabase
-    .from('work')
-    .select(
-      `
-      *,primary_image(filename_disk),project(slug)
-    `,
-    )
-    .neq('status', 'draft')
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
 
-  // Type guard to check if response.error exists
+  // console.log('isDevMode:', isDevMode)
+
+  // Start building the query
+  let query = supabase.from('work').select(
+    `
+  *,primary_image(filename_disk),project(slug)
+`,
+  )
+
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    // console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
+  }
+
+  const response = await query
+
+  // Log the response to see what is returned
+  // console.log('Response received:', response)
+
+  // Check for errors
   if (response.error) {
-    console.error(response.error)
+    console.error('Error fetching articles:', response.error)
     return null
   }
 

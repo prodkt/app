@@ -1,16 +1,15 @@
 import type { SVGProps } from 'react'
 
-const AdobeAcrobatWithAdobe = (props: SVGProps<SVGSVGElement>) => (
+const Acrobat = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={82}
     height={24}
     viewBox='0 0 82 24'
-    fill='none'
     {...props}
+    fill='none'
   >
     <title>Adobe Acrobat with Adobe</title>
-    <desc>Logo</desc>
     <path
       fill='#FF1A1A'
       d='m17.371.149 10.185 23.702V.149H17.371ZM0 .149v23.702L10.195.149H0ZM9.328 18.946h4.75l1.942 4.905h4.254l-6.49-15.4-4.456 10.495Z'
@@ -22,4 +21,4 @@ const AdobeAcrobatWithAdobe = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default AdobeAcrobatWithAdobe
+export default Acrobat

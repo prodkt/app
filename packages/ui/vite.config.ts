@@ -36,6 +36,7 @@ export default mergeConfig(
       ],
     },
     external: {
+      // externalizeDeps: Object.keys(pkg.dependencies),
       // externalizeDeps: Object.keys(pkg.dependencies).filter(
       //   (dep) => !excludedDeps.includes(dep),
       // ),

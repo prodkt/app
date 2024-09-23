@@ -13,8 +13,6 @@ import {
   Users,
 } from 'lucide-react'
 
-import { urlToSlug } from './slugs'
-
 interface Submenu {
   href: string
   label: string

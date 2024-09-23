@@ -1,19 +1,18 @@
+/* eslint-disable jsdoc/check-param-names */
+/* eslint-disable jsdoc/require-returns */
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 /* eslint-disable jsdoc/require-param-description */
 
 import type { Database } from '@/database.types'
-import type { QueryData, SupabaseClient } from '@supabase/supabase-js'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import type { APIContext } from 'astro'
+
+import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-// import { type WorkShowcaseProps } from '@/types.d'
+const supabaseClient: SupabaseClient<Database> = supabase
 
-const supabaseClient: SupabaseClient = supabase
-type Work = Database['public']['Tables']['work']['Row']
-type Technology = Database['public']['Tables']['work_technology']['Row']
-type Template = Database['public']['Tables']['work_showcase_templates']['Row']
-type TemplateFiles =
-  Database['public']['Tables']['showcase_templates_files']['Row']
 /**
  *
  * @param root0 The API context.
@@ -46,7 +45,8 @@ export async function GET({ params }: APIContext) {
       },
     })
   }
-
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   const workId = workData[0]?.id
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
@@ -63,14 +63,19 @@ export async function GET({ params }: APIContext) {
   //   })
   // }
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const technologyData = await fetchTechnologyData(supabaseClient, workId)
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const templateData = await fetchTemplateData(supabaseClient, workId)
 
   // Extract all templateIds from templateData
   const templateIds =
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     templateData?.map((template) => template.showcase_templates_id) ?? []
 
   // Fetch template files using the extracted templateIds
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const templateFiles = await fetchTemplateFiles(supabaseClient, templateIds)
 
   const { data: FilteredTokens, error: tokensError } = await supabase
@@ -86,7 +91,7 @@ export async function GET({ params }: APIContext) {
     )
   }
 
-  console.log(FilteredTokens)
+  // console.log(FilteredTokens)
 
   const ProjectDesignTokens = FilteredTokens.map(
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -113,30 +118,44 @@ export async function GET({ params }: APIContext) {
 
 /**
  *
- * @param supabase The Supabase client.
- * @param workSlug The work slug.
- * @returns A promise that resolves to an array of work data or null.
+ * @param supabaseClient
+ * @param workSlug
  */
 async function fetchWorkData(
-  supabase: SupabaseClient,
+  supabaseClient: SupabaseClient<Database>,
   workSlug: string,
-): Promise<Work[] | null> {
-  const response = await supabase
+) {
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  let query = supabaseClient
     .from('work')
     .select(
       `
-	  *,content_block,project(*,id,logos(logo(filename_disk),logo_onDark(filename_disk)),logo_3d(filename_disk),logo_wireframe(filename_disk),logo_creative(filename_disk),base_type,base_type_sample(filename_disk),code_type,code_type_sample(filename_disk),logo_type,logo_type_sample(filename_disk),expressive_type,expressive_type_sample(filename_disk))
-	  )
-	`,
+*,content_block,project(*,id,logos(logo(filename_disk),logo_onDark(filename_disk)),logo_3d(filename_disk),logo_wireframe(filename_disk),logo_creative(filename_disk),base_type,base_type_sample(filename_disk),code_type,code_type_sample(filename_disk),logo_type,logo_type_sample(filename_disk),expressive_type,expressive_type_sample(filename_disk))
+)
+`,
     )
-    .neq('status', 'draft')
     .eq('slug', workSlug)
-  type WorkTypes = QueryData<typeof response>
-  if (response.error === null) {
-    return response.data as unknown as WorkTypes[]
+
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    // console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
   }
-  console.error(response.error)
-  return null
+
+  const response = await query
+
+  // Log the response to see what is returned
+  // console.log('Response received:', response)
+
+  // Check for errors
+  if (response.error) {
+    console.error('Error fetching articles:', response.error)
+    return null
+  }
+
+  return response.data
 }
 
 /**
@@ -148,8 +167,8 @@ async function fetchWorkData(
  */
 async function fetchTechnologyData(
   supabase: SupabaseClient,
-  workId: string | undefined,
-): Promise<Technology[] | null> {
+  workId: string | null,
+) {
   const response = await supabase
     .from('work_technology')
     .select(
@@ -159,10 +178,9 @@ async function fetchTechnologyData(
 	`,
     )
     .eq('work_id', workId)
-  type TechnologyTypes = QueryData<typeof response>
 
   if (response.error === null) {
-    return response.data as TechnologyTypes[]
+    return response.data
   }
   console.error(response.error)
   return null
@@ -177,7 +195,7 @@ async function fetchTechnologyData(
 async function fetchTemplateData(
   supabase: SupabaseClient,
   workId: string | undefined,
-): Promise<Template[] | null> {
+) {
   const response = await supabase
     .from('work_showcase_templates')
     .select(
@@ -187,10 +205,9 @@ async function fetchTemplateData(
 	`,
     )
     .eq('work_id', workId)
-  type TemplateTypes = QueryData<typeof response>
 
   if (response.error === null) {
-    return response.data as unknown as TemplateTypes[]
+    return response.data
   }
   console.error(response.error)
   return null
@@ -205,7 +222,7 @@ async function fetchTemplateData(
 async function fetchTemplateFiles(
   supabase: SupabaseClient,
   templateIds: (string | null | undefined)[],
-): Promise<TemplateFiles[] | null> {
+) {
   // Filter out null or undefined IDs
   const validTemplateIds = templateIds.filter((id): id is string => !!id)
 
@@ -223,43 +240,10 @@ async function fetchTemplateFiles(
 	`,
     )
     .in('showcase_templates_id', validTemplateIds)
-  type TemplateFileTypes = QueryData<typeof response>
 
   if (response.error === null) {
-    return response.data as unknown as TemplateFileTypes[]
+    return response.data
   }
   console.error(response.error)
   return null
 }
-
-/* START DESIGN TOKENS */
-/**
- *
- * @param supabase
- */
-// async function fetchTokenData(supabase: SupabaseClient) {
-//   const response = await supabase.from('design_tokens').select(`
-//     *, title, palettes_json
-//   `)
-//   type TokenTypes = QueryData<typeof response>
-
-//   if (response.error === null) {
-//     return response.data as unknown as TokenTypes
-//   } else {
-//     console.error(response.error)
-//     return null
-//   }
-// }
-
-/**
- *
- * @param supabase
- */
-// async function useTokenData(supabase: SupabaseClient) {
-//   const tokenData = await fetchTokenData(supabase)
-//   if (tokenData) {
-//     console.log(tokenData)
-//   } else {
-//     console.log('Failed to fetch token data')
-//   }
-// }

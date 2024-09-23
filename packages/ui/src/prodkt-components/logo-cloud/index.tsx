@@ -9,7 +9,7 @@ const LogoCloud = React.forwardRef<
   return (
     <div
       ref={ref}
-      className='relative -top-px z-[6] flex flex-row items-center justify-center -space-x-px backdrop-blur'
+      className='relative -top-px z-[6] flex w-fit flex-row items-center justify-center -space-x-px backdrop-blur'
       {...props}
     >
       <div className='absolute -left-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none bg-[var(--gray4)] bg-clip-content' />

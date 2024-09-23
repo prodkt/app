@@ -38,25 +38,27 @@ type Story = StoryObj<typeof LogoCloud>
 
 export const Default: Story = {
   render: () => (
-    <LogoCloud>
-      <CloudLogo>
-        <Cisco className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
-      </CloudLogo>
-      <CloudLogo>
-        <CocaCola className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
-      </CloudLogo>
-      <CloudLogo>
-        <Hp className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
-      </CloudLogo>
-      <CloudLogo>
-        <Samsung className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
-      </CloudLogo>
-      <CloudLogo>
-        <Toyota className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
-      </CloudLogo>
-      <CloudLogo>
-        <Hm className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
-      </CloudLogo>
-    </LogoCloud>
+    <div className='flex size-full items-center justify-center'>
+      <LogoCloud>
+        <CloudLogo>
+          <Cisco className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
+        </CloudLogo>
+        <CloudLogo>
+          <CocaCola className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
+        </CloudLogo>
+        <CloudLogo>
+          <Hp className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
+        </CloudLogo>
+        <CloudLogo>
+          <Samsung className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
+        </CloudLogo>
+        <CloudLogo>
+          <Toyota className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
+        </CloudLogo>
+        <CloudLogo>
+          <Hm className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
+        </CloudLogo>
+      </LogoCloud>
+    </div>
   ),
 }

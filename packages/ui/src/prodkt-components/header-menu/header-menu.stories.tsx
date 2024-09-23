@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { TechUsed } from '.'
+import { HeaderMenu } from '.'
+import { Footer } from '../footer'
+import { Header } from '../header'
 
-const meta: Meta<typeof TechUsed> = {
-  component: TechUsed,
+const meta: Meta<typeof HeaderMenu> = {
+  component: HeaderMenu,
   args: {},
   // argTypes: {
   //   variant: {
@@ -28,15 +30,12 @@ const meta: Meta<typeof TechUsed> = {
 }
 
 export default meta
-type Story = StoryObj<typeof TechUsed>
+type Story = StoryObj<typeof HeaderMenu>
 
 export const Default: Story = {
   render: () => (
     <div className='flex size-full items-center justify-center'>
-      <TechUsed
-        technologyMark='40a2ca7d-a884-4adb-a245-e5984fd265c5.svg'
-        technologyName='Explor'
-      />
+      <HeaderMenu />
     </div>
   ),
 }

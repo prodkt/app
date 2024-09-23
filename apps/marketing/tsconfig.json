@@ -1,7 +1,8 @@
 {
   "extends": ["astro/tsconfigs/strictest", "@prodkt/tsconfig/react.json"],
   "compilerOptions": {
-    "jsx": "react", // or "react-jsx" for React 17+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
       "@/supabase/*": ["src/supabase/*"]

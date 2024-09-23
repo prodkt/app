@@ -36,11 +36,11 @@ export function TechUsed({
               : ''
           }
           alt={technologyName}
-          className='relative size-8 max-h-8 max-w-10 object-contain object-center p-1'
+          className='relative max-h-8 max-w-12 object-contain object-center p-1'
         />
       </HoverCardTrigger>
 
-      <HoverCardContent>
+      <HoverCardContent className='w-auto'>
         <div className='hoverCardTriggered--contents'>
           <p className='font-mono text-xs uppercase tracking-widest text-[var(--grayA7)]'>
             {technologyName}

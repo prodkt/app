@@ -1,0 +1,11 @@
+---
+import { BryanFunkSection } from '@prodkt/ui/prodkt-components/about-bryan'
+
+import { WorkHistory } from '@/components/work-history'
+import Layout from '@/layouts/PublicLayout.astro'
+---
+
+<Layout>
+  <BryanFunkSection client:only='react' />
+  <WorkHistory client:only='react' />
+</Layout>

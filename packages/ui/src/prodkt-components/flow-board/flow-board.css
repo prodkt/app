@@ -34,7 +34,6 @@
 }
 /* The inner container */
 .react-flow__renderer {
-  @apply bg-gradient-to-br from-[var(--grayA1)] to-[var(--gray1)];
 }
 /* Zoom & pan pane */
 .react-flow__zoompane {
@@ -81,7 +80,7 @@
 }
 /* Applied to each Node in the flow */
 .react-flow__node {
-  @apply bg-[var(--grayA4)] backdrop-blur border-[var(--grayA4)] rounded-2xl px-8 py-4;
+  @apply bg-[var(--gray1)] backdrop-blur border-[var(--grayA4)] rounded-2xl px-8 py-4;
   @apply drop-shadow-2xl shadow-[var(--grayA2)];
 
   & .selected {
@@ -147,11 +146,11 @@
 }
 /* Applied to the <Background /> component */
 .react-flow__background {
-  @apply bg-[var(--gray2)];
+  @apply bg-gradient-to-br from-[var(--gray6)] to-[var(--gray5)] dark:from-[var(--gray2)] dark:to-[var(--gray1)];
 }
 /* Applied to the <MiniMap /> component */
 .react-flow__minimap {
-  @apply bg-[var(--grayA1)] rounded-2xl border overflow-clip backdrop-blur before:opacity-0 after:opacity-0;
+  @apply bg-[var(--ghost-aa7)] rounded-2xl border border-[var(--grayA3)] overflow-clip backdrop-blur before:opacity-0 after:opacity-0;
 }
 /* Applied to the <Controls /> component */
 .react-flow__controls {
@@ -159,7 +158,12 @@
 }
 
 .react-flow__panel {
-  @apply bg-[var(--grayA1)] backdrop-blur;
+  @apply bg-[var(--ghost-aa8)] dark:bg-[var(--grayA3)] ring-1 ring-[var(--grayA2)] backdrop-blur border-none;
+}
+
+.react-flow__attribution {
+  visibility: hidden;
+  display: none;
 }
 
 .react-flow__minimap::before {

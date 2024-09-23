@@ -82,18 +82,18 @@ const MoonIcon = () => (
  */
 export function ModeToggle() {
   const [theme, setTheme] = useState(() => {
-    if (import.meta.env['SSR']) {
+    if (typeof window === 'undefined' || import.meta.env['SSR']) {
       return undefined
     }
     const storedTheme = localStorage.getItem('theme')
     if (storedTheme) {
       return storedTheme
     }
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      return 'light-theme'
-    }
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark-theme'
+    }
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light-theme'
     }
     return 'dark-theme'
   })
