@@ -2,7 +2,7 @@ import { loadEnv } from 'vite'
 
 import { buildConfig, mergeConfig, reactConfig } from '@prodkt/vite'
 
-// import pkg from './package.json'
+import pkg from './package.json'
 
 // const excludedDeps = ['react', 'react-dom', 'swiper', 'class-variance-authority', 'framer-motion']
 const env = loadEnv(process.cwd(), '')
@@ -36,7 +36,7 @@ export default mergeConfig(
       ],
     },
     external: {
-      // externalizeDeps: Object.keys(pkg.dependencies),
+      externalizeDeps: Object.keys(pkg.dependencies),
       // externalizeDeps: Object.keys(pkg.dependencies).filter(
       //   (dep) => !excludedDeps.includes(dep),
       // ),

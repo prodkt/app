@@ -133,22 +133,28 @@ const link_behance = workData?.link_behance
 const link_dribbble = workData?.link_dribbble
 const link_instagram = workData?.link_instagram
 
-const brandingShowcase = workData?.is_brand_showcase === true
+const brandingShowcase = workData?.workData[0].is_brand_showcase === true
 
-const WorkProject = workData?.project?.title
-const ProjectLogoWireframe = workData?.project?.logo_wireframe?.filename_disk
-const ProjectLogo3d = workData?.project?.logo_3d?.filename_disk
-const ProjectLogoCreative = workData?.project?.logo_creative?.filename_disk
-const ProjectAnimatedLogo = workData?.project?.component_animatedLogo_stroked
-const ProjectLogoType = workData?.project?.logo_type
-const ProjectBaseType = workData?.project?.base_type
-const ProjectExpressiveType = workData?.project?.expressive_type
-const ProjectCodeType = workData?.project?.code_type
-const ProjectLogoTypeSample = workData?.project?.logo_type_sample?.filename_disk
-const ProjectBaseTypeSample = workData?.project?.base_type_sample?.filename_disk
+const WorkProject = workData?.workData[0].project?.title
+const ProjectLogoWireframe =
+  workData?.workData[0].project?.logo_wireframe?.filename_disk
+const ProjectLogo3d = workData?.workData[0].project?.logo_3d?.filename_disk
+const ProjectLogoCreative =
+  workData?.workData[0].project?.logo_creative?.filename_disk
+const ProjectAnimatedLogo =
+  workData?.workData[0].project?.component_animatedLogo_stroked
+const ProjectLogoType = workData?.workData[0].project?.logo_type
+const ProjectBaseType = workData?.workData[0].project?.base_type
+const ProjectExpressiveType = workData?.workData[0].project?.expressive_type
+const ProjectCodeType = workData?.workData[0].project?.code_type
+const ProjectLogoTypeSample =
+  workData?.workData[0].project?.logo_type_sample?.filename_disk
+const ProjectBaseTypeSample =
+  workData?.workData[0].project?.base_type_sample?.filename_disk
 const ProjectExpressiveTypeSample =
-  workData?.project?.expressive_type_sample?.filename_disk
-const ProjectCodeTypeSample = workData?.project?.code_type_sample?.filename_disk
+  workData?.workData[0].project?.expressive_type_sample?.filename_disk
+const ProjectCodeTypeSample =
+  workData?.workData[0].project?.code_type_sample?.filename_disk
 ---
 
 <Layout>
@@ -157,9 +163,9 @@ const ProjectCodeTypeSample = workData?.project?.code_type_sample?.filename_disk
       brandingShowcase ? (
         <>
           {/* @ts-ignore */}
-          <div class='relative w-[calc(75%_-_80px)] h-full ml-auto top-28 '>
+          <div class='relative w-[calc(75%_-_0px)] h-full ml-auto top-20 '>
             <BrandingShowcase
-              client:load
+              client:only='react'
               ProjectDesignTokens={workData?.ProjectDesignTokens}
               ProjectCodeType={ProjectCodeType as string}
               ProjectCodeTypeSample={ProjectCodeTypeSample as string}
@@ -228,7 +234,7 @@ const ProjectCodeTypeSample = workData?.project?.code_type_sample?.filename_disk
             class='flex flex-col items-start justify-center w-full gap-2 px-10'
           >
             <h1 class='px-0 mr-auto text-lg text-left'>
-              {workData?.title}
+              {workData?.workData[0].title}
             </h1>
           </div>
           <div
@@ -241,7 +247,7 @@ const ProjectCodeTypeSample = workData?.project?.code_type_sample?.filename_disk
             </h4>
             <div class='flex flex-col items-center justify-start text-xs'>
               <h5 class='px-0 mr-auto text-lg text-left'>
-                {workData?.project?.title}
+                {workData?.workData[0].project?.title}
               </h5>
               <a href={`/projects/${workData?.projectSlug}`}>
                 <Button
