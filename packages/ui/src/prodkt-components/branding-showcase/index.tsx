@@ -12,6 +12,7 @@ import RegistrationImage from './registrationMarks-1.avif'
 import SplineLogo from './spline_100w.png'
 
 export interface Token {
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   palettes: Record<string, Record<string, any>>
 }
 

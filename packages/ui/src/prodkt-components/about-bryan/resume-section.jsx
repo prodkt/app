@@ -12,13 +12,13 @@ import BryanResume from '@prodkt/assets/resume/bryan-funk-resume-promo.webp'
  */
 export default function ResumeSection() {
   return (
-    <div className='h-auto w-full px-1 py-4 lg:py-20'>
+    <div className='h-auto w-full px-1 py-4 md:py-16 lg:py-28'>
       <div className='relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-4 lg:flex-row'>
         <div className='relative flex basis-1/3 flex-col items-center justify-center gap-5 lg:justify-start xl:items-start'>
           <h5 className='text-center text-6xl font-medium leading-none tracking-tight text-[var(--gray11)] lg:text-left'>
             A leave behind.
           </h5>
-          <p className='leading-none tracking-normal text-[var(--gray9)]'>
+          <p className='leading-none tracking-normal text-[var(--gray9)] text-balance'>
             Print out for reference or for someone else in the office.
           </p>
           <a

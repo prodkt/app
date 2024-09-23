@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import ResumeSection, { BryanFunkSection } from '.'
+import { BryanFunkSection } from '.'
+import ResumeSection from './resume-section'
 
 const meta: Meta<typeof BryanFunkSection> = {
   component: BryanFunkSection,

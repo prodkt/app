@@ -18,16 +18,6 @@
       "require": "./dist/brands/*/index.cjs",
       "default": "./dist/brands/*/index.js"
     },
-    "./employers/*": {
-      "types": "./dist/brands/employers/*/index.d.ts",
-      "require": "./dist/brands/employers/*/index.cjs",
-      "default": "./dist/brands/employers/*/index.js"
-    },
-    "./technologies/*": {
-      "types": "./dist/brands/technologies/*/index.d.ts",
-      "require": "./dist/brands/technologies/*/index.cjs",
-      "default": "./dist/brands/technologies/*/index.js"
-    },
     "./prodkt-components/*": {
       "types": "./dist/prodkt-components/*/index.d.ts",
       "require": "./dist/prodkt-components/*/index.cjs",
