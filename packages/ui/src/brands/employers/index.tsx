@@ -1,13 +1,11 @@
-'use client'
-
-import type { SVGProps } from 'react'
+import * as React from 'react'
 
 const tovuti = 'Tovuti LMS Logo'
 const lumen = 'Lumen Creative Logo'
 const imp = 'International Minute Press Logo'
 const designboise = 'DesignBoise Logo'
 
-const TovutiLogo = (props: SVGProps<SVGSVGElement>) => (
+const TovutiLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={146}
@@ -210,7 +208,7 @@ const TovutiLogo = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-const ImpLogo = (props: SVGProps<SVGSVGElement>) => (
+const ImpLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={155}
@@ -235,7 +233,7 @@ const ImpLogo = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-const ImpLogomark = (props: SVGProps<SVGSVGElement>) => (
+const ImpLogomark = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={63}
@@ -260,7 +258,7 @@ const ImpLogomark = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-const LumenLogo = (props: SVGProps<SVGSVGElement>) => (
+const LumenLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={129}
@@ -288,7 +286,7 @@ const LumenLogo = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-const DesignBoiseLogo = (props: SVGProps<SVGSVGElement>) => (
+const DesignBoiseLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={343}
@@ -309,7 +307,7 @@ const DesignBoiseLogo = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-const DesignBoiseLogomark = (props: SVGProps<SVGSVGElement>) => (
+const DesignBoiseLogomark = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={45}

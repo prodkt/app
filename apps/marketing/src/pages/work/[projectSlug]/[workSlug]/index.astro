@@ -16,8 +16,88 @@ import Layout from '@/layouts/PublicLayout.astro'
 
 import { GET } from './index.json'
 
-// type DiskFiles = {
-//   filename_disk?: string
+// type Files = Database['public']['Tables']['directus_files']['Row']
+// type Work = Database['public']['Tables']['work']['Row'][]
+// type Projects = Database['public']['Tables']['projects']['Row'][]
+
+// interface Logos {
+//   date_created: string | null
+//   date_updated: string | null
+//   id: string
+//   logo: Files
+//   logo_onDark: Files
+//   logomark: Files
+//   logomark_3dWireframe: Files
+//   logomark_3dWireframe_onDark: Files
+//   logomark_backgroundFill: Files
+//   logomark_backgroundFill_onDark: Files
+//   logomark_onDark: Files
+//   logotype: Files
+//   logotype_onDark: Files
+//   sort: number | null
+//   title: string | null
+//   user_created: string | null
+//   user_updated: string | null
+// }
+// interface WorkShowcase {
+//   // ProjectDesignTokens: Json
+//   content_block: string | null
+//   date_created: string | null
+//   date_updated: string | null
+//   excerpt: string | null
+//   id: string
+//   is_brand_showcase: boolean | null
+//   like: number
+//   link_behance: string | null
+//   link_dribbble: string | null
+//   link_instagram: string | null
+//   primary_color: string | null
+//   primary_image: string | null
+//   slug: string | null
+//   sort: number | null
+//   status: string
+//   title: string | null
+//   user_created: string | null
+//   user_updated: string | null
+//   project: {
+//     base_type: string | null
+//     base_type_sample: Files
+//     brand_color_primary: string | null
+//     code_type: string | null
+//     code_type_sample: Files
+//     component_animatedLogo_stroked: string | null
+//     componentPath_animatedLogo_stroked: string | null
+//     content_block: string | null
+//     date_created: string | null
+//     date_updated: string | null
+//     excerpt: string | null
+//     expressive_type: string | null
+//     expressive_type_sample: Files
+//     icon_radius: string | null
+//     id: string
+//     link_behance: string | null
+//     link_dribbble: string | null
+//     link_github: string | null
+//     link_gitlab: string | null
+//     link_instagram: string | null
+//     logo: Files
+//     logo_3d: Files
+//     logo_creative: Files
+//     logo_type: string | null
+//     logo_type_sample: Files
+//     logo_wireframe: Files
+//     og_image: Files
+//     primary_image: Files
+//     public: boolean | null
+//     slug: string
+//     sort: number | null
+//     status: string | null
+//     title: string | null
+//     user_created: string | null
+//     user_updated: string | null
+//     workspace: string | null
+//     logos: Logos
+//   }
 // }
 
 type TechnologyTypes = Database['public']['Tables']['technology']['Row'] & {
@@ -34,135 +114,41 @@ type TechnologyTypes = Database['public']['Tables']['technology']['Row'] & {
       // other properties...
       id: string
       name: string | undefined
-      'client:only'?: string // Optional if applicable
+      // 'client:only'?: string // Optional if applicable
     }
     id: string | undefined
     name: string
   }
 }
 
-// interface LogoTypes {
-//   date_created: string | null
-//   date_updated: string | null
-//   id: string
-//   logo: TechnologyTypes['logo']
-//   logo_onDark: TechnologyTypes['logo']
-//   logomark: string | null
-//   logomark_3dWireframe: string | null
-//   logomark_3dWireframe_onDark: string | null
-//   logomark_backgroundFill: string | null
-//   logomark_backgroundFill_onDark: string | null
-//   logomark_onDark: string | null
-//   logotype: string | null
-//   logotype_onDark: string | null
-//   sort: number | null
-//   title: string | null
-//   user_created: string | null
-//   user_updated: string | null
-// }
-
-// interface ProjectTypes {
-//   base_type: string | null
-//   base_type_sample: DiskFiles
-//   brand_color_primary: string | null
-//   code_type: string | null
-//   code_type_sample: DiskFiles
-//   component_animatedLogo_stroked: string | null
-//   componentPath_animatedLogo_stroked: string | null
-//   content_block: string | null
-//   date_created: string | null
-//   date_updated: string | null
-//   excerpt: string | null
-//   expressive_type: string | null
-//   expressive_type_sample: DiskFiles
-//   icon_radius: string | null
-//   id: string
-//   link_behance: string | null
-//   link_dribbble: string | null
-//   link_github: string | null
-//   link_gitlab: string | null
-//   link_instagram: string | null
-//   logo: DiskFiles
-//   logo_3d: DiskFiles
-//   logo_creative: DiskFiles
-//   logo_type: string | null
-//   logo_type_sample: DiskFiles
-//   logo_wireframe: DiskFiles
-//   og_image: string | null
-//   primary_image: string | null
-//   public: boolean | null
-//   slug: string
-//   sort: number | null
-//   status: string | null
-//   title: string | null
-//   user_created: string | null
-//   user_updated: string | null
-//   workspace: string | null
-//   logos: LogoTypes
-// }
-// type Work = Database['public']['Tables']['work']['Row']
-// interface Project {
-//   project: ProjectTypes
-// }
-// type TemplateFiles =
-//   Database['public']['Tables']['showcase_templates_files']['Row']
-// // type WorkWithProjects = QueryData<typeof data>
-
-// interface WorkData {
-//   projectSlug: string
-//   workSlug: string
-//   link_behance: ProjectTypes[]
-//   link_dribbble: ProjectTypes[]
-//   link_instagram: ProjectTypes[]
-//   logos: ProjectTypes['logos']
-//   workData: Work[] & Project[]
-//   technologyData: TechnologyTypes[]
-//   templateFiles: TemplateFiles
-//   projectData: Project
-//   ProjectDesignTokens: Token[]
-//   is_brand_showcase?: boolean
-// }
-// ;[]
 const response = await GET(Astro)
-const data = await response.json()
-const workWithProjects = data as unknown as any
-console.log(workWithProjects)
-const ProjectLogo =
-  workWithProjects.workData[0]?.project?.logos.logo?.filename_disk
-const ProjectLogoOnDark =
-  workWithProjects.workData[0]?.project?.logos.logo_onDark?.filename_disk
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const workData = (await response.json()) as any
+
+// const ProjectLogo = workData.project?.logos?.logo.filename_disk
+// const ProjectLogoOnDark = workData.project?.logo_onDark?.filename_disk
 // console.log(ProjectLogo)
 
-const link_behance = workWithProjects.workData[0]?.link_behance
-const link_dribbble = workWithProjects.workData[0]?.link_dribbble
-const link_instagram = workWithProjects.workData[0]?.link_instagram
+const link_behance = workData?.link_behance
+const link_dribbble = workData?.link_dribbble
+const link_instagram = workData?.link_instagram
 
-const brandingShowcase =
-  workWithProjects.workData[0]?.is_brand_showcase === true
+const brandingShowcase = workData?.is_brand_showcase === true
 
-const WorkProject = workWithProjects.workData[0]?.project.title
-// const ProjectLogo = workWithProjects.workData?.logo?.filename_disk
-const ProjectLogoWireframe =
-  workWithProjects.workData[0]?.project.logo_wireframe?.filename_disk
-const ProjectLogo3d =
-  workWithProjects.workData[0]?.project.logo_3d?.filename_disk
-const ProjectLogoCreative =
-  workWithProjects.workData[0]?.project.logo_creative?.filename_disk
-const ProjectAnimatedLogo =
-  workWithProjects.workData[0]?.project.component_animatedLogo_stroked
-const ProjectLogoType = workWithProjects.workData[0]?.project.logo_type
-const ProjectBaseType = workWithProjects.workData[0]?.project.base_type
-const ProjectExpressiveType =
-  workWithProjects.workData[0]?.project.expressive_type
-const ProjectCodeType = workWithProjects.workData[0]?.project.code_type
-const ProjectLogoTypeSample =
-  workWithProjects.workData[0]?.project.logo_type_sample?.filename_disk
-const ProjectBaseTypeSample =
-  workWithProjects.workData[0]?.project.base_type_sample?.filename_disk
+const WorkProject = workData?.project?.title
+const ProjectLogoWireframe = workData?.project?.logo_wireframe?.filename_disk
+const ProjectLogo3d = workData?.project?.logo_3d?.filename_disk
+const ProjectLogoCreative = workData?.project?.logo_creative?.filename_disk
+const ProjectAnimatedLogo = workData?.project?.component_animatedLogo_stroked
+const ProjectLogoType = workData?.project?.logo_type
+const ProjectBaseType = workData?.project?.base_type
+const ProjectExpressiveType = workData?.project?.expressive_type
+const ProjectCodeType = workData?.project?.code_type
+const ProjectLogoTypeSample = workData?.project?.logo_type_sample?.filename_disk
+const ProjectBaseTypeSample = workData?.project?.base_type_sample?.filename_disk
 const ProjectExpressiveTypeSample =
-  workWithProjects.workData[0]?.project.expressive_type_sample?.filename_disk
-const ProjectCodeTypeSample =
-  workWithProjects.workData[0]?.project.code_type_sample?.filename_disk
+  workData?.project?.expressive_type_sample?.filename_disk
+const ProjectCodeTypeSample = workData?.project?.code_type_sample?.filename_disk
 ---
 
 <Layout>
@@ -174,10 +160,13 @@ const ProjectCodeTypeSample =
           <div class='relative w-[calc(75%_-_80px)] h-full ml-auto top-28 '>
             <BrandingShowcase
               client:load
-              ProjectDesignTokens={workWithProjects.ProjectDesignTokens}
+              ProjectDesignTokens={workData?.ProjectDesignTokens}
               ProjectCodeType={ProjectCodeType as string}
               ProjectCodeTypeSample={ProjectCodeTypeSample as string}
-              ProjectLogo={ProjectLogo as string}
+              ProjectLogo={
+                workData?.workData[0]?.project.logos.logo
+                  .filename_disk as string
+              }
               WorkProject={WorkProject as string}
               ProjectLogo3d={ProjectLogo3d as string}
               ProjectExpressiveType={ProjectExpressiveType as string}
@@ -197,38 +186,39 @@ const ProjectCodeTypeSample =
       ) : null
     }
     {
-      workWithProjects.templateFiles && brandingShowcase === false ? (
+      workData?.templateFiles && brandingShowcase === false ? (
         <>
           {/* @ts-ignore */}
-          <PortfolioSlider template={workWithProjects.templateFiles} />
+          <PortfolioSlider template={workData?.templateFiles} />
         </>
       ) : null
     }
-    <div class='absolute pb-10 z-[4] w-1/4 h-full gap-8 top-28 left-16'>
+    <div class='absolute pb-10 z-[4] w-1/5 h-full gap-8 top-28 left-16'>
       <div
         class='sticky flex flex-col items-start justify-start w-full gap-8 top-28 rounded-2xl'
       >
         <div
-          class='bg-[var(--grayA1)] backdrop-blur-md flex flex-col items-start justify-start gap-6 rounded-2xl w-full h-full bottom-0 top-0 border border-[var(--grayA4)]'
+          class='bg-[var(--ghost-aa5)] backdrop-blur-md flex flex-col items-start justify-start gap-6 rounded-2xl w-full h-full bottom-0 top-0 border border-[var(--grayA4)]'
         >
           <div
             class='flex flex-col items-start justify-center w-full p-10 pb-0'
           >
             <img
-              src={ProjectLogo
-                ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${ProjectLogo}`
-                : '1662d152-933f-414d-9230-c4b19c773557.avif'}
-              alt={workWithProjects.projectSlug ??
-                workWithProjects.projectSlug ??
+              src={workData?.workData[0]?.project.logos.logo.filename_disk
+                ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${workData?.workData[0]?.project.logos.logo.filename_disk}`
+                : 'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif'}
+              alt={workData?.projectSlug ??
+                workData?.projectSlug ??
                 'Default Alt Text'}
               class='block h-10 max-w-32 dark:hidden'
             />
             <img
-              src={ProjectLogoOnDark
-                ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${ProjectLogoOnDark}`
-                : '1662d152-933f-414d-9230-c4b19c773557.avif'}
-              alt={workWithProjects.projectSlug ??
-                workWithProjects.projectSlug ??
+              src={workData?.workData[0]?.project.logos.logo_onDark
+                .filename_disk
+                ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${workData?.workData[0]?.project.logos.logo_onDark.filename_disk}`
+                : 'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif'}
+              alt={workData?.projectSlug ??
+                workData?.projectSlug ??
                 'Default Alt Text'}
               class='hidden h-10 max-w-32 dark:flex'
             />
@@ -238,7 +228,7 @@ const ProjectCodeTypeSample =
             class='flex flex-col items-start justify-center w-full gap-2 px-10'
           >
             <h1 class='px-0 mr-auto text-lg text-left'>
-              {workWithProjects.workData[0]?.title}
+              {workData?.title}
             </h1>
           </div>
           <div
@@ -251,9 +241,9 @@ const ProjectCodeTypeSample =
             </h4>
             <div class='flex flex-col items-center justify-start text-xs'>
               <h5 class='px-0 mr-auto text-lg text-left'>
-                {workWithProjects.workData[0]?.project?.title}
+                {workData?.project?.title}
               </h5>
-              <a href={`/projects/${workWithProjects.projectSlug}`}>
+              <a href={`/projects/${workData?.projectSlug}`}>
                 <Button
                   variant='link'
                   className='px-0 text-xs underline underline-offset-4'
@@ -272,39 +262,30 @@ const ProjectCodeTypeSample =
             </h4>
             <div class='flex flex-row items-center justify-start'>
               {
-                workWithProjects.technologyData.map(
-                  (techItem: TechnologyTypes) => {
-                    // const logo = techItem.technology_id?.logo
-                    // const logo = techItem.technology_id;
-
-                    if (techItem) {
-                      return (
-                        <TechUsed
-                          technologyName={
-                            techItem.technology_id.name
-                              ? techItem.technology_id.name
-                              : ''
-                          }
-                          id={
-                            techItem.technology_id.id
-                              ? techItem.technology_id.id
-                              : ''
-                          }
-                          technologyMark={
-                            techItem.technology_id.logo?.filename_disk
-                          }
-                          client:only='react'
-                        />
-                      )
-                    } else {
-                      console.warn(
-                        'Missing technology or logo in item:',
-                        techItem,
-                      )
-                      return null
-                    }
-                  },
-                )
+                workData?.technologyData?.map((techItem: TechnologyTypes) => {
+                  if (techItem) {
+                    return (
+                      <TechUsed
+                        technologyName={
+                          techItem.technology_id.name
+                            ? techItem.technology_id.name
+                            : ''
+                        }
+                        id={techItem.id ? techItem.id : ''}
+                        technologyMark={
+                          techItem.technology_id.logo.filename_disk
+                        }
+                        client:only='react'
+                      />
+                    )
+                  } else {
+                    console.warn(
+                      'Missing technology or logo in item:',
+                      techItem,
+                    )
+                    return null
+                  }
+                })
               }
             </div>
           </div>
@@ -363,9 +344,7 @@ const ProjectCodeTypeSample =
               Description
             </h4>
             <div class='flex flex-row items-center justify-start text-sm'>
-              <Fragment
-                set:html={workWithProjects.workData[0]?.content_block}
-              />
+              <Fragment set:html={workData?.content_block} />
             </div>
           </div>
         </div>

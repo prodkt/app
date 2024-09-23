@@ -18,6 +18,16 @@
       "require": "./dist/brands/*/index.cjs",
       "default": "./dist/brands/*/index.js"
     },
+    "./employers/*": {
+      "types": "./dist/brands/employers/*/index.d.ts",
+      "require": "./dist/brands/employers/*/index.cjs",
+      "default": "./dist/brands/employers/*/index.js"
+    },
+    "./technologies/*": {
+      "types": "./dist/brands/technologies/*/index.d.ts",
+      "require": "./dist/brands/technologies/*/index.cjs",
+      "default": "./dist/brands/technologies/*/index.js"
+    },
     "./prodkt-components/*": {
       "types": "./dist/prodkt-components/*/index.d.ts",
       "require": "./dist/prodkt-components/*/index.cjs",
@@ -63,7 +73,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@codesandbox/sandpack-react": "^2.19.8",
+    "@codesandbox/sandpack-react": "^2.19.9",
     "@codesandbox/sandpack-themes": "^2.0.21",
     "@faker-js/faker": "^9.0.1",
     "@headlessui/react": "^2.1.8",
@@ -99,7 +109,7 @@
     "@supabase/supabase-js": "^2.45.4",
     "@tanstack/react-table": "^8.20.5",
     "@types/chroma-js": "^2.4.4",
-    "@types/node": "^22.5.5",
+    "@types/node": "^22.6.0",
     "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@xyflow/react": "^12.3.0",
@@ -113,10 +123,10 @@
     "drizzle-orm": "^0.33.0",
     "embla-carousel-autoplay": "^8.1.6",
     "embla-carousel-react": "^8.1.6",
-    "framer-motion": "^11.5.5",
+    "framer-motion": "^11.5.6",
     "highlightjs-curl": "^1.3.0",
     "input-otp": "^1.2.4",
-    "lucide-react": "^0.441.0",
+    "lucide-react": "^0.445.0",
     "react": "^18.3.1",
     "react-copy-to-clipboard": "^5.1.0",
     "react-day-picker": "^8.10.1",
@@ -126,7 +136,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "reactflow": "^11.11.4",
     "recharts": "^2.12.7",
-    "sass": "^1.79.2",
+    "sass": "^1.79.3",
     "sonner": "^1.5.0",
     "swagger-ui": "^5.17.14",
     "swiper": "^11.1.14",
@@ -155,8 +165,8 @@
     "postcss": "^8.4.47",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "storybook": "^8.3.2",
-    "tailwindcss": "^3.4.12",
-    "vite": "^5.4.6",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.7",
     "vite-plugin-dts": "^4.2.1",
     "vite-plugin-external": "^4.3.1"
   }

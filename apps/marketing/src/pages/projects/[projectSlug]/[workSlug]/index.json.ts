@@ -1,6 +1,12 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-param-description */
+/* eslint-disable jsdoc/check-param-names */
+
 import type { Database } from '@/database.types'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import type { APIContext } from 'astro'
+
+import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
@@ -8,8 +14,8 @@ const supabaseClient: SupabaseClient = supabase
 type Work = Database['public']['Tables']['work']['Row']
 type Technology = Database['public']['Tables']['work_technology']['Row']
 type Template = Database['public']['Tables']['work_showcase_templates']['Row']
-type TemplateFiles =
-  Database['public']['Tables']['showcase_templates_files']['Row']
+// type TemplateFiles =
+//   Database['public']['Tables']['showcase_templates_files']['Row']
 /**
  *
  * @param root0 The API context.
@@ -82,20 +88,31 @@ async function fetchWorkData(
   supabase: SupabaseClient,
   workSlug: string,
 ): Promise<Work[] | null> {
-  const response = await supabase
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  // Start building the query
+  let query = supabase
     .from('work')
     .select(
       `
-	  *,project(logo(filename_disk),name,slug),primary_image(filename_disk)
-	  )
-	`,
+    *,project(logo(filename_disk),name,slug),primary_image(filename_disk)
+    `,
     )
-    .neq('status', 'draft')
     .eq('slug', workSlug)
 
-  if (response.error === null && response.data !== null) {
-    return response.data as unknown as Work[]
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    // console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
   }
+
+  const response = await query
+
+  if (response.error === null) {
+    return response.data
+  }
+
   console.error(response.error)
   return null
 }
@@ -111,19 +128,31 @@ async function fetchTechnologyData(
   supabase: SupabaseClient,
   workId: string | undefined,
 ): Promise<Technology[] | null> {
-  const response = await supabase
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  // Start building the query
+  let query = supabase
     .from('work_technology')
     .select(
       `
-	  *,work_id,technology_id(name,logo(filename_disk))
-	  )
-	`,
+    *,work_id,technology_id(name,logo(filename_disk))
+    `,
     )
     .eq('work_id', workId)
 
-  if (response.error === null && response.data !== null) {
-    return response.data as unknown as Technology[]
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
   }
+
+  const response = await query
+
+  if (response.error === null) {
+    return response.data
+  }
+
   console.error(response.error)
   return null
 }
@@ -138,19 +167,31 @@ async function fetchTemplateData(
   supabase: SupabaseClient,
   workId: string | undefined,
 ): Promise<Template[] | null> {
-  const response = await supabase
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
+
+  // Start building the query
+  let query = supabase
     .from('work_showcase_templates')
     .select(
       `
-	  *
-	  )
-	`,
+    *
+    `,
     )
     .eq('work_id', workId)
 
-  if (response.error === null && response.data !== null) {
-    return response.data as unknown as Template[]
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
   }
+
+  const response = await query
+
+  if (response.error === null) {
+    return response.data
+  }
+
   console.error(response.error)
   return null
 }
@@ -164,28 +205,33 @@ async function fetchTemplateData(
 async function fetchTemplateFiles(
   supabase: SupabaseClient,
   templateIds: (string | null | undefined)[],
-): Promise<TemplateFiles[] | null> {
-  // Filter out null or undefined IDs
+): Promise<unknown> {
   const validTemplateIds = templateIds.filter((id): id is string => !!id)
+  const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
+  const isDevMode = SUPABASE_DEV_MODE === 'true'
 
-  if (validTemplateIds.length === 0) {
-    console.error('No valid templateIds provided')
-    return null
-  }
-
-  const response = await supabase
+  // Start building the query
+  let query = supabase
     .from('showcase_templates_files')
     .select(
       `
-	  template:showcase_templates_id(title,type),directus_files_id(filename_disk)
-	  )
-	`,
+    template:showcase_templates_id(title,type),directus_files_id(filename_disk)
+    `,
     )
     .in('showcase_templates_id', validTemplateIds)
 
-  if (response.error === null && response.data !== null) {
-    return response.data as unknown as TemplateFiles[]
+  // Conditionally apply the filter based on isDevMode
+  if (!isDevMode) {
+    console.log('Excluding drafts from query.')
+    query = query.neq('status', 'draft')
   }
+
+  const response = await query
+
+  if (response.error === null) {
+    return response.data
+  }
+
   console.error(response.error)
   return null
 }

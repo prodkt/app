@@ -172,8 +172,8 @@ export const prodktTailwindPreset: Config = {
           12: 'var(--red12)',
         },
 
-        border: 'var(--gray4)',
-        ring: 'var(--gray4)',
+        border: 'var(--grayA4)',
+        ring: 'var(--grayA4)',
       },
       borderRadius: {
         radius: '0.5rem',
@@ -195,6 +195,14 @@ export const prodktTailwindPreset: Config = {
           '0%,70%,100%': { opacity: '1' },
           '20%,50%': { opacity: '0' },
         },
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - var(--gap)))' },
+        },
+        'marquee-vertical': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(calc(-100% - var(--gap)))' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -204,6 +212,9 @@ export const prodktTailwindPreset: Config = {
         spinSlow2x: 'spin 22.25s linear infinite',
         spinSlow3x: 'spin 24.25s linear infinite',
         spinSlow4x: 'spin 26.25s linear infinite',
+        marquee: 'marquee var(--duration) linear infinite',
+        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
       },
       transitionDelay: {
         0: '0s',
