@@ -1,6 +1,6 @@
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 
-import type { Connection, Edge, Node } from '@xyflow/react'
+import type { ColorMode, Connection, Edge, Node } from '@xyflow/react'
 import type { FlowEdgeTypes } from './Edge'
 import type { FlowNodeTypes } from './Node'
 
@@ -49,6 +49,7 @@ const Flow = ({
 } & {
   flowTitle?: string
 }) => {
+  const [colorMode] = useState<ColorMode>('dark')
   const [nodes, setNodes, onNodesChange] = useNodesState(data)
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges)
 
@@ -66,6 +67,7 @@ const Flow = ({
       onConnect={onConnect}
       fitView
       nodeTypes={nodeTypes}
+      colorMode={colorMode}
       edgeTypes={edgeTypes}
       defaultEdgeOptions={defaultEdgeOptions}
       defaultViewport={defaultViewport}
