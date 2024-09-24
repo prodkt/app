@@ -1,6 +1,7 @@
 ---
 import { BryanFunkSection } from '@prodkt/ui/prodkt-components/about-bryan'
 
+import ResumeSection from '@/components/download-resume'
 import { WorkHistory } from '@/components/work-history'
 import Layout from '@/layouts/PublicLayout.astro'
 ---
@@ -8,4 +9,5 @@ import Layout from '@/layouts/PublicLayout.astro'
 <Layout>
   <BryanFunkSection client:only='react' />
   <WorkHistory client:only='react' />
+  <ResumeSection client:only='react' />
 </Layout>

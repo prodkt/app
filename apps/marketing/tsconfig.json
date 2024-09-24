@@ -5,7 +5,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@/supabase/*": ["src/supabase/*"]
+      "@/supabase/*": ["src/supabase/*"],
+      "@prodkt/assets/*": ["../../packages/assets/*"],
+      "@prodkt/config/tailwind/*": ["../../packages/config/tailwind/*"],
+      "@prodkt/ui/*": ["../../packages/ui/dist/*"]
     }
   }
 }

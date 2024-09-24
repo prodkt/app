@@ -38,8 +38,8 @@ const Starlight = (props: SVGProps<SVGSVGElement>) => (
         y2={25.55}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--amber-11)' />
-        <stop offset={1} stopColor='var(--amber-12)' />
+        <stop stopColor='var(--amber11)' />
+        <stop offset={1} stopColor='var(--amber12)' />
       </linearGradient>
       <linearGradient
         id='starlight-c'
@@ -49,8 +49,8 @@ const Starlight = (props: SVGProps<SVGSVGElement>) => (
         y2={25.55}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--amber-11)' />
-        <stop offset={1} stopColor='var(--amber-12)' />
+        <stop stopColor='var(--amber11)' />
+        <stop offset={1} stopColor='var(--amber12)' />
       </linearGradient>
       <clipPath id='starlight-a'>
         <path fill='currentColor' d='M0 0h161v26H0z' />

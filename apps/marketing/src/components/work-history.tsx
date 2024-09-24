@@ -92,7 +92,7 @@ export function WorkHistory() {
             id='work'
             className='sticky top-1 z-[1] flex size-full snap-y snap-mandatory  flex-col place-content-start place-items-start items-start justify-start rounded-2xl shadow-2xl xl:top-24'
           >
-            <div className='flex max-h-[calc(100dvh-200px)]  min-h-[calc(100dvh-200px)] snap-start flex-col items-center justify-stretch rounded-2xl border bg-[var(--gray2)] p-0 '>
+            <div className='flex max-h-[calc(100dvh-210px)]  min-h-[calc(100dvh-210px)] snap-start flex-col items-center justify-stretch rounded-2xl border bg-[var(--gray2)] p-0 '>
               <div className=' z-[1] flex h-[90px] w-full flex-col flex-wrap items-center justify-between gap-0 rounded-t-2xl border-b bg-gradient-to-b from-[var(--gray1)] to-transparent pl-5 sm:min-h-[120px] sm:flex-row sm:justify-start sm:pl-8 md:justify-center md:pl-16'>
                 <div className='relative mx-0 flex h-full w-auto flex-row items-center justify-center gap-0 lg:justify-start xl:justify-start '>
                   {!workItem.logo ? (

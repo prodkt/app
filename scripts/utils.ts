@@ -2,9 +2,9 @@
 
 import type { PackageJson } from 'pkg-types'
 
-import * as fs from 'fs'
-import * as fsPromise from 'fs/promises'
-import * as path from 'path'
+import * as fs from 'node:fs'
+import * as fsPromise from 'node:fs/promises'
+import * as path from 'node:path'
 
 // ------------------------------------------------------------------
 

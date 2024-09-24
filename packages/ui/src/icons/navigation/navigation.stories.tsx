@@ -8,6 +8,7 @@ import {
   Data,
   Design,
   Docs,
+  ErrorFourZeroFour,
   FileVault,
   Flows,
   Handoff,
@@ -88,4 +89,10 @@ export const HomeIcon: Story = {
 export const BlogIcon: Story = {
   args: {},
   render: (args) => <Blog className='mx-auto h-16 w-auto' {...args} />,
+}
+export const FourZeroFour: Story = {
+  args: {},
+  render: (args) => (
+    <ErrorFourZeroFour className='mx-auto h-16 w-auto' {...args} />
+  ),
 }

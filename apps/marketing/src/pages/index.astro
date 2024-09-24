@@ -1,6 +1,7 @@
 ---
 import { AboutProdkt } from '@prodkt/ui/prodkt-components/about-prodkt'
 import { HeroHeader } from '@prodkt/ui/prodkt-components/hero-header'
+import IndexSectionFeatures2 from '@prodkt/ui/prodkt-components/prodkt-features'
 
 import Layout from '@/layouts/PublicLayout.astro'
 ---
@@ -23,6 +24,9 @@ import Layout from '@/layouts/PublicLayout.astro'
     >
     </div> -->
     <AboutProdkt client:only='react' />
+    <div class='w-full py-10 bg-[var(--gray1)]'>
+      <IndexSectionFeatures2 client:only='react' />
+    </div>
     <div
       class='absolute bottom-0 top-auto h-40 bg-gradient-to-t from-[var(--gray2)] to-transparent w-full z-[1]'
     >
