@@ -1,8 +1,8 @@
 @import './codeblock.scss';
 /* @import '@prodkt/tailwind/color'; */
-@import '../../../../packages/config/tailwind/src/color.css';
-@import '../../../../packages/config/tailwind/src/ghost.css';
-@import '../../../../packages/assets/fonts/stylesheet.css';
+@import '@prodkt/config/tailwind/src/color.css';
+@import '@prodkt/config/tailwind/src/ghost.css';
+@import '@prodkt/assets/fonts/stylesheet.css';
 @import './flow-board.css';
 
 @tailwind base;

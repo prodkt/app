@@ -420,7 +420,7 @@ export const prodktTailwindPreset: Config = {
           a11: 'var(--slateA11)',
           a12: 'var(--slateA12)',
         },
-        background: 'var(--gray1)',
+        background: 'var(--gray2)',
         foreground: 'var(--gray12)',
 
         muted: {

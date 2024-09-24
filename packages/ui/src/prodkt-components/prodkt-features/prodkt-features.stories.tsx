@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import IndexSectionFeatures2 from '.'
 import IndexSectionFeatures1 from './IndexSectionFeatures1'
-import IndexSectionFeatures2 from './IndexSectionFeatures2'
 import IndexSectionFeatures3 from './IndexSectionFeatures3'
 
 const meta: Meta<typeof IndexSectionFeatures1> = {

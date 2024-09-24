@@ -11,6 +11,7 @@ export default defineConfig(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    ignores: ['public'],
     rules: {
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',

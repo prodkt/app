@@ -12,9 +12,9 @@ import { SkillMarquee } from './skill-marquee'
  */
 export function BryanFunkSection() {
   return (
-    <div className='relative flex items-center justify-center'>
+    <div className='relative flex items-center justify-center xl:pt-12'>
       <div className='relative flex size-full flex-col items-center justify-center px-2 md:px-4 lg:px-12 xl:px-20'>
-        <div className='flex w-full flex-col items-start justify-center gap-4 lg:gap-8 xl:max-w-[75dvw]'>
+        <div className='flex w-full flex-col items-start justify-center gap-4 lg:gap-8 xl:max-w-[65dvw]'>
           <div className='flex w-full items-start justify-start px-4 pt-10 text-left text-2xl leading-none tracking-tight md:text-3xl lg:text-nowrap lg:text-5xl' />
           <div className='z-[1] flex w-full flex-row flex-wrap justify-center gap-2 md:gap-4 lg:h-full xl:flex-nowrap'>
             <div className='relative flex w-1/2 grow flex-col justify-between gap-4 overflow-hidden rounded-2xl border border-[var(--grayA4)] bg-gradient-to-br from-[var(--gray1)] to-[var(--grayA1)] p-4 backdrop-blur sm:basis-1/4 sm:p-6 xl:p-10'>

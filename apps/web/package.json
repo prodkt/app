@@ -7,7 +7,7 @@
   "author": "Bryan Funk",
   "type": "module",
   "scripts": {
-    "build": "next build",
+    "build:temporary": "next build",
     "clean": "bun run rm -rf .next *.tsbuildinfo playwright-report test-results",
     "dev": "next dev",
     "lint": "eslint .  --max-warnings 0",

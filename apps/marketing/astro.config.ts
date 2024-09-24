@@ -8,7 +8,7 @@ import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import vercel from '@astrojs/vercel/serverless'
-import sentry from '@sentry/astro'
+// import sentry from '@sentry/astro'
 import { defineConfig, envField } from 'astro/config'
 import dotenv from 'dotenv'
 
@@ -29,14 +29,14 @@ export default defineConfig({
     react({
       experimentalReactChildren: true,
     }),
-    sentry({
-      dsn: import.meta.env.PUBLIC_SENTRY_DSN,
-      sourceMapsUploadOptions: {
-        org: import.meta.env.SENTRY_ORG,
-        project: import.meta.env.SENTRY_PROJECT,
-        authToken: import.meta.env.SENTRY_AUTH_TOKEN,
-      },
-    }),
+    // sentry({
+    //   dsn: import.meta.env.PUBLIC_SENTRY_DSN,
+    //   sourceMapsUploadOptions: {
+    //     org: import.meta.env.SENTRY_ORG,
+    //     project: import.meta.env.SENTRY_PROJECT,
+    //     authToken: import.meta.env.SENTRY_AUTH_TOKEN,
+    //   },
+    // }),
   ],
   vite: {
     css: {
@@ -75,6 +75,6 @@ export default defineConfig({
         }),
       },
     },
-    serverIslands: true,
+    // serverIslands: true,
   },
 })

@@ -24,15 +24,15 @@ export default mergeConfig(
   buildConfig({
     lib: {
       entry: [
-        'src/CodeblockComponentMap.tsx',
-        'src/primitives/*/index.tsx',
-        'src/brands/*/index.tsx',
-        'src/prodkt-components/*/index.tsx',
-        'src/blocks/*/index.tsx',
-        'src/icons/*/index.tsx',
+        './src/primitives/*/index.tsx',
+        './src/brands/*/index.tsx',
+        './src/prodkt-components/*/index.tsx',
+        './src/blocks/*/index.tsx',
+        './src/icons/*/index.tsx',
         './src/utils/cn.ts',
         './src/utils/use-mounted.ts',
         './src/utils/kanban.ts',
+        './src/utils/use-store.ts',
       ],
     },
     external: {

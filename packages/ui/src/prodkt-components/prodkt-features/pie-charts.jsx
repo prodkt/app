@@ -28,8 +28,8 @@ export const PieChartRed = (props) => (
         y2='28.1965'
         gradientUnits='userSpaceOnUse'
       >
-        <stop offset='0.0833531' stop-color='var(--redA3)' />
-        <stop offset='0.813159' stop-color='var(--red9)' />
+        <stop offset='0.0833531' stopColor='var(--redA3)' />
+        <stop offset='0.813159' stopColor='var(--red9)' />
       </linearGradient>
       <linearGradient
         id='paint0_linear_3446_68718'
@@ -39,8 +39,9 @@ export const PieChartRed = (props) => (
         y2='28.1965'
         gradientUnits='userSpaceOnUse'
       >
-        <stop offset='0.0833531' stop-color='var(--grayA12)' />
-        <stop offset='0.813159' stop-color='var(--grayA11)' />
+        f
+        <stop offset='0.0833531' stopColor='var(--grayA12)' />
+        <stop offset='0.813159' stopColor='var(--grayA11)' />
       </linearGradient>
     </defs>
   </svg>
@@ -75,8 +76,8 @@ export const PieChartBlue = (props) => (
         y2='28.1965'
         gradientUnits='userSpaceOnUse'
       >
-        <stop offset='0.0833531' stop-color='var(--indigoA3)' />
-        <stop offset='0.813159' stop-color='var(--indigo9)' />
+        <stop offset='0.0833531' stopColor='var(--indigoA3)' />
+        <stop offset='0.813159' stopColor='var(--indigo9)' />
       </linearGradient>
       <linearGradient
         id='paint0_linear_3446_68718'
@@ -86,8 +87,8 @@ export const PieChartBlue = (props) => (
         y2='28.1965'
         gradientUnits='userSpaceOnUse'
       >
-        <stop offset='0.0833531' stop-color='var(--grayA12)' />
-        <stop offset='0.813159' stop-color='var(--grayA11)' />
+        <stop offset='0.0833531' stopColor='var(--grayA12)' />
+        <stop offset='0.813159' stopColor='var(--grayA11)' />
       </linearGradient>
     </defs>
   </svg>
@@ -122,8 +123,8 @@ export const PieChartGreen = (props) => (
         y2='28.1965'
         gradientUnits='userSpaceOnUse'
       >
-        <stop offset='0.0833531' stop-color='var(--grassA3)' />
-        <stop offset='0.813159' stop-color='var(--grass9)' />
+        <stop offset='0.0833531' stopColor='var(--grassA3)' />
+        <stop offset='0.813159' stopColor='var(--grass9)' />
       </linearGradient>
       <linearGradient
         id='paint0_linear_3446_68718'
@@ -133,8 +134,8 @@ export const PieChartGreen = (props) => (
         y2='28.1965'
         gradientUnits='userSpaceOnUse'
       >
-        <stop offset='0.0833531' stop-color='var(--grayA12)' />
-        <stop offset='0.813159' stop-color='var(--grayA11)' />
+        <stop offset='0.0833531' stopColor='var(--grayA12)' />
+        <stop offset='0.813159' stopColor='var(--grayA11)' />
       </linearGradient>
     </defs>
   </svg>
