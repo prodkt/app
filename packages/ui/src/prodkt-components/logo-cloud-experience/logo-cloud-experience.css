@@ -1,0 +1,27 @@
+.logo-cloud-experience-gradient-mask-xl {
+  -webkit-mask-image: radial-gradient(
+    50% 100% at 50% 50%,
+    rgba(0, 0, 0, 1) 50%,
+    transparent 99%
+  );
+  mask-image: radial-gradient(
+    50% 100% at 50% 50%,
+    rgba(0, 0, 0, 1) 50%,
+    transparent 99%
+  );
+}
+
+.logo-cloud-experience-gradient-mask {
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}

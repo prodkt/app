@@ -156,6 +156,20 @@ input:where([type='submit']) {
     rgba(0, 0, 0, 0) 100%
   );
 }
+.gradientMask-to-t-50 {
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.5) 55%,
+    rgba(0, 0, 0, 0) 69%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.5) 55%,
+    rgba(0, 0, 0, 0) 69%
+  );
+}
 .gradientMask-to-t-20 {
   mask-image: linear-gradient(
     180deg,

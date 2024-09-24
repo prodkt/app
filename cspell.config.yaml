@@ -14,6 +14,9 @@ words:
   - acst
   - aest
   - akst
+  - aliqua
+  - amet
+  - Amet
   - Anson
   - apitoken
   - astro
@@ -60,6 +63,7 @@ words:
   - connectingto
   - connectionindicator
   - connectionline
+  - consequat
   - Consolas
   - consts
   - Consulty
@@ -72,6 +76,7 @@ words:
   - datetime
   - dbaeumer
   - degit
+  - deserunt
   - Designboise
   - directus
   - docummentation
@@ -80,11 +85,13 @@ words:
   - dropmenu
   - dsznajder
   - Duarte
+  - duis
   - dwireframe
   - edgelabel
   - edgeupdater
   - Elsakaan
   - Embla
+  - enim
   - esbenp
   - eslintcache
   - evenodd
@@ -100,6 +107,7 @@ words:
   - Gitbook
   - Gloock
   - googleanalytics
+  - gradia
   - grotesk
   - grouphover
   - haspopup
@@ -136,6 +144,7 @@ words:
   - minimise
   - Mintlify
   - mjsx
+  - mollit
   - monokai
   - monorepoing
   - mousewheel
@@ -155,6 +164,7 @@ words:
   - nuxt
   - nzst
   - odzdpcvclydcqawdagdt
+  - officia
   - ondark
   - onwarn
   - optimisations
@@ -165,6 +175,7 @@ words:
   - pageview
   - pannable
   - peduarte
+  - Pendo
   - pids
   - Pinterest
   - pkce
@@ -172,6 +183,8 @@ words:
   - Postgrest
   - posthog
   - posx
+  - powerlines
+  - Preconfigured
   - preconnect
   - prerender
   - Presstek
@@ -244,6 +257,7 @@ words:
   - typecheck
   - typeof
   - typesafe
+  - ullamco
   - unifiedjs
   - Uniforma
   - unkey
@@ -252,6 +266,7 @@ words:
   - upvotes
   - upvoting
   - vaul
+  - Velit
   - vercel
   - viewports
   - vuepress
@@ -265,19 +280,11 @@ words:
   - xyflow
   - Yada
   - yoav
+  - measurables
+  - MENUBOX
+  - Hubspot
+  - AVATARBOX
   - zoomable
   - zoompane
   - ZUEP
   - zustand
-  - Amet
-  - mollit
-  - deserunt
-  - ullamco
-  - aliqua
-  - amet
-  - Velit
-  - officia
-  - consequat
-  - duis
-  - enim
-  - gradia
