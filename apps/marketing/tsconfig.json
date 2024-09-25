@@ -1,14 +1,10 @@
 {
   "extends": ["astro/tsconfigs/strictest", "@prodkt/tsconfig/react.json"],
   "compilerOptions": {
-    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@/supabase/*": ["src/supabase/*"],
-      "@prodkt/assets/*": ["../../packages/assets/*"],
-      "@prodkt/config/tailwind/*": ["../../packages/config/tailwind/*"],
-      "@prodkt/ui/*": ["../../packages/ui/dist/*"]
+      "@/supabase/*": ["src/supabase/*"]
     }
   }
 }

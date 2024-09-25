@@ -1,11 +1,8 @@
-import { loadEnv } from 'vite'
-
 import { buildConfig, mergeConfig, reactConfig } from '@prodkt/vite'
 
 // import pkg from './package.json'
 
 // const excludedDeps = ['react', 'react-dom', 'swiper', 'class-variance-authority', 'framer-motion']
-const env = loadEnv(process.cwd(), '')
 // const exemptedDependencies = new Set([
 //   'react',
 //   'react-dom',
@@ -24,28 +21,28 @@ export default mergeConfig(
   buildConfig({
     lib: {
       entry: [
-        './src/primitives/*/index.tsx',
-        './src/brands/*/index.tsx',
-        './src/prodkt-components/*/index.tsx',
-        './src/blocks/*/index.tsx',
-        './src/icons/*/index.tsx',
+        'src/primitives/**/*.{ts,tsx,js,jsx}',
+        'src/brands/**/*.{ts,tsx,js,jsx}',
+        'src/icons/**/*.{ts,tsx,js,jsx}',
+        'src/blocks/**/*.{ts,tsx,js,jsx}',
+        'src/prodkt-components/**/*.{ts,tsx,js,jsx}',
         './src/utils/cn.ts',
         './src/utils/use-mounted.ts',
         './src/utils/kanban.ts',
         './src/utils/use-store.ts',
       ],
     },
-    external: {
-      // externalizeDeps: Object.keys(pkg.dependencies),
-      // externalizeDeps: Object.keys(pkg.dependencies).filter(
-      //   (dep) => !excludedDeps.includes(dep),
-      // ),
-    },
+    // ...(process.env.NODE_ENV !== 'production' && {
+    // external: Object.keys(pkg.dependencies),
+    // }),
+    // externalizeDeps: Object.keys(pkg.dependencies).filter(
+    //   (dep) => !excludedDeps.includes(dep),
+    // ),
     dts: {
       exclude: ['src/storybook-utils', '**/*.stories.tsx'],
     },
     define: {
-      'process.env': env,
+      'process.env': {},
     },
   }),
 )

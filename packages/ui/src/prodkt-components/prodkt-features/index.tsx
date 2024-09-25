@@ -38,7 +38,7 @@ export default function IndexSectionFeatures2() {
           <div className='mx-auto max-w-4xl pb-36 pt-28'>
             <div className='-m-3 flex flex-wrap'>
               <div className='w-full p-3 md:w-1/2'>
-                <div className='bg-radial-gradient from-gray-4 to-gray-4 relative flex h-auto flex-col items-stretch gap-4 overflow-hidden border border-[var(--grayA3)] p-10 ring ring-inset ring-[var(--grayA2)]'>
+                <div className='relative flex h-auto flex-col items-stretch gap-4 overflow-hidden border border-[var(--grayA3)] bg-radial-gradient from-gray-4 to-gray-4 p-10 ring ring-inset ring-[var(--grayA2)]'>
                   <CodeblockGraphic className='absolute z-0 -translate-x-1/2 scale-75' />
                   <CodeblockStyles className='absolute z-0 translate-x-3/4 scale-125' />
                   <div className='z-[1] flex h-full grow flex-wrap items-stretch justify-stretch'>
@@ -59,7 +59,7 @@ export default function IndexSectionFeatures2() {
                             </div>
                             <div className='flex w-1/2 flex-row items-center justify-end pr-2'>
                               {/* START AVATARBOX */}
-                              <div className='from-gray-1 via-grayA-1 to-grayA-4 flex size-8 flex-col items-center justify-center gap-0 rounded-lg bg-gradient-to-tr shadow-[inset_0px_-2px_6px_var(--gray3)] ring ring-inset ring-[var(--grayA3)]' />
+                              <div className='flex size-8 flex-col items-center justify-center gap-0 rounded-lg bg-gradient-to-tr from-gray-1 via-grayA-1 to-grayA-4 shadow-[inset_0px_-2px_6px_var(--gray3)] ring ring-inset ring-[var(--grayA3)]' />
 
                               {/* START AVATARBOX */}
                             </div>
@@ -76,7 +76,7 @@ export default function IndexSectionFeatures2() {
                           <div className=' absolute left-[calc(75%-2rem)] z-[1] size-16 -translate-y-1/2 border border-dashed border-[var(--gray8)] bg-[var(--grayA3)] p-1 backdrop-blur '>
                             <div className='z-[1] flex size-full items-center justify-center border-[var(--gray8)] bg-[var(--grayA2)] text-[var(--gray12)]'>
                               <p>
-                                <Plus class='z-[3]' />
+                                <Plus className='z-[3]' />
                                 <Plus className='absolute inset-0 m-auto blur' />
                               </p>
                             </div>
@@ -104,23 +104,23 @@ export default function IndexSectionFeatures2() {
                     <h3 className='bg-radial-gradient from-gray-12 to-gray-6 bg-clip-text pb-1 text-4xl font-semibold tracking-tight text-transparent'>
                       Open-source Components
                     </h3>
-                    <p className='text-gray-9 text-sm'>
+                    <p className='text-sm text-gray-9'>
                       Built in isolation with Storybook
                     </p>
                   </div>
                   <div className='bottom-0 top-auto z-[1] mb-0 mt-auto flex size-auto w-full flex-row gap-4 p-2'>
                     <a
                       href='/codeblocks'
-                      className='bg-radial-gradient from-gray-12 to-gray-6 hover:to-gray-9 text-nowrap bg-clip-text pb-1 text-xs font-semibold tracking-tight text-transparent underline decoration-[var(--grayA6)] underline-offset-4 transition-colors duration-500 ease-in'
+                      className='text-nowrap bg-radial-gradient from-gray-12 to-gray-6 bg-clip-text pb-1 text-xs font-semibold tracking-tight text-transparent underline decoration-[var(--grayA6)] underline-offset-4 transition-colors duration-500 ease-in hover:to-gray-9'
                     >
                       View Codeblocks
                     </a>
-                    <p className='aspect-1 bg-radial-gradient m-0 flex size-8 w-fit -translate-y-2 items-center justify-center text-nowrap rounded-full from-[var(--ghost-aa1)] to-[var(--grayA3)]  p-1 text-xs font-semibold leading-none tracking-tight text-[var(--grayA7)]'>
+                    <p className='m-0 flex aspect-1 size-8 w-fit -translate-y-2 items-center justify-center text-nowrap rounded-full bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--grayA3)]  p-1 text-xs font-semibold leading-none tracking-tight text-[var(--grayA7)]'>
                       or
                     </p>
                     <a
                       href='https://ui.prodkt.cloud'
-                      className='text-gray-9 text-nowrap text-xs'
+                      className='text-nowrap text-xs text-gray-9'
                     >
                       <StorybookLogo className='h-4 w-auto max-w-28 transition-colors duration-500 ease-in hover:brightness-150 hover:contrast-150' />
                     </a>
@@ -128,12 +128,12 @@ export default function IndexSectionFeatures2() {
                 </div>
               </div>
               <div className='w-full p-3 md:w-1/2'>
-                <div className='to-grayA-1 h-full overflow-hidden border border-[var(--grayA4)] bg-gradient-to-b from-[var(--grayA2)] p-8 ring ring-inset ring-[var(--grayA3)]'>
+                <div className='h-full overflow-hidden border border-[var(--grayA4)] bg-gradient-to-b from-[var(--grayA2)] to-grayA-1 p-8 ring ring-inset ring-[var(--grayA3)]'>
                   <div className='bottom-0 top-auto z-[1] mb-10 mt-auto flex size-auto flex-col gap-0 p-2'>
-                    <h3 className='gradientMask-to-t-10 from-gray-12 via-gray-11 to-gray-1 max-w-xs text-balance bg-gradient-to-t bg-clip-text pb-2 text-3xl font-semibold leading-10 tracking-tighter text-transparent'>
+                    <h3 className='gradientMask-to-t-10 max-w-xs text-balance bg-gradient-to-t from-gray-12 via-gray-11 to-gray-1 bg-clip-text pb-2 text-3xl font-semibold leading-10 tracking-tighter text-transparent'>
                       Astro SSR Turborepo
                     </h3>
-                    <p className='text-shadow-[0_0_20px_var(--grayA9)] bg-gradient-to-b from-[var(--grayA4)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono text-xs uppercase tracking-[0.275rem] text-transparent'>
+                    <p className='bg-gradient-to-b from-[var(--grayA4)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono text-xs uppercase tracking-[0.275rem] text-transparent text-shadow-[0_0_20px_var(--grayA9)]'>
                       Powered by Supabase
                     </p>
                   </div>
@@ -152,7 +152,7 @@ export default function IndexSectionFeatures2() {
                     <ReactLogomark className='pointer-events-none absolute left-0 top-0 m-0 h-12 w-auto select-none blur-sm' />
                   </div>
                   <div className='z-[1] mb-0 mt-24 flex grow flex-col items-stretch justify-stretch gap-4 p-2'>
-                    <h3 className='bg-radial-gradient from-gray-12 to-gray-9 h-full max-w-[75%] text-balance bg-clip-text pb-1 text-xl font-semibold leading-6 tracking-tighter text-transparent'>
+                    <h3 className='h-full max-w-[75%] text-balance bg-radial-gradient from-gray-12 to-gray-9 bg-clip-text pb-1 text-xl font-semibold leading-6 tracking-tighter text-transparent'>
                       Low barrier, high tech stack great for new and experienced
                       developers.
                     </h3>
@@ -161,17 +161,17 @@ export default function IndexSectionFeatures2() {
                     <a
                       href='https://github.com/prodkt/app'
                       target='_blank'
-                      className='bg-radial-gradient from-gray-12 to-gray-6 hover:to-gray-9 text-nowrap bg-clip-text pb-1 text-xs font-semibold tracking-tight text-transparent underline decoration-[var(--grayA6)] underline-offset-4 transition-colors duration-500 ease-in'
+                      className='text-nowrap bg-radial-gradient from-gray-12 to-gray-6 bg-clip-text pb-1 text-xs font-semibold tracking-tight text-transparent underline decoration-[var(--grayA6)] underline-offset-4 transition-colors duration-500 ease-in hover:to-gray-9'
                       rel='noreferrer'
                     >
                       View Project on GitHub
                     </a>
-                    <p className='aspect-1 bg-radial-gradient m-0 flex size-8 w-fit -translate-y-2 items-center justify-center text-nowrap rounded-full from-[var(--ghost-aa1)] to-[var(--grayA3)]  p-1 text-xs font-semibold leading-none tracking-tight text-[var(--grayA7)]'>
+                    <p className='m-0 flex aspect-1 size-8 w-fit -translate-y-2 items-center justify-center text-nowrap rounded-full bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--grayA3)]  p-1 text-xs font-semibold leading-none tracking-tight text-[var(--grayA7)]'>
                       or
                     </p>
                     <a
                       href='https://ui.prodkt.cloud'
-                      className='text-gray-9 text-nowrap text-xs'
+                      className='text-nowrap text-xs text-gray-9'
                     >
                       Continue exploring the site
                     </a>
@@ -179,20 +179,20 @@ export default function IndexSectionFeatures2() {
                 </div>
               </div>
               <div className='w-full p-3 md:w-1/2'>
-                <div className='bg-conic-gradient relative h-full overflow-hidden border border-[var(--greenA3)]  from-[var(--oliveA7)] to-[var(--olive7)] p-16 ring ring-inset ring-[var(--grayA3)] dark:from-[var(--olive1)]'>
+                <div className='relative h-full overflow-hidden border border-[var(--greenA3)] bg-conic-gradient  from-[var(--oliveA7)] to-[var(--olive7)] p-16 ring ring-inset ring-[var(--grayA3)] dark:from-[var(--olive1)]'>
                   <PowerLines className='absolute inset-0 m-auto blur-xl' />
 
                   <div className='bottom-0 top-auto z-[1] mb-10 mt-auto flex size-auto flex-col gap-12 p-2'>
                     <div className='bottom-0 top-auto z-[1] mb-0 mt-auto flex size-auto w-full flex-row items-center justify-center gap-4 p-2'>
                       <Docker />
 
-                      <p className='aspect-1 bg-radial-gradient m-0 flex size-8 w-fit items-center justify-center text-nowrap rounded-full from-[var(--ghost-aa1)] to-[var(--grayA3)]  p-1 text-xs font-semibold leading-none tracking-tight text-[var(--grassA9)]'>
+                      <p className='m-0 flex aspect-1 size-8 w-fit items-center justify-center text-nowrap rounded-full bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--grayA3)]  p-1 text-xs font-semibold leading-none tracking-tight text-[var(--grassA9)]'>
                         <Plus size={16} />
                       </p>
 
                       <Directus />
                     </div>
-                    <p className='text-md text-shadow-[0_0_20px_var(--grayA9)] mx-auto bg-gradient-to-b from-[var(--grayA4)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono uppercase tracking-[0.36rem] text-transparent'>
+                    <p className='text-md mx-auto bg-gradient-to-b from-[var(--grayA4)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono uppercase tracking-[0.36rem] text-transparent text-shadow-[0_0_20px_var(--grayA9)]'>
                       DB + CMS + Docker
                     </p>
                   </div>
@@ -237,16 +237,16 @@ export default function IndexSectionFeatures2() {
               <div className='w-full p-3 md:w-1/2'>
                 <div className='relative h-full overflow-hidden border border-[var(--grayA4)]  bg-gradient-to-b from-[var(--gray4)] to-[var(--gray1)] ring ring-inset ring-[var(--grayA3)] dark:from-[var(--gray1)]'>
                   <div className='0 bottom-0 top-auto z-[1] m-0 flex size-auto h-full flex-col gap-8 p-10'>
-                    <p className='text-shadow-[0_0_20px_var(--grayA9)] bg-gradient-to-b from-[var(--grayA9)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono text-xs uppercase tracking-[0.175rem] text-transparent'>
+                    <p className='bg-gradient-to-b from-[var(--grayA9)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono text-xs uppercase tracking-[0.175rem] text-transparent text-shadow-[0_0_20px_var(--grayA9)]'>
                       <em className='not-italic text-[var(--amber9)]'>
                         Hiring
                       </em>{' '}
                       or know someone that is?
                     </p>
-                    <h3 className='from-gray-12 to-gray-10 max-w-xs text-balance bg-gradient-to-b bg-clip-text pb-2 text-4xl font-semibold leading-8 tracking-tighter text-transparent'>
+                    <h3 className='max-w-xs text-balance bg-gradient-to-b from-gray-12 to-gray-10 bg-clip-text pb-2 text-4xl font-semibold leading-8 tracking-tighter text-transparent'>
                       {`I'm`} on the search for my next challenge.
                     </h3>
-                    <h3 className='text-md from-gray-10 to-gray-8 h-full max-w-[75%] text-balance bg-gradient-to-br bg-clip-text pb-1 font-semibold leading-6 tracking-tight  text-transparent'>
+                    <h3 className='text-md h-full max-w-[75%] text-balance bg-gradient-to-br from-gray-10 to-gray-8 bg-clip-text pb-1 font-semibold leading-6 tracking-tight  text-transparent'>
                       Leave the company name in the chat below and I'll take it
                       from there. Though feel free to share any contact you
                       think would be a ideal to make connection with.

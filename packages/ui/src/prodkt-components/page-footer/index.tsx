@@ -1,12 +1,12 @@
 /* eslint-disable jsdoc/require-returns */
 
-import { ProdktLogo } from '../../brands/prodkt'
-import { SocialMedia } from '../social-media'
+import { ProdktLogo } from '@/brands/prodkt'
+import { SocialMedia } from '@/prodkt-components/social-media'
 
 /**
  *
  */
-function PageFooter() {
+export default function PageFooter() {
   return (
     <section className='w-full bg-transparent'>
       <div className='flex flex-row flex-wrap'>
@@ -159,5 +159,3 @@ function PageFooter() {
     </section>
   )
 }
-
-export { PageFooter }

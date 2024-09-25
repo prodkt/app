@@ -1,6 +1,8 @@
 // Generated from SVG to Code Figma Plugin
 
-export const GithubCat = (props) => (
+import type { SVGProps } from 'react'
+
+export const GithubCat = (props: SVGProps<SVGSVGElement>) => (
   <svg
     height='373'
     width='355'

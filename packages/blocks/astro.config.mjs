@@ -21,15 +21,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://astro.build/config
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      output: {
-        entryFileNames: 'client.js',
-        chunkFileNames: 'client.js',
-        assetFileNames: 'client.[ext]',
-      },
-    },
-  },
+  // build: {
+  //   rollupOptions: {
+  //     output: {
+  //       entryFileNames: 'client.js',
+  //       chunkFileNames: 'client.js',
+  //       assetFileNames: 'client.[ext]',
+  //     },
+  //   },
+  // },
   integrations: [
     react({
       experimentalReactChildren: true,
