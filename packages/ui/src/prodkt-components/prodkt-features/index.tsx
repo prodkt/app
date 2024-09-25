@@ -76,7 +76,7 @@ export default function IndexSectionFeatures2() {
                           <div className=' absolute left-[calc(75%-2rem)] z-[1] size-16 -translate-y-1/2 border border-dashed border-[var(--gray8)] bg-[var(--grayA3)] p-1 backdrop-blur '>
                             <div className='z-[1] flex size-full items-center justify-center border-[var(--gray8)] bg-[var(--grayA2)] text-[var(--gray12)]'>
                               <p>
-                                <Plus class='z-[3]' />
+                                <Plus className='z-[3]' />
                                 <Plus className='absolute inset-0 m-auto blur' />
                               </p>
                             </div>

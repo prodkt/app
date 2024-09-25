@@ -822,7 +822,7 @@
 
   body,
   .docs-story {
-    @apply bg-[var(--gray1)] text-foreground;
+    @apply bg-[var(--gray2)] text-foreground;
   }
 }
 

@@ -72,7 +72,7 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
               <div className='absolute inset-y-0 left-auto right-0 my-0 ml-auto mr-0 flex h-full flex-col'>
                 <BackgroundPattern className='gradientMask-workShowcase absolute inset-0 z-0 m-0 min-h-full min-w-full text-[var(--redA2)]' />
                 <div className='p-0' />
-                <div className='relative flex h-full min-h-8 min-w-8 flex-row items-center justify-center border border-[var(--ghost-aa1)] bg-[var(--ghost-aa1)] p-0'>
+                <div className='relative flex h-full min-h-8 min-w-8 flex-row items-center justify-center border border-[var(--ghost-a2)] bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
                 <div className='bg-[var(--ghost-aa1)] p-0' />
@@ -102,7 +102,7 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                 <div className='absolute left-3 top-3 flex w-auto flex-row flex-nowrap items-center justify-start gap-2'>
                   <PresstekLogo className='h-2 max-h-2 w-auto text-[var(--ghost-a4)]' />
                   <Badge className='text-[0.5rem]'>ProFire Digital Media</Badge>
-                  <p className='text-[0.5rem] text-[var(--indigoA6)]'>
+                  <p className='text-[0.5rem] text-[var(--redA11)]'>
                     2540 dots/inch (100 dots/mm)
                   </p>
                 </div>
@@ -132,7 +132,7 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                 <div className='border-var(--ghost-aa1) flex h-full min-h-8 min-w-8 flex-row items-center justify-center border bg-[var(--ghost-aa1)] p-0'>
                   <RegistrationMark className='opacity-50 mix-blend-luminosity brightness-50 contrast-50' />
                 </div>
-                <div className='bg-[var(--accent1)] p-0' />
+                <div className='bg-[var(--redA2)] p-0' />
               </div>
               <div className='absolute inset-y-0 left-auto right-0 my-0 ml-auto mr-0 flex h-full flex-col'>
                 <div className='bg-[var(--ghost-aa1)] p-0' />
@@ -163,7 +163,7 @@ const BrandingShowcase = React.forwardRef<HTMLDivElement, Showcase>(
                 />
                 <div className='absolute left-3 top-3 flex w-auto flex-row flex-nowrap items-center justify-start gap-2'>
                   <PresstekLogo className='h-2 max-h-2 w-auto text-[var(--ghost-a4)]' />
-                  <p className='text-[0.5rem] text-[var(--grayA5)]'>
+                  <p className='text-[0.5rem] text-[var(--ghost-a4)]'>
                     Press Plate
                   </p>
                 </div>
