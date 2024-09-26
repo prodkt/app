@@ -29,16 +29,11 @@
   --controls-box-shadow-default: 0 0 2px 1px rgba(0, 0, 0, 0.08);
 }
 
-.react-flow__attribution {
-  visibility: hidden;
-  display: none;
-}
 /* The outermost container */
 .react-flow {
 }
 /* The inner container */
 .react-flow__renderer {
-  @apply bg-gradient-to-br from-[var(--grayA1)] to-[var(--gray1)];
 }
 /* Zoom & pan pane */
 .react-flow__zoompane {
@@ -55,18 +50,24 @@
 /* Applied to each Edge in the flow */
 .react-flow__edge {
 }
-/* .selected	Added to an Edge when selected */
-.react-flow__edge {
-}
-/* .animated	Added to an Edge when its animated prop is true */
-.react-flow__edge {
-}
-/* .updating	Added to an Edge while it gets updated via onReconnect */
-.react-flow__edge {
-}
+
 /* The SVG <path /> element of an Edge */
 .react-flow__edge-path {
-  @apply stroke-[var(--grayA9)] stroke-1 ease-in-out;
+  stroke: url(#edge-gradient);
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  stroke-dasharray: 1 3;
+  stroke-linejoin: round;
+  marker-end: none;
+}
+
+.react-flow__edge .react-flow__edge-path {
+  stroke-opacity: 0.75;
+}
+
+.react-flow__edgelabel-renderer button {
+  @apply size-6 flex items-center content-center place-content-center place-items-center pb-0.5 justify-center leading-[100%] rounded-full bg-radial-gradient from-[var(--grayA6)] backdrop-blur-[2px] to-[var(--grayA1)] text-lg text-[var(--ghost-a12)];
+  border: 0px solid transparent;
 }
 /* The SVG <text /> element of an Edge label */
 .react-flow__edge-text {
@@ -76,6 +77,7 @@
 }
 /* Applied to the current connection line */
 .react-flow__connection {
+  /* @apply bg-gradient-to-t from-[var(--gray12)] to-[var(--gray1)]; */
 }
 /* The SVG <path /> of a connection line */
 .react-flow__connection-path {
@@ -85,7 +87,7 @@
 }
 /* Applied to each Node in the flow */
 .react-flow__node {
-  @apply bg-[var(--grayA4)] backdrop-blur border-[var(--grayA4)] rounded-2xl px-8 py-4;
+  @apply bg-[var(--gray1)] backdrop-blur border-[var(--grayA4)] rounded-2xl px-8 py-4;
   @apply drop-shadow-2xl shadow-[var(--grayA2)];
 
   & .selected {
@@ -93,7 +95,7 @@
 }
 /* .selected	Added to a Node when selected. */
 .react-flow__node {
-  @apply after:bg-gradient-to-br after:from-[var(--grayA1)] after:to-[var(--grayA1)] after:blur-3xl after:w-full after:h-full after:top-0 after:bottom-0 after:left-0 after:right-0 after:z-[10] after:absolute;
+  @apply after:bg-gradient-to-br after:from-[var(--grayA1)] after:to-[var(--ghost-aa4)] after:blur-3xl after:w-full after:h-full after:top-0 after:bottom-0 after:left-0 after:right-0 after:z-[10] after:absolute;
 }
 /* Added when Node type is "default" */
 .react-flow__node-default {
@@ -112,50 +114,53 @@
 }
 /* Applied to each <Handle /> component */
 .react-flow__handle {
+  @apply size-4 bg-[var(--grayA9)] border border-[var(--grayA12)] rounded-full shadow-[var(--ghost-aa12)] shadow-xl ring-1 ring-inset ring-[var(--grayA9)];
+  @apply transition-all ease-in-out duration-500;
 }
+
+.react-flow__handle.source {
+  right: -20px;
+}
+
+.react-flow__handle.target {
+  left: -20px;
+}
+
+.react-flow__node:focus {
+}
+
 /* Applied when a handle's Position is set to "top" */
 .react-flow__handle-top {
 }
 /* Applied when a handle's Position is set to "right" */
 .react-flow__handle-right {
+  /* @apply right-[-12px]; */
 }
 /* Applied when a handle's Position is set to "bottom" */
 .react-flow__handle-bottom {
 }
 /* Applied when a handle's Position is set to "left" */
 .react-flow__handle-left {
+  /* @apply left-[-12px]; */
 }
 /* Added to a Handle when a connection line is above a handle. */
 .connectingfrom {
+  @apply size-8 transition-all ease-in-out duration-1000;
 }
 /* Added to a Handle when a connection line is above a handle. */
 .connectingto {
+  @apply size-8 transition-all ease-in-out duration-1000;
 }
 /*  */
-.valid
-  Added
-  to
-  a
-  Handle
-  when
-  a
-  connection
-  line
-  is
-  above
-  and
-  the
-  connection
-  is
-  valid {
+.valid {
 }
 /* Applied to the <Background /> component */
 .react-flow__background {
-  @apply bg-[var(--gray2)];
+  @apply bg-gradient-to-br from-[var(--gray6)] to-[var(--gray5)] dark:from-[var(--gray2)] dark:to-[var(--gray1)];
 }
 /* Applied to the <MiniMap /> component */
 .react-flow__minimap {
-  @apply bg-[var(--grayA1)] rounded-2xl border overflow-clip backdrop-blur before:opacity-0 after:opacity-0;
+  @apply bg-[var(--ghost-aa7)] rounded-2xl border border-[var(--grayA3)] overflow-clip backdrop-blur before:opacity-0 after:opacity-0;
 }
 /* Applied to the <Controls /> component */
 .react-flow__controls {
@@ -163,7 +168,12 @@
 }
 
 .react-flow__panel {
-  @apply bg-[var(--grayA1)] backdrop-blur;
+  @apply bg-[var(--ghost-aa8)] dark:bg-[var(--grayA3)] ring-1 ring-[var(--grayA2)] backdrop-blur border-none;
+}
+
+.react-flow__attribution {
+  visibility: hidden;
+  display: none;
 }
 
 .react-flow__minimap::before {

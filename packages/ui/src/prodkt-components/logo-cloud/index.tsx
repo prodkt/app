@@ -12,10 +12,10 @@ const LogoCloud = React.forwardRef<
       className='relative -top-px z-[6] flex w-fit flex-row items-center justify-center -space-x-px backdrop-blur'
       {...props}
     >
-      <div className='absolute -left-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none bg-[var(--gray4)] bg-clip-content' />
-      <div className='absolute -right-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none bg-[var(--gray4)] bg-clip-content' />
-      <div className='absolute -bottom-1 -left-1 top-auto my-0 size-2 rounded-none bg-[var(--gray4)] bg-clip-content' />
-      <div className='absolute -bottom-1 -right-1 top-auto my-0 size-2 rounded-none bg-[var(--gray4)] bg-clip-content' />
+      <div className='absolute -left-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none bg-[var(--gray8)] dark:bg-[var(--gray4)] bg-clip-content' />
+      <div className='absolute -right-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none bg-[var(--gray8)] dark:bg-[var(--gray4)] bg-clip-content' />
+      <div className='absolute -bottom-1 -left-1 top-auto my-0 size-2 rounded-none bg-[var(--gray8)] dark:bg-[var(--gray4)] bg-clip-content' />
+      <div className='absolute -bottom-1 -right-1 top-auto my-0 size-2 rounded-none bg-[var(--gray8)] dark:bg-[var(--gray4)] bg-clip-content' />
       {children}
     </div>
   )
@@ -28,7 +28,7 @@ const CloudLogo = React.forwardRef<
   return (
     <div
       ref={ref}
-      className='mx-auto flex h-24 w-fit min-w-32 items-center justify-center border border-[var(--grayA2)] p-4 text-xs transition-all duration-700 hover:min-w-48'
+      className='mx-auto flex h-24 w-fit min-w-32 items-center justify-center border border-[var(--gray6)] dark:border-[var(--grayA2)] p-4 text-xs transition-all duration-700 hover:min-w-48'
       {...props}
     >
       {children}

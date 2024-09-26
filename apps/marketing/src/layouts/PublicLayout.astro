@@ -39,7 +39,7 @@ type AccentColor =
   | 'lime'
   | 'mint'
   | 'sky'
-type GrayColor = 'auto' | 'gray' | 'mauve' | 'slate' | 'sage' | 'olive' | 'sand'
+type GrayColor = 'gray' | 'mauve' | 'slate' | 'sage' | 'olive' | 'sand'
 
 interface ThemeOptions {
   appearance: Appearance
@@ -56,8 +56,8 @@ interface Props {
 
 const {
   accentColor = 'violet',
-  grayColor = 'mauve',
-  appearance = 'light',
+  grayColor = 'slate',
+  appearance = 'dark',
 } = Astro.props
 ---
 
@@ -72,13 +72,33 @@ const {
   data-panel-background='translucent'
   data-radius='large'
   data-scaling='100%'
+  transition:persist
+  transition:persist-props
 >
   <head>
     <BaseHead />
     <PostHog />
     <Plutio />
     <ViewTransitions />
+    <script>
+      // @ts-ignore
+      function setDarkMode(document: any) {
+        let theme = localStorage['theme'] ? 'dark-theme' : 'light-theme'
+        document.documentElement.dataset.theme = theme
+      }
 
+      setDarkMode(document)
+
+      document.addEventListener('astro:before-swap', (event) => {
+        // Pass the incoming document to set the theme on it
+        setDarkMode(event.newDocument)
+      })
+
+      document.addEventListener('astro:page-load', (event) => {
+        // Pass the incoming document to set the theme on it
+        setDarkMode(event)
+      })
+    </script>
     <script>
       document.addEventListener('click', function (e: MouseEvent) {
         const target = e.target as HTMLElement
@@ -112,12 +132,17 @@ const {
     </script>
   </head>
   <body
-    class='w-[100dvw] max-w-[100dvw] h-screen min-h-[100dvh] max-h-[100dvh] relative overflow-x-hidden overflow-y-hidden scroll-m-0 scroll-p-0 !p-0 sm:!p-4 m-0 bg-[var(--grayA12)]'
+    class='w-[100dvw] max-w-[100dvw] h-screen min-h-[100dvh] max-h-[100dvh] relative overflow-x-hidden overflow-y-hidden scroll-m-0 scroll-p-0 !p-0 sm:!p-4 m-0 bg-[var(--gray12)]'
   >
     <div
-      class='relative flex flex-col items-center justify-center rounded-3xl h-[calc(100dvh_-_32px)] w-full z-[0] bg-[var(--grayA12)] dark:bg-[var(--gray1)] overflow-hidden border border-[var(--grayA6)] dark:border-[var(--gray5)]'
+      class='relative flex flex-col items-center justify-center rounded-3xl h-[calc(100dvh_-_32px)] w-full z-[0] bg-[var(--gray2)] overflow-hidden border border-[var(--grayA6)] dark:border-[var(--gray5)]'
     >
-      <ThemeProvider attribute='class' client:only='react'>
+      <ThemeProvider
+        attribute='class'
+        transition:persist-props
+        client:load
+        client:only='react'
+      >
         <Theme
           !hasBackground
           asChild
@@ -128,6 +153,7 @@ const {
           radius='large'
           scaling='100%'
           client:only='react'
+          transition:persist-props
         >
           <div
             class='absolute rounded-2xl top-4 w-full bg-transparent max-w-[calc(100%_-_32px)] overflow-hidden z-[1]'
