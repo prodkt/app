@@ -10,12 +10,12 @@ export default function PageFooter() {
   return (
     <section className='w-full bg-transparent'>
       <div className='flex flex-row flex-wrap'>
-        <div className='w-full bg-transparent px-6 pt-10 sm:w-1/2 sm:pt-10 md:w-4/12 lg:w-3/12 lg:pb-10 lg:pl-12'>
+        <div className='w-full bg-[var(--ghost-aa2)] gradientMask-to-b-10 px-6 pt-10 sm:w-1/2 sm:pt-10 md:w-4/12 lg:w-3/12 lg:pb-10 lg:pl-12'>
           <div className='top-12 mx-auto max-w-md sm:sticky lg:relative'>
             <a className='mb-12 inline-block text-3xl' href='/'>
               <ProdktLogo className='h-9' />
             </a>
-            <div className='mb-12 text-xs'>
+            <div className='mb-12 text-sm'>
               <p>Working remote</p>
               <p>Las Vegas, Nevada</p>
               <p>Boise, Idaho</p>
@@ -25,30 +25,42 @@ export default function PageFooter() {
             </div>
           </div>
         </div>
-        <div className='w-full px-6 py-4 sm:w-1/2 sm:py-10 md:w-7/12 lg:w-9/12 lg:py-20 lg:pl-36'>
-          <div className='-mx-4 mt-2 flex flex-wrap border-b border-[var(--grayA3)] pb-10'>
+        <div className='lg:-mx-4 w-full bg-[var(--ghost-aa2)] sm:bg-[var(--grayA1)] px-6 sm:px-12 py-4 sm:w-1/2 sm:py-10 md:w-7/12 lg:w-9/12 lg:py-20 lg:pl-16'>
+          <div className='mt-2 flex flex-wrap border-b-4 border-[var(--ghost-a1)] pb-10 lg:pl-0'>
             <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/4'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Exploration
               </h3>
-              <ul>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/flows'>
+              <ul className='flex flex-col gap-px'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/flows'
+                  >
                     Flows
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/codeblocks'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/codeblocks'
+                  >
                     Codeblocks
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/files'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/files'
+                  >
                     File Manager
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/projects'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/projects'
+                  >
                     Projects
                   </a>
                 </li>
@@ -58,29 +70,44 @@ export default function PageFooter() {
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Bryan Funk
               </h3>
-              <ul>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/work'>
+              <ul className='flex flex-col gap-px'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/work'
+                  >
                     Work
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/blog'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/blog'
+                  >
                     Blog
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/work-history'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/work-history'
+                  >
                     Work History
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/work-history'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/work-history'
+                  >
                     Resume
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/type-one'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/type-one'
+                  >
                     Type 1 Diabetes
                   </a>
                 </li>
@@ -90,57 +117,79 @@ export default function PageFooter() {
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Prodkt
               </h3>
-              <ul>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/about'>
+              <ul className='flex flex-col gap-px'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/about'
+                  >
                     What is Prodkt?
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='https://ui.prodkt.cloud'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='https://ui.prodkt.cloud'
+                  >
                     Component Library
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/roadmaps'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/roadmaps'
+                  >
                     Roadmaps
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/pricing'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/pricing'
+                  >
                     Pricing
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/docs'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/docs'
+                  >
                     Documentation
                   </a>
                 </li>
-                <li className='mb-6 text-xs'>
-                  <a className='hover:underline' href='/'>
+                <li className='ml-[-16px] text-sm w-full flex flex-row items-stretch justify-stretch'>
+                  <a
+                    className='underline-offset-[12px] underline flex flex-row items-center py-2 px-4 justify-start text-[var(--grayA10)] hover:text-[var(--grayA12)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'
+                    href='/'
+                  >
                     API
                   </a>
                 </li>
               </ul>
             </div>
-            <div className='px-4 sm:w-1/2 sm:w-full md:w-1/2 lg:w-1/4'>
+            <div className='px-4 sm:w-1/2 sm:w-full md:w-1/2 lg:w-full'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Contact Me
               </h3>
-              <ul>
+              <ul className='flex flex-col xl:flex-row gap-px xl:gap-8'>
                 <li className='mb-6'>
-                  <h4 className='mb-2 text-xs'>Mobile</h4>
+                  <h4 className='flex flex-row items-center py-2 px-0 text-sm justify-start text-[var(--grayA10)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'>
+                    Mobile
+                  </h4>
                   <a
-                    className='text-xs text-[var(--accent11)] hover:underline dark:text-[var(--accent10)]'
+                    className='text-sm text-[var(--accent11)] underline dark:text-[var(--accent10)]'
                     href='/'
                   >
                     +1 208 954 4981
                   </a>
                 </li>
                 <li className='mb-6'>
-                  <h4 className='mb-2 text-xs'>Email</h4>
+                  <h4 className='flex flex-row items-center py-2 px-0 text-sm justify-start text-[var(--grayA10)] transition-colors decoration-[var(--grayA1)] duration-500 hover:decoration-[var(--grayA6)] w-full'>
+                    Email
+                  </h4>
                   <a
-                    className='text-xs  text-[var(--accent11)] hover:underline dark:text-[var(--accent10)]'
+                    className='text-sm  text-[var(--accent11)] underline dark:text-[var(--accent10)]'
                     href='mailto:bryan.funk@prodkt.cloud'
                   >
                     bryan.funk@prodkt.cloud
@@ -149,8 +198,8 @@ export default function PageFooter() {
               </ul>
             </div>
           </div>
-          <div className='relative mt-8 pb-32 lg:pb-0'>
-            <p className='font-mono text-xs uppercase tracking-widest'>
+          <div className='relative mt-4 pb-12 lg:pb-0'>
+            <p className='font-mono text-xs uppercase tracking-widest text-[var(--ghost-a2)]'>
               © Copyright 2024 Bryan Funk
             </p>
           </div>
