@@ -33,9 +33,9 @@ import Signature from './signature'
 export default function IndexSectionFeatures2() {
   return (
     <React.Fragment>
-      <section className='overflow-hidden bg-[var(--gray1)]'>
+      <section className='overflow-hidden'>
         <div className='container mx-auto px-4'>
-          <div className='mx-auto max-w-4xl pb-36 pt-28'>
+          <div className='mx-auto max-w-4xl pb-16 pt-4 md:pt-8 lg:pb-24 lg:pt-16'>
             <div className='-m-3 flex flex-wrap'>
               <div className='w-full p-3 md:w-1/2'>
                 <div className='bg-radial-gradient from-gray-4 to-gray-4 relative flex h-auto flex-col items-stretch gap-4 overflow-hidden border border-[var(--grayA3)] p-10 ring ring-inset ring-[var(--grayA2)]'>
@@ -202,7 +202,7 @@ export default function IndexSectionFeatures2() {
 
                     <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-24 translate-x-10 brightness-75 contrast-100' />
                     <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-40 translate-x-10 mix-blend-color-burn blur-2xl brightness-75 contrast-150' />
-                    <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-40 translate-x-10 translate-y-12 scale-y-150 mix-blend-color-burn blur-2xl brightness-75 contrast-150' />
+                    <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-40 translate-x-10 translate-y-12 scale-y-150 mix-blend-color-burn gradientMask-to-b blur-2xl brightness-50 contrast-10' />
                     <DataCube className=' gradientMask-to-t-50 inset-0 mx-auto origin-center mix-blend-color-dodge' />
                   </div>
                   <div className='z-10 flex flex-wrap items-center justify-center'>
@@ -235,7 +235,7 @@ export default function IndexSectionFeatures2() {
                 </div>
               </div>
               <div className='w-full p-3 md:w-1/2'>
-                <div className='relative h-full overflow-hidden border border-[var(--grayA4)]  bg-gradient-to-b from-[var(--gray4)] to-[var(--gray1)] ring ring-inset ring-[var(--grayA3)] dark:from-[var(--gray1)]'>
+                <div className='relative h-full overflow-hidden border border-[var(--grayA4)]  bg-gradient-to-b from-[var(--gray4)] ring ring-inset ring-[var(--grayA3)] dark:from-[var(--ghost-aa8)]'>
                   <div className='0 bottom-0 top-auto z-[1] m-0 flex size-auto h-full flex-col gap-8 p-10'>
                     <p className='text-shadow-[0_0_20px_var(--grayA9)] bg-gradient-to-b from-[var(--grayA9)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono text-xs uppercase tracking-[0.175rem] text-transparent'>
                       <em className='not-italic text-[var(--amber9)]'>
@@ -251,7 +251,7 @@ export default function IndexSectionFeatures2() {
                       from there. Though feel free to share any contact you
                       think would be a ideal to make connection with.
                     </h3>
-                    <div className=' bottom-0 mb-0 h-fit max-h-fit w-full'>
+                    <div className='hidden md:block bottom-0 mb-0 h-fit max-h-fit w-full'>
                       <Signature className='contrast-00 absolute inset-x-0 z-0 mx-auto mt-auto h-auto max-w-56 -translate-x-16 translate-y-4 rotate-6 -skew-y-12 skew-x-12 scale-x-105 fill-transparent  stroke-[var(--grayA5)]  stroke-1 text-[var(--grayA3)] brightness-100' />
                       <Signature className='absolute inset-x-0 z-0 mx-auto mt-auto h-auto max-w-56 -translate-x-16 translate-y-4 rotate-6 -skew-y-12 skew-x-12 scale-x-105 animate-pulse fill-transparent stroke-[var(--ghost-a12)]  stroke-[4px] text-[var(--grayA9)] mix-blend-difference blur-lg brightness-0 contrast-200' />
                       <Signature className='absolute inset-x-0 z-0 mx-auto mt-auto h-auto max-w-56 -translate-x-16 translate-y-4 rotate-6 -skew-y-12 skew-x-12 scale-x-105 fill-transparent stroke-[var(--grayA10)] stroke-1  text-[var(--grayA9)] mix-blend-difference blur brightness-100 contrast-150' />
@@ -263,7 +263,7 @@ export default function IndexSectionFeatures2() {
                   <img
                     src={Portrait}
                     alt=''
-                    className='gradientMask-to-t-50 absolute inset-y-0 my-auto translate-y-1/4 opacity-50 mix-blend-difference contrast-125 invert dark:brightness-50 dark:contrast-[0.81] dark:invert-0'
+                    className='select-none pointer-events-none gradientMask-to-t-50 absolute inset-y-0 my-auto translate-y-1/4 opacity-25 md:opacity-50 mix-blend-difference contrast-125 invert dark:brightness-50 dark:contrast-[0.81] dark:invert-0'
                   />
                 </div>
               </div>
