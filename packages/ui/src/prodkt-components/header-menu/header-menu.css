@@ -7,8 +7,8 @@
   background-color: transparent;
   border: 0px solid transparent;
   width: auto;
-  height: 5px;
-  border-radius: 9999px;
+  height: 1px;
+  @apply rounded-t-[100%];
 }
 .prodkt-header-menu::-webkit-scrollbar-button {
   background-color: transparent;
@@ -21,12 +21,15 @@
   border-radius: 9999px;
 }
 .prodkt-header-menu::-webkit-scrollbar-thumb {
-  background-color: var(--grayA8);
+  /* background-color: var(--grayA1); */
+  @apply bg-gradient-to-r from-[var(--grayA1)] from-40% via-[var(--grayA9)] to-60% to-[var(--grayA1)];
   border: 0px solid var(--grayA2);
   border-radius: 9999px;
 }
 .prodkt-header-menu::-webkit-scrollbar-track {
-  background-color: var(--gray4);
+  background-color: var(--grayA1);
+  @apply bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA4)] to-[var(--grayA1)];
+  /* @apply bg-gradient-to-r from-[var(--grayA1)] from-45% via-45% via-[var(--grayA3)] to-65% to-[var(--grayA1)]; */
   border: 0px solid var(--gray5);
   border-right-width: 0;
   border-radius: 9999px;
@@ -35,4 +38,5 @@
   background-color: transparent;
   border: 0px solid transparent;
   border-radius: 9999px;
+  @apply bottom-[1px];
 }

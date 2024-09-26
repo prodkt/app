@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Labil Grotesk';
+  src: url('LabilGrotesk-Medium.eot');
+  src:
+    url('LabilGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+    url('LabilGrotesk-Medium.woff2') format('woff2'),
+    url('LabilGrotesk-Medium.woff') format('woff'),
+    url('LabilGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Labil Grotesk';
+  src: url('LabilGrotesk-Light.eot');
+  src:
+    url('LabilGrotesk-Light.eot?#iefix') format('embedded-opentype'),
+    url('LabilGrotesk-Light.woff2') format('woff2'),
+    url('LabilGrotesk-Light.woff') format('woff'),
+    url('LabilGrotesk-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Labil Grotesk';
+  src: url('LabilGrotesk-Bold.eot');
+  src:
+    url('LabilGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+    url('LabilGrotesk-Bold.woff2') format('woff2'),
+    url('LabilGrotesk-Bold.woff') format('woff'),
+    url('LabilGrotesk-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Labil Grotesk';
+  src: url('LabilGrotesk-Regular.eot');
+  src:
+    url('LabilGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+    url('LabilGrotesk-Regular.woff2') format('woff2'),
+    url('LabilGrotesk-Regular.woff') format('woff'),
+    url('LabilGrotesk-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

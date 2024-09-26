@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { HeaderMenu } from '.'
-import { Footer } from '../footer'
-import { Header } from '../header'
 
 const meta: Meta<typeof HeaderMenu> = {
   component: HeaderMenu,

@@ -1,0 +1,10 @@
+{
+  "name": "@prodkt/helpers",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*"
+  },
+  "main": "./src/index.ts"
+}

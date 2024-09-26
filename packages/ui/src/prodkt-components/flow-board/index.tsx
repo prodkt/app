@@ -101,14 +101,15 @@ const Flow = ({
         nodeStrokeColor={''}
         nodeColor={''}
         maskColor={''}
-        maskStrokeWidth={0}
+        maskStrokeWidth={2}
         maskStrokeColor={''}
       />
       <svg>
         <defs>
           <linearGradient id='edge-gradient'>
-            <stop offset='0%' stopColor='var(--grayA2)' />
-            <stop offset='100%' stopColor='var(--accentA9)' />
+            <stop offset='1%' stopColor='var(--accentA4)' />
+            <stop offset='50%' stopColor='var(--accent9)' />
+            <stop offset='99%' stopColor='var(--accentA4)' />
           </linearGradient>
 
           <marker
@@ -122,7 +123,7 @@ const Flow = ({
             orient='auto'
           >
             <circle
-              stroke='var(--accent-9)'
+              stroke='var(--accent9)'
               strokeWidth='0'
               strokeOpacity='1'
               r='3'

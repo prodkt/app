@@ -1,0 +1,8 @@
+{
+  "extends": "@prodkt/tsconfig/react.json",
+  "include": ["src/**/*", "index.d.ts"],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}

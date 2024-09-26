@@ -138,7 +138,7 @@ const {
             class='prodkt-app-container relative bottom-0 mb-0 mt-auto top-auto h-auto min-h-[calc(100%_-_0px)] w-full z-[0] bg-[var(--gray1)] dark:bg-[var(--gray2)] overflow-x-hidden overflow-y-auto scrollbarGutter-stable'
           >
             <slot />
-            <PageFooter client:load />
+            <PageFooter client:only='react' />
           </div>
           <div
             class='hidden absolute bottom-8 overflow-hidden bg-transparent rounded-2xl shadow-2xl w-auto max-w-[calc(100%_-_32px)]'

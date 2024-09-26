@@ -6,7 +6,7 @@ export default create({
   fontBase: 'var(--font-labil-grotesk)',
   fontCode: 'var(--font-ibm-plex-mono)',
   appContentBg: grayDark.gray3,
-  appBg: grayDark.gray3,
+  appBg: grayDark.gray1,
   barBg: grayDark.gray3,
   inputBg: grayDark.gray3,
   buttonBg: grayDark.gray3,

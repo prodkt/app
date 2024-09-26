@@ -1,0 +1,14 @@
+{
+  "name": "@prodkt/constants",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*"
+  },
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@nivo/core": "^0.87.0",
+    "lucide-react": "^0.446.0"
+  }
+}

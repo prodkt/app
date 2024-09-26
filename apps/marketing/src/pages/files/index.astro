@@ -40,7 +40,7 @@ const data = (await response.json()) as any
       data ? (
         data.fileData.map((item: any) => (
           <PageFile
-            client:load
+            client:only='react'
             title={item.title}
             downloadLink={item.src.filename_download ?? null}
             src={item.src.filename_disk ?? null}

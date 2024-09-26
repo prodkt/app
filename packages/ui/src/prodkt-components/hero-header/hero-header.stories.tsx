@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { HeroHeader } from '.'
-import { Footer } from '../footer'
 import { Header } from '../header'
 
 const meta: Meta<typeof HeroHeader> = {
@@ -37,7 +36,6 @@ export const Default: Story = {
     <>
       <Header />
       <HeroHeader />
-      <Footer />
     </>
   ),
 }
