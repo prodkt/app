@@ -131,28 +131,6 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind base;
-:root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --card: var(--gray2);
-  --card-foreground: var(--gray11);
-  --popover: var(--gray3);
-  --popover-foreground: var(--gray11);
-  --border: var(--grayA4);
-  --input: var(--gray4);
-  --primary: var(--accent9);
-  --primary-foreground: var(--accent2);
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 100% 50%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 215 20.2% 65.1%;
-  --radius: 0.5rem;
-}
 
 [data-accent-color='amber'] {
   --accent1: var(--amber1);
@@ -964,6 +942,29 @@
   --grayA10: var(--slateA10);
   --grayA11: var(--slateA11);
   --grayA12: var(--slateA12);
+}
+
+:root {
+  --background: var(--gray2);
+  --foreground: var(--gray11);
+  --muted: var(--gray3);
+  --muted-foreground: var(--gray11);
+  --card: var(--gray2);
+  --card-foreground: var(--gray11);
+  --popover: var(--gray3);
+  --popover-foreground: var(--gray11);
+  --border: var(--grayA4);
+  --input: var(--gray4);
+  --primary: var(--accent9);
+  --primary-foreground: var(--accent2);
+  --secondary: var(--violet9);
+  --secondary-foreground: var(--violet12);
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 215 20.2% 65.1%;
+  --radius: 0.5rem;
 }
 
 @layer base {

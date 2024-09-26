@@ -118,7 +118,7 @@ export function ModeToggle() {
       root.setAttribute('data-theme', 'light-theme')
       root.setAttribute(
         'style',
-        'color-scheme: light-theme;; background-color: var(--gray1);',
+        'color-scheme: light-theme; background-color: var(--gray2)',
       )
     } else {
       root.classList.add('dark-theme')
@@ -128,7 +128,7 @@ export function ModeToggle() {
       root.setAttribute('data-theme', 'dark-theme')
       root.setAttribute(
         'style',
-        'color-scheme: dark-theme; background-color: var(--gray1);',
+        'color-scheme: dark-theme; background-color: var(--gray2)',
       )
     }
   }, [theme])
