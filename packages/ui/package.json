@@ -18,32 +18,37 @@
       "require": "./dist/brands/*/index.cjs",
       "default": "./dist/brands/*/index.js"
     },
-    "./prodkt-components/*": {
-      "types": "./dist/prodkt-components/*/index.d.ts",
-      "require": "./dist/prodkt-components/*/index.cjs",
-      "default": "./dist/prodkt-components/*/index.js"
+    "./icons/*": {
+      "types": "./dist/icons/*/index.d.ts",
+      "require": "./dist/icons/*/index.cjs",
+      "default": "./dist/icons/*/index.js"
     },
     "./blocks/*": {
       "types": "./dist/blocks/*/index.d.ts",
       "require": "./dist/blocks/*/index.cjs",
       "default": "./dist/blocks/*/index.js"
     },
-    "./icons/*": {
-      "types": "./dist/icons/*/index.d.ts",
-      "require": "./dist/icons/*/index.cjs",
-      "default": "./dist/icons/*/index.js"
+    "./prodkt-components/*": {
+      "types": "./dist/prodkt-components/*/index.d.ts",
+      "require": "./dist/prodkt-components/*/index.cjs",
+      "default": "./dist/prodkt-components/*/index.js"
     },
-    "./cn/*": {
+    "./cn/": {
       "types": "./dist/utils/cn.d.ts",
       "require": "./dist/utils/cn.cjs",
       "default": "./dist/utils/cn.js"
     },
-    "./useMounted/*": {
+    "./useMounted/": {
       "types": "./dist/utils/use-mounted.d.ts",
       "require": "./dist/utils/use-mounted.cjs",
       "default": "./dist/utils/use-mounted.js"
     },
-    "./useStore/*": {
+    "./useStore/": {
+      "types": "./dist/utils/use-store.d.ts",
+      "require": "./dist/utils/use-store.cjs",
+      "default": "./dist/utils/use-store.js"
+    },
+    "./kanban/": {
       "types": "./dist/utils/use-store.d.ts",
       "require": "./dist/utils/use-store.cjs",
       "default": "./dist/utils/use-store.js"
@@ -55,6 +60,8 @@
   "scripts": {
     "build": "vite build",
     "build-storybook": "storybook build",
+    "build:development": "vite build",
+    "build:production": "NODE_ENV=production vite build",
     "clean": "bun run rm -rf dist storybook-static *.tsbuildinfo",
     "dev": "vite build -w",
     "lint": "eslint .  --max-warnings 0",
@@ -139,12 +146,12 @@
     "@dnd-kit/core": "^6.1.0",
     "@dnd-kit/modifiers": "^7.0.0",
     "@dnd-kit/sortable": "^8.0.0",
-    "@prodkt/assets": "workspace:*",
-    "@prodkt/eslint": "workspace:*",
-    "@prodkt/storybook": "workspace:*",
-    "@prodkt/tailwind": "workspace:*",
-    "@prodkt/tsconfig": "workspace:*",
-    "@prodkt/vite": "workspace:*",
+    "@prodkt/assets": "*",
+    "@prodkt/eslint": "*",
+    "@prodkt/storybook": "*",
+    "@prodkt/tailwind": "*",
+    "@prodkt/tsconfig": "*",
+    "@prodkt/vite": "*",
     "@storybook/react": "^8.3.2",
     "@storybook/test": "^8.3.2",
     "@types/react": "^18.3.8",

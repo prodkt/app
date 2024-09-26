@@ -1,17 +1,17 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "jsx": "react", // or "react-jsx" for React 17+
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "module": "ESNext",
-    "target": "ESNext",
-    "verbatimModuleSyntax": false,
-    "declarationMap": true,
-    "declaration": true,
+    // "jsx": "react", // or "react-jsx" for React 17+
+    // "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true,
+    // "module": "ESNext",
+    // "target": "ESNext",
+    // "verbatimModuleSyntax": false,
+    // "declarationMap": true,
+    // "declaration": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   }
 }

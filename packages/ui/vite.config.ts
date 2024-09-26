@@ -1,18 +1,8 @@
-// import { loadEnv } from "vite";
-
 import { buildConfig, mergeConfig, reactConfig } from '@prodkt/vite'
 
 import pkg from './package.json'
 
 // const excludedDeps = ['react', 'react-dom', 'swiper', 'class-variance-authority', 'framer-motion']
-// const env = loadEnv(process.cwd(), "");
-// const exemptedDependencies = new Set([
-//   'react',
-//   'react-dom',
-//   '@dnd-kit',
-//   '@codesandbox/sandpack-react',
-//   'swiper',
-// ])
 
 export default mergeConfig(
   // Vite config to support React.
@@ -24,11 +14,11 @@ export default mergeConfig(
   buildConfig({
     lib: {
       entry: [
-        './src/primitives/*/index.tsx',
-        './src/brands/*/index.tsx',
-        './src/prodkt-components/*/index.tsx',
-        './src/blocks/*/index.tsx',
-        './src/icons/*/index.tsx',
+        'src/primitives/**/*.{ts,tsx,js,jsx}',
+        'src/brands/**/*.{ts,tsx,js,jsx}',
+        'src/icons/**/*.{ts,tsx,js,jsx}',
+        'src/blocks/**/*.{ts,tsx,js,jsx}',
+        'src/prodkt-components/**/*.{ts,tsx,js,jsx}',
         './src/utils/cn.ts',
         './src/utils/use-mounted.ts',
         './src/utils/kanban.ts',

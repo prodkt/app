@@ -8,7 +8,8 @@
   "type": "module",
   "exports": {
     ".": "./src/preset.ts",
-    "./color": "./src/ghost.css"
+    "./color": "./src/color.css",
+    "./ghost": "./src/ghost.css"
   },
   "scripts": {
     "clean": "bun run rm -rf *.tsbuildinfo",

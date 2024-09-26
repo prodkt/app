@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { PageFooter } from '.'
-import { Home } from '../../icons/navigation'
+import PageFooter from '.'
 
 const meta: Meta<typeof PageFooter> = {
   component: PageFooter,
