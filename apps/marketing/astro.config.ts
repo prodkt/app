@@ -47,18 +47,18 @@ export default defineConfig({
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
+        '@/supabase': path.resolve(__dirname, './src/supabase'),
+        '@prodkt/assets': path.resolve(__dirname, '../../packages/assets'),
+        '@prodkt/config/tailwind': path.resolve(
+          __dirname,
+          '../../packages/config/tailwind',
+        ),
+        '@prodkt/ui': path.resolve(__dirname, '../../packages/ui/dist'),
       },
     },
     ssr: {
-      noExternal: [],
-      external: [
-        'image-size',
-        'tiny-glob',
-        'react',
-        'react-dom',
-        '@dnd-kit',
-        '@codesandbox/sandpack-react',
-      ],
+      noExternal: ['@prodkt/ui'],
+      external: ['image-size', 'tiny-glob'],
     },
   },
   output: 'server',

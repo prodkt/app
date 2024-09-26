@@ -6,7 +6,7 @@ import Layout from '@/layouts/PublicLayout.astro'
 
 <Layout>
   <div class='flex flex-col items-center justify-center gap-4 size-full'>
-    <ErrorFourZeroFour client:load />
+    <ErrorFourZeroFour client:only='react' />
     <p class='font-mono text-xs uppercase'>Page not found</p>
   </div>
 </Layout>

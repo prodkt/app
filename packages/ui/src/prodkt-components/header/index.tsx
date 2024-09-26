@@ -19,13 +19,12 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from '@/primitives/dropdown-menu'
+import { HeaderMenu } from '@/prodkt-components/header-menu'
+import { MobileMenu } from '@/prodkt-components/mobile-menu'
 import { ModeToggle } from '@/prodkt-components/mode-toggle'
 import { TeamSwitcher } from '@/prodkt-components/team-switcher'
 import { ThemeToggle } from '@/prodkt-components/theme-toggle'
 import { cn } from '@/utils/cn'
-
-import { HeaderMenu } from '../header-menu'
-import { MobileMenu } from '../mobile-menu'
 
 /**
  * User Account component allows users to toggle between different accent and gray colors.

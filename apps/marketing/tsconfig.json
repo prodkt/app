@@ -10,5 +10,6 @@
       "@prodkt/config/tailwind/*": ["../../packages/config/tailwind/*"],
       "@prodkt/ui/*": ["../../packages/ui/dist/*"]
     }
-  }
+  },
+  "exclude": ["public/posthog.js", "dist"]
 }

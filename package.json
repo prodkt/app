@@ -9,7 +9,8 @@
   "workspaces": [
     "apps/*",
     "packages/*",
-    "packages/config/*"
+    "packages/config/*",
+    "packages/editor/*"
   ],
   "scripts": {
     "commit": "git-cz",

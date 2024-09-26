@@ -1,0 +1,10 @@
+{
+  "name": "@prodkt/types",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.d.ts",
+  "dependencies": {
+    "@prodkt/constants": "workspace:*",
+    "swr": "^2.2.5"
+  }
+}

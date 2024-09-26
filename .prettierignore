@@ -9,3 +9,4 @@ drizzle/
 packages/ui/src/primitives/form/form.mdx
 packages/ui/src/primitives/toast/toast.mdx
 packages/ui/src/primitives/carousel/carousel.mdx
+packages/constants/src/auth.ts
