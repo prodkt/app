@@ -1,11 +1,10 @@
 import type { Database } from '@/database.types'
 import type { PostgrestResponse, SupabaseClient } from '@supabase/supabase-js'
+import type { APIContext } from 'astro'
 
 import { supabase } from '@/supabase'
 
 type Changelog = Database['public']['Tables']['changelogs']['Row']
-
-const supabaseClient: SupabaseClient<Database> = supabase
 
 /**
  * Fetch flow data from the database.
@@ -33,11 +32,26 @@ async function fetchChangelogData(
 
 /**
  * Handle GET request.
+ * @param context
  * @returns The response object.
  */
-export async function GET() {
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+
+  const { supabase: SupabaseClient } = supabaseResult
   try {
-    const changelogData = await fetchChangelogData(supabaseClient)
+    const changelogData = await fetchChangelogData(
+      SupabaseClient as SupabaseClient<Database>,
+    )
     if (!changelogData || changelogData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {

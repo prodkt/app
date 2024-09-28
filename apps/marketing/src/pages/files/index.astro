@@ -8,65 +8,50 @@ import Layout from '@/layouts/PublicLayout.astro'
 import PageHeader from '../../components/page-header.astro'
 import { GET } from './index.json'
 
-const response = await GET()
+const response = await GET(Astro)
 const data = (await response.json()) as any
 ---
 
 <Layout>
-  <PageHeader minimal fullWidth text='Files' />
-  <div class='items-stretch hidden grid-cols-3 gap-32 p-20 justify-stretch'>
-    <div class='flex flex-row items-center justify-center gap-4'></div>
-    <!-- {
-      data ? (
-        data.fileData.map((item: any) => (
-          <FileFolder
-            text={item.folder.title}
-            src={
-              item.folder.image.filename_disk
-                ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${item.folder.image.filename_disk}`
-                : `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif`
-            }
-          />
-        ))
-      ) : (
-        <p>Loading...</p>
-      )
-    } -->
-  </div>
   <div
-    class='flex flex-row flex-wrap items-center justify-around gap-12 px-12 mx-auto'
+    class='flex flex-col items-stretch justify-stretch px-6 gap-6 sm:px-12 lg:px-16 lg:gap-12 py-20 sm:py-24'
   >
-    {
-      data ? (
-        data.fileData.map((item: any) => (
-          <PageFile
-            client:only='react'
-            title={item.title}
-            downloadLink={item.src.filename_download ?? null}
-            src={item.src.filename_disk ?? null}
-            fileSrc={
-              item.type === 'file-svg'
-                ? '56c87434-0b8f-4734-b5ff-bbcb3c67fa53.avif'
-                : item.type === 'file-json'
-                  ? 'c4ed0469-368d-401f-8fe7-2ed9b161916d.svg'
-                  : item.type === 'file-spline'
-                    ? 'f6894a58-ed38-4668-a9f4-8f0ca5b563cf.avif'
-                    : item.type === 'file-figma'
-                      ? '8ac073c4-7ffa-4b92-b58e-4a9509e33028.avif'
-                      : item.type === 'file-color'
-                        ? 'e1df2bfe-5249-47d2-8286-e1d5aeb4989c.svg'
-                        : item.type === 'file-html'
-                          ? '7cd7d324-b211-4e5e-bcd6-b61966a810f9.avif'
-                          : item.type === 'file-css'
-                            ? 'fa3b4bb7-0346-4626-adc4-229ca1076bd1.avif'
-                            : '7055699f-8a61-48b7-9bb7-3ef8d1aa48d9.avif'
-            }
-          />
-        ))
-      ) : (
-        <p>Loading...</p>
-      )
-    }
+    <PageHeader minimal fullWidth text='Files' />
+    <div
+      class='flex flex-row flex-wrap items-center space-x-0 justify-start gap-4'
+    >
+      {
+        data ? (
+          data.fileData.map((item: any) => (
+            <PageFile
+              client:only='react'
+              title={item.title}
+              downloadLink={item.src.filename_download ?? null}
+              src={item.src.filename_disk ?? null}
+              fileSrc={
+                item.type === 'file-svg'
+                  ? '56c87434-0b8f-4734-b5ff-bbcb3c67fa53.avif'
+                  : item.type === 'file-json'
+                    ? 'c4ed0469-368d-401f-8fe7-2ed9b161916d.svg'
+                    : item.type === 'file-spline'
+                      ? 'f6894a58-ed38-4668-a9f4-8f0ca5b563cf.avif'
+                      : item.type === 'file-figma'
+                        ? '8ac073c4-7ffa-4b92-b58e-4a9509e33028.avif'
+                        : item.type === 'file-color'
+                          ? 'e1df2bfe-5249-47d2-8286-e1d5aeb4989c.svg'
+                          : item.type === 'file-html'
+                            ? '7cd7d324-b211-4e5e-bcd6-b61966a810f9.avif'
+                            : item.type === 'file-css'
+                              ? 'fa3b4bb7-0346-4626-adc4-229ca1076bd1.avif'
+                              : '7055699f-8a61-48b7-9bb7-3ef8d1aa48d9.avif'
+              }
+            />
+          ))
+        ) : (
+          <p>Loading...</p>
+        )
+      }
+    </div>
   </div>
 </Layout>
 

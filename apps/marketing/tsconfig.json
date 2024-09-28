@@ -7,5 +7,5 @@
       "@/supabase/*": ["src/supabase/*"]
     }
   },
-  "exclude": ["public/posthog.js", "dist"]
+  "exclude": ["public/posthog.js", "dist", "_*", "**/_*", "**/_*/**/*"]
 }

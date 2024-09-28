@@ -16,7 +16,7 @@ const pageHeaderVariants = cva('', {
         cn(
           !minimal ? 'justify-center' : '',
           fullWidth ? 'w-full mx-0' : 'mx-auto',
-          'flex flex-col items-center justify-between gap-20  relative h-auto',
+          'flex flex-col items-center justify-between relative h-auto p-6 pt-10 md:pt-0 md:p-0',
         ),
     },
   },
@@ -53,101 +53,100 @@ const {
   <h1
     class={cn(
       !minimal
-        ? 'text-[8.925rem] text-center  tracking-tighter mb-12  after:left-0 after:right-0 leading-[75%]'
-        : 'text-left text-[5.925rem] tracking-[-0.325rem] font-normal  after:left-0 after:right-auto leading-[64%] mb-8',
+        ? 'text-7xl sm:text-8xl xl:text-[8.925rem] text-center  tracking-tighter after:left-0 after:right-0 leading-[75%]'
+        : 'text-left text-[5.925rem] tracking-[-0.325rem] font-normal after:left-0 after:right-auto leading-[64%]',
       !fullWidth
         ? 'w-[743px] after:mx-auto  after:w-1/2'
-        : 'block after:ml-0 mr-0 max-w-[calc(100%_-_4rem)] text-left px-10 after:w-1/4',
-      'prodkt-creative-h1 mx-auto relative z-[4] mt-20 after:absolute after:h-1/2 after:top-0 after:bg-[var(--grayA7)] after:blur-2xl after:mix-blend-soft-light',
+        : 'block after:ml-0 mr-0 max-w-[calc(100%_-_0rem)] text-left after:w-1/4',
+      'prodkt-creative-h1 mx-auto relative z-[4] after:absolute after:h-1/2 after:top-0 after:bg-[var(--grayA7)] after:blur-2xl after:mix-blend-soft-light',
     )}
   >
     {text}
     <div
-      class='z-[-1] absolute inset-x-1/2 -top-1/2 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+      class='z-[-1] opacity-25 absolute inset-x-1/2 -top-1/2 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
     <div
-      class='z-[-1] absolute -top-1/2 left-1/4 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+      class='hidden z-[-1] opacity-25 absolute -top-1/2 left-1/4 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
     <div
-      class='z-[-1] absolute -top-1/2 right-1/4 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
-    >
-    </div>
-
-    <div
-      class='z-[-1] absolute -left-0 -top-1/2 mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
-    >
-    </div>
-    <div
-      class='z-[-1] absolute -right-0 -top-1/2 mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+      class='hidden z-[-1] opacity-25 absolute -top-1/2 right-1/4 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
 
     <div
-      class='z-[-1] absolute -left-0 -top-10 bottom-auto mb-auto mt-0 h-20 w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+      class='z-[-1] opacity-25 absolute -left-0 -top-1/2 mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
     <div
-      class='z-[-1] absolute -left-10 -top-0 bottom-auto mb-auto mt-0 h-px max-h-px w-20 rounded-none bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
-    >
-    </div>
-
-    <div
-      class='z-[-1] absolute -right-0 -top-10 bottom-auto mb-auto mt-0 h-20 w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
-    >
-    </div>
-    <div
-      class='z-[-1] absolute -right-10 -top-0 bottom-auto mb-auto mt-0 h-px max-h-px w-20 rounded-none bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+      class='z-[-1] opacity-25 absolute -right-0 -top-1/2 mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
 
     <div
-      class='z-[-1] absolute -bottom-10 -left-0 top-auto mb-auto mt-0 h-20 w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+      class='z-[-1] opacity-25 absolute -left-0 -top-10 bottom-auto mb-auto mt-0 h-20 w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
     <div
-      class='z-[-1] absolute -bottom-0 -left-10 top-auto mb-auto mt-0 h-px max-h-px w-20 rounded-none bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
-    >
-    </div>
-
-    <div
-      class='z-[-1] absolute -bottom-10 -right-0 top-auto mb-auto mt-0 h-20 w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
-    >
-    </div>
-    <div
-      class='z-[-1] absolute -bottom-0 -right-10 top-auto mb-auto mt-0 h-px max-h-px w-20 rounded-none bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+      class='z-[-1] opacity-25 absolute -left-10 -top-0 bottom-auto mb-auto mt-0 h-px max-h-px w-20 rounded-none bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
 
     <div
-      class='z-[-1] absolute -left-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none border border-ghost-a7 bg-ghost-aa7'
+      class='z-[-1] opacity-25 absolute -right-0 -top-10 bottom-auto mb-auto mt-0 h-20 w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
     <div
-      class='z-[-1] absolute -right-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none border border-ghost-a7 bg-ghost-aa7'
+      class='z-[-1] opacity-25 absolute -right-10 -top-0 bottom-auto mb-auto mt-0 h-px max-h-px w-20 rounded-none bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+    >
+    </div>
+
+    <div
+      class='z-[-1] opacity-25 absolute -bottom-10 -left-0 top-auto mb-auto mt-0 h-20 w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
     <div
-      class='z-[-1] absolute -bottom-1 -left-1 top-auto my-0 size-2 rounded-none border border-ghost-a7 bg-ghost-aa7'
+      class='z-[-1] opacity-25 absolute -bottom-0 -left-10 top-auto mb-auto mt-0 h-px max-h-px w-20 rounded-none bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+    >
+    </div>
+
+    <div
+      class='z-[-1] opacity-25 absolute -bottom-10 -right-0 top-auto mb-auto mt-0 h-20 w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
     >
     </div>
     <div
-      class='z-[-1] absolute -bottom-1 -right-1 top-auto my-0 size-2 rounded-none border border-ghost-a7 bg-ghost-aa7'
+      class='z-[-1] opacity-25 absolute -bottom-0 -right-10 top-auto mb-auto mt-0 h-px max-h-px w-20 rounded-none bg-gradient-to-r from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'
+    >
+    </div>
+
+    <div
+      class='z-[-1] opacity-25 absolute -left-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none border border-ghost-a7 bg-ghost-aa7'
+    >
+    </div>
+    <div
+      class='z-[-1] opacity-25 absolute -right-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none border border-ghost-a7 bg-ghost-aa7'
+    >
+    </div>
+    <div
+      class='z-[-1] opacity-25 absolute -bottom-1 -left-1 top-auto my-0 size-2 rounded-none border border-ghost-a7 bg-ghost-aa7'
+    >
+    </div>
+    <div
+      class='z-[-1] opacity-25 absolute -bottom-1 -right-1 top-auto my-0 size-2 rounded-none border border-ghost-a7 bg-ghost-aa7'
     >
     </div>
   </h1>
   <div
     class={cn(
       !minimal
-        ? 'text-[8.925rem] text-center  tracking-tighter mb-12  after:left-0 after:right-0 leading-[75%]'
-        : 'text-left text-[5.925rem] tracking-[-0.325rem] font-normal  after:left-0 after:right-auto leading-[64%] mb-8',
+        ? 'hidden text-[8.925rem] text-center  tracking-tighter mb-12  after:left-0 after:right-0 leading-[75%]'
+        : 'hidden text-left text-[5.925rem] tracking-[-0.325rem] font-normal  after:left-0 after:right-auto leading-[64%] mb-8',
       !fullWidth
-        ? 'w-[743px] mx-auto grid grid-cols-4 items-center justify-center'
-        : 'w-[calc(100%_-_4rem)] mx-auto text-left flex flex-row items-center justify-start gap-8',
-      '',
+        ? 'hidden w-[743px] mx-auto grid-cols-4 items-center justify-center'
+        : 'hidden w-[calc(100%_-_4rem)] mx-auto text-left flex-row items-center justify-start gap-8',
+      'hidden',
     )}
-    class=''
   >
     <p
       class='col-span-1 font-mono uppercase text-sm tracking-widest font-normal text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'

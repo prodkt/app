@@ -19,32 +19,39 @@ const data = (await response.json()) as RepoData
 ---
 
 <Layout>
-  <PageHeader
-    text='Repos'
-    bullet1='Design'
-    bullet2='Previous works'
-    bullet3='Visuals'
-    bullet4='Concepts'
-  />
-  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
-    {
-      data ? (
-        data.repos.map((repo: any) => (
-          <Card
-            className='col-span-1 h-full'
-            key={repo.id}
-            alt={repo.title}
-            link={`/repos/${repo.gitLabRepo.namespace.name}/${repo.gitLabRepo.path}`}
-            image={repo.image.filename_disk}
-            title={repo.title}
-            excerpt={repo.excerpt}
-            date={formatDate(repo.date_created)}
-            buttonText='View Repo'
-          />
-        ))
-      ) : (
-        <p>Loading...</p>
-      )
-    }
+  <div
+    class='flex flex-col items-stretch justify-stretch px-6 gap-6 sm:px-12 lg:px-16 lg:gap-12 py-20 sm:py-24'
+  >
+    <PageHeader
+      fullWidth
+      text='Repos'
+      bullet1='Design'
+      bullet2='Previous works'
+      bullet3='Visuals'
+      bullet4='Concepts'
+    />
+    <div
+      class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-stretch space-x-0 justify-stretch gap-6 xl:gap-16'
+    >
+      {
+        data ? (
+          data.repos.map((repo: any) => (
+            <Card
+              className='col-span-1 h-full'
+              key={repo.id}
+              alt={repo.title}
+              link={`/repos/${repo.gitLabRepo.namespace.name}/${repo.gitLabRepo.path}`}
+              image={repo.image.filename_disk}
+              title={repo.title}
+              excerpt={repo.excerpt}
+              date={formatDate(repo.date_created)}
+              buttonText='View Repo'
+            />
+          ))
+        ) : (
+          <p>Loading...</p>
+        )
+      }
+    </div>
   </div>
 </Layout>

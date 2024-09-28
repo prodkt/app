@@ -19,37 +19,44 @@ interface WorkData {
   projectData: Project[]
 }
 
-const response = await GET()
+const response = await GET(Astro)
 const data = (await response.json()) as WorkData
 ---
 
 <Layout>
-  <PageHeader
-    text='Showcase'
-    bullet1='Design'
-    bullet2='Previous works'
-    bullet3='Visuals'
-    bullet4='Concepts'
-  />
-  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
-    {
-      data ? (
-        data.workData.map((item: any) => (
-          <Card
-            className='col-span-1 h-full'
-            key={item.id}
-            alt={item.title}
-            link={`/work/${item.project.slug}/${item.slug}`}
-            image={item.primary_image.filename_disk}
-            title={item.title}
-            excerpt={item.excerpt}
-            date={formatDate(item.date_created)}
-            buttonText='View work'
-          />
-        ))
-      ) : (
-        <p>Loading...</p>
-      )
-    }
+  <div
+    class='flex flex-col items-stretch justify-stretch px-6 gap-6 sm:px-12 lg:px-16 lg:gap-12 py-20 sm:py-24'
+  >
+    <PageHeader
+      fullWidth
+      text='Showcase'
+      bullet1='Design'
+      bullet2='Previous works'
+      bullet3='Visuals'
+      bullet4='Concepts'
+    />
+    <div
+      class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-stretch space-x-0 justify-stretch gap-6 xl:gap-16'
+    >
+      {
+        data ? (
+          data.workData.map((item: any) => (
+            <Card
+              className='col-span-1 h-full'
+              key={item.id}
+              alt={item.title}
+              link={`/work/${item.project.slug}/${item.slug}`}
+              image={item.primary_image.filename_disk}
+              title={item.title}
+              excerpt={item.excerpt}
+              date={formatDate(item.date_created)}
+              buttonText='View work'
+            />
+          ))
+        ) : (
+          <p>Loading...</p>
+        )
+      }
+    </div>
   </div>
 </Layout>

@@ -82,21 +82,24 @@ const {
     <ViewTransitions />
     <script>
       // @ts-ignore
-      function setDarkMode(document: any) {
-        let theme = localStorage['theme'] ? 'dark-theme' : 'light-theme'
-        document.documentElement.dataset.theme = theme
+      function setDarkMode() {
+        let theme =
+          localStorage.getItem('theme') === 'dark'
+            ? 'dark-theme'
+            : 'light-theme'
+        document.documentElement.dataset['theme'] = theme
       }
 
-      setDarkMode(document)
+      setDarkMode()
 
-      document.addEventListener('astro:before-swap', (event) => {
+      document.addEventListener('astro:before-swap', () => {
         // Pass the incoming document to set the theme on it
-        setDarkMode(event.newDocument)
+        setDarkMode()
       })
 
-      document.addEventListener('astro:page-load', (event) => {
+      document.addEventListener('astro:page-load', () => {
         // Pass the incoming document to set the theme on it
-        setDarkMode(event)
+        setDarkMode()
       })
     </script>
     <script>

@@ -3,7 +3,6 @@
 /* eslint-disable jsdoc/require-param-description */
 /* eslint-disable jsdoc/check-param-names */
 
-import type { Database } from '@/database.types'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import type { APIContext } from 'astro'
 
@@ -11,20 +10,30 @@ import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient<Database> = supabase
-
 /**
  *
  * @param root0
  * @param root0.params
  * @param root0.request
+ * @param context
  */
-export async function GET({ params }: APIContext) {
-  const { slug, templateSlug, codeblockSlug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { supabase: SupabaseClient } = supabaseResult
+  const { slug, templateSlug, codeblockSlug } = context.params
 
   try {
     const codeblockData = await fetchCodeblockBySlug(
-      supabaseClient,
+      SupabaseClient,
       codeblockSlug,
     )
 
@@ -44,7 +53,7 @@ export async function GET({ params }: APIContext) {
       )
     }
 
-    const templateData = await fetchBuildTemplate(supabaseClient, templateSlug)
+    const templateData = await fetchBuildTemplate(SupabaseClient, templateSlug)
 
     if (!templateData) {
       console.error('No build template found for theme.')

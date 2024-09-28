@@ -4,17 +4,20 @@ import type { APIContext } from 'astro'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient = supabase
 type Project = Database['public']['Tables']['projects']['Row']
 type ProjectIssues = Database['public']['Tables']['issues']['Row']
 /**
  *
  * @param root0 The API context.
  * @param root0.params The parameters object.
+ * @param context
  * @returns The response object.
  */
-export async function GET({ params }: APIContext) {
-  const { projectSlug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+
+  const { supabase: SupabaseClient } = supabaseResult
+  const { projectSlug } = context.params
 
   if (typeof projectSlug !== 'string') {
     return new Response(
@@ -28,7 +31,7 @@ export async function GET({ params }: APIContext) {
     )
   }
 
-  const projectData = await fetchProjectData(supabaseClient, projectSlug)
+  const projectData = await fetchProjectData(SupabaseClient, projectSlug)
   if (!projectData || projectData.length === 0) {
     console.error('Data is empty or undefined')
     return new Response(JSON.stringify({ error: 'No data found.' }), {
@@ -41,24 +44,13 @@ export async function GET({ params }: APIContext) {
 
   const projectId = projectData[0]?.id
 
-  // const roadmapData = await fetchRoadmapData(supabaseClient, projectId)
-
-  const projectListing = await fetchAllProjects(supabaseClient)
-  const issueData = await fetchIssueData(supabaseClient, projectId)
-
-  // if (!roadmapData || roadmapData.length === 0) {
-  //   // console.error('Data is empty or undefined')
-  //   return new Response(JSON.stringify({ error: 'No data found.' }), {
-  //     status: 200,
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   })
-  // }
+  const projectListing = await fetchAllProjects(SupabaseClient)
+  const issueData = await fetchIssueData(SupabaseClient, projectId)
 
   return new Response(
     JSON.stringify({
-      params,
+      context,
+      projectSlug,
       projectData,
       issueData,
       projectListing,
@@ -128,29 +120,6 @@ async function fetchIssueData(
   console.error(response.error)
   return null
 }
-
-/**
- *
- * @param supabase The Supabase client.
- * @param projectId The project ID.
- * @returns The flow data.
- */
-// async function fetchRoadmapData(
-//   supabase: SupabaseClient,
-//   projectId: string | undefined,
-// ): Promise<Roadmap[] | null> {
-//   const response = await supabase
-//     .from('roadmaps')
-//     .select('*,projects_id,slug,title,status')
-//     .neq('status', 'draft')
-//     .eq('projects_id', projectId)
-
-//   if (response.error === null) {
-//     return response.data as unknown as Roadmap[]
-//   }
-//   console.error(response.error)
-//   return null
-// }
 
 /**
  *

@@ -29,7 +29,7 @@ interface ChangelogData {
   changelogData: Changelog[]
 }
 
-const response = await GET()
+const response = await GET(Astro)
 const data = (await response.json()) as ChangelogData
 
 // Type guard to check if the value is an array of TagItem
@@ -78,108 +78,112 @@ const processTagsForItem = (item: Changelog): TagList => {
 ---
 
 <Layout>
-  <PageHeader
-    text='Changelog'
-    bullet1='Improvements'
-    bullet2='New'
-    bullet3='Fixes'
-    bullet4='API'
-  />
-  {
-    data ? (
-      data.changelogData.map((item: any) => {
-        const tagListData = processTagsForItem(item)
-        return (
-          <BlogPost
-            tagList={tagListData}
-            size='default'
-            title={item.title}
-            hideToc
-            previousText='Back to blog'
-            backLink='/blog'
-            date={formatDate(item.publish_date)}
-            image={`${item.image.filename_disk}`}
-            alt={item.title}
-            client:only='react'
-          >
-            <Fragment set:html={item.content} />
-            {item.new ? (
-              <ChangelogAccordion type='New' client:only='react'>
-                {item.new.map((item: any) => (
-                  <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-start h-auto gap-2 mx-0 right-0 left-0'>
-                    <Badge
-                      className='!text-nowrap w-auto font-mono uppercase'
-                      client:only='react'
-                    >
-                      {item.changeTo}
-                    </Badge>
-                    <h3
-                      class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
-                      set:html={item.description}
-                    />
-                  </div>
-                ))}
-              </ChangelogAccordion>
-            ) : null}
-            {item.improvements ? (
-              <ChangelogAccordion type='Improvements' client:only='react'>
-                {item.improvements.map((improvement: any) => (
-                  <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
-                    <Badge
-                      className='!text-nowrap w-auto font-mono uppercase'
-                      client:only='react'
-                    >
-                      {improvement.changeTo}
-                    </Badge>
-                    <h3
-                      class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
-                      set:html={improvement.description}
-                    />
-                  </div>
-                ))}
-              </ChangelogAccordion>
-            ) : null}
-            {item.api ? (
-              <ChangelogAccordion type='API' client:only='react'>
-                {item.api.map((item: any) => (
-                  <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
-                    <Badge
-                      className='!text-nowrap w-auto font-mono uppercase'
-                      client:only='react'
-                    >
-                      {item.changeTo}
-                    </Badge>
-                    <h3
-                      class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
-                      set:html={item.description}
-                    />
-                  </div>
-                ))}
-              </ChangelogAccordion>
-            ) : null}
-            {item.fixes ? (
-              <ChangelogAccordion type='Fixes' client:only='react'>
-                {item.fixes.map((fix: any) => (
-                  <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
-                    <Badge
-                      className='!text-nowrap w-auto font-mono uppercase'
-                      client:only='react'
-                    >
-                      {fix.changeTo}
-                    </Badge>
-                    <h3
-                      class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
-                      set:html={fix.description}
-                    />
-                  </div>
-                ))}
-              </ChangelogAccordion>
-            ) : null}
-          </BlogPost>
-        )
-      })
-    ) : (
-      <p>Loading...</p>
-    )
-  }
+  <div
+    class='flex flex-col items-stretch justify-stretch px-6 gap-6 sm:px-12 lg:px-16 lg:gap-12 py-20 sm:py-24'
+  >
+    <PageHeader
+      text='Changelog'
+      bullet1='Improvements'
+      bullet2='New'
+      bullet3='Fixes'
+      bullet4='API'
+    />
+    {
+      data ? (
+        data.changelogData.map((item: any) => {
+          const tagListData = processTagsForItem(item)
+          return (
+            <BlogPost
+              tagList={tagListData}
+              size='default'
+              title={item.title}
+              hideToc
+              previousText='Back to blog'
+              backLink='/blog'
+              date={formatDate(item.publish_date)}
+              image={`${item.image.filename_disk}`}
+              alt={item.title}
+              client:only='react'
+            >
+              <Fragment set:html={item.content} />
+              {item.new ? (
+                <ChangelogAccordion type='New' client:only='react'>
+                  {item.new.map((item: any) => (
+                    <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-start h-auto gap-2 mx-0 right-0 left-0'>
+                      <Badge
+                        className='!text-nowrap w-auto font-mono uppercase'
+                        client:only='react'
+                      >
+                        {item.changeTo}
+                      </Badge>
+                      <h3
+                        class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
+                        set:html={item.description}
+                      />
+                    </div>
+                  ))}
+                </ChangelogAccordion>
+              ) : null}
+              {item.improvements ? (
+                <ChangelogAccordion type='Improvements' client:only='react'>
+                  {item.improvements.map((improvement: any) => (
+                    <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
+                      <Badge
+                        className='!text-nowrap w-auto font-mono uppercase'
+                        client:only='react'
+                      >
+                        {improvement.changeTo}
+                      </Badge>
+                      <h3
+                        class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
+                        set:html={improvement.description}
+                      />
+                    </div>
+                  ))}
+                </ChangelogAccordion>
+              ) : null}
+              {item.api ? (
+                <ChangelogAccordion type='API' client:only='react'>
+                  {item.api.map((item: any) => (
+                    <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
+                      <Badge
+                        className='!text-nowrap w-auto font-mono uppercase'
+                        client:only='react'
+                      >
+                        {item.changeTo}
+                      </Badge>
+                      <h3
+                        class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
+                        set:html={item.description}
+                      />
+                    </div>
+                  ))}
+                </ChangelogAccordion>
+              ) : null}
+              {item.fixes ? (
+                <ChangelogAccordion type='Fixes' client:only='react'>
+                  {item.fixes.map((fix: any) => (
+                    <div class='prodkt-changelog-accordion w-full flex flex-row items-start justify-stretch gap-2 mx-0 right-0 left-0'>
+                      <Badge
+                        className='!text-nowrap w-auto font-mono uppercase'
+                        client:only='react'
+                      >
+                        {fix.changeTo}
+                      </Badge>
+                      <h3
+                        class='tracking-normal mb-0 m-0 mx-0 my-0 text-sm leading-tight'
+                        set:html={fix.description}
+                      />
+                    </div>
+                  ))}
+                </ChangelogAccordion>
+              ) : null}
+            </BlogPost>
+          )
+        })
+      ) : (
+        <p>Loading...</p>
+      )
+    }
+  </div>
 </Layout>

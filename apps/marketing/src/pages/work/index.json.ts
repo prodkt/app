@@ -1,13 +1,12 @@
 import type { Database } from '@/database.types'
 import type { SupabaseClient } from '@supabase/supabase-js'
+import type { APIContext } from 'astro'
 
 import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
 type Work = Database['public']['Tables']['work']['Row']
-
-const supabaseClient: SupabaseClient = supabase
 
 /**
  * Fetch flow data from the database.
@@ -50,11 +49,24 @@ async function fetchWorkData(supabase: SupabaseClient): Promise<Work[] | null> {
 
 /**
  * Handle GET request.
+ * @param context
  * @returns The response object.
  */
-export async function GET() {
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+
+  const { supabase: SupabaseClient } = supabaseResult
   try {
-    const workData = await fetchWorkData(supabaseClient)
+    const workData = await fetchWorkData(SupabaseClient)
     if (!workData || workData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {

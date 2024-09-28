@@ -2,6 +2,7 @@
 
 import type { Database } from '@/database.types'
 import type { PostgrestResponse, SupabaseClient } from '@supabase/supabase-js'
+import type { APIContext } from 'astro'
 
 import { supabase } from '@/supabase'
 
@@ -76,11 +77,28 @@ async function fetchCodeblockThemeData(
   return null
 }
 
-export async function GET() {
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { supabase: SupabaseClient } = supabaseResult
   try {
-    const codeblockData = await fetchCodeblockData(supabase)
-    const themeData = await fetchThemeData(supabase)
-    const codeblockThemeData = await fetchCodeblockThemeData(supabase)
+    const codeblockData = await fetchCodeblockData(
+      SupabaseClient as SupabaseClient<Database>,
+    )
+    const themeData = await fetchThemeData(
+      SupabaseClient as SupabaseClient<Database>,
+    )
+    const codeblockThemeData = await fetchCodeblockThemeData(
+      SupabaseClient as SupabaseClient<Database>,
+    )
 
     if (!codeblockData || !themeData || !codeblockThemeData) {
       return new Response(JSON.stringify({ error: 'No data found.' }), {
