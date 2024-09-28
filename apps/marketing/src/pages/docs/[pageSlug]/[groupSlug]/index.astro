@@ -51,48 +51,54 @@ const { groupData } = data
 ---
 
 <Layout>
-  <div class='relative top-0 flex flex-col items-center justify-start h-auto'>
-    <PageHeader
-      minimal
-      text='Docs'
-      bullet1=''
-      bullet2=''
-      bullet3=''
-      bullet4=''
-    />
-
-    <BlogPost
-      title={groupData[0]?.title as string}
-      previousText='Back'
-      size='noTopPadding'
-      hideAside
-      backLink='/blog'
-      date={formatDate(groupData[0]?.date_created as string | null)}
-      alt={groupData[0]?.title as string}
-      hideToc
-      image={`42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
-      client:only='react'
+  <div
+    class='flex flex-col items-stretch justify-stretch px-6 gap-6 sm:px-12 lg:px-16 lg:gap-12 py-20 sm:py-24'
+  >
+    <div
+      class='flex flex-col items-stretch w-full place-items-stretch gap-6 lg:gap-12 place-content-stretch pl-[21.5rem] justify-stretch'
     >
-      {
-        groupData.map((item, index) => (
-          <Fragment key={index}>
-            {item.block?.map((block, contentIndex) => (
-              <Fragment key={contentIndex} set:html={block.block_content} />
-            ))}
-          </Fragment>
-        ))
-      }
-      <!-- {
+      <PageHeader
+        minimal
+        text='Docs'
+        bullet1=''
+        bullet2=''
+        bullet3=''
+        bullet4=''
+      />
+
+      <BlogPost
+        title={groupData[0]?.title as string}
+        previousText='Back'
+        size='noTopPadding'
+        hideAside
+        backLink='/blog'
+        date={formatDate(groupData[0]?.date_created as string | null)}
+        alt={groupData[0]?.title as string}
+        hideToc
+        image={`42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
+        client:only='react'
+      >
+        {
+          groupData.map((item, index) => (
+            <Fragment key={index}>
+              {item.block?.map((block, contentIndex) => (
+                <Fragment key={contentIndex} set:html={block.block_content} />
+              ))}
+            </Fragment>
+          ))
+        }
+        <!-- {
         groupData.map((item, index) => (
           <Fragment key={index} set:html={item?.block_content} />
         ))
       } -->
-    </BlogPost>
-    <DocsAside />
-    <Image
-      src={Circuit}
-      class='absolute size-full max-w-full mix-blend-color-dodge left-0 top-0 right-0 z-[-1]'
-      alt=''
-    />
+      </BlogPost>
+      <DocsAside />
+      <Image
+        src={Circuit}
+        class='absolute size-full max-w-full mix-blend-color-dodge left-0 top-0 right-0 z-[-1]'
+        alt=''
+      />
+    </div>
   </div>
 </Layout>

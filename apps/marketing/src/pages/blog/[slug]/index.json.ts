@@ -1,4 +1,3 @@
-import type { Database } from '@/database.types'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import type { APIContext } from 'astro'
 
@@ -6,35 +5,25 @@ import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient<Database> = supabase
-// type Articles = Database['public']['Tables']['articles']['Row']
-// type Authors = Database['public']['Tables']['authors']['Row']
-// type Files = Database['public']['Tables']['directus_files']['Row']
-
-// interface ArticlesWithRelations {
-//   id: Articles['id']
-//   status: Articles['status']
-//   sort: Articles['sort']
-//   date_created: Articles['date_created']
-//   date_updated: Articles['date_updated']
-//   title: Articles['title']
-//   excerpt: Articles['excerpt']
-//   slug: Articles['slug']
-//   author?:
-//     | (Pick<Authors, 'title' | 'last_name' | 'first_name'> & {
-//         avatar: Pick<Files, 'filename_disk'> | null
-//       })
-//     | null
-//   image: Pick<Files, 'filename_disk'> | null
-// }
 /**
  *
  * @param root0 The API context.
  * @param root0.params The parameters object.
+ * @param context
  * @returns The response object.
  */
-export async function GET({ params }: APIContext) {
-  const { slug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { slug } = context.params
   if (typeof slug !== 'string') {
     return new Response(
       JSON.stringify({ error: 'Slug is required and must be a string.' }),
@@ -47,8 +36,9 @@ export async function GET({ params }: APIContext) {
     )
   }
 
+  const { supabase: SupabaseClient } = supabaseResult
   try {
-    const blogData = await fetchBlogData(supabaseClient, slug)
+    const blogData = await fetchBlogData(SupabaseClient, slug)
     if (!blogData || blogData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {

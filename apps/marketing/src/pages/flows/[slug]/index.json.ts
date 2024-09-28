@@ -4,8 +4,6 @@ import type { APIContext } from 'astro'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient = supabase
-
 type Nodes = Database['public']['Tables']['flows']['Row']
 // type Nodes = Database['public']['Tables']['flow_nodes']['Row']
 
@@ -13,10 +11,22 @@ type Nodes = Database['public']['Tables']['flows']['Row']
  *
  * @param root0 The API context.
  * @param root0.params The parameters object.
+ * @param context
  * @returns The response object.
  */
-export async function GET({ params }: APIContext) {
-  const { slug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { supabase: SupabaseClient } = supabaseResult
+  const { slug } = context.params
 
   if (typeof slug !== 'string') {
     return new Response(
@@ -31,7 +41,10 @@ export async function GET({ params }: APIContext) {
   }
 
   try {
-    const flowData = await fetchFlowData(supabaseClient, slug)
+    const flowData = await fetchFlowData(
+      SupabaseClient as SupabaseClient<Database>,
+      slug,
+    )
     if (!flowData || flowData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {
@@ -47,8 +60,7 @@ export async function GET({ params }: APIContext) {
     const FlowTitle = flowItem?.title
 
     const { data: FilterFlowNodes, error: flowNodesRelationshipError } =
-      await supabase
-        .from('flows_flow_nodes')
+      await SupabaseClient.from('flows_flow_nodes')
         .select('flows_id,flow_nodes_id')
         .eq('flows_id', FlowID ?? '')
 
@@ -59,8 +71,7 @@ export async function GET({ params }: APIContext) {
     }
 
     const { data: FilterFlowEdges, error: flowEdgesRelationshipError } =
-      await supabase
-        .from('flows_flow_edges')
+      await SupabaseClient.from('flows_flow_edges')
         .select('flows_id,flow_edges_id')
         .eq('flows_id', FlowID ?? '')
 
@@ -73,8 +84,9 @@ export async function GET({ params }: APIContext) {
     const flowNodesMatch = FilterFlowNodes.map((node) => node.flow_nodes_id)
     const flowEdgesMatch = FilterFlowEdges.map((node) => node.flow_edges_id)
 
-    const { data: FlowNodes, error: nodesError } = await supabase
-      .from('flow_nodes')
+    const { data: FlowNodes, error: nodesError } = await SupabaseClient.from(
+      'flow_nodes',
+    )
       .select('*,image(filename_disk)')
       .in('id', flowNodesMatch)
 
@@ -82,8 +94,9 @@ export async function GET({ params }: APIContext) {
       throw new Error(`Error fetching nodes: ${String(nodesError.message)}`)
     }
 
-    const { data: FlowEdges, error: edgesError } = await supabase
-      .from('flow_edges')
+    const { data: FlowEdges, error: edgesError } = await SupabaseClient.from(
+      'flow_edges',
+    )
       .select('*,source(*),target(*)')
       .in('id', flowEdgesMatch)
 
@@ -137,7 +150,7 @@ async function fetchFlowData(
     .neq('status', 'draft')
     .eq('slug', slug)
 
-  if (response.error === null && response.data !== null) {
+  if (response.error === null) {
     return response.data as unknown as Nodes[]
   }
   console.error(response.error)

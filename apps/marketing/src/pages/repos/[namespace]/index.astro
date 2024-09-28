@@ -26,7 +26,9 @@ const data = (await response.json()) as RepoData
     bullet3='Visuals'
     bullet4='Concepts'
   />
-  <div class='grid grid-cols-3 items-stretch justify-stretch p-20 gap-32'>
+  <div
+    class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-stretch space-x-0 justify-stretch gap-6 xl:gap-16'
+  >
     {
       data ? (
         data.repos.map((repo: any) => (

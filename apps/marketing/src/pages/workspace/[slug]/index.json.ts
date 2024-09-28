@@ -7,16 +7,28 @@ import type { APIContext } from 'astro'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient = supabase
 type Workspace = Database['public']['Tables']['workspaces']['Row']
 /**
  *
  * @param root0 The API context.
  * @param root0.params The parameters object.
+ * @param context
  * @returns The response object.
  */
-export async function GET({ params }: APIContext) {
-  const { slug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+
+  const { supabase: SupabaseClient } = supabaseResult
+  const { slug } = context.params
 
   if (typeof slug !== 'string') {
     return new Response(
@@ -30,7 +42,7 @@ export async function GET({ params }: APIContext) {
     )
   }
 
-  const workspaceData = await fetchWorkspaceData(supabaseClient, slug)
+  const workspaceData = await fetchWorkspaceData(SupabaseClient, slug)
   if (!workspaceData || workspaceData.length === 0) {
     console.error('Data is empty or undefined')
     return new Response(JSON.stringify({ error: 'No data found.' }), {
@@ -43,7 +55,7 @@ export async function GET({ params }: APIContext) {
 
   return new Response(
     JSON.stringify({
-      params,
+      params: context.params,
       workspaceData,
       // roadmapData,
       status: 200,

@@ -6,16 +6,28 @@ import { supabase } from '@/supabase'
 
 type Repos = Database['public']['Tables']['repos']['Row']
 
-const supabaseClient: SupabaseClient<Database> = supabase
-
 /**
  *
  * @param root0
  * @param root0.params
+ * @param context
  */
-export async function GET({ params }: APIContext) {
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { supabase: SupabaseClient } = supabaseResult
   try {
-    const repoData = await fetchRepoData(supabaseClient)
+    const repoData = await fetchRepoData(
+      SupabaseClient as SupabaseClient<Database>,
+    )
     if (!repoData || repoData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {
@@ -40,7 +52,7 @@ export async function GET({ params }: APIContext) {
       }
     })
 
-    const { namespace } = params
+    const { namespace } = context.params
 
     return new Response(
       JSON.stringify({

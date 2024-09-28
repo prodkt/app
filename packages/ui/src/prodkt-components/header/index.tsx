@@ -32,14 +32,14 @@ import { cn } from '@/utils/cn'
  */
 function HeaderUserNav() {
   return (
-    <div className='flex items-center justify-center h-full'>
+    <div className='flex h-full items-center justify-center'>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             variant='outline'
             className='relative size-9 rounded-full border border-[var(--grayA1)] bg-[var(--grayA1)] p-0.5 ring-1 ring-[var(--grayA1)] transition-all duration-300 hover:bg-[var(--gray12)] dark:bg-[var(--gray3)] dark:ring-[var(--gray6)]'
           >
-            <Avatar className='border-0 size-8'>
+            <Avatar className='size-8 border-0'>
               <AvatarImage
                 src='https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1ad4fd1f-b9e0-445d-aedd-960bb4a7da8e.png'
                 alt='@prodkt-demo'
@@ -131,7 +131,7 @@ const Header = React.forwardRef<
     </div>
     <HeaderMenu />
     <div className='z-[1] ml-auto mr-0 flex h-12  flex-row items-center justify-end gap-1 gap-x-px rounded-3xl border border-[var(--gray4)] bg-[var(--gray12)] dark:bg-[var(--gray1)] lg:pl-px'>
-      <div className='flex flex-row items-center justify-end h-12 gap-1 px-1 grow'>
+      <div className='flex h-12 grow flex-row items-center justify-end gap-1 px-1'>
         <MobileMenu />
         <ModeToggle />
         <ThemeToggle />

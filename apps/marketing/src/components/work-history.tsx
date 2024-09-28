@@ -1,10 +1,10 @@
-/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 /* eslint-disable jsdoc/require-returns */
+/* eslint-disable jsdoc/require-param-description */
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 
 import { useEffect, useState } from 'react'
 
 import type { Database } from '@/database.types'
-import type { PostgrestError } from '@supabase/supabase-js'
 
 import {
   DesignBoiseLogo,
@@ -19,7 +19,8 @@ import {
   TabsTrigger,
 } from '@prodkt/ui/primitives/tabs'
 
-import { supabase } from '@/supabase'
+import { createClientSupabaseClient } from '@/supabase'
+// import { GET as getSupabaseClient } from '@/supabase'
 import { formatDate } from '@/utils/formatDate'
 
 interface WorkItem {
@@ -43,38 +44,65 @@ type Resumes = Database['public']['Tables']['resumes']['Row'] & {
 /**
  *
  */
-export function WorkHistory() {
-  const [resumes, setResumes] = useState<Resumes[]>([])
-  const [error, setError] = useState<PostgrestError | null>(null)
+
+/**
+ *
+ * @param root0
+ * @param root0.initialWorkHistory
+ */
+
+const supabase = createClientSupabaseClient()
+
+/**
+ *
+ * @param root0
+ * @param root0.initialWorkHistory
+ */
+export function WorkHistory({ initialWorkHistory = [] }) {
+  const [workHistory, setWorkHistory] = useState<Resumes[]>([])
+  const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
-    const fetchResumes = async () => {
+    const fetchWorkHistory = async () => {
+      if (initialWorkHistory.length > 0) return
+
       try {
-        const { data } = await supabase
+        const { data, error } = await supabase
           .from('resumes')
-          .select(
-            '*, status,title,label,image,email,phone,url,summary,work,skills',
-          )
-          .eq('title', 'Bryan Funk')
+          .select('*,image(filename_disk)')
           .eq('status', 'published')
 
-        setResumes(data as Resumes[])
-      } catch (error) {
-        setError(error as PostgrestError)
+        if (error) {
+          throw new Error(error.message)
+        }
+
+        if (Array.isArray(data)) {
+          setWorkHistory(data as unknown as Resumes[])
+        } else {
+          throw new Error('Unexpected data format')
+        }
+      } catch (err) {
+        console.error('Error fetching work history:', err)
+        setError(
+          err instanceof Error
+            ? err
+            : new Error('Failed to fetch work history'),
+        )
       }
     }
 
-    fetchResumes().catch((error: unknown) => {
-      console.log('error', error)
-      setError(error as PostgrestError | null)
+    fetchWorkHistory().catch((error: unknown) => {
+      console.error('Failed to fetch work history:', error)
     })
-    console.log(fetchResumes)
-  }, [])
+  }, [initialWorkHistory])
+
+  if (error) {
+    return <div>Error: {error.message}</div>
+  }
 
   return (
     <div className='relative mx-auto flex h-auto flex-wrap place-content-stretch place-items-stretch items-start justify-start gap-2 py-2 md:py-12 lg:gap-20 lg:py-16 xl:max-w-[75dvw]'>
-      {error && <p>Error fetching Resume data: {error.message}</p>}
-      {resumes.map((resume) => {
+      {workHistory.map((resume) => {
         if (!Array.isArray(resume.work)) {
           return null
         }
@@ -115,7 +143,7 @@ export function WorkHistory() {
                   ) : null}
                 </div>
                 <div className='inset-y-0 my-0 flex h-full w-auto grow flex-col items-end justify-center gap-1 px-2 md:py-2 lg:px-8'>
-                  <p className='lg:text-md px-1 text-xs font-normal leading-none tracking-normal sm:text-sm'>
+                  <p className='px-1 text-xs font-normal leading-none tracking-normal sm:text-sm'>
                     {workItem.position}
                   </p>
                   <p className='bg-gradient-to-r from-[var(--grayA9)] to-[var(--grayA2)] bg-clip-text px-1 text-xs leading-none tracking-normal text-transparent'>
@@ -168,7 +196,7 @@ export function WorkHistory() {
                       </TabsTrigger>
                     </TabsList>
                     <TabsContent className='' value='highlights'>
-                      <div className='bryan-employers grid snap-x grid-cols-3 gap-4 scroll-smooth rounded-b-2xl px-0 pb-8'>
+                      <div className='grid snap-x grid-cols-3 gap-4 scroll-smooth rounded-b-2xl px-0 pb-8'>
                         {workItem.highlights?.map((highlight, index) => {
                           const highlightKey = highlight.id
                             ? `highlight-${resume.id}-${highlight.id}`

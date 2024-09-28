@@ -9,25 +9,31 @@
       "outputs": [".astro/**", "dist/**"],
       "passThroughEnv": [
         "PUBLIC_SUPABASE_URL",
+        "PUBLIC_VERCEL_ENV",
         "PUBLIC_SUPABASE_ANON_KEY",
         "PUBLIC_POSTHOG_KEY",
         "PUBLIC_POSTHOG_HOST",
         "PUBLIC_SENTRY_DSN",
         "SENTRY_ORG",
         "SENTRY_PROJECT",
-        "SENTRY_AUTH_TOKEN"
+        "SENTRY_AUTH_TOKEN",
+        "TINYBIRD_API_URL",
+        "TINYBIRD_API_KEY"
       ]
     },
     "test:e2e": {
       "passThroughEnv": [
         "PUBLIC_SUPABASE_URL",
+        "PUBLIC_VERCEL_ENV",
         "PUBLIC_SUPABASE_ANON_KEY",
         "PUBLIC_POSTHOG_KEY",
         "PUBLIC_POSTHOG_HOST",
         "PUBLIC_SENTRY_DSN",
         "SENTRY_ORG",
         "SENTRY_PROJECT",
-        "SENTRY_AUTH_TOKEN"
+        "SENTRY_AUTH_TOKEN",
+        "TINYBIRD_API_URL",
+        "TINYBIRD_API_KEY"
       ]
     }
   }

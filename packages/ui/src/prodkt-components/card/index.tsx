@@ -69,9 +69,9 @@ const Card = forwardRef<
         {...props}
         ref={ref}
       >
-        <div className='absolute inset-x-1/2 -top-1/2 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]' />
-        <div className='absolute -top-1/2 left-1/4 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]' />
-        <div className='absolute -top-1/2 right-1/4 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]' />
+        <div className='absolute inset-x-1/2 -top-1/2 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)] opacity-50' />
+        <div className='absolute -top-1/2 left-1/4 mx-auto mb-auto mt-0 hidden h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]' />
+        <div className='absolute -top-1/2 right-1/4 mx-auto mb-auto mt-0 hidden h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]' />
 
         <div className='absolute -left-0 -top-1/2 mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]' />
         <div className='absolute -right-0 -top-1/2 mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]' />

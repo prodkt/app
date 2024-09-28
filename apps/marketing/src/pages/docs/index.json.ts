@@ -1,9 +1,9 @@
 import type { Database, Json } from '@/database.types'
 import type { SupabaseClient } from '@supabase/supabase-js'
+import type { APIContext } from 'astro'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient<Database> = supabase
 interface Page {
   slug: string
   title: string
@@ -99,11 +99,25 @@ async function fetchDocumentationPages(
  * Handle GET request.
  * @param root0
  * @param root0.params
+ * @param context
  * @returns The response object.
  */
-export async function GET() {
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { supabase: SupabaseClient } = supabaseResult
   try {
-    const documentationData = await fetchDocumentationData(supabaseClient)
+    const documentationData = await fetchDocumentationData(
+      SupabaseClient as SupabaseClient<Database>,
+    )
     if (!documentationData || documentationData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {
@@ -113,7 +127,9 @@ export async function GET() {
         },
       })
     }
-    const documentationPages = await fetchDocumentationPages(supabaseClient)
+    const documentationPages = await fetchDocumentationPages(
+      SupabaseClient as SupabaseClient<Database>,
+    )
     if (!documentationPages) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {

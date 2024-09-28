@@ -10,7 +10,6 @@ import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient = supabase
 type Work = Database['public']['Tables']['work']['Row']
 type Technology = Database['public']['Tables']['work_technology']['Row']
 type Template = Database['public']['Tables']['work_showcase_templates']['Row']
@@ -20,10 +19,14 @@ type Template = Database['public']['Tables']['work_showcase_templates']['Row']
  *
  * @param root0 The API context.
  * @param root0.params The parameters object.
+ * @param context
  * @returns The response object.
  */
-export async function GET({ params }: APIContext) {
-  const { projectSlug, workSlug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+
+  const { supabase: SupabaseClient } = supabaseResult
+  const { projectSlug, workSlug } = context.params
 
   if (typeof workSlug !== 'string') {
     return new Response(
@@ -37,7 +40,10 @@ export async function GET({ params }: APIContext) {
     )
   }
 
-  const workData = await fetchWorkData(supabaseClient, workSlug)
+  const workData = await fetchWorkData(
+    SupabaseClient as SupabaseClient<Database>,
+    workSlug,
+  )
 
   if (!workData || workData.length === 0) {
     console.error('Data is empty or undefined')
@@ -51,15 +57,24 @@ export async function GET({ params }: APIContext) {
 
   const workId = workData[0]?.id
 
-  const technologyData = await fetchTechnologyData(supabaseClient, workId)
-  const templateData = await fetchTemplateData(supabaseClient, workId)
+  const technologyData = await fetchTechnologyData(
+    SupabaseClient as SupabaseClient<Database>,
+    workId,
+  )
+  const templateData = await fetchTemplateData(
+    SupabaseClient as SupabaseClient<Database>,
+    workId,
+  )
 
   // Extract all templateIds from templateData
   const templateIds =
     templateData?.map((template) => template.showcase_templates_id) ?? []
 
   // Fetch template files using the extracted templateIds
-  const templateFiles = await fetchTemplateFiles(supabaseClient, templateIds)
+  const templateFiles = await fetchTemplateFiles(
+    SupabaseClient as SupabaseClient<Database>,
+    templateIds,
+  )
 
   return new Response(
     JSON.stringify({

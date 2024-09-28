@@ -10,7 +10,6 @@ import DocsAside from '@/components/docs-aside.astro'
 import Layout from '@/layouts/PublicLayout.astro'
 import { formatDate } from '@/utils/formatDate'
 
-import PageHeader from '../../../components/page-header.astro'
 import { GET } from './index.json'
 
 interface DocDataItem {
@@ -46,55 +45,72 @@ const { docData } = data
 ---
 
 <Layout>
-  <div class='relative top-0 flex flex-col items-center justify-start h-auto'>
-    <PageHeader
-      minimal
-      text='Docs'
-      bullet1=''
-      bullet2=''
-      bullet3=''
-      bullet4=''
-    />
-
-    <BlogPost
-      title={docData[0]?.title as string}
-      previousText='Back'
-      size='noTopPadding'
-      hideAside
-      backLink='/blog'
-      date={formatDate(docData[0]?.date_created as string | null)}
-      alt={docData[0]?.title as string}
-      hideToc
-      image={`42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
-      client:only='react'
+  <div
+    class='flex flex-col items-stretch justify-stretch px-4 gap-0 lg:gap-12 py-20 sm:py-24'
+  >
+    <div
+      class='flex flex-col items-stretch w-full place-items-stretch place-content-stretch justify-stretch'
     >
-      <!-- {
-        data.docData.map((item, index) => (
-          <Fragment key={index}>
-            {item.group?.map((block) => (
-              <Fragment key={block.id} set:html={block.block_content} />
-            ))}
-          </Fragment>
-        ))
-      } -->
-      {
-        data.docData.map((item) => (
-          <>
-            <hr id={item?.anchor_slug} />
-            <h4 class='text-3xl'>{item?.title}</h4>
-            <Fragment
-              key={item.id}
-              set:html={item?.block?.[0]?.block_content}
-            />
-          </>
-        ))
-      }
-    </BlogPost>
-    <DocsAside />
-    <Image
-      src={Circuit}
-      class='absolute size-full max-w-full mix-blend-color-dodge left-0 top-0 right-0 z-[-1]'
-      alt=''
-    />
+      <div class='grid grid-cols-5 lg:gap-12 w-full'>
+        <div
+          class='hidden md:block sticky md:col-span-1 top-[80px] w-full lg:w-[328px]'
+        >
+          <DocsAside />
+        </div>
+        <div
+          class='relative col-span-5 md:col-span-4 w-full max-w-max flex flex-col justify-items-stretch items-stretch justify-stretch place-content-stretch place-items-stretch'
+        >
+          <!-- <PageHeader
+            minimal
+            fullWidth
+            text='Docs'
+            bullet1=''
+            bullet2=''
+            bullet3=''
+            bullet4=''
+          /> -->
+          <BlogPost
+            title={docData[0]?.title as string}
+            previousText='Back'
+            size='noTopPadding'
+            hideAside
+            hideToc
+            hideTags
+            backLink='/blog'
+            date={formatDate(docData[0]?.date_created as string | null)}
+            alt={docData[0]?.title as string}
+            image={`42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`}
+            client:only='react'
+          >
+            <!-- {
+      data.docData.map((item, index) => (
+        <Fragment key={index}>
+          {item.group?.map((block) => (
+            <Fragment key={block.id} set:html={block.block_content} />
+          ))}
+        </Fragment>
+      ))
+    } -->
+            {
+              data.docData.map((item) => (
+                <>
+                  <hr id={item?.anchor_slug} />
+                  <h4 class='text-3xl'>{item?.title}</h4>
+                  <Fragment
+                    key={item.id}
+                    set:html={item?.block?.[0]?.block_content}
+                  />
+                </>
+              ))
+            }
+          </BlogPost>
+        </div>
+      </div>
+      <Image
+        src={Circuit}
+        class='absolute size-full max-w-full mix-blend-color-dodge left-0 top-0 right-0 z-[-1]'
+        alt=''
+      />
+    </div>
   </div>
 </Layout>

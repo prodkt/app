@@ -51,14 +51,14 @@ interface DocTabsProps {
   documentationData: DocGroupItem[]
 }
 
-const response = await GET()
+const response = await GET(Astro)
 const data = await response.json()
 
 const { documentationData } = data as DocTabsProps
 ---
 
 <div
-  class='fixed z-[5] bg-[var(--gray1)] border-r top-[96px] h-[calc(100%_-_128px)] left-[32px] px-0 pb-5 border rounded-2xl w-auto'
+  class='z-[5] bg-[var(--gray1)] border-r top-[96px] h-[calc(100%_-_0px)] px-0 pb-5 border rounded-2xl w-auto'
 >
   <div class='prodkt-docs-aside'>
     <DocTabs client:only='react' docGroup={documentationData} />
@@ -70,7 +70,7 @@ const { documentationData } = data as DocTabsProps
     &:has(.border-b):last-of-type {
       @apply border-b-0 border-b-transparent rounded-b-none;
     }
-    @apply sticky top-[80px] bg-[var(--grayA1)] overflow-hidden  w-[327px] rounded-xl p-0;
+    @apply sticky top-[80px] bg-[var(--grayA1)] overflow-hidden rounded-xl p-0;
     ol {
       @apply py-1;
       li {

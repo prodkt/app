@@ -6,8 +6,6 @@ import { supabase } from '@/supabase'
 
 type Documentation = Database['public']['Tables']['documentation']['Row']
 
-const supabaseClient: SupabaseClient<Database> = supabase
-
 /**
  * Fetch flow data from the database.
  * @param supabase The Supabase client.
@@ -58,17 +56,32 @@ async function fetchData(
  * @param root0
  * @param root0.params
  * @param root0.request
+ * @param context
  */
-export async function GET({ params, request }: APIContext) {
-  const { pageSlug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { supabase: SupabaseClient } = supabaseResult
+  const { pageSlug } = context.params
   try {
-    const docData = await fetchData(supabaseClient, pageSlug)
+    const docData = await fetchData(
+      SupabaseClient as SupabaseClient<Database>,
+      pageSlug,
+    )
     if (!docData || docData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(
         JSON.stringify({
           error: 'No data found.',
-          path: new URL(request.url).pathname,
+          path: new URL(context.request.url).pathname,
         }),
         {
           status: 404,
@@ -80,7 +93,7 @@ export async function GET({ params, request }: APIContext) {
     }
     return new Response(
       JSON.stringify({
-        params,
+        params: context.params,
         docData,
         fetchData,
         status: 200,

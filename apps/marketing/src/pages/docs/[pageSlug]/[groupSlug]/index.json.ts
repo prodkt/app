@@ -6,8 +6,6 @@ import { supabase } from '@/supabase'
 
 type Documentation = Database['public']['Tables']['documentation']['Row']
 
-const supabaseClient: SupabaseClient<Database> = supabase
-
 /**
  *
  * @param supabase
@@ -46,12 +44,27 @@ async function fetchData(
  * Handle GET request.
  * @param root0
  * @param root0.params
+ * @param context
  * @returns The response object.
  */
-export async function GET({ params }: APIContext) {
-  const { groupSlug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { supabase: SupabaseClient } = supabaseResult
+  const { groupSlug } = context.params
   try {
-    const groupData = await fetchData(supabaseClient, groupSlug)
+    const groupData = await fetchData(
+      SupabaseClient as SupabaseClient<Database>,
+      groupSlug,
+    )
     if (!groupData || groupData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {
@@ -63,7 +76,7 @@ export async function GET({ params }: APIContext) {
     }
     return new Response(
       JSON.stringify({
-        params,
+        params: context.params,
         groupData,
         fetchData,
         status: 200,

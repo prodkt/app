@@ -11,16 +11,26 @@ import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
 
-const supabaseClient: SupabaseClient<Database> = supabase
-
 /**
  *
  * @param root0 The API context.
  * @param root0.params The parameters object.
+ * @param context
  * @returns The response object.
  */
-export async function GET({ params }: APIContext) {
-  const { projectSlug, workSlug } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  const { supabase: SupabaseClient } = supabaseResult
+  const { projectSlug, workSlug } = context.params
 
   if (typeof workSlug !== 'string') {
     return new Response(
@@ -34,7 +44,10 @@ export async function GET({ params }: APIContext) {
     )
   }
 
-  const workData = await fetchWorkData(supabaseClient, workSlug)
+  const workData = await fetchWorkData(
+    SupabaseClient as SupabaseClient<Database>,
+    workSlug,
+  )
 
   if (!workData || workData.length === 0) {
     console.error('Data is empty or undefined')
@@ -52,21 +65,10 @@ export async function GET({ params }: APIContext) {
   // @ts-ignore
   const ProjectId = workData[0]?.project?.id
 
-  // const tokenData = await fetchTokenData(supabaseClient)
-  // if (!tokenData || tokenData.length === 0) {
-  //   console.error('Design Tokens are empty or undefined')
-  //   return new Response(JSON.stringify({ error: 'No design tokens found.' }), {
-  //     status: 404,
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   })
-  // }
-
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  const technologyData = await fetchTechnologyData(supabaseClient, workId)
+  const technologyData = await fetchTechnologyData(SupabaseClient, workId)
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  const templateData = await fetchTemplateData(supabaseClient, workId)
+  const templateData = await fetchTemplateData(SupabaseClient, workId)
 
   // Extract all templateIds from templateData
   const templateIds =
@@ -76,12 +78,12 @@ export async function GET({ params }: APIContext) {
 
   // Fetch template files using the extracted templateIds
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  const templateFiles = await fetchTemplateFiles(supabaseClient, templateIds)
+  const templateFiles = await fetchTemplateFiles(SupabaseClient, templateIds)
 
-  const { data: FilteredTokens, error: tokensError } = await supabase
-    .from('projects_design_tokens')
-    .select('projects_id,design_tokens_id!inner(*,id,title,palettes_json)')
-    .eq('projects_id', ProjectId)
+  const { data: FilteredTokens, error: tokensError } =
+    await SupabaseClient.from('projects_design_tokens')
+      .select('projects_id,design_tokens_id!inner(*,id,title,palettes_json)')
+      .eq('projects_id', ProjectId)
 
   // type ProjectDesignTokenTypes = QueryData<typeof FilteredTokens>['design_tokens_id'];
   // type DesignTokenTypes = QueryData<typeof FilteredTokens>['palettes_json'];

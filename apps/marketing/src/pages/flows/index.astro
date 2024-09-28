@@ -14,37 +14,44 @@ type FlowNodes = Database['public']['Tables']['flows']['Row']
 interface FlowData {
   flowData: FlowNodes[]
 }
-const response = await GET()
+const response = await GET(Astro)
 const data = (await response.json()) as FlowData
 ---
 
 <Layout>
-  <PageHeader
-    bullet1='User Flows'
-    bullet2='UX Journeys'
-    bullet3='Proofs'
-    bullet4='Concepting'
-    text='Flows'
-  />
-  <div class='grid items-stretch grid-cols-3 gap-32 p-20 justify-stretch'>
-    {
-      data ? (
-        data.flowData.map((item: any) => (
-          <Card
-            className='col-span-1 h-full'
-            key={item.id}
-            alt={item.title}
-            link={`/flows/${item.slug}`}
-            image={item.image.filename_disk}
-            title={item.title}
-            excerpt={item.excerpt}
-            date={formatDate(item.date_created)}
-            buttonText='View flow'
-          />
-        ))
-      ) : (
-        <p>Loading...</p>
-      )
-    }
+  <div
+    class='flex flex-col items-stretch justify-stretch px-6 gap-6 sm:px-12 lg:px-16 lg:gap-12 py-20 sm:py-24'
+  >
+    <PageHeader
+      fullWidth
+      bullet1='User Flows'
+      bullet2='UX Journeys'
+      bullet3='Proofs'
+      bullet4='Concepting'
+      text='Flows'
+    />
+    <div
+      class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-stretch space-x-0 justify-stretch gap-6 xl:gap-16'
+    >
+      {
+        data ? (
+          data.flowData.map((item: any) => (
+            <Card
+              className='col-span-1 h-full'
+              key={item.id}
+              alt={item.title}
+              link={`/flows/${item.slug}`}
+              image={item.image.filename_disk}
+              title={item.title}
+              excerpt={item.excerpt}
+              date={formatDate(item.date_created)}
+              buttonText='View flow'
+            />
+          ))
+        ) : (
+          <p>Loading...</p>
+        )
+      }
+    </div>
   </div>
 </Layout>

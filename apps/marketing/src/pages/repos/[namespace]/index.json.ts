@@ -1,3 +1,8 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-returns */
+/* eslint-disable jsdoc/check-param-names */
+/* eslint-disable jsdoc/require-param-description */
+
 import type { Database } from '@/database.types'
 import type { PostgrestResponse, SupabaseClient } from '@supabase/supabase-js'
 import type { APIContext } from 'astro'
@@ -6,18 +11,22 @@ import { supabase } from '@/supabase'
 
 type Repos = Database['public']['Tables']['repos']['Row']
 
-const supabaseClient: SupabaseClient<Database> = supabase
-
 /**
  *
  * @param root0
  * @param root0.params
+ * @param context
  */
-export async function GET({ params }: APIContext) {
-  // const { namespace } = params
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+
+  const { supabase: SupabaseClient } = supabaseResult
+  // const { namespace } = context.params
 
   try {
-    const repoData = await fetchRepoData(supabaseClient)
+    const repoData = await fetchRepoData(
+      SupabaseClient as SupabaseClient<Database>,
+    )
     if (!repoData || repoData.length === 0) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {
@@ -44,7 +53,7 @@ export async function GET({ params }: APIContext) {
 
     return new Response(
       JSON.stringify({
-        params,
+        params: context.params,
         repos,
         status: 200,
       }),

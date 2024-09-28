@@ -1,31 +1,12 @@
-import type { Database } from '@/database.types'
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-param-description */
+
 import type { SupabaseClient } from '@supabase/supabase-js'
+import type { APIContext } from 'astro'
 
 import { getSecret } from 'astro:env/server'
 
 import { supabase } from '@/supabase'
-
-// type Articles = Database['public']['Tables']['articles']['Row']
-// type Authors = Database['public']['Tables']['authors']['Row']
-// type Files = Database['public']['Tables']['directus_files']['Row']
-
-// interface ArticlesWithRelations {
-//   post_id: Articles['id']
-//   status: Articles['status']
-//   sort: Articles['sort']
-//   date_created: Articles['date_created']
-//   date_updated: Articles['date_updated']
-//   title: Articles['title']
-//   excerpt: Articles['excerpt']
-//   slug: Articles['slug']
-//   author?:
-//     | (Pick<Authors, 'first_name' | 'title' | 'last_name'> & {
-//         avatar: Pick<Files, 'filename_disk'> | null
-//       })
-//     | null,
-//   image: Pick<Files, 'filename_disk'> | null,
-// }
-const supabaseClient: SupabaseClient<Database> = supabase
 
 /**
  * Fetch flow data from the database.
@@ -33,7 +14,7 @@ const supabaseClient: SupabaseClient<Database> = supabase
  * @returns A promise that resolves to an array of Nodes or null.
  */
 async function fetchBlogData(
-  supabase: SupabaseClient<Database>,
+  supabase: SupabaseClient,
 ): Promise<unknown[] | null> {
   const SUPABASE_DEV_MODE = getSecret('SUPABASE_DEV_MODE')
   const isDevMode = SUPABASE_DEV_MODE === 'true'
@@ -71,11 +52,25 @@ async function fetchBlogData(
 
 /**
  * Handle GET request.
+ * @param context
  * @returns The response object.
  */
-export async function GET() {
+export async function GET(context: APIContext) {
+  const supabaseResult = await supabase(context)
+  if (!supabaseResult?.supabase) {
+    console.error('Failed to initialize Supabase client')
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+
+  const { supabase: SupabaseClient } = supabaseResult
+
   try {
-    const blogData = await fetchBlogData(supabaseClient)
+    const blogData = await fetchBlogData(SupabaseClient)
     if (!blogData) {
       console.error('Data is empty or undefined')
       return new Response(JSON.stringify({ error: 'No data found.' }), {
