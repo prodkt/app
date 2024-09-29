@@ -12,7 +12,7 @@ body {
   @apply transition-all duration-500 will-change-auto;
 }
 body[data-scroll-locked] {
-  @apply !p-4 bg-[var(--gray9)] transition-all duration-300 h-[calc(100dvh_-_32px)];
+  @apply !p-4 transition-all duration-300 h-[calc(100dvh_-_32px)];
 }
 body[data-scroll-locked] .prodkt-provider {
   @apply rounded-3xl transition-all duration-300 blur-sm h-[calc(100dvh_-_32px)];
@@ -851,7 +851,7 @@ body[data-scroll-locked]
 
   html,
   body {
-    @apply bg-[var(--gray1)] text-foreground font-sans;
+    @apply text-foreground font-sans;
   }
 }
 

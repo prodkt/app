@@ -99,7 +99,7 @@ export function ModeToggle() {
   })
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light-theme' ? 'dark-theme' : 'light-theme'
+    const newTheme = theme === 'dark-theme' ? 'dark-theme' : 'light-theme'
     localStorage.setItem('theme', newTheme)
     document.documentElement.setAttribute('data-theme', newTheme)
     document.documentElement.setAttribute('style', `color-scheme: ${newTheme};`)
