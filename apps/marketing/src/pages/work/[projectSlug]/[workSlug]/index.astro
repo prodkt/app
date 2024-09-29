@@ -74,199 +74,205 @@ const ProjectCodeTypeSample =
 ---
 
 <Layout>
-  <div class='relative w-full h-fit'>
-    {
-      brandingShowcase ? (
-        <>
-          {/* @ts-ignore */}
-          <div class='relative w-[calc(75%_-_0px)] h-full ml-auto top-20 '>
-            <BrandingShowcase
-              client:only='react'
-              ProjectDesignTokens={workData?.ProjectDesignTokens}
-              ProjectCodeType={ProjectCodeType as string}
-              ProjectCodeTypeSample={ProjectCodeTypeSample as string}
-              ProjectLogo={
-                workData?.workData[0]?.project.logos.logo
-                  .filename_disk as string
-              }
-              WorkProject={WorkProject as string}
-              ProjectLogo3d={ProjectLogo3d as string}
-              ProjectExpressiveType={ProjectExpressiveType as string}
-              ProjectExpressiveTypeSample={
-                ProjectExpressiveTypeSample as string
-              }
-              ProjectLogoType={ProjectLogoType as string}
-              ProjectLogoTypeSample={ProjectLogoTypeSample as string}
-              ProjectLogoCreative={ProjectLogoCreative as string}
-              ProjectLogoWireframe={ProjectLogoWireframe as string}
-              ProjectAnimatedLogo={ProjectAnimatedLogo as string}
-              ProjectBaseType={ProjectBaseType as string}
-              ProjectBaseTypeSample={ProjectBaseTypeSample as string}
-            />
-          </div>
-        </>
-      ) : null
-    }
-    {
-      workData?.templateFiles && brandingShowcase === false ? (
-        <>
-          {/* @ts-ignore */}
-          <PortfolioSlider template={workData?.templateFiles} />
-        </>
-      ) : null
-    }
-    <div class='absolute pb-10 z-[4] w-1/5 h-full gap-8 top-28 left-16'>
+  <div class='relative w-full'>
+    <div
+      class='relative w-full h-auto md:min-h-screen flex flex-col justify-between items-start gap-0'
+    >
+      {
+        brandingShowcase ? (
+          <>
+            {/* @ts-ignore */}
+            <div class='relative w-full p-4 flex flex-col order-last lg:w-[calc(75%_-_0px)] mx-auto lg:ml-auto lg:mr-0 lg:left-auto lg:top-20 '>
+              <BrandingShowcase
+                client:only='react'
+                ProjectDesignTokens={workData?.ProjectDesignTokens}
+                ProjectCodeType={ProjectCodeType as string}
+                ProjectCodeTypeSample={ProjectCodeTypeSample as string}
+                ProjectLogo={
+                  workData?.workData[0]?.project.logos.logo
+                    .filename_disk as string
+                }
+                WorkProject={WorkProject as string}
+                ProjectLogo3d={ProjectLogo3d as string}
+                ProjectExpressiveType={ProjectExpressiveType as string}
+                ProjectExpressiveTypeSample={
+                  ProjectExpressiveTypeSample as string
+                }
+                ProjectLogoType={ProjectLogoType as string}
+                ProjectLogoTypeSample={ProjectLogoTypeSample as string}
+                ProjectLogoCreative={ProjectLogoCreative as string}
+                ProjectLogoWireframe={ProjectLogoWireframe as string}
+                ProjectAnimatedLogo={ProjectAnimatedLogo as string}
+                ProjectBaseType={ProjectBaseType as string}
+                ProjectBaseTypeSample={ProjectBaseTypeSample as string}
+              />
+            </div>
+          </>
+        ) : null
+      }
+      {
+        workData?.templateFiles && brandingShowcase === false ? (
+          <>
+            {/* @ts-ignore */}
+            <PortfolioSlider template={workData?.templateFiles} />
+          </>
+        ) : null
+      }
       <div
-        class='sticky flex flex-col items-start justify-start w-full gap-8 top-28 rounded-2xl'
+        class='relative lg:absolute order-first p-4 pt-20 lg:p-0 lg:pb-10 z-[4] w-full lg:w-1/5 h-full gap-8 lg:top-28 lg:left-16'
       >
         <div
-          class='bg-[var(--ghost-aa5)] backdrop-blur-md flex flex-col items-start justify-start gap-6 rounded-2xl w-full h-full bottom-0 top-0 border border-[var(--grayA4)]'
+          class='sticky flex flex-col items-start justify-start w-full gap-8 top-28 rounded-2xl'
         >
           <div
-            class='flex flex-col items-start justify-center w-full p-10 pb-0'
+            class='bg-[var(--ghost-aa5)] backdrop-blur-md flex flex-col items-start justify-start gap-6 rounded-2xl w-full h-full bottom-0 top-0 border border-[var(--grayA4)]'
           >
-            <img
-              src={workData?.workData[0]?.project.logos.logo.filename_disk
-                ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${workData?.workData[0]?.project.logos.logo.filename_disk}`
-                : 'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif'}
-              alt={workData?.projectSlug ??
-                workData?.projectSlug ??
-                'Default Alt Text'}
-              class='block h-10 max-w-32 dark:hidden'
-            />
-            <img
-              src={workData?.workData[0]?.project.logos.logo_onDark
-                .filename_disk
-                ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${workData?.workData[0]?.project.logos.logo_onDark.filename_disk}`
-                : 'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif'}
-              alt={workData?.projectSlug ??
-                workData?.projectSlug ??
-                'Default Alt Text'}
-              class='hidden h-10 max-w-32 dark:flex'
-            />
-          </div>
+            <div
+              class='flex flex-col items-start justify-center w-full p-10 pb-0'
+            >
+              <img
+                src={workData?.workData[0]?.project.logos.logo.filename_disk
+                  ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${workData?.workData[0]?.project.logos.logo.filename_disk}`
+                  : 'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif'}
+                alt={workData?.projectSlug ??
+                  workData?.projectSlug ??
+                  'Default Alt Text'}
+                class='block h-10 max-w-32 dark:hidden'
+              />
+              <img
+                src={workData?.workData[0]?.project.logos.logo_onDark
+                  .filename_disk
+                  ? `https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${workData?.workData[0]?.project.logos.logo_onDark.filename_disk}`
+                  : 'https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/1662d152-933f-414d-9230-c4b19c773557.avif'}
+                alt={workData?.projectSlug ??
+                  workData?.projectSlug ??
+                  'Default Alt Text'}
+                class='hidden h-10 max-w-32 dark:flex'
+              />
+            </div>
 
-          <div
-            class='flex flex-col items-start justify-center w-full gap-2 px-10'
-          >
-            <h1 class='px-0 mr-auto text-lg text-left'>
-              {workData?.workData[0].title}
-            </h1>
-          </div>
-          <div
-            class='flex flex-col items-start justify-center w-full gap-2 px-10'
-          >
-            <h4
-              class='font-mono text-xs uppercase tracking-widest text-[var(--grayA8)]'
+            <div
+              class='flex flex-col items-start justify-center w-full gap-2 px-10'
             >
-              Project
-            </h4>
-            <div class='flex flex-col items-center justify-start text-xs'>
-              <h5 class='px-0 mr-auto text-lg text-left'>
-                {workData?.workData[0].project?.title}
-              </h5>
-              <a href={`/projects/${workData?.projectSlug}`}>
-                <Button
-                  variant='link'
-                  className='px-0 text-xs underline underline-offset-4'
-                  >Go to Project Page</Button
+              <h1 class='px-0 mr-auto text-lg text-left'>
+                {workData?.workData[0].title}
+              </h1>
+            </div>
+            <div
+              class='flex flex-row flex-wrap items-start justify-start gap-y-2'
+            >
+              <div class='flex flex-col items-start justify-center gap-2 px-10'>
+                <h4
+                  class='font-mono text-xs uppercase tracking-widest text-[var(--grayA8)]'
                 >
-              </a>
-            </div>
-          </div>
-          <div
-            class='flex flex-col items-start justify-center w-full gap-2 px-10'
-          >
-            <h4
-              class='font-mono text-xs uppercase tracking-widest text-[var(--grayA8)]'
-            >
-              Technology
-            </h4>
-            <div class='flex flex-row items-center justify-start'>
-              {
-                workData?.technologyData?.map((techItem: TechnologyTypes) => {
-                  if (techItem) {
-                    return (
-                      <TechUsed
-                        technologyName={
-                          techItem.technology_id.name
-                            ? techItem.technology_id.name
-                            : ''
+                  Project
+                </h4>
+                <div class='flex flex-col items-center justify-start text-xs'>
+                  <h5 class='px-0 mr-auto text-lg text-left'>
+                    {workData?.workData[0].project?.title}
+                  </h5>
+                  <a href={`/projects/${workData?.projectSlug}`}>
+                    <Button
+                      variant='link'
+                      className='px-0 text-xs underline underline-offset-4'
+                      >Go to Project Page</Button
+                    >
+                  </a>
+                </div>
+              </div>
+              <div class='flex flex-col items-start justify-center gap-2 px-10'>
+                <h4
+                  class='font-mono text-xs uppercase tracking-widest text-[var(--grayA8)]'
+                >
+                  Technology
+                </h4>
+                <div class='flex flex-row items-center justify-start'>
+                  {
+                    workData?.technologyData?.map(
+                      (techItem: TechnologyTypes) => {
+                        if (techItem) {
+                          return (
+                            <TechUsed
+                              technologyName={
+                                techItem.technology_id.name
+                                  ? techItem.technology_id.name
+                                  : ''
+                              }
+                              id={techItem.id ? techItem.id : ''}
+                              technologyMark={
+                                techItem.technology_id.logo.filename_disk
+                              }
+                              client:only='react'
+                            />
+                          )
+                        } else {
+                          console.warn(
+                            'Missing technology or logo in item:',
+                            techItem,
+                          )
+                          return null
                         }
-                        id={techItem.id ? techItem.id : ''}
-                        technologyMark={
-                          techItem.technology_id.logo.filename_disk
-                        }
-                        client:only='react'
-                      />
+                      },
                     )
-                  } else {
-                    console.warn(
-                      'Missing technology or logo in item:',
-                      techItem,
-                    )
-                    return null
                   }
-                })
-              }
-            </div>
-          </div>
-          <div
-            class='flex flex-col items-start justify-center w-full gap-2 px-10'
-          >
-            {
-              (link_behance ?? link_dribbble ?? link_instagram) ? (
-                <>
-                  <h4 class='font-mono text-xs uppercase tracking-widest text-[var(--grayA8)]'>
-                    External Showcase
-                  </h4>
-                  <div class='flex flex-row items-center justify-start'>
-                    <div class='relative flex flex-col items-center justify-start text-nowrap sm:items-start'>
-                      <div class='flex flex-row items-start justify-start gap-2'>
-                        {link_dribbble ? (
-                          <LogoButton
-                            client:only='react'
-                            href={`${link_dribbble}`}
-                            target='_blank'
-                          >
-                            <BehanceLogo className='transition-colors size-10 aspect-square z-[1]' />
-                          </LogoButton>
-                        ) : null}
-                        {link_behance ? (
-                          <LogoButton
-                            client:only='react'
-                            href={`${link_behance}`}
-                            target='_blank'
-                          >
-                            <DribbbleLogo className='transition-colors size-10 aspect-square z-[1]' />
-                          </LogoButton>
-                        ) : null}
-                        {link_instagram ? (
-                          <LogoButton
-                            client:only='react'
-                            href={`${link_instagram}`}
-                            target='_blank'
-                          >
-                            <InstagramLogo className='transition-colors size-10 aspect-square z-[1]' />
-                          </LogoButton>
-                        ) : null}
+                </div>
+              </div>
+              <div class='flex flex-col items-start justify-center gap-2 px-10'>
+                {
+                  (link_behance ?? link_dribbble ?? link_instagram) ? (
+                    <>
+                      <h4 class='font-mono text-xs uppercase tracking-widest text-[var(--grayA8)]'>
+                        External Showcase
+                      </h4>
+                      <div class='flex flex-row items-center justify-start'>
+                        <div class='relative flex flex-col items-center justify-start text-nowrap sm:items-start'>
+                          <div class='flex flex-row items-start justify-start gap-2'>
+                            {link_dribbble ? (
+                              <LogoButton
+                                client:only='react'
+                                href={`${link_dribbble}`}
+                                target='_blank'
+                              >
+                                <BehanceLogo className='transition-colors size-10 aspect-square z-[1]' />
+                              </LogoButton>
+                            ) : null}
+                            {link_behance ? (
+                              <LogoButton
+                                client:only='react'
+                                href={`${link_behance}`}
+                                target='_blank'
+                              >
+                                <DribbbleLogo className='transition-colors size-10 aspect-square z-[1]' />
+                              </LogoButton>
+                            ) : null}
+                            {link_instagram ? (
+                              <LogoButton
+                                client:only='react'
+                                href={`${link_instagram}`}
+                                target='_blank'
+                              >
+                                <InstagramLogo className='transition-colors size-10 aspect-square z-[1]' />
+                              </LogoButton>
+                            ) : null}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </>
-              ) : null
-            }
-          </div>
-          <div
-            class='flex flex-col items-start justify-center w-full gap-2 px-10 pb-10'
-          >
-            <h4
-              class='font-mono text-xs uppercase tracking-widest text-[var(--grayA8)]'
+                    </>
+                  ) : null
+                }
+              </div>
+            </div>
+            <div
+              class='flex flex-col items-start justify-center w-full gap-2 px-10 pb-10'
             >
-              Description
-            </h4>
-            <div class='flex flex-row items-center justify-start text-sm'>
-              <Fragment set:html={workData?.workData[0].content_block} />
+              <h4
+                class='font-mono text-xs uppercase tracking-widest text-[var(--grayA8)]'
+              >
+                Description
+              </h4>
+              <div class='flex flex-row items-center justify-start text-sm'>
+                <Fragment set:html={workData?.workData[0].content_block} />
+              </div>
             </div>
           </div>
         </div>
