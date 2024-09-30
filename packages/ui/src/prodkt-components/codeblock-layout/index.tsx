@@ -46,7 +46,7 @@ const CodeblockLayout = ({
           className='flex h-full grow flex-col gap-4 p-0 md:gap-0 md:-space-y-px md:p-0'
           {...props}
         >
-          <div className='flex h-24 items-center justify-start gap-4 p-4'>
+          <div className='flex h-24 w-full flex-row flex-wrap items-center justify-start gap-4 text-nowrap p-4'>
             <div className='flex flex-row items-center justify-center'>
               <img
                 src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${logoOnDark}`}
@@ -59,8 +59,8 @@ const CodeblockLayout = ({
                 className='h-6 dark:hidden'
               />
             </div>
-            <h1 className='text-3xl'>{title}</h1>
-            <div className='ml-auto mr-0 flex flex-row items-center justify-center'>
+            <h1 className='text-nowrap text-lg lg:text-3xl'>{title}</h1>
+            <div className='mr-0 flex w-full flex-row items-center justify-center lg:ml-auto'>
               <TechDisplay
                 title='Build template'
                 logo={buildLogo}
@@ -70,7 +70,7 @@ const CodeblockLayout = ({
           </div>
           <ResizablePanelGroup
             direction='horizontal'
-            className='inset-0 m-0 size-full'
+            className='inset-0 m-0 size-full flex-col lg:flex-row'
           >
             <ResizablePanel defaultSize={25} maxSize={75}>
               <div className='inset-0 m-0 flex size-full items-start justify-center py-0'>

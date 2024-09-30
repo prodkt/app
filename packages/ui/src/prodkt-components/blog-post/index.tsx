@@ -24,7 +24,7 @@ const headingVariants = cva('relative mx-auto w-full max-w-screen-lg pb-20', {
         ),
     },
     size: {
-      default: 'top-20 px-4 py-12 ',
+      default: 'py-6md:py-12 top-20 px-4 ',
       noTopPadding: 'top-0 px-4 pb-12',
     },
   },
@@ -108,11 +108,11 @@ const BlogPost = React.forwardRef<HTMLDivElement, BlogPostProps>(
         <div
           className={cn(
             !hideToc ? 'justify-start' : 'justify-center',
-            'flex w-full flex-row items-center gap-4',
+            'flex w-full flex-col items-center gap-4 md:flex-row',
           )}
         >
           {!hideAside ? (
-            <div className='flex w-1/4 flex-row items-center justify-start'>
+            <div className='flex w-full flex-col items-start justify-start md:w-1/4 md:flex-row md:items-center'>
               {!hideToc ? (
                 <a
                   href={backLink}
@@ -126,12 +126,12 @@ const BlogPost = React.forwardRef<HTMLDivElement, BlogPostProps>(
               ) : null}
             </div>
           ) : null}
-          <div className='flex w-3/4 flex-row items-center justify-start'>
-            <h5 className='z-[1] mr-auto bg-gradient-to-br from-[var(--gray12)] to-[var(--gray1)] bg-clip-text p-2 text-center text-xs font-semibold uppercase tracking-widest text-transparent'>
+          <div className='inline-flex w-full flex-row items-center justify-start  gap-2 md:w-3/4'>
+            <h5 className='z-[1] p-2 text-xs font-medium text-[var(--gray10)]'>
               Created: {date}
             </h5>
             {updated ? (
-              <h5 className='z-[1] mr-auto bg-gradient-to-br from-[var(--gray12)] to-[var(--gray1)] bg-clip-text p-2 text-center text-xs font-semibold uppercase tracking-widest text-transparent'>
+              <h5 className='z-[1] p-2 text-xs font-medium text-[var(--gray10)]'>
                 Updated: {updated}
               </h5>
             ) : null}
@@ -140,13 +140,13 @@ const BlogPost = React.forwardRef<HTMLDivElement, BlogPostProps>(
         <div
           className={cn(
             !hideToc ? 'justify-start' : 'justify-center',
-            'top-0 flex w-full flex-row items-start gap-5',
+            'top-0 flex w-full flex-col items-start gap-5 md:flex-row',
           )}
         >
           {!hideAside ? (
-            <div className='sticky top-20 flex h-full w-1/4 flex-col items-start justify-start gap-4 py-3'>
+            <div className='hidden size-full flex-row items-start justify-start gap-4 py-3 md:sticky md:top-20 md:flex md:w-1/4 md:flex-col'>
               {!hideToc ? (
-                <section className='h-auto w-3/4 '>
+                <section className='h-auto w-3/4'>
                   <p className='p-2 text-xs uppercase tracking-widest text-[var(--gray7)]'>
                     {asideText}
                   </p>
@@ -202,15 +202,15 @@ const BlogPost = React.forwardRef<HTMLDivElement, BlogPostProps>(
           <div
             className={cn(
               !hideToc ? 'justify-start' : 'justify-center',
-              'flex w-3/4 flex-col items-start gap-8',
+              'relative flex w-full flex-col items-start gap-8 md:w-3/4',
             )}
           >
-            <h1 className='text-7xl tracking-tighter'>
+            <h1 className='order-first text-5xl tracking-tighter md:order-first md:text-7xl'>
               {title ? title : 'No title provided'}
             </h1>
             {image ? (
               <AspectRatio
-                className='relative z-0 border-none border-transparent bg-[var(--grayA2)] p-0'
+                className='relative z-0 order-2 border-none border-transparent bg-[var(--grayA2)] p-0 md:order-2'
                 ratio={16 / 9}
               >
                 <div className='absolute inset-x-1/2 -top-1/2 mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]' />
@@ -239,11 +239,13 @@ const BlogPost = React.forwardRef<HTMLDivElement, BlogPostProps>(
                 <img
                   src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${image}`}
                   alt={alt ?? 'Default Alt Text'}
-                  className='size-full object-cover object-center opacity-100'
+                  className='order-first size-full object-cover object-center opacity-100 md:order-2'
                 />
               </AspectRatio>
             ) : null}
-            <main className='prodkt-blog-content z-[1] w-full'>{children}</main>
+            <main className='prodkt-blog-content z-[1] order-last w-full'>
+              {children}
+            </main>
           </div>
         </div>
         <div className='absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-[var(--gray4)] to-transparent opacity-0' />

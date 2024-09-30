@@ -143,7 +143,8 @@ const {
     class='w-[100dvw] max-w-[100dvw] h-screen min-h-[100dvh] max-h-[100dvh] relative overflow-x-hidden overflow-y-hidden scroll-m-0 scroll-p-0 !p-0 sm:!p-4 m-0 bg-[var(--gray12)]'
   >
     <div
-      class='prodkt-provider relative flex flex-col items-center justify-center sm:rounded-3xl sm:h-[calc(100dvh_-_32px)] w-full z-[0] bg-[var(--gray2)] overflow-hidden border border-[var(--grayA6)] dark:border-[var(--gray5)]'
+      class='prodkt-provider relative flex flex-col items-center justify-center sm:rounded-3xl sm:h-[calc(100dvh_-_32px)] w-full z-[0] bg-[var(--gray2)] dark:*:first-letter:
+      bg-[var(--gray2)] overflow-hidden border border-[var(--grayA6)] dark:border-[var(--gray5)]'
     >
       <ThemeProvider
         attribute='class'
@@ -169,7 +170,7 @@ const {
             <Header client:only='react' />
           </div>
           <div
-            class='prodkt-app-container relative bottom-0 mb-0 mt-auto top-auto h-auto min-h-[calc(100%_-_0px)] w-full z-[0] bg-[var(--gray1)] dark:bg-[var(--gray2)] overflow-x-hidden overflow-y-auto scrollbarGutter-stable'
+            class='prodkt-app-container relative bottom-0 mb-0 mt-auto top-auto max-h-[100dvh] w-full z-[0] bg-[var(--gray1)] dark:bg-[var(--gray2)] overflow-x-hidden overflow-y-auto scrollbarGutter-stable'
           >
             <slot />
             <PageFooter client:only='react' />

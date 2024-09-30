@@ -126,12 +126,14 @@ type Story = StoryObj<typeof BlogPost>
 export const Default: Story = {
   render: () => (
     <BlogPost
-      title={data.title}
+      title={data.blogData[0].title}
+      image={data.blogData[0].image.filename_disk}
       size='default'
       alt='Blog Image'
       backLink='/blog'
       previousText='Back to blog'
-      date='August 7th, 2024'
+      date={data.blogData[0].date_created}
+      updated={data.blogData[0].date_updated}
     >
       content
     </BlogPost>

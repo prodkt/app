@@ -31,30 +31,30 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
     >
       <div className='relative flex w-full flex-col place-content-center place-items-center content-center items-start justify-start md:items-center md:justify-center'>
         <div className='my-auto grid max-w-screen-md grid-cols-1 place-content-center place-items-center content-start items-start justify-center md:grid-cols-4 md:place-items-center md:items-center'>
-          <div className='z-10 col-span-2 my-auto flex flex-col items-center justify-center gap-8 py-10 md:pt-0'>
+          <div className='z-10 col-span-2 my-auto flex flex-col items-start justify-center gap-8 py-10 md:items-center md:pt-0'>
             <h3 className='my-auto max-w-[60dvw] text-pretty bg-gradient-to-br from-[var(--gray11)] to-[var(--gray12)] bg-clip-text pb-2 pr-3 text-6xl font-semibold leading-[80%] tracking-tighter text-transparent sm:text-7xl sm:leading-[75%] md:text-balance md:text-8xl md:leading-[75%] lg:max-w-full'>
               What is Prodkt?
             </h3>
             <div className='relative mr-auto flex translate-y-0 flex-col items-center justify-start gap-4'>
               <div className='relative z-[19] mr-auto flex w-full translate-y-0 flex-col items-start justify-start gap-2'>
-                <h2 className='relative text-balance bg-gradient-to-br from-[var(--grayA9)] to-[var(--grayA11)] bg-clip-text font-mono text-xs font-semibold uppercase tracking-widest text-transparent'>
+                <h2 className=' relative max-w-xs text-balance bg-gradient-to-br from-[var(--grayA9)] to-[var(--grayA11)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent'>
                   <div className='absolute inset-y-0 -left-5 my-auto h-px w-3 bg-[var(--grayA5)]' />
                   A resume made available to companies I've expressed interest
                   in for potential employment.
                 </h2>
-                <h2 className='absolute animate-pulse text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA12)] bg-clip-text font-mono text-xs font-semibold uppercase tracking-widest text-transparent blur'>
+                <h2 className=' absolute max-w-xs animate-pulse text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA12)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent blur'>
                   <div className='absolute inset-y-0 -left-5 my-auto h-px w-3 bg-[var(--grayA5)]' />
                   A resume made available to companies I've expressed interest
                   in for potential employment.
                 </h2>
               </div>
               <div className='relative z-[19] mr-auto flex w-full translate-y-0 flex-col items-start justify-start gap-2'>
-                <h2 className='relative text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA9)] bg-clip-text font-mono text-xs font-semibold uppercase tracking-widest text-transparent'>
+                <h2 className=' relative max-w-[240px] text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA9)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent'>
                   <div className='absolute inset-y-0 -left-5 my-auto h-px w-3 bg-[var(--grayA5)]' />
                   Building towards a multi-tenant SaaS platform for technical
                   Designer/Developers looking to showcase their work.
                 </h2>
-                <h2 className='absolute hidden animate-pulse text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA12)] bg-clip-text font-mono text-xs font-semibold uppercase tracking-widest text-transparent blur'>
+                <h2 className='4absolute hidden max-w-[200px] animate-pulse text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA12)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent blur'>
                   <div className='absolute inset-y-0 -left-5 my-auto h-px w-3 bg-[var(--grayA5)]' />
                   Building towards a multi-tenant SaaS platform for technical
                   Designer/Developers looking to showcase their work.
@@ -152,15 +152,15 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
       </div>
 
       <div className='relative bottom-0 top-auto z-[1] mb-0 mt-auto flex w-full max-w-full flex-row items-start justify-start gap-8 lg:justify-center'>
-        <div className='flex h-full flex-col items-start justify-start gap-12'>
-          <h6 className='relative mr-auto max-w-[75dvw] text-balance bg-gradient-to-br from-[var(--grayA10)] to-[var(--grayA12)] bg-clip-text text-left font-mono text-xs font-semibold uppercase tracking-widest text-transparent lg:mx-auto'>
+        <div className='flex h-full flex-col items-start justify-start gap-4'>
+          <h6 className='relative mr-auto max-w-[75dvw] max-w-xl text-balance bg-gradient-to-br from-[var(--grayA10)] to-[var(--grayA12)] bg-clip-text text-left font-mono text-xs uppercase tracking-widest text-transparent lg:mx-auto lg:text-center'>
             The driving force above all other intentions and purpose is
             simple...
           </h6>
-          <h3 className='text-balance bg-gradient-to-br from-[var(--gray11)] to-[var(--gray12)] bg-clip-text pb-2 pr-3 text-6xl font-semibold leading-[80%] tracking-tighter text-transparent md:text-8xl md:leading-[85%] lg:mx-auto'>
+          <h3 className='text-balance bg-gradient-to-br from-[var(--gray11)] to-[var(--gray12)] bg-clip-text pb-2 pr-3 text-6xl font-medium leading-[80%] tracking-tighter text-transparent md:text-8xl md:leading-[85%] lg:mx-auto'>
             Get hired.
           </h3>
-          <h6 className='mr-auto text-balance bg-gradient-to-br from-[var(--grayA9)] to-[var(--grayA6)] bg-clip-text pb-2.5 pr-3 text-4xl font-medium leading-[80%] tracking-tighter text-transparent dark:from-[var(--grayA8)] dark:to-[var(--grayA12)] md:text-4xl md:leading-[80%] lg:mx-auto'>
+          <h6 className='mr-auto text-balance  pb-2.5 pr-3 text-lg leading-[80%] tracking-tight text-[var(--gray9)] md:text-2xl md:leading-[80%] lg:mx-auto'>
             I{`'`}m in search of my next challenge.
           </h6>
         </div>

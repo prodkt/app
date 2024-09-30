@@ -10,8 +10,8 @@ export default function PageFooter() {
   return (
     <section className='w-full bg-transparent'>
       <div className='flex flex-row flex-wrap'>
-        <div className='gradientMask-to-b-10 w-full bg-[var(--ghost-aa2)] px-6 pt-10 sm:w-1/2 sm:pt-10 md:w-4/12 lg:w-3/12 lg:pb-10 lg:pl-12'>
-          <div className='top-12 mx-auto max-w-md sm:sticky lg:relative'>
+        <div className='gradientMask-to-b-10 w-full bg-[var(--ghost-aa2)] px-6 pt-10 sm:w-1/2 sm:pt-16 md:w-4/12 lg:w-3/12 lg:pb-10 lg:pl-12'>
+          <div className='top-20 mx-auto max-w-md sm:sticky lg:relative'>
             <a className='mb-12 inline-block text-3xl' href='/'>
               <ProdktLogo className='h-9' />
             </a>
