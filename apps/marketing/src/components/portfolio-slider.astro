@@ -25,7 +25,7 @@ const { template } = Astro.props
   class='mySwiper order-2'
   thumbs-swiper='.mySwiper2'
   loop='true'
-  space-between='-100px'
+  space-between='-50px'
   navigation='true'
   direction='horizontal'
   pagination-clickable='true'
@@ -35,8 +35,8 @@ const { template } = Astro.props
   centered-slides='true'
   slides-per-view='2'
   coverflow-effect-rotate='5'
-  coverflow-effect-stretch='300'
-  coverflow-effect-depth='200'
+  coverflow-effect-stretch='250'
+  coverflow-effect-depth='50'
   coverflow-effect-modifier='2'
   coverflow-effect-slide-shadows='false'
 >
@@ -84,29 +84,30 @@ const { template } = Astro.props
   swiper-container {
     width: 100%;
     height: 100%;
+    max-height: calc(100dvh - 100px);
   }
 
   .mySwiper swiper-slide {
     text-align: center;
     font-size: 18px;
     display: flex;
-    @apply rounded-3xl overflow-hidden mx-auto;
+    @apply rounded-3xl overflow-hidden mx-auto my-auto;
     justify-content: center;
     align-items: center;
   }
 
   .mySwiper swiper-slide:has(.swiper-slide-active) {
-    @apply w-auto scale-100 transition-all duration-500;
+    @apply w-auto scale-100 transition-all duration-500 opacity-100;
   }
 
   .mySwiper swiper-slide:not(.swiper-slide-active) img {
-    @apply overflow-hidden  scale-75 blur-sm relative transition-all duration-1000;
+    @apply overflow-hidden  scale-75 blur-sm relative transition-all duration-1000 brightness-50;
   }
 
   .mySwiper swiper-slide img {
     display: sw </swiper-slidek;
-    @apply flex shrink;
-    @apply rounded-[2rem] overflow-hidden border border-[var(--grayA4)] shadow-2xl;
+    @apply flex my-auto;
+    @apply rounded-[1.5rem] overflow-hidden border border-[var(--grayA4)] shadow-2xl;
     height: 100%;
     @apply max-h-[calc(100dvh_-_200px)];
   }
@@ -177,7 +178,7 @@ const { template } = Astro.props
   }
 
   .mySwiper2 {
-    height: 15%;
+    max-height: 150px;
     @apply order-last overflow-hidden border z-[5] border-[var(--grayA4)]  w-[60%] ring-[var(--grayA2)] scale-90 mt-auto hover:scale-100 shadow-inner mx-auto left-0 right-0 transition-transform duration-500 translate-y-[calc(-40%_+_40px)] hover:translate-y-[calc(-40%_+_0px)] hidden lg:flex flex-col items-center justify-center gap-4 gap-x-6 space-x-2 p-2 rounded-2xl bg-[var(--ghost-12)];
     box-sizing: border-box;
     @apply after:absolute after:w-full after:h-full after:left-0 after:right-0 after:top-0 after:bottom-0 after:bg-radial-gradient-1 after:z-[2];
