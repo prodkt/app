@@ -153,7 +153,7 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
 
       <div className='relative bottom-0 top-auto z-[1] mb-0 mt-auto flex w-full max-w-full flex-row items-start justify-start gap-8 lg:justify-center'>
         <div className='flex h-full flex-col items-start justify-start gap-4'>
-          <h6 className='relative mr-auto max-w-[75dvw] max-w-xl text-balance bg-gradient-to-br from-[var(--grayA10)] to-[var(--grayA12)] bg-clip-text text-left font-mono text-xs uppercase tracking-widest text-transparent lg:mx-auto lg:text-center'>
+          <h6 className='relative mr-auto max-w-xl text-balance bg-gradient-to-br from-[var(--grayA10)] to-[var(--grayA12)] bg-clip-text text-left font-mono text-xs uppercase tracking-widest text-transparent lg:mx-auto lg:text-center'>
             The driving force above all other intentions and purpose is
             simple...
           </h6>

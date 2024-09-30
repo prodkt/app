@@ -46,8 +46,8 @@ const CodeblockLayout = ({
           className='flex h-full grow flex-col gap-4 p-0 md:gap-0 md:-space-y-px md:p-0'
           {...props}
         >
-          <div className='flex h-24 w-full flex-row flex-wrap items-center justify-start gap-4 text-nowrap p-4'>
-            <div className='flex flex-row items-center justify-center'>
+          <div className='flex h-24 w-full flex-row items-center justify-start gap-4 text-nowrap p-4'>
+            <div className='flex flex-row items-center border-r border-[var(--grayA3)] pr-4'>
               <img
                 src={`https://odzdpcvclydcqawdagdt.supabase.co/storage/v1/object/public/prodkt/${logoOnDark}`}
                 alt='Logo'
@@ -59,8 +59,8 @@ const CodeblockLayout = ({
                 className='h-6 dark:hidden'
               />
             </div>
-            <h1 className='text-nowrap text-lg lg:text-3xl'>{title}</h1>
-            <div className='mr-0 flex w-full flex-row items-center justify-center lg:ml-auto'>
+            <h1 className='text-nowrap text-lg lg:text-2xl'>{title}</h1>
+            <div className='mr-0 hidden w-full flex-row items-center justify-end lg:ml-auto lg:flex'>
               <TechDisplay
                 title='Build template'
                 logo={buildLogo}
@@ -70,18 +70,18 @@ const CodeblockLayout = ({
           </div>
           <ResizablePanelGroup
             direction='horizontal'
-            className='inset-0 m-0 size-full flex-col lg:flex-row'
+            className='inset-0 m-0 size-full'
           >
-            <ResizablePanel defaultSize={25} maxSize={75}>
+            <ResizablePanel defaultSize={25} minSize={25} className='flex'>
               <div className='inset-0 m-0 flex size-full items-start justify-center py-0'>
                 <CodeEditor componentData={componentData} template={template} />
               </div>
             </ResizablePanel>
             <ResizableHandle
-              className='relative mx-2 h-full max-h-full border-none bg-transparent'
+              className='relative mx-2 flex h-full max-h-full border-none bg-transparent'
               withHandle
             />
-            <ResizablePanel minSize={25} defaultSize={75} maxSize={75}>
+            <ResizablePanel minSize={25} defaultSize={75}>
               <div className='inset-0 m-0 flex size-full items-start justify-center py-0 pl-0'>
                 {children}
               </div>
