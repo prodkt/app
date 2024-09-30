@@ -60,8 +60,9 @@ const HeaderMenu = ({ ...props }) => {
       <HeaderMenuItem link='/work' icon={Roadmaps} name='Work' />
       <HeaderMenuItem link='/projects' icon={Concepts} name='Projects' />
       <HeaderMenuItem link='/codeblocks' icon={Codeblocks} name='Codeblocks' />
-      <HeaderMenuItem link='/repos' icon={Repo} name='Repos' />
-      <HeaderMenuItem link='/docs' icon={Docs} name='Docs' />
+      {/* <HeaderMenuItem link='/repos' icon={Repo} name='Repos' /> */}
+      {/* <HeaderMenuItem link='/docs' icon={Docs} name='Docs' /> */}
+      <HeaderMenuItem link='/work-history' icon={Docs} name='Work History' />
       <HeaderMenuItem link='/files' icon={Work} name='Files' />
       <HeaderMenuItem link='/changelog' icon={Changelogs} name='Changelog' />
     </ul>

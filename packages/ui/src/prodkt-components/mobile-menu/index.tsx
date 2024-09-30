@@ -7,7 +7,7 @@ import { Menu as MenuIcon } from 'lucide-react'
 import {
   MobileBlog,
   MobileChangelogs,
-  MobileData,
+  MobileCodeblocks,
   MobileDesign,
   MobileDocs,
   MobileFlows,
@@ -35,24 +35,39 @@ const MobileMenu = () => {
       <DrawerTrigger asChild className='px-2 xl:hidden'>
         <Button
           variant='outline'
-          className='group flex flex-row items-center justify-center gap-1 rounded-full border px-2 py-1 hover:bg-[var(--ghost-aa12)]'
+          className='group flex flex-row items-center justify-center gap-1 rounded-full border px-2 py-1 transition-colors hover:bg-[var(--ghost-aa3)]'
         >
-          <MenuIcon size={20} className='group-hover:stroke-[var(--accent9)]' />
-          <p className='font-mono text-xs font-normal tracking-widest uppercase'>
+          <MenuIcon
+            size={20}
+            className='transition-colors group-hover:stroke-[var(--accent9)]'
+          />
+          <p className='font-mono text-xs font-normal uppercase tracking-widest'>
             Menu
           </p>
         </Button>
       </DrawerTrigger>
-      <DrawerContent className='h-[75dvh]'>
+      <DrawerContent className='h-[75dvh] border-[var(--grayA4)]'>
         <DrawerHeader className='h-full'>
-          <ul className='grid grid-cols-3 gap-px md:grid-cols-4'>
+          <ul className='grid grid-cols-3 gap-px overflow-hidden rounded-xl md:grid-cols-4'>
             <MobileMenuItem link='/' icon={MobileHome} name='Home' />
             <MobileMenuItem link='/flows' icon={MobileFlows} name='Flows' />
             <MobileMenuItem link='/blog' icon={MobileBlog} name='Blog' />
             <MobileMenuItem link='/work' icon={MobileWork} name='Work' />
-            <MobileMenuItem link='/docs' icon={MobileDocs} name='Docs' />
-            <MobileMenuItem link='/data' icon={MobileData} name='Data' />
-            <MobileMenuItem link='/design' icon={MobileDesign} name='Design' />
+            <MobileMenuItem
+              link='/work-history'
+              icon={MobileDocs}
+              name='Work History'
+            />
+            <MobileMenuItem
+              link='/codeblocks'
+              icon={MobileCodeblocks}
+              name='Codeblocks'
+            />
+            <MobileMenuItem
+              link='https://ui.prodkt.cloud'
+              icon={MobileDesign}
+              name='Component Library'
+            />
             <MobileMenuItem
               link='/changelog'
               icon={MobileChangelogs}
@@ -60,11 +75,11 @@ const MobileMenu = () => {
             />
           </ul>
         </DrawerHeader>
-        <DrawerFooter>
+        {/* <DrawerFooter>
           <DrawerClose>
             <Button variant='outline'>Close</Button>
           </DrawerClose>
-        </DrawerFooter>
+        </DrawerFooter> */}
       </DrawerContent>
     </Drawer>
   )
@@ -75,11 +90,11 @@ const MobileMenuItem = React.forwardRef<HTMLLIElement, MobileMenuItemProps>(
     return (
       <li
         ref={ref}
-        className='flex items-center justify-center list-none size-full'
+        className='flex size-full list-none place-content-center place-items-center content-center items-center justify-center bg-[var(--grayA2)]'
         {...props}
       >
         <a
-          className='group relative mx-0 inline-flex h-full w-fit grow flex-col items-center justify-start gap-2 rounded-2xl px-5 py-3.5 text-sm text-[var(--gray11)]'
+          className='group relative mx-0 inline-flex h-full w-fit grow flex-col items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm text-[var(--gray11)]'
           href={link}
         >
           {MobileIcon && typeof MobileIcon === 'function' ? (
