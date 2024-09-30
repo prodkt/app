@@ -120,13 +120,13 @@ const HeroHeader = React.forwardRef<
       </LogoCloud>
 
       <div className='relative z-[2] mb-4 flex flex-col items-center justify-center gap-2 sm:flex-row'>
-        <h2 className=' bg-gradient-to-br from-ghost to-[var(--ghost-a10)] bg-clip-text font-mono text-xs font-semibold uppercase tracking-widest text-transparent'>
+        <h2 className=' bg-gradient-to-br from-ghost to-[var(--ghost-a10)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent'>
           A portfolio platform from Bryan Funk
         </h2>
         <div className='hidden h-4 w-px bg-ghost-a1 sm:block' />
-        <a href='/about'>
+        <a href='/work-history'>
           <Button className='p-0 text-xs' variant='link'>
-            Learn more
+            Coming Soon
           </Button>
         </a>
         <div className='absolute -bottom-14 right-4 w-fit sm:-bottom-14 sm:-right-1/4'>

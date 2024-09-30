@@ -52,39 +52,40 @@ const sortedPages = [...documentationPages].sort(
     class='flex flex-col items-stretch justify-stretch px-6 gap-6 sm:px-12 lg:px-16 lg:gap-12 py-20 sm:py-24'
   >
     <div
-      class='flex flex-col items-stretch w-full place-items-stretch gap-6 lg:gap-12 place-content-stretch xl:pl-[21.5rem] justify-stretch'
+      class='flex flex-col items-stretch w-full place-items-stretch gap-6 lg:gap-12 place-content-stretch justify-stretch'
     >
       <PageHeader minimal fullWidth text='Docs' />
-      <div
-        class='grid items-stretch grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 -space-x-px justify-stretch'
-      >
-        {
-          sortedPages.length > 0 ? (
-            sortedPages.map((item: DocumentationPage) => (
-              <Card
-                client:only='react'
-                className='col-span-1 h-full'
-                key={item.id}
-                image={
-                  item.image?.filename_disk
-                    ? item.image?.filename_disk
-                    : `42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`
-                }
-                alt='test'
-                link={`/docs/${item.slug}`}
-                title={item.title || 'Untitled'}
-                excerpt={item.title || 'No description available'}
-                date={formatDate(item.date_updated) || 'Date not available'}
-              />
-            ))
-          ) : (
-            <p>Loading...</p>
-          )
-        }
+      <div class='grid lg:grid-cols-2 gap-6 size-full'>
+        <DocsAside />
+        <div
+          class='grid items-stretch grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 -space-x-px justify-stretch w-full basis-2/3'
+        >
+          {
+            sortedPages.length > 0 ? (
+              sortedPages.map((item: DocumentationPage) => (
+                <Card
+                  client:only='react'
+                  className='col-span-1 h-full'
+                  key={item.id}
+                  image={
+                    item.image?.filename_disk
+                      ? item.image?.filename_disk
+                      : `42f3d79d-1a22-4f70-acf0-91e2883d5d04.avif`
+                  }
+                  alt='test'
+                  link={`/docs/${item.slug}`}
+                  title={item.title || 'Untitled'}
+                  excerpt={item.title || 'No description available'}
+                  date={formatDate(item.date_updated) || 'Date not available'}
+                />
+              ))
+            ) : (
+              <p>Loading...</p>
+            )
+          }
+        </div>
       </div>
     </div>
-
-    <DocsAside />
 
     <Image
       src={Circuit}

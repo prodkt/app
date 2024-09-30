@@ -1,6 +1,7 @@
 /* eslint-disable jsdoc/require-returns */
 
 import { ProdktLogo } from '@/brands/prodkt'
+import { Badge } from '@/primitives/badge'
 import { SocialMedia } from '@/prodkt-components/social-media'
 
 /**
@@ -27,7 +28,7 @@ export default function PageFooter() {
         </div>
         <div className='w-full bg-[var(--ghost-aa2)] px-6 py-4 sm:w-1/2 sm:bg-[var(--grayA1)] sm:px-12 sm:py-10 md:w-7/12 lg:-mx-4 lg:w-9/12 lg:py-20 lg:pl-16'>
           <div className='mt-2 flex flex-wrap border-b-4 border-[var(--ghost-a1)] pb-10 lg:pl-0'>
-            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/4'>
+            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/3'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Exploration
               </h3>
@@ -66,7 +67,7 @@ export default function PageFooter() {
                 </li>
               </ul>
             </div>
-            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/4'>
+            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/3'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Bryan Funk
               </h3>
@@ -103,29 +104,13 @@ export default function PageFooter() {
                     Resume
                   </a>
                 </li>
-                <li className='ml-[-16px] flex w-full flex-row items-stretch justify-stretch text-sm'>
-                  <a
-                    className='flex w-full flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'
-                    href='/type-one'
-                  >
-                    Type 1 Diabetes
-                  </a>
-                </li>
               </ul>
             </div>
-            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/4'>
+            <div className='w-1/2 px-4 sm:mb-10 sm:w-full md:w-1/2 lg:mb-0 lg:w-1/3'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Prodkt
               </h3>
               <ul className='flex flex-col gap-px'>
-                <li className='ml-[-16px] flex w-full flex-row items-stretch justify-stretch text-sm'>
-                  <a
-                    className='flex w-full flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'
-                    href='/about'
-                  >
-                    What is Prodkt?
-                  </a>
-                </li>
                 <li className='ml-[-16px] flex w-full flex-row items-stretch justify-stretch text-sm'>
                   <a
                     className='flex w-full flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'
@@ -135,44 +120,30 @@ export default function PageFooter() {
                   </a>
                 </li>
                 <li className='ml-[-16px] flex w-full flex-row items-stretch justify-stretch text-sm'>
-                  <a
-                    className='flex w-full flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'
-                    href='/roadmaps'
-                  >
-                    Roadmaps
-                  </a>
-                </li>
-                <li className='ml-[-16px] flex w-full flex-row items-stretch justify-stretch text-sm'>
-                  <a
-                    className='flex w-full flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'
-                    href='/pricing'
-                  >
-                    Pricing
-                  </a>
-                </li>
-                <li className='ml-[-16px] flex w-full flex-row items-stretch justify-stretch text-sm'>
-                  <a
-                    className='flex w-full flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'
-                    href='/docs'
-                  >
+                  <div className='flex flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'>
                     Documentation
-                  </a>
+                  </div>
+                  <Badge variant='outline'>Coming Soon</Badge>
                 </li>
                 <li className='ml-[-16px] flex w-full flex-row items-stretch justify-stretch text-sm'>
-                  <a
-                    className='flex w-full flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'
-                    href='/'
-                  >
+                  <div className='flex flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'>
+                    Workspaces
+                  </div>
+                  <Badge variant='outline'>Coming Soon</Badge>
+                </li>
+                <li className='ml-[-16px] flex w-full flex-row items-stretch justify-stretch text-sm'>
+                  <div className='flex flex-row items-center justify-start px-4 py-2 text-[var(--grayA10)] underline decoration-[var(--grayA1)] underline-offset-[12px] transition-colors duration-500 hover:text-[var(--grayA12)] hover:decoration-[var(--grayA6)]'>
                     API
-                  </a>
+                  </div>
+                  <Badge variant='outline'>Coming Soon</Badge>
                 </li>
               </ul>
             </div>
-            <div className='mt-6 px-4 sm:mt-0 sm:w-1/2 sm:w-full md:w-1/2 lg:w-full'>
+            <div className='mt-6 flex w-full flex-col px-4'>
               <h3 className='mb-8 font-mono text-xs uppercase tracking-widest text-[var(--gray8)]'>
                 Contact Me
               </h3>
-              <ul className='flex flex-col gap-px xl:flex-row xl:gap-8'>
+              <ul className='flex flex-col gap-px md:flex-row md:gap-8'>
                 <li className='mb-6'>
                   <h4 className='flex w-full flex-row items-center justify-start px-0 py-2 text-sm text-[var(--grayA10)] decoration-[var(--grayA1)] transition-colors duration-500 hover:decoration-[var(--grayA6)]'>
                     Mobile

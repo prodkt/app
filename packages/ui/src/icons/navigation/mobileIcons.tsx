@@ -736,8 +736,8 @@ const MobileBlog = (props: SVGProps<SVGSVGElement>) => (
         y2={10.261}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--olive5)' />
-        <stop offset={1} stopColor='var(--olive9)' />
+        <stop stopColor='var(--grass10)' />
+        <stop offset={1} stopColor='var(--grass9)' />
       </linearGradient>
       <linearGradient
         id='mobile_blogIconMobile-c'
@@ -747,8 +747,8 @@ const MobileBlog = (props: SVGProps<SVGSVGElement>) => (
         y2={10.261}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--olive5)' />
-        <stop offset={1} stopColor='var(--olive9)' />
+        <stop stopColor='var(--grass10)' />
+        <stop offset={1} stopColor='var(--grass9)' />
       </linearGradient>
       <clipPath id='mobile_blogIconMobile-a'>
         <path fill='currentColor' d='M.415 0h20v20h-20z' />
