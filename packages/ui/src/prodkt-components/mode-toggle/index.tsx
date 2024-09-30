@@ -93,13 +93,13 @@ export function ModeToggle() {
       return 'dark-theme'
     }
     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      return 'light-theme'
+      return 'dark-theme'
     }
     return 'dark-theme'
   })
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light-theme' ? 'dark-theme' : 'light-theme'
+    const newTheme = theme === 'dark-theme' ? 'light-theme' : 'dark-theme'
     localStorage.setItem('theme', newTheme)
     document.documentElement.setAttribute('data-theme', newTheme)
     document.documentElement.setAttribute('style', `color-scheme: ${newTheme};`)
@@ -120,7 +120,20 @@ export function ModeToggle() {
         'style',
         'color-scheme: light-theme; background-color: var(--gray2)',
       )
-    } else {
+    }
+    // if (theme === 'system' || theme === undefined) {
+    //   localStorage.setItem('theme', 'dark-theme')
+    //   root.classList.remove('light-theme')
+    //   root.classList.remove('light')
+    //   root.classList.add('dark-theme')
+    //   root.classList.add('dark')
+    //   root.setAttribute('data-theme', 'dark-theme')
+    //   root.setAttribute(
+    //     'style',
+    //     'color-scheme: dark-theme; background-color: var(--gray2)',
+    //   )
+    // }
+    else {
       root.classList.add('dark-theme')
       root.classList.add('dark')
       root.classList.remove('light-theme')

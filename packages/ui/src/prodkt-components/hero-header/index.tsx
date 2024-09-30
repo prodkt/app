@@ -29,39 +29,53 @@ const HeroHeader = React.forwardRef<
   return (
     <div
       ref={ref}
-      className='relative flex min-h-screen h-full flex-col items-center justify-start space-y-16 overflow-hidden pt-28 pb-20'
+      className='relative flex h-full min-h-screen flex-col items-center justify-start space-y-16 overflow-hidden pb-20 pt-28'
       {...props}
     >
       <div className='relative z-[1] flex h-fit flex-col items-center justify-center space-y-8'>
-        <div className='relative flex flex-row text-xs gap-2 items-center justify-center border border-[var(--accentA9)] bg-radial-gradient from-[var(--accentA3)] to-[var(--accentA1)] px-4 py-1 shadow-2xl shadow-ghost-a2 backdrop-blur'>
-          <div className='absolute -left-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none border border-[var(--accentA9)] bg-ghost-aa7' />
-          <div className='absolute -right-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none border border-[var(--accentA9)] bg-ghost-aa7' />
-          <div className='absolute -bottom-1 -left-1 top-auto my-0 size-2 rounded-none border border-[var(--accentA9)] bg-ghost-aa7' />
-          <div className='absolute -bottom-1 -right-1 top-auto my-0 size-2 rounded-none border border-[var(--accentA9)] bg-ghost-aa7' />
-          <p className=''>I'm on the search for my next challenge.</p>
-          <div className='h-4 w-px bg-ghost-a1 hidden sm:block' />
-          <a href='/work-history'>
-            <Button className='p-0 gap-1 text-xs' variant='link'>
-              Work History
-              <ExternalLink
-                size={16}
-                className='fill-[var(--grayA1)] stroke-[var(--accent9)]'
-              />
-            </Button>
-          </a>
-          <div className='h-4 w-px bg-ghost-a1 hidden sm:block' />
-          <a href='/resume/BryanFunk_CV-Resume_v2_001_reduced.pdf' download>
-            <Button className='p-0 text-xs gap-1' variant='link'>
-              <Download
-                size={16}
-                className='fill-[var(--grayA1)] stroke-[var(--accent9)]'
-              />
-              Resume
-            </Button>
-          </a>
+        <div className='relative flex flex-row items-center justify-center gap-0 border border-[var(--grayA4)] p-0'>
+          <div className='absolute -left-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none border border-[var(--grayA4)] bg-ghost-aa7' />
+          <div className='absolute -right-1 -top-1 bottom-auto mb-auto mt-0 size-2 rounded-none border border-[var(--grayA4)] bg-ghost-aa7' />
+          <div className='absolute -bottom-1 -left-1 top-auto my-0 size-2 rounded-none border border-[var(--grayA4)] bg-ghost-aa7' />
+          <div className='absolute -bottom-1 -right-1 top-auto my-0 size-2 rounded-none border border-[var(--grayA4)] bg-ghost-aa7' />
+          <div className='flex flex-col items-center justify-center gap-1 space-y-0 py-2 pl-3 pr-2 sm:flex-row'>
+            <p className=' text-pretty text-center text-sm text-[var(--grayA8)]'>
+              I'm on the search for my next challenge.
+            </p>
+            <div className='flex flex-row place-content-stretch place-items-stretch content-stretch items-center justify-stretch gap-2 -space-x-px space-y-0'>
+              <a className='inset-x-0 mx-0 w-full py-0' href='/work-history'>
+                <Button
+                  className='flex h-6 items-center justify-center gap-1 p-0 px-1 text-xs'
+                  variant='link'
+                >
+                  Work History
+                  <ExternalLink
+                    size={16}
+                    className='fill-[var(--grayA1)] stroke-[var(--accent11)]'
+                  />
+                </Button>
+              </a>
+              <div className='my-auto h-4 min-w-px bg-[var(--grayA4)]' />
+              <a
+                className='inset-x-0 mx-0 w-full py-0'
+                href='/resume/BryanFunk_CV-Resume_v2_001_reduced.pdf'
+                download
+              >
+                <Button
+                  className='flex h-6 items-center justify-center gap-1 p-0 px-1 text-xs'
+                  variant='link'
+                >
+                  <Download
+                    size={16}
+                    className='fill-[var(--accent9)] stroke-[var(--accent11)]'
+                  />
+                  Resume
+                </Button>
+              </a>
+            </div>
+          </div>
         </div>
-
-        <h1 className='-mb-6 bg-gradient-to-b from-ghost-a11 to-ghost-a9 bg-clip-text pb-2 text-5xl sm:text-8xl tracking-tighter text-transparent'>
+        <h1 className='-mb-6 bg-gradient-to-b from-ghost-a11 to-ghost-a9 bg-clip-text pb-2 text-5xl tracking-tighter text-transparent sm:text-8xl'>
           Bryan Funk
         </h1>
         <Sparks className='pointer-events-none absolute inset-auto z-0 m-auto w-screen select-none' />
@@ -79,7 +93,7 @@ const HeroHeader = React.forwardRef<
           className='absolute inset-auto right-0 z-[2] m-0 translate-x-full rotate-180 select-none'
           alt='Chip glow'
         />
-        <Chip className='pointer-events-none z-[10] min-w-96 translate-y-[6.125rem] select-none' />
+        <Chip className='pointer-events-none z-10 min-w-96 translate-y-[6.125rem] select-none' />
         <div className='absolute z-0 m-auto h-full w-1/2 -translate-y-3 rotate-90 animate-pulse rounded-l-full bg-[var(--sky11)] blur-xl' />
         <div className='absolute z-0 m-auto h-full w-1/2 -translate-y-3 rotate-90 animate-pulse rounded-l-full bg-[var(--orange9)] blur-xl' />
         <div className='absolute z-0 m-auto h-full w-1/2 translate-y-3 rotate-90 animate-pulse rounded-l-full bg-[var(--sky11)] blur-xl' />
@@ -105,60 +119,60 @@ const HeroHeader = React.forwardRef<
         </CloudLogo>
       </LogoCloud>
 
-      <div className='relative z-[2] mb-4 flex flex-col sm:flex-row items-center justify-center gap-2'>
+      <div className='relative z-[2] mb-4 flex flex-col items-center justify-center gap-2 sm:flex-row'>
         <h2 className=' bg-gradient-to-br from-ghost to-[var(--ghost-a10)] bg-clip-text font-mono text-xs font-semibold uppercase tracking-widest text-transparent'>
           A portfolio platform from Bryan Funk
         </h2>
-        <div className='h-4 w-px bg-ghost-a1 hidden sm:block' />
+        <div className='hidden h-4 w-px bg-ghost-a1 sm:block' />
         <a href='/about'>
           <Button className='p-0 text-xs' variant='link'>
             Learn more
           </Button>
         </a>
-        <div className='absolute -bottom-14 sm:-bottom-14 right-4 sm:-right-1/4 w-fit'>
+        <div className='absolute -bottom-14 right-4 w-fit sm:-bottom-14 sm:-right-1/4'>
           <AnimatedCursor text='Bryan Funk' />
         </div>
       </div>
       <div className='relative hidden flex-row items-center justify-center gap-20'>
         {/* BOX 2 */}
-        <div className='group flex flex-row items-center justify-center gap-0 space-y-[0px]'>
-          <div className='flex flex-col items-center justify-center gap-0 space-y-[0px]'>
-            <div className='relative flex flex-col items-center justify-center  shadow-2xl shadow-ghost-aa12 bg-gradient-to-br border border-[var(--ghost-a1)] from-[var(--ghost-aa4)] ring ring-inset ring-[var(--ghost-aa4)] to-[var(--gray3)] p-8'>
-              <div className='text-transparent bg-gradient-to-t from-[var(--grayA2)] to-[var(--grayA8)] text-md bg-clip-text font-mono uppercase text-xs tracking-widest'>
+        <div className='group flex flex-row items-center justify-center gap-0 space-y-0'>
+          <div className='flex flex-col items-center justify-center gap-0 space-y-0'>
+            <div className='relative flex flex-col items-center justify-center  border border-[var(--ghost-a1)] bg-gradient-to-br from-[var(--ghost-aa4)] to-[var(--gray3)] p-8 shadow-2xl shadow-ghost-aa12 ring ring-inset ring-[var(--ghost-aa4)]'>
+              <div className='text-md bg-gradient-to-t from-[var(--grayA2)] to-[var(--grayA8)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent'>
                 New Product Development
               </div>
             </div>
             {/* BRANCHES 2 */}
-            <div className='hidden relative flex-col items-center justify-center gradientMask-to-b'>
-              <div className='relative flex flex-row items-center justify-center mt-6'>
-                <div className='scale-x-[-1]' />
+            <div className='gradientMask-to-b relative hidden flex-col items-center justify-center'>
+              <div className='relative mt-6 flex flex-row items-center justify-center'>
+                <div className='-scale-x-100' />
                 <div className=' absolute inset-x-auto mx-auto'>
                   <PathLineComposed className='h-auto scale-150' />
                 </div>
-                <div className='scale-x-[-1]' />
+                <div className='-scale-x-100' />
               </div>
-              <div className='relative flex flex-row items-center justify-center mt-6 mx-auto text-center gap-2 text-[var(--grayA9)]'>
-                <div className='relative text-xs w-auto  shadow-inner shadow-ghost-aa12 ring font-mono uppercase font-light tracking-widest ring-inset py-2 px-5 ring-[var(--grayA2)] border border-[var(--grayA4)] bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--ghost-aa12)]'>
+              <div className='relative mx-auto mt-6 flex flex-row items-center justify-center gap-2 text-center text-[var(--grayA9)]'>
+                <div className='relative w-auto border  border-[var(--grayA4)] bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--ghost-aa12)] px-5 py-2 font-mono text-xs font-light uppercase tracking-widest shadow-inner shadow-ghost-aa12 ring ring-inset ring-[var(--grayA2)]'>
                   <p className='bg-gradient-to-t from-[var(--ghost-a5)] to-[var(--ghost-aa9)] bg-clip-text text-transparent'>
                     Discovery
                   </p>
-                  <p className='absolute z-[1] invisible hover:visible inset-0 m-0 text-[var(--ghost-a3)] bg-[var(--ghost-aa12)] flex items-center justify-center size-full'>
+                  <p className='invisible absolute inset-0 z-[1] m-0 flex size-full items-center justify-center bg-[var(--ghost-aa12)] text-[var(--ghost-a3)] hover:visible'>
                     Continue
                   </p>
                 </div>
-                <div className='relative text-xs w-auto  shadow-inner-[10px_10px_10px_4px] shadow-ghost-a11 ring font-mono uppercase font-light tracking-widest ring-inset py-2 px-5 ring-[var(--grayA2)] border border-[var(--grayA4)] bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--ghost-aa12)]'>
+                <div className='shadow-inner-[10px_10px_10px_4px] relative w-auto  border border-[var(--grayA4)] bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--ghost-aa12)] px-5 py-2 font-mono text-xs font-light uppercase tracking-widest shadow-ghost-a11 ring ring-inset ring-[var(--grayA2)]'>
                   <p className='bg-gradient-to-t from-[var(--ghost-a5)] to-[var(--ghost-aa9)] bg-clip-text text-transparent'>
                     Delivery
                   </p>
-                  <p className='absolute z-[1] invisible hover:visible inset-0 m-0 text-[var(--ghost-aa3)] bg-[var(--ghost-aa12)] flex items-center justify-center size-full'>
+                  <p className='invisible absolute inset-0 z-[1] m-0 flex size-full items-center justify-center bg-[var(--ghost-aa12)] text-[var(--ghost-aa3)] hover:visible'>
                     Continue
                   </p>
                 </div>
-                <div className='relative text-xs w-auto  shadow-inner shadow-ghost-aa12 ring font-mono uppercase font-light tracking-widest ring-inset py-2 px-5 ring-[var(--grayA2)] border border-[var(--grayA4)] bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--ghost-aa12)]'>
+                <div className='relative w-auto border  border-[var(--grayA4)] bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--ghost-aa12)] px-5 py-2 font-mono text-xs font-light uppercase tracking-widest shadow-inner shadow-ghost-aa12 ring ring-inset ring-[var(--grayA2)]'>
                   <p className='bg-gradient-to-t from-[var(--ghost-a5)] to-[var(--ghost-aa9)] bg-clip-text text-transparent'>
                     Growth
                   </p>
-                  <p className='absolute z-[1] invisible hover:visible inset-0 m-0 text-[var(--ghost-a3)] bg-[var(--ghost-aa12)] flex items-center justify-center size-full'>
+                  <p className='invisible absolute inset-0 z-[1] m-0 flex size-full items-center justify-center bg-[var(--ghost-aa12)] text-[var(--ghost-a3)] hover:visible'>
                     Continue
                   </p>
                 </div>
@@ -167,16 +181,16 @@ const HeroHeader = React.forwardRef<
             {/* END BRANCHES 2 */}
           </div>
           {/* BRANCHES 3 */}
-          <div className='relative hidden flex-row items-center justify-center gap-8 -translate-y-1/4'>
+          <div className='relative hidden -translate-y-1/4 flex-row items-center justify-center gap-8'>
             <div className='relative flex flex-row items-center justify-center'>
-              <div className=' absolute -rotate-90 translate-x-1/4'>
-                <PathLineComposed className='h-auto scale-y-150 invert mix-blend-overlay' />
+              <div className=' absolute translate-x-1/4 -rotate-90'>
+                <PathLineComposed className='h-auto scale-y-150 mix-blend-overlay invert' />
               </div>
             </div>
-            <div className='relative flex flex-col items-start justify-center pl-10 gap-10 text-center text-[var(--grayA6)]'>
-              <div className='text-xs w-auto'>Discovery</div>
-              <div className='text-xs w-auto'>Delivery</div>
-              <div className='text-xs w-auto'>Growth</div>
+            <div className='relative flex flex-col items-start justify-center gap-10 pl-10 text-center text-[var(--grayA6)]'>
+              <div className='w-auto text-xs'>Discovery</div>
+              <div className='w-auto text-xs'>Delivery</div>
+              <div className='w-auto text-xs'>Growth</div>
             </div>
           </div>
           {/* END BRANCHES 3 */}

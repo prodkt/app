@@ -8,9 +8,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body {
+  @apply transition-all duration-500 will-change-auto;
+}
 body[data-scroll-locked] {
-  @apply !p-4;
+  @apply !p-4 transition-all duration-300 h-[calc(100dvh_-_32px)];
+}
+body[data-scroll-locked] .prodkt-provider {
+  @apply rounded-3xl transition-all duration-300 blur-sm h-[calc(100dvh_-_32px)];
+}
+
+body[data-scroll-locked] div:has(.fixed, [role='dialog']),
+body[data-scroll-locked]
+  [data-vaul-drawer][data-vaul-snap-points='false'][data-vaul-drawer-direction='bottom'][data-state='open'] {
+  @apply !inset-x-[16px] rounded-3xl bottom-[16px] overflow-hidden;
+}
+
+[data-vaul-drawer][data-vaul-snap-points='false'][data-vaul-drawer-direction='bottom'][data-state='closed'] {
+  @apply !inset-x-[16px] rounded-3xl bottom-[0px] overflow-hidden;
 }
 
 [data-accent-color='amber'] {
@@ -836,7 +851,7 @@ body[data-scroll-locked] {
 
   html,
   body {
-    @apply bg-[var(--gray1)] text-foreground font-sans;
+    @apply text-foreground font-sans;
   }
 }
 

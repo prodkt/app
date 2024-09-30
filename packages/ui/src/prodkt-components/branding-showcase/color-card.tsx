@@ -1,3 +1,9 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-returns */
+/* eslint-disable jsdoc/require-param-description */
+
+import type { Json } from '@/database.types'
+
 import chroma from 'chroma-js'
 import { cva } from 'class-variance-authority'
 import { Locate } from 'lucide-react'
@@ -9,9 +15,7 @@ import { cn } from '@/utils/cn'
 // type TokenTypes = Database['public']['Tables']['design_tokens']['Row']
 
 export interface SwatchProps {
-  // @ts-ignore
   key_hsl: Json | string | null
-  // @ts-ignore
   value_hsl: Json | string | null
   key_use: string
   isDark: boolean
@@ -124,8 +128,8 @@ export default function ColorCard({
     borderColor = 'var(--ghost-a5)'
     tagBg = 'var(--ghost-a3)'
     if (
-      Number.parseInt(key_hsl, 10) >= 9 &&
-      Number.parseInt(key_hsl, 10) <= 12
+      Number.parseInt(key_hsl as string, 10) >= 9 &&
+      Number.parseInt(key_hsl as string, 10) <= 12
     ) {
       textColor = 'var(--gray-1)'
       borderColor = 'var(--ghost-aa3)'
@@ -136,8 +140,8 @@ export default function ColorCard({
     borderColor = 'var(--ghost-aa5)'
     tagBg = 'var(--ghost-aa2)'
     if (
-      Number.parseInt(key_hsl, 10) >= 7 &&
-      Number.parseInt(key_hsl, 10) <= 12
+      Number.parseInt(key_hsl as string, 10) >= 7 &&
+      Number.parseInt(key_hsl as string, 10) <= 12
     ) {
       textColor = 'var(--gray-12)'
       borderColor = 'var(--ghost-a5)'
@@ -155,10 +159,10 @@ export default function ColorCard({
     <div
       className={combinedClasses}
       style={{
-        backgroundColor: value_hsl,
+        backgroundColor: value_hsl as string,
         color: textColor,
-        [customVar]: borderColor,
-        [customBg]: tagBg,
+        ...(borderColor && { [customVar]: borderColor }),
+        ...(tagBg && { [customBg]: tagBg }),
       }}
     >
       <div className='relative mb-auto ml-auto mr-0 mt-0 flex w-full max-w-full flex-col items-start justify-end gap-2'>

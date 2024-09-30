@@ -108,7 +108,7 @@ export default function IndexSectionFeatures2() {
                       Built in isolation with Storybook
                     </p>
                   </div>
-                  <div className='bottom-0 top-auto z-[1] mb-0 mt-auto flex size-auto w-full flex-row gap-4 p-2'>
+                  <div className='bottom-0 top-auto z-[1] mb-0 mt-auto flex size-auto w-full flex-row gap-2 p-2'>
                     <a
                       href='/codeblocks'
                       className='text-nowrap bg-radial-gradient from-gray-12 to-gray-6 bg-clip-text pb-1 text-xs font-semibold tracking-tight text-transparent underline decoration-[var(--grayA6)] underline-offset-4 transition-colors duration-500 ease-in hover:to-gray-9'
@@ -138,17 +138,17 @@ export default function IndexSectionFeatures2() {
                     </p>
                   </div>
                   <div className='relative'>
-                    <GithubCat className='pointer-events-none absolute inset-0 m-0 select-none mix-blend-hard-light blur' />
-                    <GithubCat className='pointer-events-none select-none mix-blend-hard-light' />
-                    <GithubCat className='gradientMask-to-t pointer-events-none absolute bottom-0 top-auto m-0 translate-y-16 scale-x-150 scale-y-50  select-none blur-lg' />
+                    <GithubCat className='pointer-events-none absolute inset-0 z-[1] m-0 select-none mix-blend-hard-light blur' />
+                    <GithubCat className='pointer-events-none z-[1] select-none' />
+                    <GithubCat className='gradientMask-to-t pointer-events-none absolute bottom-0 top-auto z-[1] m-0 translate-y-16 scale-x-150 scale-y-50  select-none blur-lg' />
                     <GlowOrb className='gradientMask-to-t pointer-events-none absolute -left-1/4 -top-1/4 z-0 m-auto scale-[2] select-none opacity-25 mix-blend-hard-light brightness-100 contrast-50 dark:opacity-100 dark:brightness-100' />
                     <TurborepoLogomark className='pointer-events-none absolute right-0 top-1/3 my-auto h-12 w-auto select-none blur-sm' />
-                    <SupabaseLogomark className='pointer-events-none absolute left-6 top-1/3 z-[1] my-auto h-20  w-auto -rotate-12 select-none' />
+                    <SupabaseLogomark className='pointer-events-none absolute left-6 top-1/3 z-[2] my-auto h-20  w-auto -rotate-12 select-none' />
                     <VercelLogomark className='pointer-events-none absolute bottom-12 left-8 m-0 h-8 w-auto scale-x-150 scale-y-50 select-none blur-[2px]' />
                     <StorybookLogomark className='pointer-events-none absolute right-[calc(50%-10%)] top-4 m-0 h-4 w-auto rotate-6 scale-x-125 scale-y-75 select-none blur-[1px]' />
-                    <BunLogomark className='pointer-events-none absolute bottom-20 right-12 mx-auto h-8 w-auto scale-y-50 select-none blur-[2px]' />
-                    <AstroLogomark className='pointer-events-none absolute left-3/4 top-0 mx-auto h-20 w-auto rotate-12 select-none' />
-                    <AstroLogomark className='pointer-events-none absolute right-28 top-[65%] mx-auto h-20 w-auto rotate-45 -skew-x-12 -skew-y-[45deg] scale-y-50 select-none opacity-50 blur-md' />
+                    <BunLogomark className='pointer-events-none absolute bottom-20 right-12 z-[-1] mx-auto h-8 w-auto scale-y-50 select-none blur-[2px]' />
+                    <AstroLogomark className='pointer-events-none absolute left-3/4 top-0 z-[2] mx-auto h-20 w-auto rotate-12 select-none' />
+                    <AstroLogomark className='pointer-events-none absolute right-28 top-[65%] z-[2] mx-auto h-20 w-auto rotate-45 -skew-x-12 -skew-y-[45deg] scale-y-50 select-none opacity-50 blur-md' />
                     <ReactLogomark className='pointer-events-none absolute left-0 top-0 m-0 h-12 w-auto select-none blur-sm' />
                   </div>
                   <div className='z-[1] mb-0 mt-24 flex grow flex-col items-stretch justify-stretch gap-4 p-2'>
@@ -166,23 +166,14 @@ export default function IndexSectionFeatures2() {
                     >
                       View Project on GitHub
                     </a>
-                    <p className='m-0 flex aspect-1 size-8 w-fit -translate-y-2 items-center justify-center text-nowrap rounded-full bg-radial-gradient from-[var(--ghost-aa1)] to-[var(--grayA3)]  p-1 text-xs font-semibold leading-none tracking-tight text-[var(--grayA7)]'>
-                      or
-                    </p>
-                    <a
-                      href='https://ui.prodkt.cloud'
-                      className='text-nowrap text-xs text-gray-9'
-                    >
-                      Continue exploring the site
-                    </a>
                   </div>
                 </div>
               </div>
               <div className='w-full p-3 md:w-1/2'>
-                <div className='relative h-full overflow-hidden border border-[var(--greenA3)] bg-conic-gradient  from-[var(--oliveA7)] to-[var(--olive7)] p-16 ring ring-inset ring-[var(--grayA3)] dark:from-[var(--olive1)]'>
+                <div className='relative h-full overflow-hidden border border-[var(--greenA3)] bg-conic-gradient  from-[var(--oliveA7)] to-[var(--olive7)] p-6 ring ring-inset ring-[var(--grayA3)] dark:from-[var(--olive1)] md:p-16'>
                   <PowerLines className='absolute inset-0 m-auto blur-xl' />
 
-                  <div className='bottom-0 top-auto z-[1] mb-10 mt-auto flex size-auto flex-col gap-12 p-2'>
+                  <div className='bottom-0 top-auto z-[1] mb-10 mt-auto flex h-auto w-full flex-col gap-12 p-2'>
                     <div className='bottom-0 top-auto z-[1] mb-0 mt-auto flex size-auto w-full flex-row items-center justify-center gap-4 p-2'>
                       <Docker />
 
@@ -192,18 +183,19 @@ export default function IndexSectionFeatures2() {
 
                       <Directus />
                     </div>
-                    <p className='text-md mx-auto bg-gradient-to-b from-[var(--grayA4)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono uppercase tracking-[0.36rem] text-transparent text-shadow-[0_0_20px_var(--grayA9)]'>
+                    <p className='text-md mx-0 w-full bg-gradient-to-b from-[var(--grayA4)] to-[var(--grayA11)] bg-clip-text pl-1 text-center font-mono uppercase tracking-[0.36rem] text-transparent text-shadow-[0_0_20px_var(--grayA9)]'>
                       DB + CMS + Docker
                     </p>
                   </div>
-                  <div className='relative inset-0 mx-auto -mb-24 -ml-11 mt-24 h-auto w-full'>
-                    <PowerLines className='gradientMask-to-t absolute bottom-0 m-auto ml-10 -translate-y-1/4 -rotate-6 mix-blend-overlay' />
-                    <PowerLines className='gradientMask-to-t absolute bottom-0 m-auto ml-10 -translate-y-1/4 -rotate-6 blur-md' />
+                  <div className='relative inset-0 mx-auto -mb-24 mt-24 flex h-auto w-full place-content-center place-items-center content-center items-center justify-center overflow-visible '>
+                    <PowerLines className='gradientMask-to-t absolute bottom-0 m-auto -rotate-6 mix-blend-overlay contrast-75 md:-translate-y-1/4' />
+                    <PowerLines className='gradientMask-to-t absolute bottom-0 m-auto -rotate-6 blur-md contrast-75 md:-translate-y-1/4' />
 
-                    <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-24 translate-x-10 brightness-75 contrast-100' />
-                    <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-40 translate-x-10 mix-blend-color-burn blur-2xl brightness-75 contrast-150' />
-                    <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-40 translate-x-10 translate-y-12 scale-y-150 mix-blend-color-burn gradientMask-to-b blur-2xl brightness-50 contrast-10' />
-                    <DataCube className=' gradientMask-to-t-50 inset-0 mx-auto origin-center mix-blend-color-dodge' />
+                    <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-24 brightness-75 contrast-100' />
+                    {/* <SupabaseLogomark className='absolute inset-0 z-[1] mx-auto size-40 translate-x-10 mix-blend-color-burn blur-2xl brightness-75 contrast-150' /> */}
+                    {/* <SupabaseLogomark className='gradientMask-to-b contrast-10 absolute inset-0 z-[1] mx-auto size-40 translate-x-10 translate-y-12 scale-y-150 mix-blend-color-burn blur-2xl brightness-50' /> */}
+
+                    <DataCube className='gradientMask-to-t-50 inset-x-0 z-0 mx-auto min-w-[800px] translate-x-[204px] opacity-25 mix-blend-screen contrast-75' />
                   </div>
                   <div className='z-10 flex flex-wrap items-center justify-center'>
                     <div className='h-auto w-full'>
@@ -237,21 +229,21 @@ export default function IndexSectionFeatures2() {
               <div className='w-full p-3 md:w-1/2'>
                 <div className='relative h-full overflow-hidden border border-[var(--grayA4)]  bg-gradient-to-b from-[var(--gray4)] ring ring-inset ring-[var(--grayA3)] dark:from-[var(--ghost-aa8)]'>
                   <div className='0 bottom-0 top-auto z-[1] m-0 flex size-auto h-full flex-col gap-8 p-10'>
-                    <p className='bg-gradient-to-b from-[var(--grayA9)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono text-xs uppercase tracking-[0.175rem] text-transparent text-shadow-[0_0_20px_var(--grayA9)]'>
+                    <p className='text-balance bg-gradient-to-b from-[var(--grayA9)] to-[var(--grayA11)] bg-clip-text pl-1 font-mono text-xs uppercase tracking-[0.15rem] text-transparent text-shadow-[0_0_20px_var(--grayA9)]'>
                       <em className='not-italic text-[var(--amber9)]'>
                         Hiring
                       </em>{' '}
                       or know someone that is?
                     </p>
-                    <h3 className='max-w-xs text-balance bg-gradient-to-b from-gray-12 to-gray-10 bg-clip-text pb-2 text-4xl font-semibold leading-8 tracking-tighter text-transparent'>
+                    <h3 className='max-w-xs text-balance bg-gradient-to-b from-gray-12 to-gray-10 bg-clip-text pb-2 text-4xl font-medium leading-8 tracking-tighter text-transparent'>
                       {`I'm`} on the search for my next challenge.
                     </h3>
-                    <h3 className='text-md h-full max-w-[75%] text-balance bg-gradient-to-br from-gray-10 to-gray-8 bg-clip-text pb-1 font-semibold leading-6 tracking-tight  text-transparent'>
+                    <h3 className='text-md h-full max-w-[75%] text-balance  pb-1.5 leading-6 tracking-tight text-gray-9'>
                       Leave the company name in the chat below and I'll take it
                       from there. Though feel free to share any contact you
                       think would be a ideal to make connection with.
                     </h3>
-                    <div className='hidden md:block bottom-0 mb-0 h-fit max-h-fit w-full'>
+                    <div className='bottom-0 mb-0 hidden h-fit max-h-fit w-full md:block'>
                       <Signature className='contrast-00 absolute inset-x-0 z-0 mx-auto mt-auto h-auto max-w-56 -translate-x-16 translate-y-4 rotate-6 -skew-y-12 skew-x-12 scale-x-105 fill-transparent  stroke-[var(--grayA5)]  stroke-1 text-[var(--grayA3)] brightness-100' />
                       <Signature className='absolute inset-x-0 z-0 mx-auto mt-auto h-auto max-w-56 -translate-x-16 translate-y-4 rotate-6 -skew-y-12 skew-x-12 scale-x-105 animate-pulse fill-transparent stroke-[var(--ghost-a12)]  stroke-[4px] text-[var(--grayA9)] mix-blend-difference blur-lg brightness-0 contrast-200' />
                       <Signature className='absolute inset-x-0 z-0 mx-auto mt-auto h-auto max-w-56 -translate-x-16 translate-y-4 rotate-6 -skew-y-12 skew-x-12 scale-x-105 fill-transparent stroke-[var(--grayA10)] stroke-1  text-[var(--grayA9)] mix-blend-difference blur brightness-100 contrast-150' />
@@ -263,7 +255,7 @@ export default function IndexSectionFeatures2() {
                   <img
                     src={Portrait}
                     alt=''
-                    className='select-none pointer-events-none gradientMask-to-t-50 absolute inset-y-0 my-auto translate-y-1/4 opacity-25 md:opacity-50 mix-blend-difference contrast-125 invert dark:brightness-50 dark:contrast-[0.81] dark:invert-0'
+                    className='gradientMask-to-t-50 pointer-events-none absolute inset-y-0 my-auto translate-y-1/4 select-none opacity-25 mix-blend-difference contrast-125 invert dark:brightness-50 dark:contrast-[0.81] dark:invert-0 md:opacity-50'
                   />
                 </div>
               </div>
