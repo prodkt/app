@@ -1,6 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 
 import type { Config } from 'tailwindcss'
 
@@ -16,7 +17,7 @@ import windyTypography from 'windy-radix-typography'
 const colors = createPlugin()
 
 export const prodktTailwindPreset: Config = {
-  content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx,mdx,astro}'],
   presets: [windyTypography],
   theme: {
     extend: {
