@@ -41,7 +41,7 @@ const HeaderMenuItem = ({
         ) : (
           Icon
         )}
-        <p className='gradientMask-to-b-40 z-[1] text-sm font-normal transition-all'>
+        <p className='gradientMask-to-b-40 z-[1] text-nowrap text-sm font-normal transition-all'>
           {name}
         </p>
       </a>
@@ -52,7 +52,7 @@ const HeaderMenuItem = ({
 const HeaderMenu = ({ ...props }) => {
   return (
     <ul
-      className='prodkt-header-menu m-auto hidden h-12 w-auto flex-row place-content-center place-items-center items-center justify-start gap-px overflow-y-hidden rounded-2xl border border-[var(--gray12)] bg-[var(--gray12)] p-[2px] shadow-2xl dark:border-[var(--gray4)] dark:bg-[var(--gray1)] xl:inline-flex'
+      className='prodkt-header-menu m-auto hidden h-12 w-auto flex-row place-content-center place-items-center items-center justify-start gap-px overflow-y-hidden rounded-2xl border border-[var(--gray12)] bg-[var(--gray12)] p-[2px] shadow-2xl xl:inline-flex dark:border-[var(--gray4)] dark:bg-[var(--gray1)]'
       {...props}
     >
       <HeaderMenuItem link='/flows' icon={Flows} name='Flows' />

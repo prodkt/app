@@ -2735,8 +2735,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={171.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-c'
@@ -2746,8 +2746,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={139.46}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-d'
@@ -2757,8 +2757,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={392}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-e'
@@ -2768,8 +2768,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={380.63}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-g'
@@ -2779,8 +2779,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={392}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-h'
@@ -2790,8 +2790,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={380.63}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-j'
@@ -2801,8 +2801,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={392}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-k'
@@ -2812,8 +2812,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={380.63}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-m'
@@ -2823,8 +2823,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={370.06}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-n'
@@ -2834,8 +2834,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={358.69}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-p'
@@ -2845,8 +2845,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={117.72}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-q'
@@ -2856,8 +2856,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={106.34}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-s'
@@ -2867,8 +2867,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={387.89}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-t'
@@ -2878,8 +2878,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-v'
@@ -2889,8 +2889,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={117.72}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-w'
@@ -2900,8 +2900,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={106.34}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-y'
@@ -2911,8 +2911,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={387.89}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-z'
@@ -2922,8 +2922,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-B'
@@ -2933,8 +2933,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={117.72}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-C'
@@ -2944,8 +2944,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={106.34}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-E'
@@ -2955,8 +2955,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={387.89}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-F'
@@ -2966,8 +2966,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-H'
@@ -2977,8 +2977,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={490.14}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-I'
@@ -2988,8 +2988,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={487.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-K'
@@ -2999,8 +2999,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={503.86}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-L'
@@ -3010,8 +3010,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-N'
@@ -3021,8 +3021,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.31}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-O'
@@ -3032,8 +3032,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={492.78}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-Q'
@@ -3043,8 +3043,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.31}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-R'
@@ -3054,8 +3054,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={492.78}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-T'
@@ -3065,8 +3065,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.57}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-U'
@@ -3076,8 +3076,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={370.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-W'
@@ -3087,8 +3087,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={387.28}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-X'
@@ -3098,8 +3098,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-Z'
@@ -3109,8 +3109,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.74}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aa'
@@ -3120,8 +3120,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ac'
@@ -3131,8 +3131,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.74}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ad'
@@ -3142,8 +3142,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-af'
@@ -3153,8 +3153,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={557.34}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ag'
@@ -3164,8 +3164,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={554.5}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ai'
@@ -3175,8 +3175,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={571.05}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aj'
@@ -3186,8 +3186,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-al'
@@ -3197,8 +3197,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-am'
@@ -3208,8 +3208,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={559.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ao'
@@ -3219,8 +3219,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ap'
@@ -3230,8 +3230,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={559.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ar'
@@ -3241,8 +3241,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={490.14}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-as'
@@ -3252,8 +3252,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={487.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-au'
@@ -3263,8 +3263,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={503.86}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-av'
@@ -3274,8 +3274,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ax'
@@ -3285,8 +3285,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.31}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ay'
@@ -3296,8 +3296,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={492.78}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aA'
@@ -3307,8 +3307,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.31}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aB'
@@ -3318,8 +3318,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={492.78}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aD'
@@ -3329,8 +3329,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.57}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aE'
@@ -3340,8 +3340,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={370.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aG'
@@ -3351,8 +3351,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={387.28}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aH'
@@ -3362,8 +3362,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aJ'
@@ -3373,8 +3373,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.74}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aK'
@@ -3384,8 +3384,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aM'
@@ -3395,8 +3395,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.74}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aN'
@@ -3406,8 +3406,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aP'
@@ -3417,8 +3417,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={557.34}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aQ'
@@ -3428,8 +3428,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={554.5}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aS'
@@ -3439,8 +3439,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={571.05}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aT'
@@ -3450,8 +3450,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aV'
@@ -3461,8 +3461,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aW'
@@ -3472,8 +3472,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={559.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aY'
@@ -3483,8 +3483,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-aZ'
@@ -3494,8 +3494,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={559.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bb'
@@ -3505,8 +3505,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={490.14}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bc'
@@ -3516,8 +3516,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={487.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-be'
@@ -3527,8 +3527,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={503.86}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bf'
@@ -3538,8 +3538,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bh'
@@ -3549,8 +3549,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.31}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bi'
@@ -3560,8 +3560,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={492.78}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bk'
@@ -3571,8 +3571,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={501.31}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bl'
@@ -3582,8 +3582,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={492.78}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bn'
@@ -3593,8 +3593,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.57}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bo'
@@ -3604,8 +3604,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={370.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bq'
@@ -3615,8 +3615,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={387.28}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-br'
@@ -3626,8 +3626,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bt'
@@ -3637,8 +3637,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.74}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bu'
@@ -3648,8 +3648,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bw'
@@ -3659,8 +3659,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={384.74}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bx'
@@ -3670,8 +3670,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={376.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bz'
@@ -3681,8 +3681,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={557.34}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bA'
@@ -3692,8 +3692,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={554.5}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bC'
@@ -3703,8 +3703,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={571.05}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bD'
@@ -3714,8 +3714,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bF'
@@ -3725,8 +3725,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bG'
@@ -3736,8 +3736,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={559.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bI'
@@ -3747,8 +3747,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={568.51}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bJ'
@@ -3758,8 +3758,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={559.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bL'
@@ -3769,8 +3769,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={148.66}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bM'
@@ -3780,8 +3780,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={145.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bO'
@@ -3791,8 +3791,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={162.37}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bP'
@@ -3802,8 +3802,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={159.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bR'
@@ -3813,8 +3813,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={159.83}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bS'
@@ -3824,8 +3824,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={151.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bU'
@@ -3835,8 +3835,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={159.83}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bV'
@@ -3846,8 +3846,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={151.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bX'
@@ -3857,8 +3857,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={436.65}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-bY'
@@ -3868,8 +3868,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={433.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ca'
@@ -3879,8 +3879,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={450.37}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cb'
@@ -3890,8 +3890,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={447.52}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cd'
@@ -3901,8 +3901,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={447.83}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ce'
@@ -3912,8 +3912,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={439.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cg'
@@ -3923,8 +3923,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={447.83}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ch'
@@ -3934,8 +3934,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={439.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cj'
@@ -3945,8 +3945,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={506.6}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ck'
@@ -3956,8 +3956,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={503.75}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cm'
@@ -3967,8 +3967,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={520.31}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cn'
@@ -3978,8 +3978,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={517.47}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cp'
@@ -3989,8 +3989,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={517.77}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cq'
@@ -4000,8 +4000,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={509.24}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cs'
@@ -4011,8 +4011,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={517.77}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ct'
@@ -4022,8 +4022,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={509.24}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cv'
@@ -4033,8 +4033,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={534.03}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cw'
@@ -4044,8 +4044,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={531.18}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cy'
@@ -4055,8 +4055,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={547.74}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cz'
@@ -4066,8 +4066,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={544.9}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cB'
@@ -4077,8 +4077,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={545.2}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cC'
@@ -4088,8 +4088,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={536.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cE'
@@ -4099,8 +4099,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={545.2}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cF'
@@ -4110,8 +4110,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={536.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cH'
@@ -4121,8 +4121,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={506.6}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cI'
@@ -4132,8 +4132,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={503.75}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cK'
@@ -4143,8 +4143,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={520.31}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cL'
@@ -4154,8 +4154,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={517.47}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cN'
@@ -4165,8 +4165,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={517.77}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cO'
@@ -4176,8 +4176,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={509.24}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cQ'
@@ -4187,8 +4187,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={517.77}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cR'
@@ -4198,8 +4198,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={509.24}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cT'
@@ -4209,8 +4209,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={436.65}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cU'
@@ -4220,8 +4220,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={433.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cW'
@@ -4231,8 +4231,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={450.37}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cX'
@@ -4242,8 +4242,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={447.52}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-cZ'
@@ -4253,8 +4253,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={447.83}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-da'
@@ -4264,8 +4264,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={439.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dc'
@@ -4275,8 +4275,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={447.83}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dd'
@@ -4286,8 +4286,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={439.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-df'
@@ -4297,8 +4297,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={464.08}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dg'
@@ -4308,8 +4308,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={461.24}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-di'
@@ -4319,8 +4319,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={477.8}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dj'
@@ -4330,8 +4330,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={474.95}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dl'
@@ -4341,8 +4341,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={475.26}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dm'
@@ -4352,8 +4352,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={466.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-do'
@@ -4363,8 +4363,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={475.26}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dp'
@@ -4374,8 +4374,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={526.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dq'
@@ -4385,8 +4385,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={504.75}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dr'
@@ -4396,8 +4396,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={494.25}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ds'
@@ -4407,8 +4407,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={522.02}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dt'
@@ -4418,8 +4418,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={723.75}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-du'
@@ -4429,8 +4429,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={464.42}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dv'
@@ -4440,8 +4440,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={448.23}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dw'
@@ -4451,8 +4451,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={447.15}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dx'
@@ -4462,8 +4462,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={505.23}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dy'
@@ -4473,8 +4473,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={532.99}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dz'
@@ -4484,8 +4484,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={516.8}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dA'
@@ -4495,8 +4495,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={515.72}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dB'
@@ -4506,8 +4506,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={1040.35}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dD'
@@ -4517,8 +4517,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={240.69}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dF'
@@ -4528,8 +4528,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={755.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dH'
@@ -4539,8 +4539,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={837.96}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dI'
@@ -4550,8 +4550,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={773.62}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dJ'
@@ -4561,8 +4561,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={840.14}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dK'
@@ -4572,8 +4572,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={421.25}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dL'
@@ -4583,8 +4583,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={1211.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dM'
@@ -4594,8 +4594,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={512.99}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dN'
@@ -4605,8 +4605,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={299.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dO'
@@ -4616,8 +4616,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={307.84}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dP'
@@ -4627,8 +4627,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={316.07}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dQ'
@@ -4638,8 +4638,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={324.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dR'
@@ -4649,8 +4649,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={332.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dS'
@@ -4660,8 +4660,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={340.76}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dT'
@@ -4671,8 +4671,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={348.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dU'
@@ -4682,8 +4682,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={357.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dV'
@@ -4693,8 +4693,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={365.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dW'
@@ -4704,8 +4704,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dX'
@@ -4715,8 +4715,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={381.9}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dY'
@@ -4726,8 +4726,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={390.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-dZ'
@@ -4737,8 +4737,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={398.36}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ea'
@@ -4748,8 +4748,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={299.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eb'
@@ -4759,8 +4759,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={307.84}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ec'
@@ -4770,8 +4770,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={316.07}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ed'
@@ -4781,8 +4781,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={324.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ee'
@@ -4792,8 +4792,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={332.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ef'
@@ -4803,8 +4803,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={340.76}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eg'
@@ -4814,8 +4814,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={348.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eh'
@@ -4825,8 +4825,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={357.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ei'
@@ -4836,8 +4836,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={365.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ej'
@@ -4847,8 +4847,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ek'
@@ -4858,8 +4858,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={381.9}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-el'
@@ -4869,8 +4869,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={390.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-em'
@@ -4880,8 +4880,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={398.36}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-en'
@@ -4891,8 +4891,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={299.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eo'
@@ -4902,8 +4902,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={307.84}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ep'
@@ -4913,8 +4913,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={316.07}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eq'
@@ -4924,8 +4924,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={324.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-er'
@@ -4935,8 +4935,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={332.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-es'
@@ -4946,8 +4946,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={340.76}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-et'
@@ -4957,8 +4957,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={348.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eu'
@@ -4968,8 +4968,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={357.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ev'
@@ -4979,8 +4979,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={365.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ew'
@@ -4990,8 +4990,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ex'
@@ -5001,8 +5001,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={381.9}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ey'
@@ -5012,8 +5012,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={390.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ez'
@@ -5023,8 +5023,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={398.36}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eA'
@@ -5034,8 +5034,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={299.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eB'
@@ -5045,8 +5045,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={307.84}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eC'
@@ -5056,8 +5056,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={316.07}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eD'
@@ -5067,8 +5067,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={324.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eE'
@@ -5078,8 +5078,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={332.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eF'
@@ -5089,8 +5089,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={340.76}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eG'
@@ -5100,8 +5100,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={348.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eH'
@@ -5111,8 +5111,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={357.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eI'
@@ -5122,8 +5122,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={365.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eJ'
@@ -5133,8 +5133,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eK'
@@ -5144,8 +5144,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={381.9}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eL'
@@ -5155,8 +5155,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={390.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eM'
@@ -5166,8 +5166,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={398.36}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eN'
@@ -5177,8 +5177,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={299.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eO'
@@ -5188,8 +5188,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={307.84}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eP'
@@ -5199,8 +5199,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={316.07}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eQ'
@@ -5210,8 +5210,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={324.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eR'
@@ -5221,8 +5221,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={332.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eS'
@@ -5232,8 +5232,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={340.76}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eT'
@@ -5243,8 +5243,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={348.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eU'
@@ -5254,8 +5254,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={357.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eV'
@@ -5265,8 +5265,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={365.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eW'
@@ -5276,8 +5276,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eX'
@@ -5287,8 +5287,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={381.9}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eY'
@@ -5298,8 +5298,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={390.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-eZ'
@@ -5309,8 +5309,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={398.36}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fa'
@@ -5320,8 +5320,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={299.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fb'
@@ -5331,8 +5331,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={307.84}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fc'
@@ -5342,8 +5342,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={316.07}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fd'
@@ -5353,8 +5353,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={324.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fe'
@@ -5364,8 +5364,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={332.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ff'
@@ -5375,8 +5375,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={340.76}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fg'
@@ -5386,8 +5386,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={348.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fh'
@@ -5397,8 +5397,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={357.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fi'
@@ -5408,8 +5408,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={365.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fj'
@@ -5419,8 +5419,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fk'
@@ -5430,8 +5430,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={381.9}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fl'
@@ -5441,8 +5441,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={390.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fm'
@@ -5452,8 +5452,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={398.36}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fn'
@@ -5463,8 +5463,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={299.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fo'
@@ -5474,8 +5474,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={307.84}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fp'
@@ -5485,8 +5485,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={316.07}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fq'
@@ -5496,8 +5496,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={324.3}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fr'
@@ -5507,8 +5507,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={332.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fs'
@@ -5518,8 +5518,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={340.76}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ft'
@@ -5529,8 +5529,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={348.98}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fu'
@@ -5540,8 +5540,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={357.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fv'
@@ -5551,8 +5551,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={365.44}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fw'
@@ -5562,8 +5562,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={373.67}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fx'
@@ -5573,8 +5573,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={381.9}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fy'
@@ -5584,8 +5584,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={390.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fz'
@@ -5595,8 +5595,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={398.36}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fA'
@@ -5607,7 +5607,7 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         gradientUnits='userSpaceOnUse'
       >
         <stop stopColor='var(--ghost-a3)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fB'
@@ -5628,7 +5628,7 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={968}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
+        <stop stopColor='var(--grayA10)' />
         <stop offset={1} stopColor='transparent' stopOpacity={0} />
       </linearGradient>
       <linearGradient
@@ -5639,8 +5639,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={979.66}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fE'
@@ -5650,8 +5650,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={357.6}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fF'
@@ -5661,8 +5661,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={597.16}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fG'
@@ -5672,8 +5672,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={340.57}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fH'
@@ -5683,8 +5683,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fI'
@@ -5694,8 +5694,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fJ'
@@ -5705,8 +5705,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fK'
@@ -5716,8 +5716,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fL'
@@ -5727,8 +5727,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fM'
@@ -5738,8 +5738,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fN'
@@ -5749,8 +5749,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fO'
@@ -5760,8 +5760,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fP'
@@ -5771,8 +5771,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fQ'
@@ -5782,8 +5782,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fR'
@@ -5793,8 +5793,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fS'
@@ -5804,8 +5804,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fT'
@@ -5815,8 +5815,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fU'
@@ -5826,8 +5826,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fV'
@@ -5837,8 +5837,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fW'
@@ -5848,8 +5848,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fX'
@@ -5859,8 +5859,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fY'
@@ -5870,8 +5870,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-fZ'
@@ -5881,8 +5881,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ga'
@@ -5892,8 +5892,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gb'
@@ -5903,8 +5903,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gc'
@@ -5914,8 +5914,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gd'
@@ -5925,8 +5925,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ge'
@@ -5936,8 +5936,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gf'
@@ -5947,8 +5947,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gg'
@@ -5958,8 +5958,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gh'
@@ -5969,8 +5969,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gi'
@@ -5980,8 +5980,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gj'
@@ -5991,8 +5991,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gk'
@@ -6002,8 +6002,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gl'
@@ -6013,8 +6013,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gm'
@@ -6024,8 +6024,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gn'
@@ -6035,8 +6035,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-go'
@@ -6046,8 +6046,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gp'
@@ -6057,8 +6057,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gq'
@@ -6068,8 +6068,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gr'
@@ -6079,8 +6079,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gs'
@@ -6090,8 +6090,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gt'
@@ -6101,8 +6101,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gu'
@@ -6112,8 +6112,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gv'
@@ -6123,8 +6123,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gw'
@@ -6134,8 +6134,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gx'
@@ -6145,8 +6145,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gy'
@@ -6156,8 +6156,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gz'
@@ -6167,8 +6167,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gA'
@@ -6178,8 +6178,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gB'
@@ -6189,8 +6189,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gC'
@@ -6200,8 +6200,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gD'
@@ -6211,8 +6211,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={232.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gE'
@@ -6222,8 +6222,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={242.01}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gF'
@@ -6233,8 +6233,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={251.61}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gG'
@@ -6244,8 +6244,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={261.21}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gH'
@@ -6255,8 +6255,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={270.81}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gI'
@@ -6266,8 +6266,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={280.41}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gJ'
@@ -6277,8 +6277,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={786.29}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gK'
@@ -6288,8 +6288,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gL'
@@ -6299,8 +6299,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gM'
@@ -6310,8 +6310,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gN'
@@ -6321,8 +6321,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gO'
@@ -6332,8 +6332,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gP'
@@ -6343,8 +6343,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gQ'
@@ -6354,8 +6354,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gR'
@@ -6365,8 +6365,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gS'
@@ -6376,8 +6376,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gT'
@@ -6387,8 +6387,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gU'
@@ -6398,8 +6398,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gV'
@@ -6409,8 +6409,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gW'
@@ -6420,8 +6420,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gX'
@@ -6431,8 +6431,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gY'
@@ -6442,8 +6442,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-gZ'
@@ -6453,8 +6453,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ha'
@@ -6464,8 +6464,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hb'
@@ -6475,8 +6475,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hc'
@@ -6486,8 +6486,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hd'
@@ -6497,8 +6497,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-he'
@@ -6508,8 +6508,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hf'
@@ -6519,8 +6519,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hg'
@@ -6530,8 +6530,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hh'
@@ -6541,8 +6541,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hi'
@@ -6552,8 +6552,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hj'
@@ -6563,8 +6563,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hk'
@@ -6574,8 +6574,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hl'
@@ -6585,8 +6585,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hm'
@@ -6596,8 +6596,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hn'
@@ -6607,8 +6607,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ho'
@@ -6618,8 +6618,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hp'
@@ -6629,8 +6629,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hq'
@@ -6640,8 +6640,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hr'
@@ -6651,8 +6651,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hs'
@@ -6662,8 +6662,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-ht'
@@ -6673,8 +6673,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hu'
@@ -6684,8 +6684,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hv'
@@ -6695,8 +6695,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hw'
@@ -6706,8 +6706,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hx'
@@ -6717,8 +6717,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hy'
@@ -6728,8 +6728,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hz'
@@ -6739,8 +6739,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hA'
@@ -6750,8 +6750,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hB'
@@ -6761,8 +6761,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hC'
@@ -6772,8 +6772,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hD'
@@ -6783,8 +6783,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hE'
@@ -6794,8 +6794,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hF'
@@ -6805,8 +6805,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hG'
@@ -6816,8 +6816,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={678.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hH'
@@ -6827,8 +6827,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={687.73}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hI'
@@ -6838,8 +6838,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={697.33}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hJ'
@@ -6849,8 +6849,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={706.93}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hK'
@@ -6860,8 +6860,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={716.53}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <linearGradient
         id='prodkthero-hL'
@@ -6871,8 +6871,8 @@ const HeroBackground = (props: SVGProps<SVGSVGElement>) => (
         y2={726.13}
         gradientUnits='userSpaceOnUse'
       >
-        <stop stopColor='var(--ghost-a6)' />
-        <stop offset={1} stopColor='var(--ghost-a1)' />
+        <stop stopColor='var(--grayA10)' />
+        <stop offset={1} stopColor='var(--grayA4)' />
       </linearGradient>
       <clipPath id='prodkthero-a'>
         <path fill='currentColor' d='M0 0h1872v966H0z' />

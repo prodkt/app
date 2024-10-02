@@ -24,6 +24,7 @@ import { MobileMenu } from '@/prodkt-components/mobile-menu'
 import { ModeToggle } from '@/prodkt-components/mode-toggle'
 import { TeamSwitcher } from '@/prodkt-components/team-switcher'
 import { ThemeToggle } from '@/prodkt-components/theme-toggle'
+import { TypeToggle } from '@/prodkt-components/type-toggle'
 import { cn } from '@/utils/cn'
 
 /**
@@ -37,7 +38,7 @@ function HeaderUserNav() {
         <DropdownMenuTrigger asChild>
           <Button
             variant='outline'
-            className='relative size-9 rounded-full border border-[var(--grayA1)] bg-[var(--grayA1)] p-0.5 ring-1 ring-[var(--grayA1)] transition-all duration-300 hover:bg-[var(--gray12)] dark:bg-[var(--gray3)] dark:ring-[var(--gray6)]'
+            className='relative size-9 rounded-full border border-[var(--gray11)] bg-[var(--grayA1)] p-0.5 ring-1 ring-[var(--grayA1)] transition-all duration-300 hover:bg-[var(--gray12)] dark:border-[var(--gray6)] dark:bg-[var(--gray3)] dark:ring-[var(--gray6)]'
           >
             <Avatar className='size-8 border-0'>
               <AvatarImage
@@ -52,7 +53,7 @@ function HeaderUserNav() {
           <DropdownMenuLabel className='font-normal'>
             <div className='flex flex-col space-y-1'>
               <p className='text-sm font-medium leading-none'>prodkt-demo</p>
-              <p className='text-xs leading-none text-muted-foreground'>
+              <p className='text-muted-foreground text-xs leading-none'>
                 bryan.funk@prodkt.cloud
               </p>
             </div>
@@ -124,17 +125,18 @@ const Header = React.forwardRef<
   >
     <div className='z-[1] mx-0 flex flex-row items-center justify-center gap-x-0'>
       <HeaderLogo
-        className='flex size-12 w-32 items-center justify-center rounded-2xl border border-[var(--gray12)] bg-[var(--grayA12)] px-4 text-[var(--gray1)] dark:border-[var(--gray4)] dark:bg-[var(--gray1)] dark:text-[var(--gray12)] dark:ring-[var(--gray4)] sm:rounded-r-none md:rounded-l-2xl'
+        className='flex size-12 w-32 items-center justify-center rounded-2xl border border-[var(--gray12)] bg-[var(--grayA12)] px-4 text-[var(--gray1)] sm:rounded-r-none md:rounded-l-2xl dark:border-[var(--gray4)] dark:bg-[var(--gray1)] dark:text-[var(--gray12)] dark:ring-[var(--gray4)]'
         href='/'
       />
       <TeamSwitcher variant='header' />
     </div>
     <HeaderMenu />
-    <div className='z-[1] ml-auto mr-0 flex h-12  flex-row items-center justify-end gap-1 gap-x-px rounded-3xl border border-[var(--gray4)] bg-[var(--gray12)] dark:bg-[var(--gray1)] lg:pl-px'>
+    <div className='z-[1] ml-auto mr-0 flex h-12  flex-row items-center justify-end gap-1 gap-x-px rounded-3xl border border-[var(--gray4)] bg-[var(--gray12)] lg:pl-px dark:bg-[var(--gray1)]'>
       <div className='flex h-12 grow flex-row items-center justify-end gap-1 px-1'>
         <MobileMenu />
         <ModeToggle />
         <ThemeToggle />
+        <TypeToggle />
         <HeaderUserNav />
       </div>
     </div>

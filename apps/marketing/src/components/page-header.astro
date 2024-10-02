@@ -53,12 +53,12 @@ const {
   <h1
     class={cn(
       !minimal
-        ? 'text-7xl sm:text-8xl xl:text-[8.925rem] text-center  tracking-tighter after:left-0 after:right-0 leading-[75%]'
-        : 'text-left text-[5.925rem] tracking-[-0.325rem] font-normal after:left-0 after:right-auto leading-[64%]',
+        ? ' text-center  tracking-tighter after:left-0 after:right-0 leading-[75%]'
+        : 'text-left tracking-[-0.325rem] after:left-0 after:right-auto leading-[64%]',
       !fullWidth
-        ? 'w-[743px] after:mx-auto  after:w-1/2'
+        ? 'after:mx-auto  after:w-1/2'
         : 'block after:ml-0 mr-0 max-w-[calc(100%_-_0rem)] text-left after:w-1/4',
-      'prodkt-creative-h1 mx-auto relative z-[4] after:absolute after:h-1/2 after:top-0 after:bg-[var(--grayA7)] after:blur-2xl after:mix-blend-soft-light',
+      'prodkt-creative-h1 text-7xl md:text-8xl lg:text-[8.925rem] mx-auto leading-none font-medium tracking-tighter relative z-[4] after:absolute after:h-1/2 after:top-0 after:bg-[var(--grayA7)] after:blur-2xl after:mix-blend-soft-light',
     )}
   >
     {text}
@@ -141,7 +141,7 @@ const {
     class={cn(
       !minimal
         ? 'hidden text-[8.925rem] text-center  tracking-tighter mb-12  after:left-0 after:right-0 leading-[75%]'
-        : 'hidden text-left text-[5.925rem] tracking-[-0.325rem] font-normal  after:left-0 after:right-auto leading-[64%] mb-8',
+        : 'hidden text-left text-[5.925rem] tracking-[-0.325rem]  after:left-0 after:right-auto leading-[64%] mb-8',
       !fullWidth
         ? 'hidden w-[743px] mx-auto grid-cols-4 items-center justify-center'
         : 'hidden w-[calc(100%_-_4rem)] mx-auto text-left flex-row items-center justify-start gap-8',
@@ -149,22 +149,22 @@ const {
     )}
   >
     <p
-      class='col-span-1 font-mono uppercase text-sm tracking-widest font-normal text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
+      class='col-span-1 font-mono uppercase text-sm tracking-widest text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
     >
       {bullet1}
     </p>
     <p
-      class='col-span-1 font-mono uppercase text-sm tracking-widest font-normal text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
+      class='col-span-1 font-mono uppercase text-sm tracking-widest text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
     >
       {bullet2}
     </p>
     <p
-      class='col-span-1 font-mono uppercase text-sm tracking-widest font-normal text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
+      class='col-span-1 font-mono uppercase text-sm tracking-widest text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
     >
       {bullet3}
     </p>
     <p
-      class='col-span-1 font-mono uppercase text-sm tracking-widest font-normal text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
+      class='col-span-1 font-mono uppercase text-sm tracking-widest text-transparent bg-gradient-to-b from-[var(--grayA9)] to-[var(--gray1)] bg-clip-text'
     >
       {bullet4}
     </p>
@@ -178,7 +178,7 @@ const {
       0px 4px 24px var(--gray1),
       0px 1px 1px var(--gray6);
     @apply bg-gradient-to-b from-[var(--gray12)] to-[var(--gray1)] brightness-[2] contrast-50 dark:brightness-[1.2] dark:contrast-100;
-    @apply bg-clip-text text-transparent px-2 py-2;
+    @apply bg-clip-text text-transparent;
 
     leading-trim: both;
     text-edge: cap;

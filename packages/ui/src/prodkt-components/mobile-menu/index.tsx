@@ -13,16 +13,14 @@ import {
   MobileFlows,
   MobileHome,
   MobileWork,
-} from '../../icons/navigation/mobileIcons'
-import { Button } from '../../primitives/button'
+} from '@/icons/navigation/mobileIcons'
+import { Button } from '@/primitives/button'
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerTrigger,
-} from '../../primitives/drawer'
+} from '@/primitives/drawer'
 
 interface MobileMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   link: string
@@ -35,12 +33,9 @@ const MobileMenu = () => {
       <DrawerTrigger asChild className='px-2 xl:hidden'>
         <Button
           variant='outline'
-          className='group flex flex-row items-center justify-center gap-1 rounded-full border px-2 py-1 transition-colors hover:bg-[var(--ghost-aa3)]'
+          className='group flex flex-row items-center justify-center gap-1 rounded-full border border-[var(--gray11)] bg-[var(--grayA1)] px-2 py-1 text-[var(--gray2)] transition-all duration-500 hover:bg-[var(--grayA6)] hover:text-[var(--gray3)] dark:border-[var(--gray6)] dark:bg-[var(--gray3)] dark:text-[var(--gray12)] dark:hover:bg-[var(--gray2)] dark:hover:text-[var(--gray11)]'
         >
-          <MenuIcon
-            size={20}
-            className='transition-colors group-hover:stroke-[var(--accent9)]'
-          />
+          <MenuIcon size={20} className='' />
           <p className='font-mono text-xs font-normal uppercase tracking-widest'>
             Menu
           </p>
