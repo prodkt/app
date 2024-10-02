@@ -1,15 +1,8 @@
 import React from 'react'
 
-import Astro from '@/brands/technologies/astro'
-import Directus from '@/brands/technologies/directus'
-import Docker from '@/brands/technologies/docker'
-import ReactLogo from '@/brands/technologies/react'
-import Storybook from '@/brands/technologies/storybook'
-import Supabase from '@/brands/technologies/supabase'
-
 import { ConnectionBoard, ProdktBlurry, Stars, TopGlow } from '../assets'
 import { HeroBackground } from '../hero-header/background'
-import { CloudLogo, LogoCloud } from '../logo-cloud'
+import FeatureSection2 from '../prodkt-features/FeatureSection2'
 
 import './about-prodkt.css'
 
@@ -19,7 +12,7 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
   return (
     <section
       ref={ref}
-      className='relative flex w-full flex-col items-center justify-center overflow-hidden px-10 md:px-20 md:pb-20 '
+      className='relative flex w-full flex-col items-center justify-center overflow-hidden px-10 md:px-20 md:pb-20'
       {...props}
     >
       <div className='relative flex w-full flex-col place-content-center place-items-center content-center items-start justify-start md:items-center md:justify-center'>
@@ -28,14 +21,14 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
             <h3 className='my-auto max-w-[60dvw] text-pretty pb-2 pr-3 text-3xl font-medium leading-[80%] tracking-tighter text-[var(--gray12)] sm:text-5xl sm:leading-[75%] md:text-balance md:text-5xl md:leading-[75%] lg:max-w-full'>
               What is Prodkt?
             </h3>
-            <div className='relative mr-auto flex translate-y-0 flex-col items-center justify-start gap-4'>
+            <div className='relative mr-auto flex translate-y-0 flex-col items-center justify-start gap-8'>
               <div className='relative z-[19] mr-auto flex w-full translate-y-0 flex-col items-start justify-start gap-2'>
                 <h2 className=' relative max-w-xs text-balance bg-gradient-to-br from-[var(--grayA9)] to-[var(--grayA11)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent'>
                   <div className='absolute inset-y-0 -left-5 my-auto h-px w-3 bg-[var(--grayA5)]' />
                   A resume made available to companies I've expressed interest
                   in for potential employment.
                 </h2>
-                <h2 className=' absolute max-w-xs animate-pulse text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA12)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent blur'>
+                <h2 className='absolute max-w-xs animate-pulse text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA12)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent blur'>
                   <div className='absolute inset-y-0 -left-5 my-auto h-px w-3 bg-[var(--grayA5)]' />
                   A resume made available to companies I've expressed interest
                   in for potential employment.
@@ -47,7 +40,7 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
                   Building towards a multi-tenant SaaS platform for technical
                   Designer/Developers looking to showcase their work.
                 </h2>
-                <h2 className='4absolute hidden max-w-[200px] animate-pulse text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA12)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent blur'>
+                <h2 className='absolute hidden max-w-[200px] animate-pulse text-balance bg-gradient-to-br from-[var(--grayA4)] to-[var(--grayA12)] bg-clip-text font-mono text-xs uppercase tracking-widest text-transparent blur'>
                   <div className='absolute inset-y-0 -left-5 my-auto h-px w-3 bg-[var(--grayA5)]' />
                   Building towards a multi-tenant SaaS platform for technical
                   Designer/Developers looking to showcase their work.
@@ -120,28 +113,7 @@ const AboutProdkt = React.forwardRef<HTMLDivElement>(({ ...props }, ref) => {
             </div>
           </div>
         </div>
-        <div className='relative z-[1] mx-auto -mt-[calc(0.6rem_-_1px)] mb-12 flex flex-col items-center justify-start overflow-visible backdrop-blur md:mb-20 lg:mb-28'>
-          <LogoCloud>
-            <CloudLogo>
-              <Supabase className='h-4 w-auto max-w-16' />
-            </CloudLogo>
-            <CloudLogo>
-              <Astro className='h-4 w-auto max-w-16' />
-            </CloudLogo>
-            <CloudLogo>
-              <Directus className='h-4 w-auto max-w-16' />
-            </CloudLogo>
-            <CloudLogo>
-              <Storybook className='h-4 w-auto max-w-16' />
-            </CloudLogo>
-            <CloudLogo>
-              <ReactLogo className='h-4 w-auto max-w-16' />
-            </CloudLogo>
-            <CloudLogo>
-              <Docker className='h-4 w-auto max-w-16' />
-            </CloudLogo>
-          </LogoCloud>
-        </div>
+        <FeatureSection2 />
       </div>
 
       <div className='relative bottom-0 top-auto z-[1] mb-0 mt-auto flex w-full max-w-full flex-row items-start justify-start gap-8 lg:justify-center'>

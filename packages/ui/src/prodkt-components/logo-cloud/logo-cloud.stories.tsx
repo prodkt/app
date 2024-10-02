@@ -7,6 +7,7 @@ import { Hm } from '../../brands/clients/hm'
 import { Hp } from '../../brands/clients/hp'
 import { Samsung } from '../../brands/clients/samsung'
 import { Toyota } from '../../brands/clients/toyota'
+import LogoCloudTechnology from './logo-cloud-technology'
 
 const meta: Meta<typeof LogoCloud> = {
   component: LogoCloud,
@@ -59,6 +60,13 @@ export const Default: Story = {
           <Hm className='h-4 w-auto max-w-14 text-[var(--ghost-a6)]' />
         </CloudLogo>
       </LogoCloud>
+    </div>
+  ),
+}
+export const Technology: Story = {
+  render: () => (
+    <div className='flex size-full items-center justify-center'>
+      <LogoCloudTechnology />
     </div>
   ),
 }
