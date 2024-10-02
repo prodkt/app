@@ -21,7 +21,7 @@ export default function IndexSectionFeatures3() {
         />
         <div className='container relative z-10 mx-auto px-4'>
           <div className='md:mx-auto md:max-w-3xl'>
-            <h2 className='bg-radial-gradient from-gray-12 to-gray-11 text-shadow-[0_0_10px_var(--grayA2)] mb-20 mb-6 max-w-xl text-balance bg-clip-text pb-2 text-5xl font-bold tracking-tighter text-transparent sm:text-6xl'>
+            <h2 className='bg-radial-gradient from-gray-12 to-gray-11 text-shadow-[0_0_10px_var(--grayA2)] mb-20 mb-6 max-w-xl text-balance bg-clip-text pb-2 text-5xl font-medium tracking-tighter text-transparent sm:text-6xl'>
               Recommended by world-class companies.
             </h2>
             <div className='-m-5 flex flex-wrap'>
@@ -30,16 +30,16 @@ export default function IndexSectionFeatures3() {
                   <p className='from-iris-9 to-iris-11 mb-4 bg-gradient-to-b bg-clip-text font-mono text-xs uppercase text-transparent text-opacity-100'>
                     Advance reports
                   </p>
-                  <h3 className='from-iris-11 to-iris-12 mb-20 bg-gradient-to-br bg-clip-text text-3xl font-bold tracking-tight text-transparent'>
+                  <h3 className='from-iris-11 to-iris-12 mb-20 bg-gradient-to-br bg-clip-text text-3xl font-medium tracking-tight text-transparent'>
                     Daily analytics help you to understand business growth.
                   </h3>
                   <div>
                     <div className='pr-7'>
                       <div className='rounded-10 shadow-3xl bg-radial-gradient from-iris-a1 to-mauve-a7 relative z-10 border border-[var(--grayA2)] p-5 text-center backdrop-blur'>
-                        <p className='text-iris-12 text-shadow-[0_4px_32px_var(--iris12)] mb-3 text-3xl font-bold'>
+                        <p className='text-iris-12 text-shadow-[0_4px_32px_var(--iris12)] mb-3 text-3xl font-medium'>
                           162.9k
                         </p>
-                        <p className='text-iris-12 text-shadow-[0_4px_24px_var(--gray10)] mb-3 text-xs font-bold'>
+                        <p className='text-iris-12 text-shadow-[0_4px_24px_var(--gray10)] mb-3 text-xs font-medium'>
                           Last 7 Days Website Visits
                         </p>
                         <p className='text-gray-9 text-xs'>
@@ -49,10 +49,10 @@ export default function IndexSectionFeatures3() {
                     </div>
                     <div className='-mt-14 pl-7'>
                       <div className='rounded-10 shadow-3xl bg-mauve-a7 border border-[var(--irisA2)] p-5 text-center opacity-30'>
-                        <p className='text-gray-11 text-shadow-[0_4px_24px_var(--gray12)] mb-3 text-3xl font-bold'>
+                        <p className='text-gray-11 text-shadow-[0_4px_24px_var(--gray12)] mb-3 text-3xl font-medium'>
                           162.9k
                         </p>
-                        <p className='text-iris-12 text-shadow-[0_4px_24px_var(-iris10)] mb-3 text-xs font-bold'>
+                        <p className='text-iris-12 text-shadow-[0_4px_24px_var(-iris10)] mb-3 text-xs font-medium'>
                           Last 7 Days Website Visits
                         </p>
                         <p className='text-iris-11 text-xs'>
@@ -69,7 +69,7 @@ export default function IndexSectionFeatures3() {
                     <p className='from-blue-9 to-blue-12 mb-4 bg-gradient-to-b bg-clip-text font-mono text-xs uppercase text-transparent text-opacity-100'>
                       Unlimited entertainment
                     </p>
-                    <h3 className='from-blue-12 to-blue-10 mb-5 bg-gradient-to-br bg-clip-text text-3xl font-bold tracking-tight text-transparent'>
+                    <h3 className='from-blue-12 to-blue-10 mb-5 bg-gradient-to-br bg-clip-text text-3xl font-medium tracking-tight text-transparent'>
                       Give a break. Make employee happy in the office.
                     </h3>
                   </div>
@@ -81,7 +81,7 @@ export default function IndexSectionFeatures3() {
                   <p className='from-amber-10 to-amber-12 mb-4 bg-gradient-to-b bg-clip-text font-mono text-xs uppercase text-transparent text-opacity-100'>
                     Fastest growth
                   </p>
-                  <h3 className='from-amber-12 to-amber-10 mb-20 bg-gradient-to-tr bg-clip-text text-3xl font-bold tracking-tight text-transparent'>
+                  <h3 className='from-amber-12 to-amber-10 mb-20 bg-gradient-to-tr bg-clip-text text-3xl font-medium tracking-tight text-transparent'>
                     Track results. Share with anyone without taking the hassle.
                   </h3>
                   <img className='mx-auto' src={ProdktCard} alt='' />
@@ -92,7 +92,7 @@ export default function IndexSectionFeatures3() {
                   <p className='from-slate-10 to-slate-12 mb-4 bg-gradient-to-b bg-clip-text font-mono text-xs uppercase text-transparent text-opacity-100'>
                     Customer review
                   </p>
-                  <h3 className='from-slate-12 to-slate-10 mb-20 bg-gradient-to-tr bg-clip-text text-3xl font-bold tracking-tight text-transparent'>
+                  <h3 className='from-slate-12 to-slate-10 mb-20 bg-gradient-to-tr bg-clip-text text-3xl font-medium tracking-tight text-transparent'>
                     20k+ experts love our products &amp; support.
                   </h3>
                   <img className='mx-auto' src={ProdktCard} alt='' />

@@ -1,3 +1,4 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
 /* eslint-disable jsdoc/require-returns */
 
 import { ProdktLogo } from '@/brands/prodkt'

@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import IndexSectionFeatures2 from '.'
-import IndexSectionFeatures1 from './IndexSectionFeatures1'
+import FeatureSection1 from '.'
+import FeatureSection2 from './FeatureSection2'
 import IndexSectionFeatures3 from './IndexSectionFeatures3'
 
-const meta: Meta<typeof IndexSectionFeatures1> = {
-  component: IndexSectionFeatures1,
+const meta: Meta<typeof FeatureSection1> = {
+  component: FeatureSection1,
   args: {},
   // argTypes: {
   //   variant: {
@@ -30,13 +30,13 @@ const meta: Meta<typeof IndexSectionFeatures1> = {
 }
 
 export default meta
-type Story = StoryObj<typeof IndexSectionFeatures1>
+type Story = StoryObj<typeof FeatureSection1>
 
 export const Default: Story = {
-  render: () => <IndexSectionFeatures1 />,
+  render: () => <FeatureSection1 />,
 }
 export const Section2: Story = {
-  render: () => <IndexSectionFeatures2 />,
+  render: () => <FeatureSection2 />,
 }
 export const Section3: Story = {
   render: () => <IndexSectionFeatures3 />,
