@@ -1,6 +1,6 @@
 import { buildConfig, mergeConfig, reactConfig } from '@prodkt/vite'
 
-import pkg from './package.json'
+// import pkg from './package.json'
 
 export default mergeConfig(
   // Vite config to support React.
