@@ -7,6 +7,42 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-theme-sans: var(--font-labil-grotesk);
+  --font-theme-mono: var(--font-ibm-plex-mono);
+}
+
+[data-typography='prodkt'],
+.radix-themes:where([data-typography='prodkt']) {
+  --font-theme-sans: var(--font-labil-grotesk);
+  --font-theme-mono: var(--font-ibm-plex-mono);
+}
+[data-typography='trendy'],
+.radix-themes:where([data-typography='trendy']) {
+  --font-theme-sans: var(--font-dm-sans-variable);
+  --font-theme-mono: var(--font-ibm-plex-mono);
+}
+[data-typography='techy'],
+.radix-themes:where([data-typography='techy']) {
+  --font-theme-sans: var(--font-space-grotesk);
+  --font-theme-mono: var(--font-jetbrains-mono-variable);
+}
+[data-typography='press'],
+.radix-themes:where([data-typography='press']) {
+  --font-theme-sans: var(--font-dm-sans-variable);
+  --font-theme-mono: var(--font-dm-mono);
+}
+[data-typography='giest'],
+.radix-themes:where([data-typography='giest']) {
+  --font-theme-sans: var(--font-geist-sans);
+  --font-theme-mono: var(--font-geist-mono);
+}
+[data-typography='steady'],
+.radix-themes:where([data-typography='steady']) {
+  --font-theme-sans: var(--font-figtree-variable);
+  --font-theme-mono: var(--font-jetbrains-mono-variable);
+}
+
 [data-accent-color='amber'] {
   --accent1: var(--amber1);
   --accent2: var(--amber2);
@@ -828,15 +864,4 @@
   .docs-story {
     @apply bg-[var(--gray2)] text-foreground;
   }
-}
-:root {
-  --font-theme-sans: 'Labil Grotesk Variable';
-}
-
-@font-face {
-  font-family: 'Labil Grotesk Variable';
-  font-display: swap;
-  src:
-    url('./LabilGroteskLite-Variable.woff2') format('woff2-variations'),
-    url('./LabilGroteskLite-Regular.woff') format('woff');
 }

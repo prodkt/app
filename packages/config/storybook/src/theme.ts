@@ -1,10 +1,13 @@
 import { grayDark, violetDark } from '@radix-ui/colors'
+
+import '@prodkt/assets/fonts/index.css'
+
 import { create } from '@storybook/theming'
 
 export default create({
   base: 'dark',
-  fontBase: 'var(--font-theme-sans)',
-  fontCode: 'var(--font-theme-mono)',
+  fontBase: '"var(--font-theme-sans)", sans-serif',
+  fontCode: '"var(--font-theme-mono)", monospace',
   appContentBg: grayDark.gray3,
   appBg: grayDark.gray1,
   barBg: grayDark.gray3,

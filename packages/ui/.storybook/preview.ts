@@ -1,3 +1,4 @@
+import '@prodkt/assets/fonts/index.css'
 import '../../assets/fonts/index.css'
 import './globals.css'
 
