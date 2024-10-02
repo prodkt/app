@@ -1,4 +1,4 @@
-import '@prodkt/assets/fonts/stylesheet.css'
+import '@prodkt/assets/fonts/index.css'
 import './globals.css'
 
 import preview from '@prodkt/storybook/preview'
