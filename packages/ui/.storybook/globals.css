@@ -829,3 +829,14 @@
     @apply bg-[var(--gray2)] text-foreground;
   }
 }
+:root {
+  --font-theme-sans: 'Labil Grotesk Variable';
+}
+
+@font-face {
+  font-family: 'Labil Grotesk Variable';
+  font-display: swap;
+  src:
+    url('./LabilGroteskLite-Variable.woff2') format('woff2-variations'),
+    url('./LabilGroteskLite-Regular.woff') format('woff');
+}
