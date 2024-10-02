@@ -1,4 +1,4 @@
-@import '@prodkt/assets/fonts/index.css';
+@import '../../assets/fonts/index.css';
 @import '@prodkt/tailwind/color';
 @import '@prodkt/tailwind/typography';
 @tailwind base;
