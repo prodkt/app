@@ -12,7 +12,7 @@ import Plutio from '@/components/plutio/plutio.astro'
 import PostHog from '@/components/posthog/PostHog.astro'
 
 type DataTheme = 'dark-theme' | 'light-theme'
-type Typography = 'theme-prodkt' | 'theme-blog'
+type Typography = 'prodkt' | 'trendy' | 'techy' | 'press' | 'giest' | 'steady'
 type Appearance = 'inherit' | 'light' | 'dark'
 type AccentColor =
   | 'gray'
@@ -65,7 +65,7 @@ const {
   grayColor = 'slate',
   appearance = 'dark',
   theme = 'dark-theme',
-  typography = 'theme-prodkt',
+  typography = 'prodkt',
 } = Astro.props
 ---
 
