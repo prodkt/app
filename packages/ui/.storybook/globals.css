@@ -1,4 +1,6 @@
 @import '../../assets/fonts/index.css';
+@import '../../assets/fonts/stylesheet.css';
+@import '../../config/tailwind/src/typography.css';
 @import '@prodkt/tailwind/color';
 @import '@prodkt/tailwind/typography';
 @tailwind base;
