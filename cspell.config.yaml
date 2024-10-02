@@ -11,37 +11,69 @@ ignorePaths:
   - drizzle
   - '**/*.svg'
 words:
+  - Aaiun
+  - Ababa
+  - abcdefghijklmopqrstuvwxyz
   - acst
+  - actionables
+  - Adak
+  - Addis
   - aest
   - akst
   - aliqua
   - amet
   - Amet
+  - Anadyr
   - Anson
   - apitoken
+  - Aqtau
+  - Aqtobe
+  - Araguaina
+  - Asmera
   - astro
   - astrojs
+  - astrolib
+  - Atikokan
+  - Atka
+  - Atyrau
   - autodocs
+  - automations
+  - Automations
   - autoplay
+  - autoset
+  - AVATARBOX
   - awst
-  - iefix
-  - unstarted
-  - Unstarted
   - backgroun
   - backgroundfill
+  - Baja
+  - Banderas
+  - Barthelemy
   - basemaps
+  - Bator
   - Beamer
   - behance
   - Bento
   - Binni
+  - Blocke
+  - Blockquotes
+  - blueprintjs
   - boxshadow
   - branchname
+  - Branco
   - bunx
+  - burndown
+  - burndowns
+  - Busingen
   - bvaughn
   - Byrom
   - callees
   - camdynn
   - Camdynn
+  - Catamarca
+  - chartjs
+  - Choibalsan
+  - Chuuk
+  - Ciudad
   - cjsx
   - classname
   - clsx
@@ -50,15 +82,20 @@ words:
   - cmin
   - codebl
   - codefence
+  - codemark
   - codemirror
   - codepreview
   - codesandbox
   - codespace
   - codespaces
+  - collab
   - Colm
   - colorwheel
+  - colwidth
+  - commitish
   - commitlint
   - commitlintrc
+  - Comod
   - Comonent
   - compat
   - Concepting
@@ -72,41 +109,72 @@ words:
   - Consulty
   - coverflow
   - cpath
+  - Creston
   - crossorigin
+  - ÇŞĞIİÖÜA
   - csvg
   - ctsx
+  - Cuiaba
+  - customkeymap
+  - Dacca
+  - Danmarkshavn
   - dashdraw
   - datetime
   - dbaeumer
+  - decos
   - degit
   - deserunt
   - Designboise
+  - Dili
   - directus
+  - doctag
   - docummentation
   - dotenv
+  - dotlottie
+  - downlaods
   - dribbble
+  - dropcursor
   - dropmenu
   - dsznajder
   - Duarte
   - duis
+  - Dumont
+  - duplicable
   - dwireframe
   - edgelabel
   - edgeupdater
+  - Efate
+  - Eirunepe
   - Elsakaan
   - Embla
+  - encapsulte
+  - Enderbury
   - enim
+  - Ensenada
   - esbenp
   - eslintcache
+  - Eucla
   - evenodd
+  - exitable
   - explor
   - Explor
   - Extralight
+  - Fakaofo
+  - favorited
+  - FAVORITED
   - Figtree
   - filesize
   - fkey
+  - flipbehavior
   - floatingedges
   - focusable
+  - fromnow
   - frontmatter
+  - gantt
+  - Gantt
+  - gapcursor
+  - Gapcursor
+  - giest
   - Gitbook
   - Gloock
   - googleanalytics
@@ -118,56 +186,109 @@ words:
   - hellsangels
   - heroicons
   - highlightjs
+  - hightlights
+  - hitbox
   - hljs
   - hookform
+  - Hovd
   - Hoverable
+  - Hubspot
   - HYWE
   - ianvs
   - Ideanote
+  - iefix
   - Ifwg
+  - indexeddb
+  - Indexeddb
+  - Inuvik
+  - Issuefields
   - jiti
   - jscoverage
   - jspm
+  - JTBD
+  - Jujuy
   - Kanban
+  - Kanton
+  - keymap
+  - Keymap
+  - Khandyga
+  - Kiritimati
+  - Kitts
   - kohler
+  - Kolkata
+  - Kosrae
+  - Kralendijk
+  - Kuala
   - labil
+  - laquo
   - Leveln
+  - Lindeman
   - linecap
   - linejoin
   - Lnan
   - lockb
   - Logomark
+  - Longyearbyen
+  - lottiefiles
+  - lowlight
+  - Lowlight
   - lucide
+  - lumkey
+  - Lumpur
+  - machine
+  - Magadan
+  - Mahe
   - Malyavko
+  - Manaus
   - mapbox
+  - marching
+  - Marigot
+  - Marino
+  - matching
+  - Mayen
+  - measurables
   - Memoji
   - Menlo
+  - MENUBOX
+  - Metlakatla
   - microbundle
   - mikestead
+  - Minh
   - minimise
   - Mintlify
   - mjsx
   - mollit
   - monokai
   - monorepoing
+  - Moresby
   - mousewheel
   - mtsx
+  - Murdo
   - neonctl
   - neondatabase
+  - Nera
   - nesw
   - Neue
   - nextjs
+  - Nipigon
+  - nivo
   - nocheck
   - nodesselection
   - nodrag
+  - noopener
   - nopan
+  - noreferrer
+  - Noronha
+  - Norte
   - Noto
   - nowrap
   - nums
+  - Nuuk
   - nuxt
   - nzst
   - odzdpcvclydcqawdagdt
   - officia
+  - Ojinaga
   - ondark
   - onwarn
   - optimisations
@@ -176,13 +297,20 @@ words:
   - packagejson
   - pacocoursey
   - pageview
+  - Pago
+  - Pandang
+  - Pangnirtung
   - pannable
+  - passowrd
+  - pathline
   - peduarte
   - Pendo
   - pids
   - Pinterest
   - pkce
   - plutio
+  - Pohnpei
+  - popperjs
   - Postgrest
   - posthog
   - posx
@@ -195,29 +323,53 @@ words:
   - prodkthero
   - progressbar
   - proptected
+  - prosemirror
+  - Prosemirror
   - Psnhw
+  - Punta
+  - Qostanay
   - quickstart
+  - Qyzylorda
+  - raquo
   - Ratelimit
   - reactflow
+  - reparent
   - resizer
   - revolutionvodka
   - rgba
+  - Rica
+  - Rioja
   - Ritalic
+  - Rivadavia
   - Roadmaps
   - rotatex
+  - Rothera
+  - rowspan
+  - Sablon
   - sandpack
+  - Santarem
+  - Santo
+  - scatterplot
+  - Scoresbysund
   - scroller
   - Segoe
+  - selectednode
   - selectionpane
+  - seperator
+  - servicemark
   - shadcn
+  - Shiprock
   - signin
+  - signup
   - slidek
   - sonner
   - Squircle
   - squoosh
   - srcdoc
+  - Srednekolymsk
   - sslmode
   - Stabil
+  - Starke
   - starterkit
   - starterkits
   - styledictionary
@@ -226,28 +378,38 @@ words:
   - stylesheet
   - subgrid
   - subline
+  - sublist
+  - Sublist
   - supabase
   - superjson
   - SVGR
   - Swiper
+  - Syowa
   - tada
   - tailwindcss
   - tamasfe
   - tanstack
   - textareas
   - textbg
+  - textblock
+  - Textblock
   - textnodes
   - textwrapper
   - Themeing
   - thollander
   - tiktok
+  - timebox
+  - timeboxed
+  - TINYBIRD
+  - tippyjs
+  - tiptap
+  - Tiptap
+  - Tiraspol
   - todos
   - tokensstudent
   - tokentype
+  - Tongatapu
   - topbar
-  - machine
-  - marching
-  - matching
   - tovuti
   - transitionall
   - transpiles
@@ -258,215 +420,55 @@ words:
   - tsconfigs
   - tseslint
   - tsup
+  - tubro
   - Tuite
   - turborepo
   - typecheck
   - typeof
   - typesafe
+  - Ujung
+  - Ulaanbaatar
+  - Ulan
   - ullamco
+  - unfavorited
+  - UNFAVORITED
   - unifiedjs
   - Uniforma
   - unkey
+  - unstarted
+  - Unstarted
   - uploadthing
+  - upvoted
   - upvoters
   - upvotes
   - upvoting
+  - Urville
+  - Ushuaia
+  - uuidv
+  - Uzhgorod
   - vaul
+  - Velho
   - Velit
   - vercel
+  - Vevay
   - viewports
   - vuepress
   - waitlist
   - webp
   - wght
+  - Winamac
   - wireframe
   - wireframes
   - WITA
   - wscript
   - xyflow
   - Yada
+  - Yakutat
+  - Yancowinna
   - yoav
-  - measurables
-  - MENUBOX
-  - Hubspot
-  - AVATARBOX
+  - zipball
   - zoomable
   - zoompane
   - ZUEP
   - zustand
-  - nivo
-  - passowrd
-  - Gantt
-  - gantt
-  - burndowns
-  - burndown
-  - timebox
-  - timeboxed
-  - JTBD
-  - actionables
-  - matching
-  - FAVORITED
-  - favorited
-  - UNFAVORITED
-  - unfavorited
-  - fromnow
-  - automations
-  - Automations
-  - Addis
-  - Ababa
-  - Asmera
-  - Aaiun
-  - Adak
-  - Araguaina
-  - Catamarca
-  - Comod
-  - Rivadavia
-  - Jujuy
-  - Rioja
-  - Ushuaia
-  - Atikokan
-  - Atka
-  - Banderas
-  - Sablon
-  - Ciudad
-  - Rica
-  - Creston
-  - Cuiaba
-  - Danmarkshavn
-  - Eirunepe
-  - Ensenada
-  - Vevay
-  - Winamac
-  - Inuvik
-  - Kralendijk
-  - Manaus
-  - Marigot
-  - Metlakatla
-  - Nipigon
-  - Noronha
-  - Nuuk
-  - Ojinaga
-  - Pangnirtung
-  - Velho
-  - Punta
-  - Branco
-  - Santarem
-  - Santo
-  - Scoresbysund
-  - Shiprock
-  - Barthelemy
-  - Kitts
-  - Yakutat
-  - Dumont
-  - Urville
-  - Murdo
-  - Rothera
-  - Syowa
-  - Longyearbyen
-  - Anadyr
-  - Aqtau
-  - Aqtobe
-  - Atyrau
-  - Choibalsan
-  - Dacca
-  - Dili
-  - Minh
-  - Hovd
-  - Khandyga
-  - Kolkata
-  - Kuala
-  - Lumpur
-  - Magadan
-  - Qostanay
-  - Qyzylorda
-  - Srednekolymsk
-  - Ujung
-  - Pandang
-  - Ulaanbaatar
-  - Ulan
-  - Bator
-  - Nera
-  - Mayen
-  - Eucla
-  - Lindeman
-  - Yancowinna
-  - Busingen
-  - Marino
-  - Tiraspol
-  - Uzhgorod
-  - Mahe
-  - Baja
-  - Norte
-  - Chuuk
-  - Efate
-  - Enderbury
-  - Fakaofo
-  - Kanton
-  - Kiritimati
-  - Kosrae
-  - Pago
-  - Pohnpei
-  - Moresby
-  - Tongatapu
-  - Starke
-  - tubro
-  - tiptap
-  - lowlight
-  - prosemirror
-  - codemark
-  - Gapcursor
-  - selectednode
-  - gapcursor
-  - doctag
-  - exitable
-  - Lowlight
-  - textblock
-  - Prosemirror
-  - encapsulte
-  - collab
-  - Tiptap
-  - Keymap
-  - keymap
-  - dropcursor
-  - Textblock
-  - seperator
-  - noopener
-  - noreferrer
-  - sublist
-  - Sublist
-  - customkeymap
-  - rowspan
-  - colwidth
-  - servicemark
-  - laquo
-  - raquo
-  - uuidv
-  - hightlights
-  - decos
-  - tippyjs
-  - indexeddb
-  - Indexeddb
-  - flipbehavior
-  - duplicable
-  - blueprintjs
-  - Blockquotes
-  - Issuefields
   - zxcvbn
-  - ÇŞĞIİÖÜA
-  - hitbox
-  - scatterplot
-  - popperjs
-  - autoset
-  - Blocke
-  - reparent
-  - commitish
-  - zipball
-  - pathline
-  - dotlottie
-  - lottiefiles
-  - chartjs
-  - downlaods
-  - upvoted
-  - signup
-  - lumkey
-  - TINYBIRD

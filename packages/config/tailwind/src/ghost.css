@@ -281,7 +281,3 @@ input:where([type='submit']) {
     rgba(0, 0, 0, 0) 80%
   );
 }
-
-.prodkt-blog-content a {
-  @apply text-[var(--accent10)] font-normal underline underline-offset-4 !important;
-}

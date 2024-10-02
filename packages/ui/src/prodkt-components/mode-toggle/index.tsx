@@ -151,7 +151,7 @@ export function ModeToggle() {
       variant='outline'
       size='icon'
       onClick={toggleTheme}
-      className='prodktModeToggle !before:group-hover:rounded-full !before:hover:rounded-full !before:rounded-full !after:group-hover:rounded-full !after:hover:rounded-full !after:rounded-full flex  items-center justify-center rounded-full border-[var(--grayA1)] bg-[var(--grayA1)] p-2 text-[var(--gray9)] shadow-inner transition-all duration-500 hover:bg-[var(--grayA6)] hover:text-[var(--gray9)] focus:outline-none dark:border-[var(--gray6)]  dark:bg-[var(--gray3)] dark:hover:bg-[var(--gray2)] dark:hover:text-[var(--gray11)]'
+      className='prodktModeToggle !before:group-hover:rounded-full !before:hover:rounded-full !before:rounded-full !after:group-hover:rounded-full !after:hover:rounded-full !after:rounded-full flex  items-center justify-center rounded-full border-[var(--gray11)] bg-[var(--grayA1)] p-2 text-[var(--gray9)] shadow-inner transition-all duration-500 hover:bg-[var(--grayA6)] hover:text-[var(--gray9)] focus:outline-none dark:border-[var(--gray6)]  dark:bg-[var(--gray3)] dark:hover:bg-[var(--gray2)] dark:hover:text-[var(--gray11)]'
     >
       <span className='sr-only rounded-full'>Toggle mode</span>
       <AnimatePresence initial={false}>

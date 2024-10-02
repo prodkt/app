@@ -18,7 +18,7 @@ const data = (await response.json()) as any
   >
     <PageHeader minimal fullWidth text='Files' />
     <div
-      class='flex flex-row flex-wrap items-center space-x-0 justify-start gap-4'
+      class='flex flex-row flex-wrap items-start space-x-0 justify-between justify-items-start content-start place-content-start gap-x-0 gap-y-4'
     >
       {
         data ? (
@@ -54,21 +54,3 @@ const data = (await response.json()) as any
     </div>
   </div>
 </Layout>
-
-<style>
-  .cube:hover {
-    transform: scaleX(1) scaleY(1) scaleZ(2.5) rotateX(33deg) rotateY(0deg)
-      rotateZ(0deg) translateX(0px) translateY(41px) translateZ(-83px)
-      skewX(0deg) skewY(0deg);
-  }
-
-  .cube:has(:hover) .cube-text {
-    transform: scaleX(1) scaleY(1) scaleZ(1.9) rotateX(9deg) rotateY(0deg)
-      rotateZ(0deg) translateX(0px) translateY(32px) translateZ(-55px)
-      skewX(0deg) skewY(0deg);
-  }
-  .cube-wrap {
-    perspective: 1001px;
-    perspective-origin: 49% 50%;
-  }
-</style>

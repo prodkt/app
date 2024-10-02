@@ -3,8 +3,8 @@ import { create } from '@storybook/theming'
 
 export default create({
   base: 'dark',
-  fontBase: 'var(--font-labil-grotesk)',
-  fontCode: 'var(--font-ibm-plex-mono)',
+  fontBase: 'var(--font-theme-sans)',
+  fontCode: 'var(--font-theme-mono)',
   appContentBg: grayDark.gray3,
   appBg: grayDark.gray1,
   barBg: grayDark.gray3,

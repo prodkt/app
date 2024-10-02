@@ -1,0 +1,24 @@
+@import './stylesheet.css';
+
+:root {
+  --font-geist-mono: 'Geist Mono';
+  --font-geist-sans: 'Geist Sans';
+  --font-ibm-plex-mono: 'IBM Plex Mono';
+  --font-labil-grotesk: 'Labil Grotesk';
+  --font-dm-sans-variable: 'DM Sans Variable';
+  --font-dm-mono: 'DM Mono';
+  --font-jetbrains-mono-variable: 'JetBrains Mono Variable';
+  --font-figtree-variable: 'Figtree Variable';
+  --font-labil-grotesk-variable: 'Labil Grotesk Variable';
+  --font-stabil-grotesk: 'Stabil Grotesk';
+  --font-attila-sans-classic: 'Attila Sans Classic';
+  --font-attila-sans-sharp: 'Attila Sans Sharp';
+  --font-victor-narrow: 'Victor Narrow';
+  --font-victor-sans: 'Victor Sans';
+  --font-victor-serif: 'Victor Serif';
+  --font-victor-serif-variable: 'Victor Serif Variable';
+  --font-uniforma: 'Uniforma';
+  --font-uniforma-variable: 'Uniforma Variable';
+  --font-space-grotesk-variable: 'Space Grotesk Variable';
+  --font-space-grotesk: 'Space Grotesk';
+}

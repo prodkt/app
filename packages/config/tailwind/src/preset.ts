@@ -996,8 +996,8 @@ export const prodktTailwindPreset: Config = {
         radius: '0.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-labil-grotesk)'],
-        mono: ['var(--font-ibm-plex-mono)'],
+        sans: ['var(--font-theme-sans)'],
+        mono: ['var(--font-theme-mono)'],
       },
       keyframes: {
         'accordion-down': {
@@ -1043,6 +1043,15 @@ export const prodktTailwindPreset: Config = {
         500: '500ms',
         700: '700ms',
         1000: '1000ms',
+        2000: '2000ms',
+        3000: '3000ms',
+        4000: '4000ms',
+        5000: '5000ms',
+        6000: '6000ms',
+        7000: '7000ms',
+        8000: '8000ms',
+        9000: '9000ms',
+        10000: '10000ms',
       },
       transitionDuration: {
         DEFAULT: '150ms',
@@ -1055,6 +1064,15 @@ export const prodktTailwindPreset: Config = {
         500: '500ms',
         700: '700ms',
         1000: '1000ms',
+        2000: '2000ms',
+        3000: '3000ms',
+        4000: '4000ms',
+        5000: '5000ms',
+        6000: '6000ms',
+        7000: '7000ms',
+        8000: '8000ms',
+        9000: '9000ms',
+        10000: '10000ms',
       },
       transitionProperty: {
         none: 'none',

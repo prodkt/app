@@ -83,7 +83,7 @@ export function ThemeToggle() {
       <DialogTrigger asChild>
         <Button
           variant='outline'
-          className='rounded-full border-[var(--grayA1)] bg-[var(--grayA1)] transition-all duration-500 after:rounded-full hover:bg-[var(--grayA6)] dark:border-[var(--gray6)] dark:bg-[var(--gray3)] dark:hover:bg-[var(--gray2)]'
+          className='rounded-full border-[var(--gray11)] bg-[var(--grayA1)] transition-all duration-500 after:rounded-full hover:bg-[var(--grayA6)] dark:border-[var(--gray6)] dark:bg-[var(--gray3)] dark:hover:bg-[var(--gray2)]'
           size='icon'
         >
           <ColorWheel className='size-6' />
