@@ -13,21 +13,18 @@ import { GET } from './index.json'
 type Roadmap = Database['public']['Tables']['roadmaps']['Row']
 type Project = Database['public']['Tables']['projects']['Row']
 type Files = Database['public']['Tables']['directus_files']['Row']
-type Issue = Database['public']['Tables']['issues']['Row']
-type Status = Database['public']['Tables']['status']['Row'] & { tasks: Issue[] } // Ensure Status includes tasks
-type Column = {
-  id: string
-  color: string
-  label: string
-  value: string
-  tasks: Issue[]
+type Issue = Database['public']['Tables']['issues']['Row'] & {
+  status: Status
 }
+type Status = Database['public']['Tables']['status']['Row'] & { tasks: Issue[] } // Ensure Status includes tasks
+
 interface ProjectData {
   projectSlug?: string
   roadmapSlug?: string
   roadmapData?: Roadmap[]
   projectData: Project[]
   issueData: Issue[]
+  tasks: Issue[]
   projectListing: ProjectList[]
   projectTitle: string | null
   logo: Files['filename_disk']
@@ -38,35 +35,35 @@ interface ProjectData {
 const response = await GET(Astro)
 const data = (await response.json()) as ProjectData
 
-// Group tasks by their status label
-const columnsData = data.issueData.reduce<Record<string, Issue[]>>(
-  (acc, task) => {
-    const status = task.status // Ensure status is correctly typed
-    // @ts-ignore
-    const columnKey = status.label || 'Unknown' // Group by status label
+const issueData = data.issueData // Access your issue data from the data object
 
-    if (!acc[columnKey]) {
-      acc[columnKey] = []
-    }
-
-    acc[columnKey].push(task)
-    return acc
-  },
-  {},
-)
+// Group issues by their status label
+const columnsData = issueData.reduce<Record<string, Issue[]>>((acc, issue) => {
+  const statusLabel = issue.status?.label ?? 'Unknown' // Use the status label for grouping, default to 'Unknown'
+  if (!acc[statusLabel]) {
+    acc[statusLabel] = []
+  }
+  acc[statusLabel].push(issue)
+  return acc
+}, {})
 
 // Transform grouped tasks into the format for BoardColumn
-const columns: Column[] = Object.entries(columnsData).map(([label, tasks]) => {
-  // @ts-ignore
-  const exampleStatus = tasks[0]?.status as Status
-
+const columns = Object.entries(columnsData).map(([label, tasks]) => {
   return {
-    id: exampleStatus?.id || `unknown-${label}`,
-    color: exampleStatus?.color || 'default-color',
-    label: exampleStatus?.label || 'No Label',
-    value: exampleStatus?.value || 'no-value',
+    id: tasks[0]?.status.id || `unknown-${label}`, // Use the first task's status id
+    color: tasks[0]?.status.color ?? 'default-color', // Use the first task's status color
+    label, // The label is the status label (e.g., "Backlog", "Todo")
     tasks, // Pass the tasks to the column object
+    value: label,
   }
+})
+
+// Define the desired order of the columns
+const desiredOrder = ['Backlog', 'Todo', 'In Progress', 'Done']
+
+// Sort the columns based on the desired order
+const orderedColumns = columns.sort((a, b) => {
+  return desiredOrder.indexOf(a.value) - desiredOrder.indexOf(b.value)
 })
 ---
 
@@ -88,10 +85,10 @@ const columns: Column[] = Object.entries(columnsData).map(([label, tasks]) => {
       client:only='react'
     >
       {
-        columns.map((column) => (
+        orderedColumns.map((column) => (
           <BoardColumn
             column={column}
-            tasks={column.tasks}
+            tasks={column.tasks as Issue[]}
             isOverlay={false}
             client:only='react'
           />

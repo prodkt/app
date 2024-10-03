@@ -9,7 +9,6 @@ import {
   Concepts,
   Docs,
   Flows,
-  Repo,
   Roadmaps,
   Work,
 } from '../../icons/navigation'

@@ -266,34 +266,44 @@ const data = {
   status: 200,
 }
 
-// Group tasks by their status label
-const columnsData = data.issueData.reduce<Record<string, Issue[]>>(
-  (acc, task) => {
-    const status = task.status // Ensure status is correctly typed
-    // @ts-ignore
-    const columnKey = status.label || 'Unknown' // Group by status label
+const issueData = data.issueData // Access your issue data from the data object
 
-    if (!acc[columnKey]) {
-      acc[columnKey] = []
-    }
-
-    acc[columnKey].push(task)
-    return acc
-  },
-  {},
-)
+// Group issues by their status label
+const columnsData = issueData.reduce((acc, issue) => {
+  const statusLabel = issue.status.label // Use the status label for grouping
+  if (!acc[statusLabel]) {
+    acc[statusLabel] = []
+  }
+  acc[statusLabel].push(issue)
+  return acc
+}, {})
 
 // Transform grouped tasks into the format for BoardColumn
-const columns: Column[] = Object.entries(columnsData).map(([label, tasks]) => {
-  const exampleStatus = tasks[0]?.status as Status
-
+const columns = Object.entries(columnsData).map(([label, tasks]) => {
   return {
-    id: exampleStatus.id || `unknown-${label}`,
-    color: exampleStatus.color || 'default-color',
-    label: exampleStatus.label || 'No Label',
-    value: exampleStatus.value || 'no-value',
+    id: tasks[0]?.status.id || `unknown-${label}`, // Use the first task's status id
+    color: tasks[0]?.status.color ?? 'default-color', // Use the first task's status color
+    label, // The label is the status label (e.g., "Backlog", "Todo")
     tasks, // Pass the tasks to the column object
+    value: label,
   }
+})
+
+// Define the desired order of the columns
+const desiredOrder = ['backlog', 'todo', 'in-progress', 'done']
+
+const orderedColumns = columns.sort((a, b) => {
+  const valueA = a.value.toLowerCase() // Ensure lowercase for comparison
+  const valueB = b.value.toLowerCase() // Ensure lowercase for comparison
+
+  const indexA = desiredOrder.indexOf(valueA)
+  const indexB = desiredOrder.indexOf(valueB)
+
+  // If the value is not found in the desiredOrder array, place it at the end
+  const orderA = indexA === -1 ? desiredOrder.length : indexA
+  const orderB = indexB === -1 ? desiredOrder.length : indexB
+
+  return orderA - orderB
 })
 
 const meta: Meta<typeof ProjectLayout> = {
@@ -311,10 +321,10 @@ export const Default: Story = {
       </div>
       <ProjectLayout
         projectLogo={data.projectData[0]?.logo.filename_disk as string | null}
-        projectTitle={data.projectData[0]?.title}
+        projectTitle={data.projectData[0]?.title ?? ''}
         projects={projects}
       >
-        {columns.map((column) => (
+        {orderedColumns.map((column) => (
           <BoardColumn
             key={column.id}
             column={column}
