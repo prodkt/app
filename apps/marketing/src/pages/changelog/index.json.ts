@@ -20,6 +20,7 @@ async function fetchChangelogData(
       '*,id,title,content,project_id,publish_date,published,summary,author_id(*),slug,image(filename_disk),improvements',
     )
     .neq('published', false)
+    .order('publish_date', { ascending: false })
 
   // Type guard to check if response.error exists
   if (response.error) {
@@ -37,7 +38,7 @@ async function fetchChangelogData(
  */
 export async function GET(context: APIContext) {
   const supabaseResult = await supabase(context)
-  if (!supabaseResult?.supabase) {
+  if (!supabaseResult.supabase) {
     console.error('Failed to initialize Supabase client')
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
