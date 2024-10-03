@@ -1,3 +1,7 @@
+/* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-returns */
+/* eslint-disable jsdoc/require-param-description */
+
 import type { Database } from '@/database.types'
 
 import { SortableContext, useSortable } from '@dnd-kit/sortable'
@@ -110,7 +114,7 @@ export function BoardColumn({
   }
 
   const variants = cva(
-    'mb-auto flex h-[600px] basis-1/3 snap-center flex-col overflow-visible rounded-none border-[var(--grayA3)] bg-gradient-to-b from-[var(--gray5)] to-[var(--gray3)] dark:from-[var(--gray1)] dark:to-[var(--gray1)]',
+    'mb-auto flex h-[600px] w-1/3 basis-1/3 snap-center flex-col overflow-visible rounded-none border-[var(--grayA3)] bg-gradient-to-b from-[var(--gray5)] to-[var(--gray3)] dark:from-[var(--gray1)] dark:to-[var(--gray1)]',
     {
       variants: {
         dragging: {
@@ -136,7 +140,7 @@ export function BoardColumn({
           variant={'ghost'}
           {...attributes}
           {...listeners}
-          className='relative -ml-2 h-auto cursor-grab p-1 hover:bg-opacity-0 group-hover:bg-[var(--grayA1)] group-hover:text-[var(--grayA12)]'
+          className='relative -ml-2 h-auto cursor-grab p-1 group-hover:bg-[var(--grayA1)] group-hover:text-[var(--grayA12)]'
         >
           <GripVertical
             size={16}

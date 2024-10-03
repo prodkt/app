@@ -1,5 +1,5 @@
-/* eslint-disable jsdoc/require-returns */
 /* eslint-disable @eslint-community/eslint-comments/disable-enable-pair */
+/* eslint-disable jsdoc/require-returns */
 /* eslint-disable jsdoc/require-param-description */
 
 import type { Database } from '@/database.types'
@@ -91,7 +91,7 @@ export function TaskCard({ task, isOverlay }: Readonly<TaskCardProps>) {
           variant={'ghost'}
           {...attributes}
           {...listeners}
-          className='-ml-2 h-auto cursor-grab p-1 hover:bg-opacity-0 group-hover:bg-[var(--grayA1)]'
+          className='-ml-2 h-auto cursor-grab p-1 group-hover:bg-[var(--grayA1)]'
         >
           <span className='sr-only'>Move task</span>
           <GripVertical
@@ -102,6 +102,7 @@ export function TaskCard({ task, isOverlay }: Readonly<TaskCardProps>) {
           <div className='pointer-events-none absolute left-0 top-0 z-0 size-full w-1/4 select-none rounded-xl bg-gradient-to-b from-[var(--ghost-aa4)] via-transparent to-transparent blur-lg' />
         </Button>
         <div className='flex flex-row items-center justify-center gap-1'>
+          <Assignee />
           <div
             aria-label='Milestone'
             className='ml-auto flex h-6 select-none flex-row items-center justify-center gap-1 rounded-full border border-[var(--grayA1)] bg-[var(--gray3)] px-1 py-0.5 pr-2 text-xs shadow-inner'
@@ -123,7 +124,7 @@ export function TaskCard({ task, isOverlay }: Readonly<TaskCardProps>) {
       <CardContent className='whitespace-pre-wrap px-5 pb-6 pt-0 text-left'>
         {task.title}
       </CardContent>
-      <CardFooter className='gap-1'>
+      <CardFooter className='flex-wrap gap-1'>
         <IssuePriority
           disableShortcut
           defaultPriority={task.priority ?? 'no-priority'}
@@ -133,7 +134,6 @@ export function TaskCard({ task, isOverlay }: Readonly<TaskCardProps>) {
           disableShortcut
           defaultEstimate={task.estimate ?? 'no-estimate'}
         />
-        <Assignee />
       </CardFooter>
     </Card>
   )

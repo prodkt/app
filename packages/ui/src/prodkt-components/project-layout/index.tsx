@@ -181,7 +181,7 @@ const ProjectLayout = ({
             </a>
           </div>
         </div>
-        <div className='relative grid min-h-[600px] grid-cols-3 gap-0 -space-x-px p-0'>
+        <div className='relative flex max-h-[600px] min-h-[600px] flex-row flex-nowrap items-start justify-start gap-0 -space-x-px p-0'>
           <div className='absolute inset-x-1/2 -top-1/2 z-[-1] mx-auto mb-auto mt-0 hidden h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'></div>
           <div className='absolute -top-1/2 left-1/3 z-[-1] mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'></div>
           <div className='absolute -top-1/2 right-1/3 z-[-1] mx-auto mb-auto mt-0 h-[200%] w-px max-w-px rounded-none bg-gradient-to-b from-[var(--grayA1)] via-[var(--grayA3)] to-[var(--grayA1)]'></div>

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { BrandingShowcase } from '.'
+import PlanfoundryAnimatedLogo from './planfoundryAnimatedLogo'
 
 const data = {
   slug: 'remix-lxp-branding',
@@ -115,6 +116,13 @@ export const Default: Story = {
         ProjectBaseType={data.ProjectBaseType}
         ProjectBaseTypeSample={data.ProjectBaseTypeSample}
       />
+    </div>
+  ),
+}
+export const PlanFoundry: Story = {
+  render: () => (
+    <div className='w-full max-w-full overflow-x-hidden'>
+      <PlanfoundryAnimatedLogo />
     </div>
   ),
 }
